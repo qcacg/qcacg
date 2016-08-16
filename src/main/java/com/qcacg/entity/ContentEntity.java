@@ -16,8 +16,16 @@ public class ContentEntity implements Serializable {
     private Long contentWordCount;
     @Column(name = "contentUpdate")
     private String contentUpdate;
+    @Column(name = "contentStatus")
+    private String contentStatus;
 
+    public String getContentStatus() {
+        return contentStatus;
+    }
 
+    public void setContentStatus(String contentStatus) {
+        this.contentStatus = contentStatus;
+    }
 
     public Long getContentId() {
         return contentId;
@@ -51,13 +59,11 @@ public class ContentEntity implements Serializable {
         this.contentWordCount = contentWordCount;
     }
 
-    public String getContentPicture() {
+    public String getContentUpdate() {
         return contentUpdate;
     }
 
-    public void setContentPicture(String contentUpdate) {
+    public void setContentUpdate(String contentUpdate) {
         this.contentUpdate = contentUpdate;
     }
-
-
 }
