@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qcacg.mapper.RoleMapper">
+	<!-- 回收策略为先进先出 --> <!-- 自动刷新时间60s --><!-- 最多缓存512个引用对象 -->
+	<!-- <cache eviction="FIFO" flushInterval="30000" size="512" readOnly="false" /> -->  <!-- 只读 -->
+
+	<select id="findRoleByUser" resultType="com.qcacg.entity.RoleEntity">
+		select
+		roleId,
+		roleStatus,
+		roleName,
+		roleDescription
+		from sys_user
+		where sys_user.roleId
+		in (SELECT roleId
+		FROM sys_user_role WHERE
+		userId=#{userId})
+	</select>
+
+
+
+
+
+
+</mapper>
