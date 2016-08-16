@@ -1,10 +1,637 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c386070-8ed9-4d41-aed2-04507d0e93f4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcacg.iml" />
+    <list default="true" readonly="true" id="bfa18c5d-906d-4d48-ac4f-65fe43107609" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-amd64-freebsd-6.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-amd64-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-amd64-solaris.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-ia64-hpux-11.sl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-ia64-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-pa-hpux-11.sl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-ppc-aix-5.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-ppc-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-ppc64-aix-5.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-ppc64-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-s390x-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-sparc-solaris.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-sparc64-solaris.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-universal-macosx.dylib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-universal64-macosx.dylib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-x86-freebsd-5.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-x86-freebsd-6.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-x86-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/libsigar-x86-solaris.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/sigar-amd64-winnt.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/sigar-x86-winnt.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/sigar-x86-winnt.lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/plugins/fullavatareditor/scripts/expressInstall.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/plugins/fullavatareditor/scripts/fullAvatarEditor.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/annotation/SystemLog.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/constant/LoginConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/BaseController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/BookController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/ButtomController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/ContentController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/LogController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/LoginController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/RegisterController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/ResourcesController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/RoleController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/SessionController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/SystemController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/UserController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/BookEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/ButtonEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/ContentEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/GroupEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/LogEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/ResourcesEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/RoleEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/ServerEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/UserEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/UserEntityExample$Criteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/UserEntityExample$Criterion.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/UserEntityExample$GeneratedCriteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/UserEntityExample.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/UserRoleEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/user/UserCustom.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/user/UserQauryVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/logAop/LogAopAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/BookMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/ButtomMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/ContentMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/LogMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/ResourcesMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/RoleMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/ServerMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/UserMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/UserRoleMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/BaseService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/BaseServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/exception/BusinessException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/BookService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/ButtomService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/ContentService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/LogService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/ResourcesService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/RoleService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/ServerService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/UserService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/BookServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/ButtomServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/ContentServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/LogServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/ResourcesServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/RoleServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/ServerServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/UserServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/shiro/ChainDefinitionSectionMetaSource.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/shiro/MyRealm.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/shiro/credentials/RetryLimitHashedCredentialsMatcher.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/shiro/filter/ForceLogoutFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/shiro/filter/KickoutSessionControlFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/shiro/filter/SysUserFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/shiro/spring/SpringCacheManagerWrapper$SpringCacheWrapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/shiro/spring/SpringCacheManagerWrapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/task/CacheInit.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/task/MonitorTask.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/AjavaAuthenticator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/CommonUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/EhcacheUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/EmailUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/JSONUtil$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/JSONUtil$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/JSONUtil$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/JSONUtil$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/JSONUtil$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/JSONUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/PasswordHelper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/PropertiesUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/SystemInfo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/TreeUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/UserEntityUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/exception/MyExceptionHandler.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/exception/ParameterException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/exception/SystemException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/http/ResponseUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/poi/ExcelUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/poi/ExcelUtilToArray.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/poi/ExcelUtilToMap.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/poi/ExcelUtilToObject.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/poi/KeyEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/poi/RunMain.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/upload/FileRepository.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/upload/Num62.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/upload/Repository.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/util/upload/UploadUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg.war" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/annotation/SystemLog.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/constant/LoginConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/BaseController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/ButtomController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/LogController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/LoginController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/RegisterController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/ResourcesController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/RoleController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/SessionController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/SystemController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/UserController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/BookEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/ButtonEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/GroupEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/LogEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/ResourcesEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/RoleEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/ServerEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/UserEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/UserEntityExample$Criteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/UserEntityExample$Criterion.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/UserEntityExample$GeneratedCriteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/UserEntityExample.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/UserRoleEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/user/UserCustom.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/user/UserQauryVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/logAop/LogAopAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/BookMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/ButtomMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/LogMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/ResourcesMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/RoleMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/ServerMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/UserMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/UserRoleMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/BaseService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/BaseServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/exception/BusinessException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/ButtomService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/LogService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/ResourcesService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/RoleService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/ServerService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/UserService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/ButtomServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/LogServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/ResourcesServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/RoleServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/ServerServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/UserServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/shiro/ChainDefinitionSectionMetaSource.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/shiro/MyRealm.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/shiro/credentials/RetryLimitHashedCredentialsMatcher.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/shiro/filter/ForceLogoutFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/shiro/filter/KickoutSessionControlFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/shiro/filter/SysUserFilter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/shiro/spring/SpringCacheManagerWrapper$SpringCacheWrapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/shiro/spring/SpringCacheManagerWrapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/task/CacheInit.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/task/MonitorTask.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/AjavaAuthenticator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/CommonUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/EhcacheUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/EmailUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/JSONUtil$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/JSONUtil$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/JSONUtil$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/JSONUtil$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/JSONUtil$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/JSONUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/PasswordHelper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/PropertiesUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/SystemInfo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/TreeUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/UserEntityUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/exception/MyExceptionHandler.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/exception/ParameterException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/exception/SystemException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/http/ResponseUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/poi/ExcelUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/poi/ExcelUtilToArray.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/poi/ExcelUtilToMap.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/poi/ExcelUtilToObject.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/poi/KeyEntity.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/poi/RunMain.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/upload/FileRepository.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/upload/Num62.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/upload/Repository.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/util/upload/UploadUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/activation-1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/aopalliance-1.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/asm-3.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/aspectjweaver-1.6.11.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/classmate-1.0.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/commons-beanutils-1.8.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/commons-codec-1.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/commons-collections-3.2.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/commons-fileupload-1.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/commons-httpclient-3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/commons-io-2.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/commons-lang-2.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/commons-lang3-3.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/commons-logging-1.1.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/commons-net-3.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/dom4j-1.6.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/druid-1.0.16.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/ehcache-core-2.5.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/ezmorph-1.0.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/fastjson-1.2.12.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/hibernate-validator-5.0.2.Final.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/httpcore-4.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/jackson-annotations-2.1.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/jackson-core-2.1.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/jackson-core-asl-1.9.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/jackson-core-lgpl-1.9.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/jackson-databind-2.1.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/jackson-mapper-asl-1.9.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/jackson-mapper-lgpl-1.9.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/javax.inject-1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/jboss-logging-3.1.1.GA.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/json-lib-2.4-jdk15.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/jsqlparser-0.9.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/jstl-1.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-amd64-freebsd-6.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-amd64-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-amd64-solaris.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-ia64-hpux-11.sl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-ia64-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-pa-hpux-11.sl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-ppc-aix-5.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-ppc-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-ppc64-aix-5.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-ppc64-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-s390x-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-sparc-solaris.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-sparc64-solaris.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-universal-macosx.dylib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-universal64-macosx.dylib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-x86-freebsd-5.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-x86-freebsd-6.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-x86-linux.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/libsigar-x86-solaris.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/log4j-1.2.17.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/mail-1.4.7.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/mapper-3.3.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/mybatis-3.2.8.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/mybatis-spring-1.2.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/mysql-connector-java-5.1.26.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/pagehelper-4.1.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/persistence-api-1.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/poi-3.10-FINAL.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/poi-ooxml-3.10-FINAL.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/poi-ooxml-schemas-3.10-FINAL.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/quartz-1.6.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/shiro-core-1.2.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/shiro-ehcache-1.2.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/shiro-quartz-1.2.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/shiro-spring-1.2.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/shiro-web-1.2.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/sigar-1.6.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/sigar-amd64-winnt.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/sigar-x86-winnt.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/sigar-x86-winnt.lib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/slf4j-api-1.6.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/slf4j-log4j12-1.7.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/spring-aop-4.2.0.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/spring-beans-4.2.0.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/spring-context-4.2.0.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/spring-context-support-4.2.0.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/spring-core-4.2.0.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/spring-expression-4.2.0.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/spring-jdbc-4.2.0.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/spring-orm-4.2.0.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/spring-test-4.2.0.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/spring-tx-4.2.0.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/spring-web-4.2.0.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/spring-webmvc-4.2.0.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/stax-api-1.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/validation-api-1.1.0.Final.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/xml-apis-1.0.b2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/lib/xmlbeans-2.6.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/plugins/fullavatareditor/scripts/expressInstall.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/plugins/fullavatareditor/scripts/fullAvatarEditor.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/com/qcacg/system/TestDemo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/qcacg_war.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/qcacg_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__asm_asm_3_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_16.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_0_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_1_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_1_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_1_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_3_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_persistence_api_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_javax_servlet_jsp_api_2_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_26.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_10_FINAL.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_10_FINAL.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_10_FINAL.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_2_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_2_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_quartz_1_2_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_2_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_2_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_6_11.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_lgpl_1_9_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_lgpl_1_9_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_fusesource_sigar_1_6_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_0_2_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_1_GA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opensymphony_quartz_quartz_1_6_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_0_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_3_3_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/.jsdtscope" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.component" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.container" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.wst.validation.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/annotation/SystemLog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/constant/LoginConstant.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/BaseController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ButtomController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/LogController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/LoginController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/RegisterController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ResourcesController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/RoleController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/SessionController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/SystemController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ButtonEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ContentEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/GroupEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/LogEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ResourcesEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/RoleEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ServerEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserEntityExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserRoleEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/user/UserCustom.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/user/UserQauryVo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/logAop/LogAopAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ButtomMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ContentMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/LogMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ResourcesMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/RoleMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ServerMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/UserMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/UserRoleMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/BaseService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/BaseServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/exception/BusinessException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/ButtomService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/ContentService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/LogService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/ResourcesService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/RoleService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/ServerService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/UserService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ButtomServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ContentServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/LogServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ResourcesServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/RoleServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ServerServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/UserServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/shiro/ChainDefinitionSectionMetaSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/shiro/MyRealm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/shiro/credentials/RetryLimitHashedCredentialsMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/shiro/filter/ForceLogoutFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/shiro/filter/KickoutSessionControlFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/shiro/filter/SysUserFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/shiro/spring/SpringCacheManagerWrapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/task/CacheInit.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/task/MonitorTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/CommonUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/EhcacheUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/EmailUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/JSONUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/PasswordHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/PropertiesUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/SystemInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/TreeUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/UserEntityUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/exception/MyExceptionHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/exception/ParameterException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/exception/SystemException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/http/ResponseUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/poi/ExcelUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/poi/ExcelUtilToArray.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/poi/ExcelUtilToMap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/poi/ExcelUtilToObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/poi/KeyEntity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/poi/RunMain.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/upload/FileRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/upload/Num62.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/upload/Repository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/util/upload/UploadUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/ValidationMessages.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/ehcache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ContentMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/resourcesMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/roleMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring-application.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc-shiro.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring-shiro.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/404.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/common.jspf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/denied.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/install.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/profile.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/buttom/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/log/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/resources/edit.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/resources/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/resources/permissions.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role/edit.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/session/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/sys/info.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/sys/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/sys/monitor.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user/edit.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user/roleSelect.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/export/FileSaver.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/export/html2canvas.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/export/jspdf.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/export/jspdf.plugin.autotable.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/export/tableExport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/monitor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/plugins/fullavatareditor/scripts/fullAvatarEditor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/plugins/fullavatareditor/scripts/jQuery.Cookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/plugins/fullavatareditor/scripts/swfobject.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/common/plugins/fullavatareditor/scripts/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/qcacg/system/TestDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/ehcache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/mapper/resourcesMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/mapper/roleMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/spring-application.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/spring-mvc-shiro.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/spring-mvc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/spring-shiro.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ValidationMessages.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/config.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ehcache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapper/BookMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapper/ContentMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapper/resourcesMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mapper/roleMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring-application.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring-mvc-shiro.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring-mvc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/spring-shiro.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/ValidationMessages.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/config.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/ehcache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/BookMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/UserMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/resourcesMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/roleMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/spring-application.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/spring-mvc-shiro.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/spring-mvc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/spring-shiro.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/404.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/common/common.jspf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/login.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/buttom/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/log/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/resources/edit.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/resources/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/resources/permissions.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/role/edit.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/role/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/session/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/sys/info.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/sys/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/sys/monitor.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/user/edit.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/user/list.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/system/user/roleSelect.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/export/FileSaver.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/export/html2canvas.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/export/jspdf.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/export/jspdf.plugin.autotable.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/export/tableExport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/monitor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/plugins/fullavatareditor/scripts/fullAvatarEditor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/plugins/fullavatareditor/scripts/jQuery.Cookie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/plugins/fullavatareditor/scripts/swfobject.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/qcacg/common/plugins/fullavatareditor/scripts/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.qcacg.system.TestDemo.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/com.qcacg.system.TestDemo.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/config.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/ehcache.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/jdbc.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/mapper/resourcesMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/mapper/roleMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/spring-application.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/spring-mvc-shiro.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/spring-mvc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/spring-shiro.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qcacg.iml" afterPath="$PROJECT_DIR$/qcacg.iml" />
     </list>
-    <ignored path="qcacg.iws" />
+    <ignored path="battcn1.0.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -24,15 +651,35 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="qcacg" />
+    <favorites_list name="battcn1.0" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="BookCollectController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookCollectController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.03533569">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChapterController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ChapterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4454343">
+              <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -43,10 +690,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="spring-beans.schema" />
-        <option value="HTML File" />
         <option value="Jsp File" />
         <option value="Interface" />
+        <option value="spring-beans.schema" />
         <option value="Class" />
       </list>
     </option>
@@ -68,57 +714,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/util/AjaxResponseBody.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/util/Md5Util.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/constant/LoginConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registerxx.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/register.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/ValidationMessages.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/LoginAndRegisterController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ContentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/ContentService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user/info.jsp" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookCollectController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookCollectEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/BaseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookCollectService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/BaseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/mapper/BookCollectMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookCollectMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookCollectServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/BookCollectMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/passworldrecovery.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/common/common.js" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qcacg/system/TestDemo.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/login.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/updatePassword.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/user-info/wangEditor.min.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user/profile.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/util/PasswordHelper.java" />
+        <option value="F:/轻创/qcacgTest2016-7-12/qcacgTest/user-info.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/util/SendTelephoneCode.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/RegisterController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/util/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/util/upload/FileRepository.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/qcacg/system/TestDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookEntityMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ContentEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ContentEntityMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ContentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ContentMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/ContentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ContentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/LogEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user/list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/SessionController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/resourcesMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/annotation/SystemLog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ResourcesController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/logAop/LogAopAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/RoleController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ContentEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ContentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ChapterController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/用户中心 - 轻文轻小说.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-shiro.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/用户中心 - 轻文轻小说.jsp" />
+        <option value="F:/360/qcacg/test/js/user-info-A.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/user-info-A.js" />
+        <option value="F:/360/qcacg/src/main/java/com/qcacg/controller/system/ContentController.java" />
+        <option value="F:/360/qcacg/src/main/webapp/WEB-INF/views/user-info.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java" />
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -140,6 +786,11 @@
         <option name="mavenHome" value="Bundled (Maven 3)" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -151,6 +802,70 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="qcacg" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="qcacg" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="war" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="qcacg" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="qcacg" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="compiler" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="qcacg" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -183,7 +898,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>SpringModelInspection</id>
+            <id>SpringJavaAutowiringInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -214,6 +929,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -222,92 +940,177 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="F:/qcacg" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="queryUserForList&#9;null&#9;null&#10;getOriginalFilename&#9;PSI&#9;JAVA://org.springframework.web.multipart.MultipartFile#getOriginalFilename&#10;indexOfExtension&#9;PSI&#9;JAVA://org.apache.commons.io.FilenameUtils#indexOfExtension&#10;Subject&#9;null&#9;null&#10;getMessageConverters&#9;PSI&#9;JAVA://org.springframework.web.servlet.config.AnnotationDrivenBeanDefinitionParser#getMessageConverters&#10;forceLogout&#9;FILE&#9;file://F:/炉石传说/qcacg/src/main/java/com/qcacg/shiro/filter/ForceLogoutFilter.java&#10;securityManager&#9;null&#9;null&#10;Map&#9;PSI&#9;JAVA://com.qcacg.mapper.ButtomMapper&#10;resId&#9;PSI&#9;JAVA://com.qcacg.service.system.ResourcesService#findResourcessByRoleId&#10;resourcesId&#9;PSI&#9;JAVA://com.qcacg.entity.GroupEntity#resourcesId&#10;USER_SESSION_KEY&#9;PSI&#9;JAVA://com.qcacg.util.UserEntityUtil#USER_SESSION_KEY&#10;telephone&#9;PSI&#9;JAVA://com.qcacg.entity.UserEntity#telephone&#10;accountname&#9;null&#9;null&#10;buildSqlSessionFactory&#9;PSI&#9;JAVA://org.mybatis.spring.SqlSessionFactoryBean#buildSqlSessionFactory&#10;afterPropertiesSet&#9;PSI&#9;JAVA://org.mybatis.spring.batch.MyBatisPagingItemReader#afterPropertiesSet&#10;SqlSessionFactoryBean&#9;PSI&#9;JAVA://org.mybatis.spring.SqlSessionFactoryBean&#10;ResolverUtil&#9;PSI&#9;JAVA://org.apache.ibatis.io.ResolverUtil&#10;icon&#9;PSI&#9;JAVA://javax.swing.Icon&#10;treeNodes&#9;PSI&#9;JAVA://com.qcacg.mapper.ResourcesMapper#treeNodes&#10;btn &#9;null&#9;null&#10;sort&#9;ACTION&#9;TabsAlphabeticalMode&#10;batchAddUserGroup&#9;PSI&#9;JAVA://com.battcn.mapper.ResourcesMapper#batchAddUserGroup&#10;PageInfo&#9;null&#9;null&#10;sqlSession&#9;null&#9;null&#10;CredentialsSalt&#9;PSI&#9;JAVA://com.battcn.entity.UserEntity#credentialsSalt&#10;pagehelp&#9;PSI&#9;JAVA://com.github.pagehelper.PageHelper&#10;pagehelper&#9;FILE&#9;file://F:/WorkSpace/IT/battcn1.0-master/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_1_0.xml&#10;txAdvice&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/spring-tx/4.2.0.RELEASE/spring-tx-4.2.0.RELEASE.jar!/org/springframework/transaction/config/TxAdviceBeanDefinitionParser.class&#10;level&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="modal-body&#9;null&#9;null&#10;modal-dialog&#9;null&#9;null&#10;btn-avatar-profile&#9;null&#9;null&#10;chpt-m&#9;null&#9;null&#10;item-nav&#9;null&#9;null&#10;selRole&#9;null&#9;null&#10; row&#9;ACTION&#9;ShowTabsInSingleRow&#10;row&#9;null&#9;null&#10;getSelections&#9;null&#9;null&#10;getUserIdSelections&#9;null&#9;null&#10;getParameter&#9;PSI&#9;JAVA://com.qcacg.controller.BaseController#getParameter&#10;resourcesId&#9;PSI&#9;JAVA://com.qcacg.service.system.ResourcesService#findResourcessByUserId&#10;findResourcesByUserId&#9;PSI&#9;JAVA://com.qcacg.service.system.ResourcesService#findResourcessByUserId&#10;securityManager&#9;null&#9;null&#10;Map&#9;PSI&#9;JAVA://com.qcacg.mapper.ButtomMapper&#10;resId&#9;PSI&#9;JAVA://com.qcacg.service.system.ResourcesService#findResourcessByRoleId&#10;USER_SESSION_KEY&#9;PSI&#9;JAVA://com.qcacg.util.UserEntityUtil#USER_SESSION_KEY&#10;telephone&#9;PSI&#9;JAVA://com.qcacg.entity.UserEntity#telephone&#10;accountname&#9;null&#9;null&#10;buildSqlSessionFactory&#9;PSI&#9;JAVA://org.mybatis.spring.SqlSessionFactoryBean#buildSqlSessionFactory&#10;afterPropertiesSet&#9;PSI&#9;JAVA://org.mybatis.spring.batch.MyBatisPagingItemReader#afterPropertiesSet&#10;SqlSessionFactoryBean&#9;PSI&#9;JAVA://org.mybatis.spring.SqlSessionFactoryBean&#10;ResolverUtil&#9;PSI&#9;JAVA://org.apache.ibatis.io.ResolverUtil&#10;icon&#9;PSI&#9;JAVA://javax.swing.Icon&#10;treeNodes&#9;PSI&#9;JAVA://com.qcacg.mapper.ResourcesMapper#treeNodes&#10;btn &#9;null&#9;null&#10;sort&#9;ACTION&#9;TabsAlphabeticalMode&#10;batchAddUserGroup&#9;PSI&#9;JAVA://com.battcn.mapper.ResourcesMapper#batchAddUserGroup&#10;PageInfo&#9;null&#9;null&#10;sqlSession&#9;null&#9;null&#10;CredentialsSalt&#9;PSI&#9;JAVA://com.battcn.entity.UserEntity#credentialsSalt&#10;pagehelp&#9;PSI&#9;JAVA://com.github.pagehelper.PageHelper&#10;pagehelper&#9;FILE&#9;file://F:/WorkSpace/IT/battcn1.0-master/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_1_0.xml&#10;txAdvice&#9;FILE&#9;jar://C:/Users/Administrator/.m2/repository/org/springframework/spring-tx/4.2.0.RELEASE/spring-tx-4.2.0.RELEASE.jar!/org/springframework/transaction/config/TxAdviceBeanDefinitionParser.class&#10;level&#9;null&#9;null" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/com/qcacg" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="D:\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\炉石传说\qcacg\src\main\webapp" />
-      <recent name="F:\炉石传说\qcacg\src\main\webapp\WEB-INF" />
-      <recent name="F:\炉石传说\qcacg\src\main\webapp\WEB-INF\views" />
-      <recent name="F:\炉石传说\qcacg\src\main\webapp\static" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\炉石传说\qcacg\src\main\resources\mapper" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\img" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\user-info" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\css" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\js" />
       <recent name="F:\炉石传说\qcacg\src\main\webapp\WEB-INF\views" />
-      <recent name="F:\炉石传说\qcacg\src\main\webapp\scripts\111" />
-      <recent name="F:\炉石传说\qcacg\src\main\webapp\resources\js" />
-      <recent name="F:\炉石传说\qcacg\src\main\webapp\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.qcacg.mapper" />
       <recent name="com.qcacg.entity" />
       <recent name="com.qcacg.util" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.qcacg.entity" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\WEB-INF\views" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\user-info" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\WEB-INF\views\system\user" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\user-info\icomoon" />
+      <recent name="F:\炉石传说\qcacg\src\main\resources\mapper" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9">
-    <configuration default="false" name="PasswordHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.qcacg.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.qcacg.util.PasswordHelper" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="qcacg" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Sendsms" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.qcacg.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.qcacg.util.Sendsms" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="qcacg" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestDemo.TestTelephoneCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestDemo.TestBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.qcacg.system.*" />
@@ -319,11 +1122,11 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.qcacg.system" />
       <option name="MAIN_CLASS_NAME" value="com.qcacg.system.TestDemo" />
-      <option name="METHOD_NAME" value="TestTelephoneCode" />
+      <option name="METHOD_NAME" value="TestBook" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -333,10 +1136,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="index.shtml" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/index.shtml">
-      <method />
-    </configuration>
-    <configuration default="false" name="TestDemo.testController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestDemo.TestRegister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.qcacg.system.*" />
@@ -348,7 +1148,85 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.qcacg.system" />
       <option name="MAIN_CLASS_NAME" value="com.qcacg.system.TestDemo" />
-      <option name="METHOD_NAME" value="testController" />
+      <option name="METHOD_NAME" value="TestRegister" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestDemo.TestRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.qcacg.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="qcacg" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qcacg.system" />
+      <option name="MAIN_CLASS_NAME" value="com.qcacg.system.TestDemo" />
+      <option name="METHOD_NAME" value="TestRole" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestDemo.TestChapter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.qcacg.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="qcacg" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qcacg.system" />
+      <option name="MAIN_CLASS_NAME" value="com.qcacg.system.TestDemo" />
+      <option name="METHOD_NAME" value="TestChapter" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestDemo.TestBookCollect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.qcacg.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="qcacg" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qcacg.system" />
+      <option name="MAIN_CLASS_NAME" value="com.qcacg.system.TestDemo" />
+      <option name="METHOD_NAME" value="TestBookCollect" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -927,19 +1805,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.qcacg" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 9" />
-      <item index="2" class="java.lang.String" itemvalue="Application.PasswordHelper" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Sendsms" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestDemo.TestTelephoneCode" />
-      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.index.shtml" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.TestDemo.testController" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestDemo.TestBook" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestDemo.TestRegister" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestDemo.TestRole" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.TestDemo.TestChapter" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.TestDemo.TestBookCollect" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestDemo.testController" />
-        <item index="1" class="java.lang.String" itemvalue="Application.PasswordHelper" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestDemo.TestTelephoneCode" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.shtml" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Sendsms" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestDemo.TestRegister" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestDemo.TestBookCollect" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestDemo.TestBook" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestDemo.TestRole" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestDemo.TestChapter" />
       </list>
     </recent_temporary>
   </component>
@@ -997,61 +1875,90 @@
       <workItem from="1466385653727" duration="2995000" />
       <workItem from="1466391901922" duration="18112000" />
       <workItem from="1466473447059" duration="18548000" />
-      <workItem from="1466561731423" duration="19149000" />
-      <workItem from="1466648952429" duration="18683000" />
-      <workItem from="1466734145839" duration="15886000" />
-      <workItem from="1466824175350" duration="178000" />
-      <workItem from="1466824398505" duration="19290000" />
-      <workItem from="1466994093539" duration="10804000" />
-      <workItem from="1467080784570" duration="15717000" />
-      <workItem from="1467163628690" duration="14725000" />
-      <workItem from="1467251055552" duration="15084000" />
-      <workItem from="1467343977722" duration="4027000" />
-      <workItem from="1467427953582" duration="20510000" />
-      <workItem from="1467511048815" duration="19847000" />
-      <workItem from="1467534849448" duration="946000" />
-      <workItem from="1467597559219" duration="13448000" />
-      <workItem from="1467684325900" duration="13200000" />
-      <workItem from="1467770626969" duration="3521000" />
-      <workItem from="1467792574733" duration="5723000" />
-      <workItem from="1468564040646" duration="507000" />
+      <workItem from="1466561731423" duration="1338000" />
+      <workItem from="1467527229062" duration="244000" />
+      <workItem from="1467697872238" duration="1086000" />
+      <workItem from="1467700319892" duration="3482000" />
+      <workItem from="1467706420928" duration="14592000" />
+      <workItem from="1467770775239" duration="19386000" />
+      <workItem from="1467805232025" duration="1754000" />
+      <workItem from="1467807147492" duration="684000" />
+      <workItem from="1467855871429" duration="20390000" />
+      <workItem from="1467945646170" duration="20619000" />
+      <workItem from="1468038431056" duration="15683000" />
+      <workItem from="1468125468340" duration="9919000" />
+      <workItem from="1468201222759" duration="15145000" />
+      <workItem from="1468289786238" duration="14908000" />
+      <workItem from="1468374427415" duration="19518000" />
+      <workItem from="1468412772307" duration="1862000" />
+      <workItem from="1468462644104" duration="15703000" />
+      <workItem from="1468546443105" duration="16180000" />
+      <workItem from="1468573373558" duration="3830000" />
+      <workItem from="1468894347605" duration="10575000" />
+      <workItem from="1468978967514" duration="10651000" />
+      <workItem from="1469067752953" duration="13664000" />
+      <workItem from="1469150165737" duration="29135000" />
+      <workItem from="1469241363473" duration="25904000" />
+      <workItem from="1469332654738" duration="577000" />
+      <workItem from="1469413893488" duration="14331000" />
+      <workItem from="1469498011016" duration="12727000" />
+      <workItem from="1469584180485" duration="9409000" />
+      <workItem from="1469600677259" duration="12422000" />
+      <workItem from="1469669161628" duration="9904000" />
+      <workItem from="1469687414291" duration="8279000" />
+      <workItem from="1469755811077" duration="2951000" />
+      <workItem from="1469759069038" duration="12189000" />
+      <workItem from="1469792076455" duration="3695000" />
+      <workItem from="1469937061511" duration="10215000" />
+      <workItem from="1470017467757" duration="2363000" />
+      <workItem from="1470274767611" duration="1821000" />
+      <workItem from="1470359944586" duration="14368000" />
+      <workItem from="1470387407288" duration="1353000" />
+      <workItem from="1470393212091" duration="5588000" />
+      <workItem from="1470450903821" duration="7255000" />
+      <workItem from="1470467336845" duration="7723000" />
+      <workItem from="1470538728465" duration="11469000" />
+      <workItem from="1471169350532" duration="865000" />
+      <workItem from="1471320488911" duration="599000" />
+      <workItem from="1471327235125" duration="597000" />
+      <workItem from="1471327906445" duration="593000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestDemo_TestTelephoneCode - 2016.06.20 at 16h 47m 22s.xml">
-      <configuration name="TestDemo.TestTelephoneCode" configurationId="JUnit" />
+    <history-entry file="TestDemo_TestBookCollect - 2016.07.14 at 16h 23m 54s.xml">
+      <configuration name="TestDemo.TestBookCollect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestTelephoneCode - 2016.06.20 at 16h 53m 50s.xml">
-      <configuration name="TestDemo.TestTelephoneCode" configurationId="JUnit" />
+    <history-entry file="TestDemo_TestBookCollect - 2016.07.14 at 16h 24m 30s.xml">
+      <configuration name="TestDemo.TestBookCollect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestTelephoneCode - 2016.06.20 at 16h 54m 33s.xml">
-      <configuration name="TestDemo.TestTelephoneCode" configurationId="JUnit" />
+    <history-entry file="TestDemo_TestBookCollect - 2016.07.14 at 16h 24m 57s.xml">
+      <configuration name="TestDemo.TestBookCollect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestTelephoneCode - 2016.06.20 at 16h 55m 42s.xml">
-      <configuration name="TestDemo.TestTelephoneCode" configurationId="JUnit" />
+    <history-entry file="TestDemo_TestBookCollect - 2016.07.14 at 16h 48m 17s.xml">
+      <configuration name="TestDemo.TestBookCollect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestTelephoneCode - 2016.06.20 at 17h 00m 57s.xml">
-      <configuration name="TestDemo.TestTelephoneCode" configurationId="JUnit" />
+    <history-entry file="TestDemo_TestBookCollect - 2016.07.14 at 16h 48m 49s.xml">
+      <configuration name="TestDemo.TestBookCollect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestTelephoneCode - 2016.06.20 at 17h 04m 21s.xml">
-      <configuration name="TestDemo.TestTelephoneCode" configurationId="JUnit" />
+    <history-entry file="TestDemo_TestBookCollect - 2016.07.14 at 16h 53m 37s.xml">
+      <configuration name="TestDemo.TestBookCollect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestTelephoneCode - 2016.06.21 at 10h 55m 11s.xml">
-      <configuration name="TestDemo.TestTelephoneCode" configurationId="JUnit" />
+    <history-entry file="TestDemo_TestBookCollect - 2016.07.14 at 16h 57m 44s.xml">
+      <configuration name="TestDemo.TestBookCollect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_testController - 2016.06.29 at 10h 03m 45s.xml">
-      <configuration name="TestDemo.testController" configurationId="JUnit" />
+    <history-entry file="TestDemo_TestRegister - 2016.07.23 at 15h 02m 51s.xml">
+      <configuration name="TestDemo.TestRegister" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_testController - 2016.06.29 at 10h 04m 06s.xml">
-      <configuration name="TestDemo.testController" configurationId="JUnit" />
+    <history-entry file="TestDemo_TestRegister - 2016.07.23 at 15h 16m 14s.xml">
+      <configuration name="TestDemo.TestRegister" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_testController - 2016.06.29 at 10h 04m 57s.xml">
-      <configuration name="TestDemo.testController" configurationId="JUnit" />
+    <history-entry file="TestDemo_TestRegister - 2016.07.23 at 15h 48m 11s.xml">
+      <configuration name="TestDemo.TestRegister" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="660464000" />
+    <option name="totallyTimeSpent" value="885659000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1066,36 +1973,69 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5021322" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4978678" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35064936" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33225107" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17537314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43073592" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17270789" sideWeight="0.49134198" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27056277" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18176973" sideWeight="0.508658" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4891775" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35064936" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33225107" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17555556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27056277" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43073592" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35222223" sideWeight="0.49134198" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18176973" sideWeight="0.508658" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4891775" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1108,9 +2048,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="53" />
+      <option name="time" value="89" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1119,18 +2062,352 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/qcacg.iml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="40" column="229" selection-start-line="40" selection-start-column="224" selection-end-line="40" selection-end-column="229" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03533569">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/common.jspf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43348625">
+          <caret line="153" column="8" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/cropper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44320711">
+          <caret line="935" column="4" selection-start-line="935" selection-start-column="4" selection-end-line="935" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/user-info/moe.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3542654">
+          <caret line="5" column="41503" selection-start-line="5" selection-start-column="41503" selection-end-line="5" selection-end-column="41503" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/commons-lang/commons-lang/2.5/commons-lang-2.5.jar!/org/apache/commons/lang/RandomStringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63559324">
+          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/util/upload/Num62.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/util/upload/UploadUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33296213">
+          <caret line="1032" column="19" selection-start-line="1032" selection-start-column="19" selection-end-line="1032" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35634744">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8856502">
+          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/轻创/qcacgTest2016-7-12/qcacgTest/user-info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.224513">
+          <caret line="578" column="8" selection-start-line="578" selection-start-column="8" selection-end-line="578" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/login-bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/headportrait1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/scrollbar1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/scrollbar2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/scrollbar3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/searchMagnifier.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/img/bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://F:/轻创/fileUpload/fileUpload/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.0">
+          <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/轻创/fileUpload/fileUpload/new_file.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5647194">
+          <caret line="120" column="24" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/commons-logging/commons-logging/1.1.2/commons-logging-1.1.2.jar!/org/apache/commons/logging/impl/AvalonLogger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8599311">
+          <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/commons-logging/commons-logging/1.1.2/commons-logging-1.1.2.jar!/org/apache/commons/logging/Log.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.035591274">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/commons-fileupload/commons-fileupload/1.3.1/commons-fileupload-1.3.1.jar!/org/apache/commons/fileupload/FileItem.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.428572">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar!/org/apache/commons/io/output/DeferredFileOutputStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.322314">
+          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE.jar!/org/springframework/web/multipart/commons/CommonsMultipartFile.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.25">
+          <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/commons-fileupload/commons-fileupload/1.3.1/commons-fileupload-1.3.1.jar!/org/apache/commons/fileupload/disk/DiskFileItem.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.928572">
+          <caret line="105" column="22" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/io/FilterInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7797552">
+          <caret line="105" column="15" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE.jar!/org/springframework/web/multipart/MultipartFile.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48220438">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/util/upload/FileRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17817372">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/BaseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-beans/4.2.0.RELEASE/spring-beans-4.2.0.RELEASE.jar!/org/springframework/beans/BeanUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.071428">
+          <caret line="289" column="23" selection-start-line="289" selection-start-column="23" selection-end-line="289" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.844098">
+          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22271715">
+          <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64365256">
+          <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62138087">
+          <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user-info-H.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user-info-A.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6035634">
+          <caret line="73" column="28" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6904232">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2178899">
+          <caret line="558" column="61" selection-start-line="558" selection-start-column="61" selection-end-line="558" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02293578">
+          <caret line="40" column="229" selection-start-line="40" selection-start-column="224" selection-end-line="40" selection-end-column="229" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42093542">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18348624">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ButtomController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13363029">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookCollectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ChapterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4454343">
+          <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -1194,6 +2471,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

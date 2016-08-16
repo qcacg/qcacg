@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qcacg.mapper.BookMapper">
+
+
+    <select id="findBookByUserId" resultType="com.qcacg.entity.BookEntity" parameterType="java.lang.Long">
+    SELECT
+    wor_book.BookId,
+    wor_book.BookName,
+    wor_book.`Partition`,
+    wor_book.BookIntroduction,
+    wor_book.BookUpdated,
+    wor_book.BookCoverImage,
+    wor_book.BookWordCount,
+    wor_book.BookStatus,
+    wor_book.BookHits,
+    wor_book.BookCollections,
+    wor_book.BookCopperCoins,
+    wor_book.BookSilverCoins
+    FROM
+    wor_book
+    WHERE
+    wor_book.UserId = #{wor_book.UserId}
+    ORDER BY
+    wor_book.BookUpdated DESC
+
+    </select>
+
+
+
+
+</mapper>
