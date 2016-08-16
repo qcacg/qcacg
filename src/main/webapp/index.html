@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>轻创</title>
+<script src="WEB-INF/views/js/jquery-1.9.1.min.js"></script>
+<script>
+
+
+
+	 $.ajax({
+             type: "GET",
+             url: "/login.shtml",
+             data:{telephone:"15067171806",passWord:"123456"},
+             dataType: "json",
+             success: function(data){
+               document.getElementsByTagName("body")[0].innerHTML=eval("("+data+")");
+
+					},
+			error:   function(data, textStatus, errorThrown){
+					 var div=document.createElement("div");
+					 div.innerHTML=textStatus+""+errorThrown;
+					 document.getElementsByTagName("body")[0].appendChild(div);
+
+          			 //通常情况下textStatus和errorThrown只有其中一个包含信息
+         			 //调用本次ajax请求时传递的options参数
+      				 }
+
+         });
+
+//跨域（可跨所有域名）
+   
+//   $.getJSON("http://192.168.126.105:8080/login.shtml", {telephone:"15067171806",passWord:"123456"}, function(json) {
+//
+//      alert(JSON.stringify(json));
+//
+//    });
+
+　
+ 
+
+
+</script>
+</head>
+
+<body>
+
+111111111111111111111111
+</body>
+</html>
