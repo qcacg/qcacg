@@ -582,6 +582,7 @@
 		editor.config.uploadImgUrl = '/content/upload.shtml';
 		$('#btn-content-post').click(function () {
 			var html = editor.$txt.html();
+
 		});
 
 		editor.config.emotions = {

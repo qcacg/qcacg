@@ -77,6 +77,8 @@
           <element id="library" level="project" name="Maven: commons-httpclient:commons-httpclient:3.1" />
           <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.12" />
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4" />
+          <element id="file-copy" path="F:/WorkSpace/IT/Ueditor4SpringMvc-master/src/main/webapp/WEB-INF/lib/ueditor-1.1.2.jar" />
+          <element id="file-copy" path="F:/WorkSpace/IT/gt-java-sdk-master/lib/java-json.jar" />
         </element>
       </element>
       <element id="directory" name="META-INF">

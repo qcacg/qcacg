@@ -1,5 +1,6 @@
 package com.qcacg.controller.system;
 
+import com.baidu.ueditor.ActionEnter;
 import com.qcacg.controller.BaseController;
 import com.qcacg.entity.ContentEntity;
 import com.qcacg.service.system.ContentService;
@@ -20,6 +21,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.UUID;
 
 /**
@@ -49,11 +51,11 @@ public class ContentController extends BaseController {
     }
 
     @RequestMapping("saveContent")
-    public void saveContent(MultipartHttpServletRequest request, HttpServletResponse response,
+    public void saveContent(@RequestParam(value = "html", required = false)MultipartHttpServletRequest request, HttpServletResponse response,
                        ModelMap model, Long id) {
         String message = "";
         String error = "";
-        MultipartFile file = request.getFile("text");
+        MultipartFile file = request.getFile("html");
         String path = "";
         if (file == null || file.isEmpty()) {
             error = "文件太小！";
@@ -61,12 +63,12 @@ public class ContentController extends BaseController {
 
             File destFile = null;
             try {
-                String filename = UploadUtils.generateFilename("txt");
+                String filename = UploadUtils.generateFilename("html");
                 path = "/upload/file/content" + filename;
                 destFile = fileRepository.storeByFilename(path, file);
                 message = path;
             } catch (Exception e) {
-                error = "上传失败！";
+                error = "保存失败！";
                 e.printStackTrace();
                 if (destFile != null && destFile.exists()) {
                     destFile.delete();
@@ -79,9 +81,23 @@ public class ContentController extends BaseController {
         ResponseUtils.renderText(response, obj.toString());
     }
 
-    @RequestMapping("save")
-    public void save(){
 
+    @RequestMapping("save")
+    public void save(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity){
+
+        String path = request.getSession().getServletContext().getRealPath("/upload/file/content");
+
+        try {
+            String exec = new ActionEnter(request, path).exec();
+            PrintWriter writer = response.getWriter();
+            writer.write(exec);
+            writer.flush();
+            writer.close();
+            contentEntity.setContentUrl(path);
+            contentEntity.setContent("");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

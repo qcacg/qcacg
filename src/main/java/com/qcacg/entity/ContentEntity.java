@@ -18,6 +18,16 @@ public class ContentEntity implements Serializable {
     private String contentUpdate;
     @Column(name = "contentStatus")
     private String contentStatus;
+    @Column(name = "contentUrl")
+    private String contentUrl;
+
+    public String getContentUrl() {
+        return contentUrl;
+    }
+
+    public void setContentUrl(String contentUrl) {
+        this.contentUrl = contentUrl;
+    }
 
     public String getContentStatus() {
         return contentStatus;

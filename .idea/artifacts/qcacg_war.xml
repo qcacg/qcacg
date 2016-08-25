@@ -3,6 +3,12 @@
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="archive" name="qcacg.war">
       <element id="artifact" artifact-name="qcacg:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="file-copy" path="F:/WorkSpace/IT/Ueditor4SpringMvc-master/src/main/webapp/WEB-INF/lib/ueditor-1.1.2.jar" />
+          <element id="file-copy" path="F:/WorkSpace/IT/gt-java-sdk-master/lib/java-json.jar" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>
