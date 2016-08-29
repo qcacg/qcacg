@@ -97,8 +97,8 @@
 				$("#btn-login").click(function () {
 					var validate = captchaObj.getValidate();
 					if (!validate) {
-						alert('请先完成验证！');
-						return;
+//						alert('请先完成验证！');
+//						return;
 					}
 					$.ajax({
 						url: "VerifyLoginServlet", // 进行二次验证
@@ -114,7 +114,7 @@
 
 							if (data && (data.status === "success")) {
 
-								$("#popup-captcha").html('登录成功');
+								$("#popup-captcha").html('欢迎回来！页面即将跳转到链接');
 
 							} else {
 

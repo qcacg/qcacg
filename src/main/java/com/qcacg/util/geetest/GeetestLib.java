@@ -1,5 +1,7 @@
 package com.qcacg.util.geetest;
 
+import com.qcacg.util.UserEntityUtil;
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.InetAddress;
@@ -51,7 +53,7 @@ public class GeetestLib {
 	
 	private String privateKey = "";
 	
-	private String userId = "";
+	private Long userId = null;
 
 	private String responseStr = "";
 	
@@ -139,13 +141,17 @@ public class GeetestLib {
 	/**
 	 * 验证初始化预处理
 	 *
-	 * @param userid
+//	 * @param userid
 	 * @return 1表示初始化成功，0表示初始化失败
 	 */
-	public int preProcess(String userId){
-		
-		this.userId = userId;
-		return this.preProcess();
+	public  boolean checkOut(){
+
+		if(UserEntityUtil.getUserFromSession().getUserId()!=null){
+			return false;
+		}
+		else {
+			return true;
+		}
 	}
 	
 	
@@ -158,9 +164,9 @@ public class GeetestLib {
 	private int registerChallenge() {
 		try {
 			String GET_URL = apiUrl + registerUrl+"?gt=" + this.captchaId;
-			if (this.userId != ""){
+			if (this.userId != null){
 				GET_URL = GET_URL + "&user_id=" + this.userId;
-				this.userId = "";
+				this.userId = null;
 			}
 			gtlog("GET_URL:" + GET_URL);
 			String result_str = readContentFromGet(GET_URL);
@@ -238,7 +244,7 @@ public class GeetestLib {
 	/**
 	 * 检查客户端的请求是否合法,三个只要有一个为空，则判断不合法
 	 * 
-	 * @param request
+//	 * @param request
 	 * @return
 	 */
 	private boolean resquestIsLegal(String challenge, String validate, String seccode) {
@@ -281,9 +287,9 @@ public class GeetestLib {
 				(this.sdkLang + "_" + this.verName));
 		String response = "";
 		
-		if (this.userId != ""){
+		if (this.userId != null){
 			query = query + "&user_id=" + this.userId;
-			this.userId = "";
+			this.userId = null;
 		}
 		gtlog(query);
 		try {
@@ -317,12 +323,12 @@ public class GeetestLib {
 	 * @param challenge
 	 * @param validate
 	 * @param seccode
-	 * @param userid
+//	 * @param userid
 	 * @return 验证结果,1表示验证成功0表示验证失败
 	 */
-	public int enhencedValidateRequest(String challenge, String validate, String seccode, String userid) {	
+	public int enhencedValidateRequest(String challenge, String validate, String seccode, Long userId) {
 		
-		this.userId = userid;
+		this.userId = userId;
 		return this.enhencedValidateRequest(challenge, validate, seccode);
 	}
 
@@ -415,7 +421,7 @@ public class GeetestLib {
 	/**
 	 * 解码随机参数
 	 * 
-	 * @param encodeStr
+//	 * @param encodeStr
 	 * @param challenge
 	 * @return
 	 */
@@ -457,7 +463,7 @@ public class GeetestLib {
 	/**
 	 * 输入的两位的随机数字,解码出偏移量
 	 * 
-	 * @param randStr
+//	 * @param randStr
 	 * @return
 	 */
 	private int decodeRandBase(String challenge) {

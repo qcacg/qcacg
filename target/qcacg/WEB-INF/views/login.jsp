@@ -97,8 +97,8 @@
 				$("#btn-login").click(function () {
 					var validate = captchaObj.getValidate();
 					if (!validate) {
-						alert('请先完成验证！');
-						return;
+//						alert('请先完成验证！');
+//						return;
 					}
 					$.ajax({
 						url: "VerifyLoginServlet", // 进行二次验证
@@ -114,7 +114,7 @@
 
 							if (data && (data.status === "success")) {
 
-								$("#popup-captcha").html('登录成功');
+								$("#popup-captcha").html('欢迎回来！页面即将跳转到链接');
 
 							} else {
 
@@ -146,7 +146,7 @@
 					initGeetest({
 						gt: data.gt,
 						challenge: data.challenge,
-						product: "float", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+						product: "popup", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
 						offline: !data.success // 表示用户后台检测极验服务器是否宕机，一般不需要关注
 					}, handlerPopup);
 				}

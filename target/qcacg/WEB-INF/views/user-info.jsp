@@ -751,7 +751,19 @@
 			 $('.block-bookinfo').removeClass('active');
 			 $('.block-bookcontent').addClass('active');
 		});
+		$('#btn-content-post').on('click',function(){
+			$.ajax({
+				url: "/content/save.shtml", // 进行二次验证
+				type: "post",
+				dataType: "json",
+				data: {chapterName:'chapterName',content:'content',
 
+				},
+				success: function (data) {
+					alert('保存成功！');
+				}
+			});
+		});
 		
 	})
 </script>

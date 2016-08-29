@@ -79,6 +79,8 @@
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4" />
           <element id="file-copy" path="F:/WorkSpace/IT/Ueditor4SpringMvc-master/src/main/webapp/WEB-INF/lib/ueditor-1.1.2.jar" />
           <element id="file-copy" path="F:/WorkSpace/IT/gt-java-sdk-master/lib/java-json.jar" />
+          <element id="file-copy" path="F:/下载/sdk-java-23443437/taobao-sdk-java-auto_1455552377940-20160828.jar" />
+          <element id="file-copy" path="F:/下载/sdk-java-23443437/taobao-sdk-java-auto_1455552377940-20160828-source.jar" />
         </element>
       </element>
       <element id="directory" name="META-INF">

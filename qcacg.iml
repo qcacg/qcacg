@@ -152,5 +152,18 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://F:/下载/sdk-java-23443437" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://F:/下载/sdk-java-23443437" />
+        </SOURCES>
+        <jarDirectory url="file://F:/下载/sdk-java-23443437" recursive="false" />
+        <jarDirectory url="file://F:/下载/sdk-java-23443437" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>

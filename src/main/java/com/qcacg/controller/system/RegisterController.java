@@ -4,7 +4,8 @@ import com.qcacg.entity.UserEntity;
 import com.qcacg.entity.user.UserCustom;
 import com.qcacg.entity.user.UserQauryVo;
 import com.qcacg.service.system.UserService;
-import com.qcacg.util.SendTelephoneCode;
+import com.qcacg.util.Sms;
+import com.taobao.api.ApiException;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,7 +72,7 @@ public class RegisterController {
 }
     @RequestMapping("sendTelephoneCode")
     @ResponseBody
-    public void checkTelephoneCode(String telephone, HttpServletRequest request){
+    public void checkTelephoneCode(String telephone, HttpServletRequest request) throws ApiException {
         StringBuilder telephoneCode = new StringBuilder();
         Random random = new Random();
         for (int i = 0; i < 6; i++) {
@@ -81,7 +82,7 @@ public class RegisterController {
         session.setAttribute(VALIDATE_TELEPHONE,telephone);
         session.setAttribute(VALIDATE_TELEPHONE_CODE,telephoneCode.toString());
         session.setAttribute(SEND_CODE_TIME, new Date().getTime());
-        SendTelephoneCode.sendMessage(telephone, telephoneCode);
+        Sms.sendMessage(telephone, telephoneCode);
     }
 
 
@@ -131,13 +132,6 @@ public class RegisterController {
         return "redirect:/login.shtml";
 
     }
-//    public class Result
-//    {
-//
-//        public Boolean success;
-//        public String userid;
-//        public String username;
-//        public String msg;
-//    }
+
 
 }

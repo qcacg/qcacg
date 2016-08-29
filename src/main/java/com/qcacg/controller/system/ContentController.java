@@ -2,7 +2,9 @@ package com.qcacg.controller.system;
 
 import com.baidu.ueditor.ActionEnter;
 import com.qcacg.controller.BaseController;
+import com.qcacg.entity.ChapterEntity;
 import com.qcacg.entity.ContentEntity;
+import com.qcacg.service.system.ChapterService;
 import com.qcacg.service.system.ContentService;
 import com.qcacg.util.http.ResponseUtils;
 import com.qcacg.util.upload.FileRepository;
@@ -34,7 +36,8 @@ public class ContentController extends BaseController {
     private FileRepository fileRepository;
     @Autowired
     ContentService contentService;
-
+    @Autowired
+    ChapterService chapterService;
     @RequestMapping("findContentByChapter")
     @ResponseBody
     public ContentEntity findContentByChapter(Long chapterId)
@@ -52,7 +55,7 @@ public class ContentController extends BaseController {
 
     @RequestMapping("saveContent")
     public void saveContent(@RequestParam(value = "html", required = false)MultipartHttpServletRequest request, HttpServletResponse response,
-                       ModelMap model, Long id) {
+                       ModelMap model, ContentEntity contentEntity) {
         String message = "";
         String error = "";
         MultipartFile file = request.getFile("html");
@@ -67,6 +70,7 @@ public class ContentController extends BaseController {
                 path = "/upload/file/content" + filename;
                 destFile = fileRepository.storeByFilename(path, file);
                 message = path;
+                PrintWriter writer = response.getWriter();
             } catch (Exception e) {
                 error = "保存失败！";
                 e.printStackTrace();
@@ -75,6 +79,10 @@ public class ContentController extends BaseController {
                 }
             }
         }
+
+        contentEntity.setContentUrl(path);
+        contentEntity.setContent("");
+        this.contentService.saveOrUpdate(contentEntity);
         JSONObject obj = new JSONObject();
         obj.put("err", error);
         obj.put("msg", message);
@@ -83,7 +91,8 @@ public class ContentController extends BaseController {
 
 
     @RequestMapping("save")
-    public void save(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity){
+    @ResponseBody
+    public void save(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity, ChapterEntity chapterEntity){
 
         String path = request.getSession().getServletContext().getRealPath("/upload/file/content");
 
@@ -93,11 +102,15 @@ public class ContentController extends BaseController {
             writer.write(exec);
             writer.flush();
             writer.close();
+            chapterEntity.setChapterName("");
             contentEntity.setContentUrl(path);
-            contentEntity.setContent("");
+            contentEntity.setContent(exec);
+            this.contentService.saveOrUpdate(contentEntity);
+            this.chapterService.saveOrUpdate(chapterEntity);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
 

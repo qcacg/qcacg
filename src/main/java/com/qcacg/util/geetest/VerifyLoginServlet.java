@@ -2,6 +2,8 @@ package com.qcacg.util.geetest;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,12 +16,12 @@ import java.io.PrintWriter;
 /**
  * 使用post方式，返回验证结果, request表单中必须包含challenge, validate, seccode
  */
-
+@Controller
 public class VerifyLoginServlet extends HttpServlet {
 
 
 	private static final long serialVersionUID = 5691814559693335335L;
-
+	@RequestMapping("/StartCaptchaServlet")
 	protected void doPost(HttpServletRequest request,
 						  HttpServletResponse response) throws ServletException, IOException {
 
@@ -33,7 +35,7 @@ public class VerifyLoginServlet extends HttpServlet {
 		int gt_server_status_code = (Integer) request.getSession().getAttribute(gtSdk.gtServerStatusSessionKey);
 		
 		//从session中获取userid
-//		String userId = (String)request.getSession().getAttribute("userId");
+//		Long userId = UserEntityUtil.getUserFromSession().getUserId();
 		
 		int gtResult = 0;
 
