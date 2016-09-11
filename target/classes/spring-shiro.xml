@@ -76,6 +76,9 @@
 	<bean id="chainDefinitionSectionMetaSource" class="com.qcacg.shiro.ChainDefinitionSectionMetaSource">
 		<property name="filterChainDefinitions">
 			<value>
+
+				/index.jsp = anon
+				/index.shtml = anon
 				/common/** = anon
 				/lib/** = anon
 				/module/** = anon
@@ -90,10 +93,6 @@
 				/updatePassword.shtml = anon
 				/404.jsp = anon
 				/error.jsp = anon
-				/index.shtml = anon
-				/index.jsp = anon
-				/index.html = anon
-				/index.htm = anon
 
 			</value>
 		</property>

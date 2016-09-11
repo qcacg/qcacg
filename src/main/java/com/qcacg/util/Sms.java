@@ -12,14 +12,14 @@ import com.taobao.api.response.AlibabaAliqinFcSmsNumSendResponse;
 public class Sms {
 
     public static void sendMessage(String telephone, StringBuilder telephoneCode) throws ApiException {
-        String url="http://gw.api.taobao.com/router/rest";
-        TaobaoClient client = new DefaultTaobaoClient(url, "23443437", "d952c9b7409dfe772b6f0e19e775e689");
+
+        TaobaoClient client = new DefaultTaobaoClient("http://gw.api.taobao.com/router/rest", "23454250", "1b31945a443c43e6c4caaf22a09d0f5c");
         AlibabaAliqinFcSmsNumSendRequest req = new AlibabaAliqinFcSmsNumSendRequest();
         req.setSmsType("normal");
-        req.setSmsFreeSignName("轻创轻小说");
-        req.setSmsParam("{\"number\":\""+telephoneCode+"\",\"product\":\"轻创轻小说\"}");
+        req.setSmsFreeSignName("注册验证");
+        req.setSmsParam("{\"code\":\""+telephoneCode+"\",\"product\":\"轻悦轻小说\"}");
         req.setRecNum(telephone);
-        req.setSmsTemplateCode("SMS_13700646");
+        req.setSmsTemplateCode("SMS_14715820");
         AlibabaAliqinFcSmsNumSendResponse response = client.execute(req);
         System.out.println(response.getBody());
     }

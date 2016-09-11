@@ -106,6 +106,10 @@
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>default</servlet-name>
+		<url-pattern>*.woff2</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
 		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
 	<error-page>
@@ -113,10 +117,9 @@
 		<location>/WEB-INF/views/404.jsp</location>
 	</error-page>
 	<welcome-file-list>
-		<welcome-file>index.shtml</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
+
+		<welcome-file>/WEB-INF/views/index.jsp</welcome-file>
+
 	</welcome-file-list>
 
 	<servlet>

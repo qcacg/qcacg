@@ -92,8 +92,7 @@ public class UserController extends BaseController
 	}
 
 	@RequestMapping(value = "upload")
-	public void upload(MultipartHttpServletRequest request, HttpServletResponse response,
-					   ModelMap model) {
+	public void upload(MultipartHttpServletRequest request, HttpServletResponse response) {
 
 		String message = "";
 		String error = "";

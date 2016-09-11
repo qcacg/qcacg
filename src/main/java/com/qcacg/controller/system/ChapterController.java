@@ -6,6 +6,7 @@ import com.qcacg.service.system.ChapterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -20,9 +21,11 @@ public class ChapterController extends BaseController {
     ChapterService chapterService;
     @RequestMapping("saveChapter")
     @ResponseBody
-    public String saveChapter(ChapterEntity form)
+    public String saveChapter(ChapterEntity chapterEntity, @RequestParam("chapterName")String chapterName, @RequestParam("volumeId")Long volumeId)
     {
-        return this.chapterService.saveOrUpdate(form);
+        chapterEntity.setVolumeId(volumeId);
+        chapterEntity.setChapterName(chapterName);
+        return this.chapterService.saveOrUpdate(chapterEntity);
     }
 
     @RequestMapping("findChapterByVolume")

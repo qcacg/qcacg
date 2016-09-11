@@ -13,8 +13,8 @@
     wor_book.BookCoverImage,
     wor_book.BookWordCount,
     wor_book.BookStatus,
-    wor_book.BookHits,
-    wor_book.BookCollections,
+    wor_book.BookHit,
+    wor_book.BookCollect,
     wor_book.BookCopperCoins,
     wor_book.BookSilverCoins
     FROM

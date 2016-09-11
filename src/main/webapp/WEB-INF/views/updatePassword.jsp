@@ -3,16 +3,17 @@
 <html lang="zh-CN">
 	<head>
 		<meta charset="utf-8">
-		<title>注册 - 轻文轻小说</title>
+		<title>注册 - 轻悦轻小说</title>
 		<link rel="stylesheet" href="${pageContext.servletContext.contextPath }/register_files/moe.f9e95134.css">
 		<link rel="stylesheet" href="${pageContext.servletContext.contextPath }/register_files/login.29a3b59b.css">
 		<script src="${pageContext.servletContext.contextPath }/js/jquery-1.9.1.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main.css" />
+		<link rel="shortcut icon" href="http://www.qcacg.com/favicon.ico" type="image/x-icon" />
 	</head>
 	<body>
 		<section class="navbar">
 				<nav class="nav">
-					<h1 class="logo"><a href="index.shtml">轻创轻小说</a></h1>
+					<h1 class="logo"><a href="index.shtml">轻悦轻小说</a></h1>
 					<ul class="clearfloat pull-left">
 						<li><a href="index.shtml">首页</a></li>
 						<li>分类</li>
@@ -91,6 +92,16 @@
 				<ul class="gy gy_over">
 					<li class="title">友情链接</li>
 				</ul>
+			</div>
+		</footer>
+		<footer class="footer">
+			<div class="container">
+				<div class="site-info">
+					<p>杭州轻悦网络科技有限公司
+						<span class="driver"> | </span>
+						浙ICP备16021285号
+					</p>
+				</div>
 			</div>
 		</footer>
 	</body>

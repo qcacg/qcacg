@@ -9,13 +9,12 @@ import com.qcacg.util.upload.FileRepository;
 import com.qcacg.util.upload.UploadUtils;
 import net.sf.json.JSONObject;
 import org.apache.commons.io.FilenameUtils;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -61,12 +60,17 @@ public class BookController extends BaseController {
     }
 
     @RequestMapping("saveOrUpdateBook")
-    public void saveBook(BookEntity form)
+    public void saveBook(BookEntity bookEntity, @RequestParam("bookName")String bookName,
+                         @RequestParam("bookIntroduction")String bookIntroduction,
+                         @RequestParam("bookCoverImage")String bookCoverImage )
     {
         try{
-            BookEntity bookEntity = new BookEntity();
-            BeanUtils.copyProperties(form, bookEntity);
-            this.bookService.saveOrUpdate(form);
+            Long userId = UserEntityUtil.getUserFromSession().getUserId();
+            bookEntity.setUserId(userId);
+            bookEntity.setBookName(bookName);
+            bookEntity.setBookIntroduction(bookIntroduction);
+            bookEntity.setBookCoverImage(bookCoverImage);
+            this.bookService.saveOrUpdate(bookEntity);
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -74,8 +78,7 @@ public class BookController extends BaseController {
     }
 
     @RequestMapping(value = "upload")
-    public void upload(MultipartHttpServletRequest request, HttpServletResponse response,
-                       ModelMap model, Long id) {
+    public void upload(MultipartHttpServletRequest request, HttpServletResponse response) {
         String message = "";
         String error = "";
         MultipartFile file = request.getFile("Image");
@@ -103,6 +106,7 @@ public class BookController extends BaseController {
                 }
             }
         }
+
         JSONObject obj = new JSONObject();
         obj.put("err", error);
         obj.put("msg", message);

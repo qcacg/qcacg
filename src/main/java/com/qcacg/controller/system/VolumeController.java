@@ -7,6 +7,7 @@ import com.qcacg.service.system.VolumeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -25,14 +26,16 @@ public class VolumeController extends BaseController {
 
     @RequestMapping("saveVolume")
     @ResponseBody
-    public String saveVolume(VolumeEntity form)
+    public String saveVolume(VolumeEntity volumeEntity, @RequestParam("volumeName")String volumeName, @RequestParam("bookId")Long bookId)
     {
-        return this.volumeService.saveOrUpdate(form);
+        volumeEntity.setBookId(bookId);
+        volumeEntity.setVolumeName(volumeName);
+        return this.volumeService.saveOrUpdate(volumeEntity);
     }
 
     @RequestMapping("findVolumeByBook")
     @ResponseBody
-    public List<VolumeEntity> findVolumeByBook(Long bookId)
+    public List<VolumeEntity> findVolumeByBook(@RequestParam("bookId")Long bookId)
     {
         return this.volumeService.findVolumeByBookId(bookId);
     }

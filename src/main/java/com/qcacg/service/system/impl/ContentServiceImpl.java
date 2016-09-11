@@ -4,8 +4,13 @@ import com.qcacg.entity.ContentEntity;
 import com.qcacg.mapper.ContentMapper;
 import com.qcacg.service.BaseServiceImpl;
 import com.qcacg.service.system.ContentService;
+import com.qcacg.util.upload.UploadUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 
 /**
  * Created by Administrator on 2016/7/4.
@@ -26,9 +31,10 @@ public class ContentServiceImpl extends BaseServiceImpl<ContentEntity> implement
         String result = "";
         try
         {
-            if (entity.getContent() == null)
+            if (entity.getContentId() == null)
             {
                 return this.save(entity);
+
             } else
             {
                 result = this.update(entity);

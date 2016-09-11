@@ -46,20 +46,6 @@ public class LoginController {
 		return "user-info";
 	}
 
-//	@RequestMapping("index")
-//	public String index(Model model,HttpServletRequest request) {
-//		UserEntity infoForm = UserEntityUtil.getUserFromSession();
-//		String userId = String.valueOf(infoForm.getUserId());
-//		if (StringUtils.isNotBlank(userId)) {
-//			Map<String, String> queryMap = new HashMap<String, String>();
-//			queryMap.put("userId", userId);
-//			List<ResourcesEntity> resourceForms = resourcesService.findResourcessByMap(queryMap);
-//			List<ResourcesEntity> ns = TreeUtil.getChildResourceForms(resourceForms, 0);
-//			model.addAttribute("list", ns);
-//		}
-//		// 登陆的信息回传页面
-//		return "indexindex";
-//	}
 
 	@RequestMapping(value = "login", method = RequestMethod.POST, produces = "text/html; charset=utf-8")
 	public String login(HttpServletRequest request, HttpServletResponse response, UserEntity user,Model model) {
@@ -95,7 +81,7 @@ public class LoginController {
 
 	}
 	@RequestMapping("index")
-	public String main() {
+	public String index() {
 		return "index";
 	}
 

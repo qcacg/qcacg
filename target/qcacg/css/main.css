@@ -495,3 +495,23 @@ figcaption a {
 				width: 100%;
 				padding-left: 15%;
 			}
+
+.footer .container{
+	position: relative;
+	width: 1130px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.footer .site-info{
+	font-size:12px;
+	color:#666;
+	text-align:center;
+	margin-top:16px;
+	padding-bottom:24px
+}
+.footer .site-info p{
+	 margin:0
+ }
+.footer .site-info .divider {
+	margin:0 8px;color:#aaa
+}

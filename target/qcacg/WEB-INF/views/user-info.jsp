@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="zh-CN">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		
 		
-		<title>用户中心 - 轻文轻小说</title>
+		<title>用户中心 - 轻悦轻小说</title>
 		<link rel="stylesheet" href="${pageContext.servletContext.contextPath }/user-info/moe.css">
 		<link rel="stylesheet" href="${pageContext.servletContext.contextPath }/user-info/member.css">
 		<link rel="stylesheet" href="${pageContext.servletContext.contextPath }/user-info/user-info.css">
@@ -13,7 +14,8 @@
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath }/js/cropper.js"></script>
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath }/js/user-info-A.js"></script>
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath }/js/user-info-H.js"></script>
-
+	    <script type="text/javascript" src="${pageContext.servletContext.contextPath }/js/user-info-B.js"></script>
+	    <link rel="shortcut icon" href="http://www.qcacg.com/favicon.ico" type="image/x-icon" />
 		 <style>
    img {
       max-width: 100%; /* This rule is very important, please do not ignore this! */
@@ -172,9 +174,9 @@
 							<div class="item" id="item-thumb">
 								<div class="thumb-wrap">
 								<a href="javascript:;" class="thumb">
-									<img src="${pageContext.servletContext.contextPath }/user-info/b8219e4b-3e4c-4ba1-840c-fab078a29b97.jpg" srcset="//image.iqing.in/cover/b8219e4b-3e4c-4ba1-840c-fab078a29b97.jpg?imageView2/1/w/128/h/171/format/jpg/interlace/1/q/86 128w, //image.iqing.in/cover/b8219e4b-3e4c-4ba1-840c-fab078a29b97.jpg?imageView2/1/w/256/h/342/format/jpg/interlace/1/q/86 256w" data-sizes="128px" class="cover"><span class="tag-a status status-0">草稿</span></a><span class="count tag-a">0 字</span><span class="tag-a channel channel-10">少年</span><span class="tag-b view">点击：0</span><span class="tag-b coin">轻石：0</span><span class="tag-b follow">收藏：0</span></div>
+									<img src="${bookEntity.bookCoverImage}" srcset="//image.iqing.in/cover/b8219e4b-3e4c-4ba1-840c-fab078a29b97.jpg?imageView2/1/w/128/h/171/format/jpg/interlace/1/q/86 128w, //image.iqing.in/cover/b8219e4b-3e4c-4ba1-840c-fab078a29b97.jpg?imageView2/1/w/256/h/342/format/jpg/interlace/1/q/86 256w" data-sizes="128px" class="cover"><span class="tag-a status status-0">草稿</span></a><span class="count tag-a">0 字</span><span class="tag-a channel channel-10">少年</span><span class="tag-b view">点击：0</span><span class="tag-b coin">轻石：0</span><span class="tag-b follow">收藏：0</span></div>
 										<a href="javascript:;" class="title">
-											我的老婆非常非常可爱</a>
+										${bookEntity.bookName}</a>
 							</div>
 						</div>
 						<ul class="pagination"></ul>
@@ -194,12 +196,12 @@
 								<div class="ipt-group" ><input id="ipt-title-post-info" placeholder="64个字符以内" required="" maxlength="64" autocomplete="off" spellcheck="false" class="form-control input-sm" name="bookName" value="${bookEntity.bookName}"></div>
 							</div>
 							<div class="row-m"><label for="ipt-intro-post-info" class="label-m label-top">简介：</label>
-								<div class="ipt-group"><textarea id="ipt-intro-post-info" placeholder="300个字符以内" required="" maxlength="300" spellcheck="false" class="form-control input-sm" name="bookIntroduction" value="${bookEntity.bookIntroduction}"></textarea></div>
+								<div class="ipt-group"><textarea id="ipt-intro-post-info" placeholder="300个字符以内" required="" maxlength="300" spellcheck="false" class="form-control input-sm" name="bookIntroduction" >${bookEntity.bookIntroduction}</textarea></div>
 							</div>
 							<div class="row-m"><label class="label-m" >分区：</label>
 								<div class="ipt-group" >
-									<div class="ipt-item"><input id="ipt-channel-a" type="radio" name="channel" value="10" checked="checked" class="magic-radio"><label for="ipt-channel-a" name="partition" value="少年">少年</label></div>
-									<div class="ipt-item"><input id="ipt-channel-b" type="radio" name="channel" value="11" class="magic-radio"><label for="ipt-channel-b" name="partition" value="少女">少女</label></div>
+									<div class="ipt-item"><input id="ipt-channel-a" type="radio" name="channel" value="10" checked="checked" class="magic-radio"><label for="ipt-channel-a" >少年</label></div>
+									<div class="ipt-item"><input id="ipt-channel-b" type="radio" name="channel" value="11" class="magic-radio"><label for="ipt-channel-b" >少女</label></div>
 								</div>
 							</div>
 							<div class="row-m"><label class="label-m">分类：</label>
@@ -212,8 +214,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="row-m hide"><label class="label-m">封面：</label>
-								<div class="ipt-group"><input id="ipt-cover-post-info" name="cover" class="form-control input-sm"></div>
+							<div class="row-m hide"><img src="${bookEntity.bookCoverImage}"><label class="label-m">封面：</label>
+								<div class="ipt-group"><input id="ipt-cover-post-info" name="bookCoverImage" class="form-control input-sm" value="${bookEntity.bookCoverImage}"></div>
 							</div>
 							<div class="row-m"><label class="label-m"></label>
 								<div class="ipt-group"><button id="btn-info-book" type="submit" class="btn btn-primary btn-sm btn-wide">保存</button></div>
@@ -257,13 +259,13 @@
 			</div>
 			<div class="js-block block block-bookcontent">
 				<div class="area-title-block"><span onclick="history.back()" class="prev"><i class="fa fa-angle-left"></i></span><span class="title">章节</span><span class="next"></span></div>
-				<form id="form-content-post" class="form-member form-chapter">
+				<%--<form id="form-content-post" class="form-member form-chapter">--%>
 					<div id="area-title-content" class="row-m" ><label for="ipt-chapter-post" class="label-m" >标题：</label>
 						<div class="ipt-group" ><input id="ipt-chapter-post" required="" maxlength="64" autocomplete="off" placeholder="请输入章名" class="form-control input-sm" name="chapterName" value="${chapterEntity.chapterName}"></div>
 					</div>
 					<div class="row-m"><label for="ipt-content-post" class="label-m label-top" >正文：</label>
 						<div class="ipt-group" >
-							<textarea id="ipt-content-post" spellcheck="false" placeholder="请输入内容" class="form-control input-sm" style="display: none;">
+							<textarea id="ipt-content-post" required="" spellcheck="false" placeholder="${contentEntity.content}" class="form-control input-sm" style="display: none;">
 
 							</textarea>
 						</div>
@@ -272,17 +274,17 @@
 						<div class="ipt-group text-center relative">
 							<div id="text-count-post" class="count-content"></div><button id="btn-content-post" class="btn btn-sm btn-primary btn-wide">保存</button><a id="link-restore-edit" class="btn btn-link link-restore">恢复上次编辑的内容</a></div>
 					</div>
-				</form>
+				<%--</form>--%>
 			</div>
 			<!-- 新增卷   加入style="display: block; padding-right: 17px;"  class加入 in-->
 			<div id="modal-add-vol" class="modal fade modal-post">
 				<div class="modal-dialog modal-sm">
 					<button data-dismiss="modal" class="close"><i class="fa fa-remove"></i></button>
-					<form id="form-add-vol" class="modal-content">
+					<%--<form id="form-add-vol" class="modal-content">--%>
 						<div class="modal-body">
-							<p class="text-center">请输入卷的标题</p><input id="ipt-title-volume" placeholder="卷标题" required="" maxlength="64" autocomplete="off" class="form-control input-sm"></div>
+							<p class="text-center">请输入卷的标题</p><input id="ipt-title-volume" placeholder="${volumeEntity.volumeName}" required="" maxlength="64" autocomplete="off" class="form-control input-sm"></div>
 						<div class="modal-footer text-center"><button id="btn-add-vol-submit" type="submit" class="btn-primary btn-sm btn btn-wide">提交</button></div>
-					</form>
+					<%--</form>--%>
 				</div>
 			</div>
 			<div id="modal-book-apply" class="modal fade modal-post">
@@ -296,11 +298,11 @@
 			</div>
 			<div id="modal-rename-vol" class="modal fade modal-post">
 				<div class="modal-dialog modal-sm"><button data-dismiss="modal" class="close"><i class="fa fa-remove"></i></button>
-					<form id="form-rename-vol" class="modal-content">
+					<%--<form id="form-rename-vol" class="modal-content">--%>
 						<div class="modal-body">
 							<p class="text-center">请输入卷的标题</p><input id="ipt-title-rename-volume" placeholder="卷标题" required="" maxlength="64" autocomplete="off" class="form-control input-sm"></div>
 						<div class="modal-footer text-center"><button id="btn-rename-vol-submit" type="submit" class="btn-primary btn-sm btn btn-wide">提交</button></div>
-					</form>
+					<%--</form>--%>
 				</div>
 			</div>
 			<div id="modal-rename-cpt" class="modal fade modal-post">
@@ -572,104 +574,110 @@
 		</div>
 		<div></div>
 		<div class="modal-backdrop fade in" style="display:none" id="heimu"></div>
-	
-
+	 <footer class="footer">
+		 <div class="container">
+	         <div class="site-info">
+		         <p>杭州轻悦网络科技有限公司
+			     <span class="driver"> | </span>
+			     浙ICP备16021285号
+		         </p>
+	     </div>
+		 </div>
+     </footer>
 
 	<script type="text/javascript" src="${pageContext.servletContext.contextPath }/user-info/wangEditor.min.js"></script>
 	<script type="text/javascript">
-		var textarea = document.getElementById('ipt-content-post');
-		var editor = new wangEditor(textarea);
-		editor.config.uploadImgUrl = '/content/upload.shtml';
-		$('#btn-content-post').click(function () {
-			var html = editor.$txt.html();
 
-		});
+			var textarea = document.getElementById('ipt-content-post');
+			var editor = new wangEditor(textarea);
+			editor.config.uploadImgUrl = '/content/upload.shtml';
 
-		editor.config.emotions = {
-			'default': {
-				title: '轻悦娘',
-				data: [
-					{
-						'icon': './img/不明所以然.jpg',
-						'value': '[不明所以然]'
-					},
-					{
-						'icon': './img/伤心欲绝.jpg',
-						'value': '[伤心欲绝]'
-					},
-					{
-						'icon': './img/发呆.jpg',
-						'value': '[发呆]'
-					},
-					{
-						'icon': './img/吃惊.jpg',
-						'value': '[吃惊]'
-					},
-					{
-						'icon': './img/哭泣.jpg',
-						'value': '[哭泣]'
-					},
-					{
-						'icon': './img/害羞.jpg',
-						'value': '[害羞]'
-					},
-					{
-						'icon': './img/就是那个.jpg',
-						'value': '[就是那个]'
-					},
-					{
-						'icon': './img/微笑.jpg',
-						'value': '[微笑]'
-					},
-					{
-						'icon': './img/恼怒.jpg',
-						'value': '[恼怒]'
-					},
-					{
-						'icon': './img/悲伤.jpg',
-						'value': '[悲伤]'
-					},
-					{
-						'icon': './img/战斗力渣渣.jpg',
-						'value': '[战斗力渣渣]'
-					},
-					{
-						'icon': './img/抛媚眼.jpg',
-						'value': '[抛媚眼]'
-					},
-					{
-						'icon': './img/早就看穿一切.jpg',
-						'value': '[早就看穿一切]'
-					},
-					{
-						'icon': './img/汗.jpg',
-						'value': '[汗]'
-					},
-					{
-						'icon': './img/菜刀.jpg',
-						'value': '[菜刀]'
-					},
-					{
-						'icon': './img/那个有没有.jpg',
-						'value': '[那个有没有]'
-					},
-					{
-						'icon': './img/震惊.jpg',
-						'value': '[震惊]'
-					},
-					{
-						'icon': './img/高兴.jpg',
-						'value': '[高兴]'
-					},
-					{
-						'icon': './img/默默地看着.jpg',
-						'value': '[默默地看着]'
-					}
-						]
-			}
+			editor.config.emotions = {
+				'default': {
+					title: '轻悦娘',
+					data: [
+						{
+							'icon': './img/不明所以然.jpg',
+							'value': '[不明所以然]'
+						},
+						{
+							'icon': './img/伤心欲绝.jpg',
+							'value': '[伤心欲绝]'
+						},
+						{
+							'icon': './img/发呆.jpg',
+							'value': '[发呆]'
+						},
+						{
+							'icon': './img/吃惊.jpg',
+							'value': '[吃惊]'
+						},
+						{
+							'icon': './img/哭泣.jpg',
+							'value': '[哭泣]'
+						},
+						{
+							'icon': './img/害羞.jpg',
+							'value': '[害羞]'
+						},
+						{
+							'icon': './img/就是那个.jpg',
+							'value': '[就是那个]'
+						},
+						{
+							'icon': './img/微笑.jpg',
+							'value': '[微笑]'
+						},
+						{
+							'icon': './img/恼怒.jpg',
+							'value': '[恼怒]'
+						},
+						{
+							'icon': './img/悲伤.jpg',
+							'value': '[悲伤]'
+						},
+						{
+							'icon': './img/战斗力渣渣.jpg',
+							'value': '[战斗力渣渣]'
+						},
+						{
+							'icon': './img/抛媚眼.jpg',
+							'value': '[抛媚眼]'
+						},
+						{
+							'icon': './img/早就看穿一切.jpg',
+							'value': '[早就看穿一切]'
+						},
+						{
+							'icon': './img/汗.jpg',
+							'value': '[汗]'
+						},
+						{
+							'icon': './img/菜刀.jpg',
+							'value': '[菜刀]'
+						},
+						{
+							'icon': './img/那个有没有.jpg',
+							'value': '[那个有没有]'
+						},
+						{
+							'icon': './img/震惊.jpg',
+							'value': '[震惊]'
+						},
+						{
+							'icon': './img/高兴.jpg',
+							'value': '[高兴]'
+						},
+						{
+							'icon': './img/默默地看着.jpg',
+							'value': '[默默地看着]'
+						}
+					]
+				}
 
-		};
-		editor.create();
+			};
+			editor.create();
+
 	</script>
 <script>
 	$(function(){
@@ -692,6 +700,17 @@
 			  $(this).removeClass('active');
 			});
 			 $('.active-user').addClass('active');
+			$.ajax('/book/findBookByUser.shtml', {
+				type: "GET",
+				cache: true,
+				dataType: "json",
+				success: function () {
+					console.log('findBookByUser success');
+				},
+				error: function () {
+					console.log('findBookByUser error');
+				}
+			});
 		});
 		$('.favor-nav').on('click',function(){
 			 $('.js-stage').each(function(){
@@ -751,19 +770,7 @@
 			 $('.block-bookinfo').removeClass('active');
 			 $('.block-bookcontent').addClass('active');
 		});
-		$('#btn-content-post').on('click',function(){
-			$.ajax({
-				url: "/content/save.shtml", // 进行二次验证
-				type: "post",
-				dataType: "json",
-				data: {chapterName:'chapterName',content:'content',
 
-				},
-				success: function (data) {
-					alert('保存成功！');
-				}
-			});
-		});
 		
 	})
 </script>

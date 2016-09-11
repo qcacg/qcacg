@@ -7,23 +7,18 @@ import com.qcacg.entity.ContentEntity;
 import com.qcacg.service.system.ChapterService;
 import com.qcacg.service.system.ContentService;
 import com.qcacg.util.http.ResponseUtils;
-import com.qcacg.util.upload.FileRepository;
 import com.qcacg.util.upload.UploadUtils;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.UUID;
 
 /**
@@ -32,12 +27,12 @@ import java.util.UUID;
 @Controller
 @RequestMapping("/content/")
 public class ContentController extends BaseController {
-    @Autowired
-    private FileRepository fileRepository;
+
     @Autowired
     ContentService contentService;
     @Autowired
     ChapterService chapterService;
+
     @RequestMapping("findContentByChapter")
     @ResponseBody
     public ContentEntity findContentByChapter(Long chapterId)
@@ -46,43 +41,35 @@ public class ContentController extends BaseController {
     }
 
 
-    @RequestMapping("saveForm")
-    @ResponseBody
-    public String saveContent(ContentEntity form)
-    {
-        return this.contentService.saveOrUpdate(form);
-    }
 
-    @RequestMapping("saveContent")
-    public void saveContent(@RequestParam(value = "html", required = false)MultipartHttpServletRequest request, HttpServletResponse response,
-                       ModelMap model, ContentEntity contentEntity) {
+
+    @RequestMapping("save")
+    public void saveContent(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity, ChapterEntity chapterEntity,
+                            @RequestParam("html")String content,  @RequestParam("chapterName")String chapterName,  @RequestParam("volumeId")Long volumeId) {
         String message = "";
         String error = "";
-        MultipartFile file = request.getFile("html");
         String path = "";
-        if (file == null || file.isEmpty()) {
-            error = "文件太小！";
-        } else {
-
-            File destFile = null;
-            try {
-                String filename = UploadUtils.generateFilename("html");
-                path = "/upload/file/content" + filename;
-                destFile = fileRepository.storeByFilename(path, file);
-                message = path;
-                PrintWriter writer = response.getWriter();
-            } catch (Exception e) {
-                error = "保存失败！";
-                e.printStackTrace();
-                if (destFile != null && destFile.exists()) {
-                    destFile.delete();
-                }
-            }
+        try{
+            String filename = UploadUtils.generateFilename("html");
+            path = "/upload/file/content" + filename;
+            message = path;
+            File file =new File(path);
+            FileWriter fileWriter = new FileWriter(file.getName());
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.write(content);
+            bufferedWriter.close();
+        }catch (IOException e){
+            e.printStackTrace();
         }
 
+        chapterEntity.setChapterName(chapterName);
+        chapterEntity.setVolumeId(volumeId);
+        this.chapterService.saveOrUpdate(chapterEntity);
+        contentEntity.setChapterId(chapterEntity.getChapterId());
+        contentEntity.setContent(content);
         contentEntity.setContentUrl(path);
-        contentEntity.setContent("");
         this.contentService.saveOrUpdate(contentEntity);
+
         JSONObject obj = new JSONObject();
         obj.put("err", error);
         obj.put("msg", message);
@@ -90,7 +77,7 @@ public class ContentController extends BaseController {
     }
 
 
-    @RequestMapping("save")
+    @RequestMapping("saveContent")
     @ResponseBody
     public void save(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity, ChapterEntity chapterEntity){
 
