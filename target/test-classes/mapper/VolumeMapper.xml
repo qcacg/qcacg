@@ -19,5 +19,38 @@
 
 
 
+  <!--<resultMap id="VolumeAndContentResultMap" type="com.qcacg.entity.VolumeEntity">-->
+    <!--<collection property="volumeEntityList" ofType="com.qcacg.entity.BookEntity">-->
+      <!--<id column="volumeId" property="volumeId"/>-->
+      <!--<result column="volumeName" property="volumeName"/>-->
+      <!--<collection property="ContentEntityList" ofType="com.qcacg.entity.ContentEntity">-->
+        <!--<id column="contentId" property="contentId"/>-->
+        <!--<result column="contentTitle" property="contentTitle"/>-->
+      <!--</collection>-->
+    <!--</collection>-->
+  <!--</resultMap>-->
+
+  <!--<resultMap id="VolumeAndContentResultMap" type="com.qcacg.entity.ContentEntity">-->
+      <!--<collection property="ContentEntityList" ofType="com.qcacg.entity.ContentEntity">-->
+        <!--<id column="wor_content.ContentId" property="contentId"/>-->
+        <!--<result column="wor_content.ContentTitle" property="contentTitle"/>-->
+      <!--</collection>-->
+  <!--</resultMap>-->
+
+  <select id="findVolumeAndContentByBookId" resultMap="VolumeAndContentResultMap" parameterType="java.lang.Long">
+SELECT
+wor_content.ContentId,
+wor_content.ContentTitle
+FROM
+wor_content
+WHERE
+wor_content.VolumeId IN
+(SELECT
+wor_volume.VolumeId
+FROM
+wor_volume
+WHERE
+wor_volume.BookId = #{wor_volume.BookId})
+  </select>
 
 </mapper>

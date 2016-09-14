@@ -3,10 +3,18 @@
 <mapper namespace="com.qcacg.mapper.BookCollectMapper">
 
 
-    <delete id="deleteByBookCollectId" parameterType="java.lang.Long">
+    <select id="findBookCollectByUserId" parameterType="java.lang.Long">
+    SELECT
+    wor_bookcollect.BookId
+    FROM
+    wor_bookcollect
+    WHERE
+    wor_bookcollect.UserId = #{wor_bookcollect.UserId}
+    ORDER BY
+    wor_bookcollect.BookCollectDate DESC
 
 
-    </delete>
+    </select>
 
 
 </mapper>

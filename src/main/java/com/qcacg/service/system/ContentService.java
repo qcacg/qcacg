@@ -8,7 +8,7 @@ import com.qcacg.service.BaseService;
  */
 public interface ContentService extends BaseService<ContentEntity> {
 
-    public ContentEntity findContentByChapterId(Long chapterId);
+//    public List<ContentEntity> findVolumeAndContentByBookId(Long bookId);
 
     public String saveOrUpdate(ContentEntity entity);
 

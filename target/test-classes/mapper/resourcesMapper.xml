@@ -36,7 +36,7 @@
 		JOIN (
 		SELECT resourcesId FROM sys_user_resources  WHERE userId = #{userId}
 		UNION ALL
-		SELECT resId FROM sys_role_resources t1 JOIN sys_user_role t2 ON t1.roleId = t2.roleId
+		SELECT resourcesId FROM sys_role_resources t1 JOIN sys_user_role t2 ON t1.roleId = t2.roleId
 		AND t2.userId = #{userId})t2 
 		 ON t1.resourcesId = t2.resourcesId
 	</select>
@@ -64,7 +64,7 @@
 		(SELECT DISTINCT resourcesId FROM (SELECT resourcesId FROM sys_user_resources WHERE userId = #{userId}
 		UNION ALL
 		SELECT resourcesId FROM sys_role_resources WHERE roleId in (SELECT roleId FROM sys_user_role WHERE userId= #{userId})) tmp)
-		<if test="parentId != null and parentId != '' and parentId != 0">
+		<if test="parentResourcesId != null and parentResourcesId != '' and parentResourcesId != 0">
 			AND parentResourcesId = #{parentResourcesId}
 		</if>
 	</select>
@@ -105,6 +105,10 @@
 	<select id="treeNodes" >
          CALL treeNodes()
     </select>
+
+
+
+
 
 
 

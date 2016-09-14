@@ -1,6 +1,7 @@
 package com.qcacg.controller.system;
 
 import com.qcacg.controller.BaseController;
+import com.qcacg.entity.ContentEntity;
 import com.qcacg.entity.VolumeEntity;
 import com.qcacg.service.system.BookService;
 import com.qcacg.service.system.VolumeService;
@@ -38,5 +39,12 @@ public class VolumeController extends BaseController {
     public List<VolumeEntity> findVolumeByBook(@RequestParam("bookId")Long bookId)
     {
         return this.volumeService.findVolumeByBookId(bookId);
+    }
+
+    @RequestMapping("findVolumeAndContentByBookId")
+    @ResponseBody
+    public List<ContentEntity> findVolumeAndContentByBookId(@RequestParam("bookId")Long bookId)
+    {
+        return this.volumeService.findVolumeAndContentByBookId(bookId);
     }
 }

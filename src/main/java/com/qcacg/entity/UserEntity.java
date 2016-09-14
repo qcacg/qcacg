@@ -27,7 +27,8 @@ public class UserEntity implements Serializable
 	private String email;
 	@Column(name = "IP")
 	private String IP;
-
+	@Column(name = "sex")
+	private String sex;
 	@Column(name = "createDate")
 	private String createDate;
 	@Column(name = "lastLoginDate")
@@ -38,7 +39,8 @@ public class UserEntity implements Serializable
 	private String userHead;
 	@Column(name = "information")
 	private String information;
-
+	@Column(name = "birthday")
+	private String birthday;
 	// @Transient表示注销改字段
 
 	public String getUserHead()
@@ -168,4 +170,19 @@ public class UserEntity implements Serializable
 		this.information = information;
 	}
 
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public String getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
+	}
 }

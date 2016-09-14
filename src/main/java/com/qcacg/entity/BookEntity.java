@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
+
 @Table(name = "wor_book")
 public class BookEntity implements Serializable {
 
@@ -35,7 +36,7 @@ public class BookEntity implements Serializable {
     @Column(name = "bookIntroduction")
     private String bookIntroduction;
 
-
+//    private List<VolumeEntity> volumeEntityList ;
 
     public Long getBookId() {
         return bookId;
@@ -142,5 +143,11 @@ public class BookEntity implements Serializable {
     }
 
 
-
+//    public List<VolumeEntity> getVolumeEntityList() {
+//        return volumeEntityList;
+//    }
+//
+//    public void setVolumeEntityList(List<VolumeEntity> volumeEntityList) {
+//        this.volumeEntityList = volumeEntityList;
+//    }
 }

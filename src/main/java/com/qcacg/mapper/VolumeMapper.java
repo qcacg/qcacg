@@ -1,5 +1,6 @@
 package com.qcacg.mapper;
 
+import com.qcacg.entity.ContentEntity;
 import com.qcacg.entity.VolumeEntity;
 import tk.mybatis.mapper.common.Mapper;
 
@@ -9,5 +10,6 @@ public interface VolumeMapper extends Mapper<VolumeEntity> {
 
     public List<VolumeEntity> findVolumeByBookId(Long bookId);
 
+    public List<ContentEntity> findVolumeAndContentByBookId(Long bookId);
 
 }

@@ -16,8 +16,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -56,25 +56,20 @@ public class UserController extends BaseController
 		return "/system/user/edit";
 	}
 
-	@RequestMapping("queryUserForList")
-	@ResponseBody
-	public PageInfo<UserEntity> queryUserForList(String telephone)
-	{
-		UserEntity entity = null;
-		if(StringUtils.isNoneEmpty(telephone))
-		{
-			entity = new UserEntity();
-			entity.setTelephone(telephone);
-		}
-		return this.userService.queryUserForList(entity);
-	}
 
-	@RequestMapping("saveForm")
+/*
+基本的修改(基本信息增加签名字段)
+ */
+
+	@RequestMapping("saveOrUpdateUser")
 	@ResponseBody
-	@SystemLog(resourcesName = "用户管理", methods = "添加用户")
-	public String saveUser(UserEntity form)
+	public String updateUser(UserEntity userEntity, @RequestParam("userName")String userName, @RequestParam("birthday")String birthday, @RequestParam("sex")String sex, @RequestParam("information")String information)
 	{
-		return this.userService.saveOrUpdate(form);
+		userEntity.setUserName(userName);
+		userEntity.setBirthday(birthday);
+		userEntity.setInformation(information);
+		userEntity.setSex(sex);
+		return this.userService.saveOrUpdate(userEntity);
 	}
 
 	@RequestMapping("batchDelete")
@@ -131,18 +126,28 @@ public class UserController extends BaseController
 	}
 
 
-
-
-
-	@RequestMapping("queryUser/{userId}")
+	@RequestMapping("queryUserForList")
 	@ResponseBody
-	public String  queryUser(@PathVariable("userId") Long userId, Model model)
+	public PageInfo<UserEntity> queryUserForList(String telephone)
 	{
-		if (userId != null){
-			model.addAttribute("user", userService.findByPrimaryKey(userId));
+		UserEntity entity = null;
+		if(StringUtils.isNoneEmpty(telephone))
+		{
+			entity = new UserEntity();
+			entity.setTelephone(telephone);
 		}
-		return "/system/user/info";
+		return this.userService.queryUserForList(entity);
+	}
 
+/*
+获取基本信息
+ */
+	@RequestMapping("queryUser")
+	@ResponseBody
+	public UserEntity queryUser()
+	{
+		Long userId = UserEntityUtil.getUserFromSession().getUserId();
+		return this.userService.findByPrimaryKey(userId);
 	}
 
 

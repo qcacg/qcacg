@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.List;
 
 /**
  * Created by Administrator on 2016/7/4.
@@ -21,10 +22,11 @@ public class ContentServiceImpl extends BaseServiceImpl<ContentEntity> implement
     @Autowired
     ContentMapper contentMapper;
 
-    @Override
-    public ContentEntity findContentByChapterId(Long chapterId) {
-        return this.contentMapper.findContentByChapterId(chapterId);
-    }
+//    @Override
+//    public List<ContentEntity> findVolumeAndContentByBookId(Long bookId) {
+//
+//        return this.contentMapper.findVolumeAndContentByBookId(bookId);
+//    }
 
     @Override
     public String saveOrUpdate(ContentEntity entity) {

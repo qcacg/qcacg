@@ -1,13 +1,11 @@
 package com.qcacg.system;
 
-import com.qcacg.controller.system.RegisterController;
 import com.qcacg.controller.system.RoleController;
 import com.qcacg.entity.*;
 import com.qcacg.entity.user.UserCustom;
 import com.qcacg.mapper.ResourcesMapper;
 import com.qcacg.mapper.RoleMapper;
 import com.qcacg.service.system.*;
-import com.qcacg.util.SendTelephoneCode;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,9 +38,8 @@ public class TestDemo {
     @Autowired
     VolumeService volumeService;
     @Autowired
-    ChapterService chapterService;
-    @Autowired
-    BookCollectService bookCollectService;
+    ContentService contentService;
+
 
 
 
@@ -101,13 +98,13 @@ public class TestDemo {
 //        System.out.println(registerController.checkTelephoneCode(userCustom));
 //    }
 
-    @Test
-    public void TestBook(){
+//    @Test
+//    public void TestBook(){
 //        List<BookEntity> list = this.bookService.findBookByUserId(1l);
 //        List<VolumeEntity> list = this.volumeService.findVolumeByBookId(1l);
-        List<ChapterEntity> list = this.chapterService.findChapterByVolumeId(1l);
-        System.out.println(list.get(1).getChapterName());
-    }
+//        List<ChapterEntity> list = this.chapterService.findChapterByVolumeId(1l);
+//        System.out.println(list.get(1).getChapterName());
+//    }
 
     @Test
     public void TestVolume(){
@@ -121,25 +118,36 @@ public class TestDemo {
     }
 
     @Test
-    public void TestChapter(){
+    public void TestContent(){
 
-        ChapterEntity chapterEntity = new ChapterEntity();
-        chapterEntity.setVolumeId(1l);
-        chapterEntity.setChapterName("心中的困惑");
-        this.chapterService.saveOrUpdate(chapterEntity);
-        logger.info(chapterEntity);
-        System.out.println(chapterEntity.getChapterName());
+        ContentEntity contentEntity = new ContentEntity();
+        contentEntity.setVolumeId(1l);
+        contentEntity.setContentTitle("美好的一天");
+        this.contentService.saveOrUpdate(contentEntity);
+        logger.info(contentEntity);
+        System.out.println(contentEntity.getContentId());
     }
 
-    @Test
-    public void TestBookCollect(){
-
-        BookCollectEntity bookCollectEntity = new BookCollectEntity();
+//    @Test
+//    public void TestBookCollect(){
+//
+//        BookCollectEntity bookCollectEntity = new BookCollectEntity();
 //        bookCollectEntity.setBookCollectId(4l);
-        bookCollectEntity.setBookId(2l);
-        bookCollectEntity.setUserId(1l);
-        this.bookCollectService.saveOrDelete(bookCollectEntity);
-        logger.info(bookCollectEntity);
-        System.out.println(bookCollectEntity.getBookCollectDate());
+//        bookCollectEntity.setBookId(2l);
+//        bookCollectEntity.setUserId(1l);
+//        this.bookCollectService.saveOrDelete(bookCollectEntity);
+//        logger.info(bookCollectEntity);
+//        System.out.println(bookCollectEntity.getBookCollectDate());
+//    }
+
+    @Test
+    public void TestFindBook() {
+        List<ContentEntity> contentEntityList = this.volumeService.findVolumeAndContentByBookId(1l);
+        
+        for (int i = 0; i < contentEntityList.size(); i++) {
+            System.out.println(contentEntityList.get(i).getContentTitle());
+        }
+
+
     }
 }

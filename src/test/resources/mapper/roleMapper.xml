@@ -11,8 +11,8 @@
 		roleStatus,
 		roleName,
 		roleDescription
-		from sys_user
-		where sys_user.roleId
+		from sys_role
+		where sys_role.roleId
 		in (SELECT roleId
 		FROM sys_user_role WHERE
 		userId=#{userId})

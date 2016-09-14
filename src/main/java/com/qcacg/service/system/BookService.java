@@ -19,5 +19,4 @@ public interface BookService extends BaseService<BookEntity> {
 
     public List<BookEntity> findBookByUserId(Long userId);
 
-
 }

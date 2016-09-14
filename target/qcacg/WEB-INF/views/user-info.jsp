@@ -174,7 +174,7 @@
 							<div class="item" id="item-thumb">
 								<div class="thumb-wrap">
 								<a href="javascript:;" class="thumb">
-									<img src="${bookEntity.bookCoverImage}" srcset="//image.iqing.in/cover/b8219e4b-3e4c-4ba1-840c-fab078a29b97.jpg?imageView2/1/w/128/h/171/format/jpg/interlace/1/q/86 128w, //image.iqing.in/cover/b8219e4b-3e4c-4ba1-840c-fab078a29b97.jpg?imageView2/1/w/256/h/342/format/jpg/interlace/1/q/86 256w" data-sizes="128px" class="cover"><span class="tag-a status status-0">草稿</span></a><span class="count tag-a">0 字</span><span class="tag-a channel channel-10">少年</span><span class="tag-b view">点击：0</span><span class="tag-b coin">轻石：0</span><span class="tag-b follow">收藏：0</span></div>
+									<img src="${bookEntity.bookCoverImage}" srcset="${bookEntity.bookCoverImage}" data-sizes="128px" class="cover"><span class="tag-a status status-0">草稿</span></a><span class="count tag-a">0 字</span><span class="tag-a channel channel-10">少年</span><span class="tag-b view">点击：0</span><span class="tag-b coin">轻石：0</span><span class="tag-b follow">收藏：0</span></div>
 										<a href="javascript:;" class="title">
 										${bookEntity.bookName}</a>
 							</div>
@@ -261,7 +261,7 @@
 				<div class="area-title-block"><span onclick="history.back()" class="prev"><i class="fa fa-angle-left"></i></span><span class="title">章节</span><span class="next"></span></div>
 				<%--<form id="form-content-post" class="form-member form-chapter">--%>
 					<div id="area-title-content" class="row-m" ><label for="ipt-chapter-post" class="label-m" >标题：</label>
-						<div class="ipt-group" ><input id="ipt-chapter-post" required="" maxlength="64" autocomplete="off" placeholder="请输入章名" class="form-control input-sm" name="chapterName" value="${chapterEntity.chapterName}"></div>
+						<div class="ipt-group" ><input id="ipt-chapter-post" required="" maxlength="64" autocomplete="off" placeholder="请输入章名" class="form-control input-sm" name="chapterName" value="${contentEntity.contentTitle}"></div>
 					</div>
 					<div class="row-m"><label for="ipt-content-post" class="label-m label-top" >正文：</label>
 						<div class="ipt-group" >
@@ -693,6 +693,20 @@
 			  $(this).removeClass('active');
 			});
 			 $('.active-user-info').addClass('active');
+
+			$.ajax('/user/queryUser.shtml', {
+				type: "GET",
+				cache: false,
+				dataType: "json",
+				success: function () {
+
+					console.log('queryUser success');
+				},
+				error: function () {
+					console.log('queryUser error');
+				}
+			});
+
 		});
 		
 		$('.post-nav').on('click',function(){
@@ -700,17 +714,22 @@
 			  $(this).removeClass('active');
 			});
 			 $('.active-user').addClass('active');
+
 			$.ajax('/book/findBookByUser.shtml', {
 				type: "GET",
-				cache: true,
+				cache: false,
 				dataType: "json",
-				success: function () {
+				success: function (data) {
+
+
+
 					console.log('findBookByUser success');
 				},
 				error: function () {
 					console.log('findBookByUser error');
 				}
 			});
+
 		});
 		$('.favor-nav').on('click',function(){
 			 $('.js-stage').each(function(){

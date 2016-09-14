@@ -1,10 +1,7 @@
 package com.qcacg.controller.system;
 
-import com.baidu.ueditor.ActionEnter;
 import com.qcacg.controller.BaseController;
-import com.qcacg.entity.ChapterEntity;
 import com.qcacg.entity.ContentEntity;
-import com.qcacg.service.system.ChapterService;
 import com.qcacg.service.system.ContentService;
 import com.qcacg.util.http.ResponseUtils;
 import com.qcacg.util.upload.UploadUtils;
@@ -18,7 +15,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.UUID;
 
 /**
@@ -30,22 +30,17 @@ public class ContentController extends BaseController {
 
     @Autowired
     ContentService contentService;
-    @Autowired
-    ChapterService chapterService;
 
-    @RequestMapping("findContentByChapter")
-    @ResponseBody
-    public ContentEntity findContentByChapter(Long chapterId)
-    {
-        return this.contentService.findContentByChapterId(chapterId);
-    }
+    /*
+    获取草稿
+    */
 
 
 
 
     @RequestMapping("save")
-    public void saveContent(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity, ChapterEntity chapterEntity,
-                            @RequestParam("html")String content,  @RequestParam("chapterName")String chapterName,  @RequestParam("volumeId")Long volumeId) {
+    public void saveContent(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity,
+                            @RequestParam("html")String content,  @RequestParam("contentTitle")String contentTitle,  @RequestParam("volumeId")Long volumeId) {
         String message = "";
         String error = "";
         String path = "";
@@ -62,10 +57,8 @@ public class ContentController extends BaseController {
             e.printStackTrace();
         }
 
-        chapterEntity.setChapterName(chapterName);
-        chapterEntity.setVolumeId(volumeId);
-        this.chapterService.saveOrUpdate(chapterEntity);
-        contentEntity.setChapterId(chapterEntity.getChapterId());
+        contentEntity.setVolumeId(volumeId);
+        contentEntity.setContentTitle(contentTitle);
         contentEntity.setContent(content);
         contentEntity.setContentUrl(path);
         this.contentService.saveOrUpdate(contentEntity);
@@ -77,30 +70,11 @@ public class ContentController extends BaseController {
     }
 
 
-    @RequestMapping("saveContent")
-    @ResponseBody
-    public void save(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity, ChapterEntity chapterEntity){
-
-        String path = request.getSession().getServletContext().getRealPath("/upload/file/content");
-
-        try {
-            String exec = new ActionEnter(request, path).exec();
-            PrintWriter writer = response.getWriter();
-            writer.write(exec);
-            writer.flush();
-            writer.close();
-            chapterEntity.setChapterName("");
-            contentEntity.setContentUrl(path);
-            contentEntity.setContent(exec);
-            this.contentService.saveOrUpdate(contentEntity);
-            this.chapterService.saveOrUpdate(chapterEntity);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
 
 
+    /*
+    上传图片
+    */
     @RequestMapping(value = "upload")
     @ResponseBody
     public String upload(@RequestParam(value = "wangEditorH5File", required = false)MultipartFile file, HttpServletRequest request) throws IOException{

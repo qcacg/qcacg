@@ -1,5 +1,6 @@
 package com.qcacg.service.system.impl;
 
+import com.qcacg.entity.ContentEntity;
 import com.qcacg.entity.VolumeEntity;
 import com.qcacg.mapper.VolumeMapper;
 import com.qcacg.service.BaseServiceImpl;
@@ -40,5 +41,11 @@ public class VolumeServiceImpl extends BaseServiceImpl<VolumeEntity> implements 
     @Override
     public List<VolumeEntity> findVolumeByBookId(Long bookId) {
         return this.volumeMapper.findVolumeByBookId(bookId);
+    }
+
+    @Override
+    public List<ContentEntity> findVolumeAndContentByBookId(Long bookId) {
+
+        return this.volumeMapper.findVolumeAndContentByBookId(bookId);
     }
 }

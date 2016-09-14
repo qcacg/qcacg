@@ -9,5 +9,4 @@ public interface BookMapper extends Mapper<BookEntity> {
 
     public List<BookEntity> findBookByUserId(Long userId);
 
-
 }

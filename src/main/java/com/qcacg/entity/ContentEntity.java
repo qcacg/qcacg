@@ -8,8 +8,10 @@ public class ContentEntity implements Serializable {
     private static final long serialVersionUID = 1525818970451395420L;
     @Column(name = "contentId", unique = true, nullable = false)
     private Long contentId;
-    @Column(name = "chapterId", unique = true, nullable = false)
-    private Long chapterId;
+    @Column(name = "volumeId", unique = true, nullable = false)
+    private Long volumeId;
+    @Column(name = "contentTitle")
+    private String contentTitle;
     @Column(name = "content")
     private String content;
     @Column(name = "contentWordCount")
@@ -45,13 +47,6 @@ public class ContentEntity implements Serializable {
         this.contentId = contentId;
     }
 
-    public Long getChapterId() {
-        return chapterId;
-    }
-
-    public void setChapterId(Long chapterId) {
-        this.chapterId = chapterId;
-    }
 
     public String getContent() {
         return content;
@@ -75,5 +70,21 @@ public class ContentEntity implements Serializable {
 
     public void setContentUpdate(String contentUpdate) {
         this.contentUpdate = contentUpdate;
+    }
+
+    public Long getVolumeId() {
+        return volumeId;
+    }
+
+    public void setVolumeId(Long volumeId) {
+        this.volumeId = volumeId;
+    }
+
+    public String getContentTitle() {
+        return contentTitle;
+    }
+
+    public void setContentTitle(String contentTitle) {
+        this.contentTitle = contentTitle;
     }
 }

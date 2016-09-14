@@ -3,6 +3,7 @@ package com.qcacg.entity;
 import javax.persistence.Column;
 import javax.persistence.Table;
 import java.io.Serializable;
+
 @Table(name = "wor_volume")
 public class VolumeEntity implements Serializable {
     @Column(name = "volumeId", unique = true, nullable = false)
@@ -11,6 +12,8 @@ public class VolumeEntity implements Serializable {
     private Long bookId;
     @Column(name = "volumeName")
     private String volumeName;
+
+//    private List<ContentEntity> ContentEntityList ;
 
     private static final long serialVersionUID = -4809600648149719389L;
 
@@ -39,4 +42,11 @@ public class VolumeEntity implements Serializable {
     }
 
 
+//    public List<ContentEntity> getContentEntityList() {
+//        return ContentEntityList;
+//    }
+//
+//    public void setContentEntityList(List<ContentEntity> contentEntityList) {
+//        ContentEntityList = contentEntityList;
+//    }
 }

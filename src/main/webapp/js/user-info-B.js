@@ -57,3 +57,20 @@ $(function() {
         });
     });
 })
+
+$(function() {
+    $('#item-thumb').on('click', function() {
+
+        $.ajax('/volume/findVolumeAndContentByBookId.shtml', {
+            type: "POST",
+            data: {"bookId":1},
+            dataType: "text",
+            success: function () {
+                console.log('findVolumeAndContentByBookId success');
+            },
+            error: function () {
+                console.log('findVolumeAndContentByBookId error');
+            }
+        });
+    });
+})

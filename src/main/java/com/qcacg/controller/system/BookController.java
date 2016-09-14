@@ -2,6 +2,7 @@ package com.qcacg.controller.system;
 
 import com.qcacg.controller.BaseController;
 import com.qcacg.entity.BookEntity;
+import com.qcacg.entity.VolumeEntity;
 import com.qcacg.service.system.BookService;
 import com.qcacg.util.UserEntityUtil;
 import com.qcacg.util.http.ResponseUtils;
@@ -44,6 +45,10 @@ public class BookController extends BaseController {
     }
 
 
+
+    /*
+    获取作品列表
+     */
     @RequestMapping("findBookByUser")
     @ResponseBody
     public List<BookEntity> findBookByUser()
@@ -52,6 +57,9 @@ public class BookController extends BaseController {
         return this.bookService.findBookByUserId(userId);
     }
 
+    /*
+    获取作品详情
+     */
     @RequestMapping("findByPrimaryBookId/{bookId}")
     @ResponseBody
     public BookEntity findByPrimaryBookId(@PathVariable("bookId")Long bookId)
