@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qcacg.mapper.VolumeCustomMapper">
+
+
+    <resultMap id="VolumeAndContentResultMap" type="com.qcacg.entity.VolumeEntity">
+        <id column="wor_volume.VolumeId" property="volumeId"/>
+        <result column="wor_volume.VolumeName" property="volumeName"/>
+        <collection property="contentEntityList" ofType="com.qcacg.entity.ContentEntity">
+            <id column="wor_content.ContentId" property="contentId"/>
+            <result column="wor_content.ContentTitle" property="contentTitle"/>
+        </collection>
+    </resultMap>
+
+    <select id="findVolumeAndContentByBookId" resultMap="VolumeAndContentResultMap" parameterType="java.lang.Long">
+SELECT
+wor_volume.VolumeId,
+wor_volume.VolumeName,
+wor_content.ContentId,
+wor_content.ContentTitle
+FROM
+wor_content ,
+wor_volume
+WHERE
+wor_volume.VolumeId = wor_content.VolumeId AND
+wor_volume.BookId =  #{wor_volume.BookId}
+  </select>
+
+</mapper>

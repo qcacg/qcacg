@@ -22,11 +22,7 @@ public class ContentServiceImpl extends BaseServiceImpl<ContentEntity> implement
     @Autowired
     ContentMapper contentMapper;
 
-//    @Override
-//    public List<ContentEntity> findVolumeAndContentByBookId(Long bookId) {
-//
-//        return this.contentMapper.findVolumeAndContentByBookId(bookId);
-//    }
+
 
     @Override
     public String saveOrUpdate(ContentEntity entity) {

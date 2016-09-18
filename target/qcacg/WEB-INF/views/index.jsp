@@ -5,16 +5,18 @@
 		<meta charset="utf-8" />
 		<title>轻悦轻小说</title>
 		<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main-A.css" />
 		<link rel="shortcut icon" href="http://www.qcacg.com/favicon.ico" type="image/x-icon" />
 	</head>
 	<body>
+	<iframe id="qcacg-header" style="height: 56px;width: 100%;min-width:1200px;border: 0px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-header.html"></iframe>
 		<header class="header">
 			<section class="navbar">
 				<nav class="nav">
 					<h1 class="logo"><a href="index.shtml">轻悦轻小说</a></h1>
 					<ul class="clearfloat pull-left">
 						<li class="action"><a href="index.shtml">首页</a></li>
-						<li>分类</li>
+						<li class="action"><a href="type.shtml">分类</a></li>
 						<li>画师</li>
 						<li>周边</li>
 						<li>福利</li>
@@ -955,50 +957,8 @@
 
 		</section>
 		
-		<footer class="footer">
 
-			<div class="tar">
-				<ul class="gy">
-					<li class="title">关于</li>
-					<li><a href="javascript:;">关于我们</a></li>
-					<li><a href="javascript:;">公司信息</a></li>
-					<li><a href="javascript:;">免责声明</a></li>
-				</ul>
-			</div>
-			<div class="tar">
-				<ul class="gy">
-					<li class="title">联系方式</li>
-					<li><a href="javascript:;">微博</a></li>
-					<li><a href="javascript:;">电子邮件</a></li>
-				</ul>
-			</div>
-			<div class="tar">
-				<ul class="gy">
-					<li class="title">投稿</li>
-					<li><a href="javascript:;">签约制度</a></li>
-					<li><a href="javascript:;">作者福利</a></li>
-					<li><a href="javascript:;">签约流程</a></li>
-					<li><a href="javascript:;">约稿函</a></li>
-					<li><a href="javascript:;">投稿流程</a></li>
-				</ul>
-			</div>
-			<div class="tar">
-				<ul class="gy gy_over">
-					<li class="title">友情链接</li>
-				</ul>
-			</div>
-
-		</footer>
-		<footer class="footer">
-			<div class="container">
-				<div class="site-info">
-					<p>杭州轻悦网络科技有限公司
-						<span class="driver"> | </span>
-						浙ICP备16021285号
-					</p>
-				</div>
-			</div>
-		</footer>
+	<iframe style="height: 240px;width: 100%;border: 0px;min-width:1200px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-footer.html"></iframe>
 	</body>
 
 </html>

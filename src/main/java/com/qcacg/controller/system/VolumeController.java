@@ -1,9 +1,10 @@
 package com.qcacg.controller.system;
 
 import com.qcacg.controller.BaseController;
-import com.qcacg.entity.ContentEntity;
 import com.qcacg.entity.VolumeEntity;
+import com.qcacg.entity.volume.VolumeCustom;
 import com.qcacg.service.system.BookService;
+import com.qcacg.service.system.VolumeCustomService;
 import com.qcacg.service.system.VolumeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +20,8 @@ import java.util.List;
 @Controller
 @RequestMapping("/volume/")
 public class VolumeController extends BaseController {
-
+    @Autowired
+    VolumeCustomService volumeCustomService;
     @Autowired
     VolumeService volumeService;
     @Autowired
@@ -43,8 +45,8 @@ public class VolumeController extends BaseController {
 
     @RequestMapping("findVolumeAndContentByBookId")
     @ResponseBody
-    public List<ContentEntity> findVolumeAndContentByBookId(@RequestParam("bookId")Long bookId)
+    public List<VolumeCustom> findVolumeAndContentByBookId(@RequestParam("bookId")Long bookId)
     {
-        return this.volumeService.findVolumeAndContentByBookId(bookId);
+        return this.volumeCustomService.findVolumeAndContentByBookId(bookId);
     }
 }

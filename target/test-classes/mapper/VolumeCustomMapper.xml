@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qcacg.mapper.VolumeCustomMapper">
+
+    <resultMap id="ContentResultMap" type="com.qcacg.entity.ContentEntity">
+    <id column="wor_content.ContentId" property="contentId"/>
+    <result column="wor_content.ContentTitle" property="contentTitle"/>
+    </resultMap>
+
+    <resultMap id="VolumeResultMap" type="com.qcacg.entity.volume.VolumeCustom">
+        <id column="wor_volume.VolumeId" property="volumeId"/>
+        <result column="wor_volume.VolumeName" property="volumeName"/>
+        <collection property="contentEntityList" ofType="com.qcacg.entity.ContentEntity" column="wor_content.VolumeId" select="findContentByBookId" javaType="java.util.ArrayList"/>
+    </resultMap>
+
+    <select id="findVolumeAndContentByBookId" resultMap="VolumeResultMap" parameterType="java.lang.Long">
+        SELECT
+    wor_volume.VolumeId,
+    wor_volume.VolumeName
+    FROM
+    wor_volume
+    WHERE
+    wor_volume.BookId = #{wor_volume.BookId}
+  </select>
+
+    <select id="findContentByBookId" resultMap="ContentResultMap" parameterType="java.lang.Long">
+        SELECT
+        wor_content.ContentId,
+        wor_content.ContentTitle
+        FROM
+        wor_content
+        WHERE wor_content.VolumeId IN
+        (SELECT wor_volume.VolumeId FROM wor_volume
+        WHERE wor_volume.BookId = #{wor_volume.BookId})
+    </select>
+</mapper>

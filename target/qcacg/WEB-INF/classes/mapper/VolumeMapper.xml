@@ -18,31 +18,4 @@
   </select>
 
 
-
-  <resultMap id="VolumeAndContentResultMap" type="com.qcacg.entity.VolumeEntity">
-    <collection property="volumeEntityList" ofType="com.qcacg.entity.VolumeEntity">
-      <id column="volumeId" property="volumeId"/>
-      <result column="volumeName" property="volumeName"/>
-      <collection property="ContentEntityList" ofType="com.qcacg.entity.ContentEntity">
-        <id column="contentId" property="contentId"/>
-        <result column="wcontentTitle" property="contentTitle"/>
-      </collection>
-    </collection>
-  </resultMap>
-
-  <select id="findVolumeAndContentByBookId" resultMap="VolumeAndContentResultMap" parameterType="java.lang.Long">
-    SELECT
-wor_volume.VolumeId AS volumeId,
-wor_volume.VolumeName AS volumeName,
-wor_content.ContentId AS contentId,
-wor_content.ContentTitle AS contentTitle
-FROM
-wor_volume ,
-wor_content
-WHERE
-wor_volume.BookId = 1 AND
-wor_volume.VolumeId = wor_content.VolumeId
-  </select>
-
-
 </mapper>

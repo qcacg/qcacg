@@ -85,6 +85,10 @@ public class LoginController {
 		return "index";
 	}
 
+	@RequestMapping("type")
+	public String type() {
+		return "type";
+	}
 	@RequestMapping("toLogin")
 	public String toLogin(){
 		return "login";

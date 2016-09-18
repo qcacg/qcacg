@@ -43,9 +43,5 @@ public class VolumeServiceImpl extends BaseServiceImpl<VolumeEntity> implements 
         return this.volumeMapper.findVolumeByBookId(bookId);
     }
 
-    @Override
-    public List<ContentEntity> findVolumeAndContentByBookId(Long bookId) {
 
-        return this.volumeMapper.findVolumeAndContentByBookId(bookId);
-    }
 }

@@ -10,10 +10,11 @@
 		<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
 		<script src="http://static.geetest.com/static/tools/gt.js"></script>
 		<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main-A.css" />
 		<link rel="shortcut icon" href="http://www.qcacg.com/favicon.ico" type="image/x-icon" />
 	</head>
 	<body>
-		 
+	<iframe id="qcacg-header" style="height: 56px;width: 100%;min-width:1200px;border: 0px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-header.html"></iframe>
 		<section class="navbar">
 				<nav class="nav">
 					<h1 class="logo"><a href="index.shtml">轻悦轻小说</a></h1>
@@ -164,6 +165,7 @@
 			});
 
 		</script>
+	<iframe style="height: 240px;width: 100%;border: 0px;min-width:1200px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-footer.html"></iframe>
 	</body>
 
 </html>

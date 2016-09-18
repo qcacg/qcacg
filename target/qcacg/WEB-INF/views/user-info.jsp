@@ -39,7 +39,7 @@
 	</head>
 
 	<body style="zoom: 1;">
-
+	<iframe id="qcacg-header" style="height: 56px;width: 100%;min-width:1200px;border: 0px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-header.html"></iframe>
 	 <div id="canvas"></div>
 		<div id="content" style="min-height: 608px;" class="content">
 			<div class="container">
@@ -574,16 +574,7 @@
 		</div>
 		<div></div>
 		<div class="modal-backdrop fade in" style="display:none" id="heimu"></div>
-	 <footer class="footer">
-		 <div class="container">
-	         <div class="site-info">
-		         <p>杭州轻悦网络科技有限公司
-			     <span class="driver"> | </span>
-			     浙ICP备16021285号
-		         </p>
-	     </div>
-		 </div>
-     </footer>
+	<iframe style="height: 240px;width: 100%;border: 0px;min-width:1200px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-footer.html"></iframe>
 
 	<script type="text/javascript" src="${pageContext.servletContext.contextPath }/user-info/wangEditor.min.js"></script>
 	<script type="text/javascript">

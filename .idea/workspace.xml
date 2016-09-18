@@ -2,73 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="bfa18c5d-906d-4d48-ac4f-65fe43107609" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/mapper/ContentMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/mapper/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/BookController.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/BookController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/ContentController.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/ContentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/UserController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/100x140.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/150x210.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/50x50-tou.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/Catalog-bj.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/LOG0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/class-2-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/class1-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/class1-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/class2-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/volume/VolumeCustom.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeCustomMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeCustomService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeCustomServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/VolumeCustomMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Model.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/catalog.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/type.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/headerOrFooter.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/main-A.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/vue.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/vue.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/public/public-footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/public/public-header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/mapper/VolumeCustomMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/VolumeController.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/VolumeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/entity/BookEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/BookEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/entity/ContentEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/ContentEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/entity/UserEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/UserEntity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/entity/VolumeEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/VolumeEntity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/VolumeMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/VolumeMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/VolumeService.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/VolumeService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/ContentServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/ContentServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/VolumeServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/VolumeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/BookController.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/BookController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/ContentController.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/ContentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/UserController.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/LoginController.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/VolumeController.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/VolumeController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/BookEntity.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/BookEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/ContentEntity.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/ContentEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/UserEntity.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/UserEntity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/VolumeEntity.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/VolumeEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/ContentMapper.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/ContentMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/VolumeMapper.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/VolumeMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/ContentService.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/ContentService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/VolumeService.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/VolumeService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/ContentServiceImpl.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/ContentServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/VolumeServiceImpl.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/VolumeServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/qcacg/system/TestDemo.class" afterPath="$PROJECT_DIR$/target/test-classes/com/qcacg/system/TestDemo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ContentEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ContentEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserEntity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/VolumeEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/VolumeEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ContentMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ContentMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookService.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/ContentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/ContentService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ContentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ContentServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ContentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ContentMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/VolumeMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/VolumeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-shiro.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-shiro.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/user-info-B.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/user-info-B.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/qcacg/system/TestDemo.java" afterPath="$PROJECT_DIR$/src/test/java/com/qcacg/system/TestDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/mapper/BookCollectMapper.xml" afterPath="$PROJECT_DIR$/src/test/resources/mapper/BookCollectMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/mapper/VolumeMapper.xml" afterPath="$PROJECT_DIR$/src/test/resources/mapper/VolumeMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/mapper/bookMapper.xml" afterPath="$PROJECT_DIR$/src/test/resources/mapper/bookMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/mapper/resourcesMapper.xml" afterPath="$PROJECT_DIR$/src/test/resources/mapper/resourcesMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/mapper/roleMapper.xml" afterPath="$PROJECT_DIR$/src/test/resources/mapper/roleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/BookMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/BookMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/VolumeMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/VolumeMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/BookMapper.xml" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/BookMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-shiro.xml" afterPath="$PROJECT_DIR$/target/classes/spring-shiro.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/ContentMapper.xml" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/ContentMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/VolumeMapper.xml" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/VolumeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/spring-shiro.xml" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/spring-shiro.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/index.jsp" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/login.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/user-info.jsp" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/user-info.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/js/user-info-B.js" afterPath="$PROJECT_DIR$/target/qcacg/js/user-info-B.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/mapper/BookCollectMapper.xml" afterPath="$PROJECT_DIR$/target/test-classes/mapper/BookCollectMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/css/main.css" afterPath="$PROJECT_DIR$/target/qcacg/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/mapper/VolumeMapper.xml" afterPath="$PROJECT_DIR$/target/test-classes/mapper/VolumeMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/mapper/bookMapper.xml" afterPath="$PROJECT_DIR$/target/test-classes/mapper/bookMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/mapper/resourcesMapper.xml" afterPath="$PROJECT_DIR$/target/test-classes/mapper/resourcesMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/mapper/roleMapper.xml" afterPath="$PROJECT_DIR$/target/test-classes/mapper/roleMapper.xml" />
     </list>
     <ignored path="battcn1.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,25 +97,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VolumeMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VolumeMapper.xml">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.153847">
-              <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-              <folding>
-                <marker date="1473853764155" expanded="true" signature="321:498" placeholder="SELECT wor_v... wor_volume" />
-                <marker date="1473853764155" expanded="true" signature="1622:1815" placeholder="SELECT wor_c... wor_content" />
-                <marker date="1473853764155" expanded="true" signature="1725:1814" placeholder="SELECT wor_v... wor_volume" />
-              </folding>
+            <state vertical-scroll-proportion="0.29723993">
+              <caret line="7" column="95" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="109" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestDemo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main-A.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/main-A.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestDemo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/qcacg/system/TestDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5243902">
-              <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="150" column="44" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -122,50 +131,65 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="71" selection-start-line="47" selection-start-column="71" selection-end-line="47" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VolumeEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/VolumeEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VolumeMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VolumeService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="73" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VolumeServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="70" selection-start-line="48" selection-start-column="70" selection-end-line="48" selection-end-column="70" />
+              <caret line="47" column="58" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="58" />
               <folding>
-                <element signature="e#1095#1096#0" expanded="true" />
-                <element signature="e#1162#1163#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VolumeCustom.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/volume/VolumeCustom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VolumeCustomMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeCustomMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="58" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VolumeCustomMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/mapper/VolumeCustomMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <marker date="1474169574432" expanded="true" signature="969:1105" placeholder="SELECT wor_v... wor_volume" />
+                <marker date="1474169574432" expanded="true" signature="1225:1474" placeholder="SELECT wor_c... wor_content" />
+                <marker date="1474169574432" expanded="true" signature="1376:1473" placeholder="SELECT wor_v... wor_volume" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VolumeCustomService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeCustomService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="58" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VolumeCustomServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeCustomServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -177,10 +201,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
-        <option value="Interface" />
-        <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
@@ -201,28 +225,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/用户中心 - 轻文轻小说.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/用户中心 - 轻文轻小说.jsp" />
-        <option value="F:/360/qcacg/test/js/user-info-A.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/user-info-A.js" />
-        <option value="F:/360/qcacg/src/main/java/com/qcacg/controller/system/ContentController.java" />
-        <option value="F:/360/qcacg/src/main/webapp/WEB-INF/views/user-info.jsp" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/util/geetest/GeetestConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/util/geetest/GeetestLib.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/util/geetest/VerifyLoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/util/geetest/StartCaptchaServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/geetest/StartCaptchaServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/geetest/VerifyLoginServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/RegisterController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-shiro.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/updatePassword.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/main.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/util/Sms.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/user-info-C.js" />
@@ -234,24 +241,41 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/user-info-B.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ContentEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookEntity.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/mapper/VolumeMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/resources/mapper/ContentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ContentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ContentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/ContentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ContentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ContentEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/VolumeEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/VolumeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/mapper/VolumeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/VolumeCustomMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ContentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/volume/VolumeCustom.java" />
+        <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.2.8/mybatis-3.2.8.jar!/org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/class.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/catalog.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Model.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-shiro.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/public/public-footer.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/type.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/public/public-header.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeCustomService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeCustomMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qcacg/system/TestDemo.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/mapper/VolumeCustomMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeCustomServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
       </list>
     </option>
   </component>
@@ -416,6 +440,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -638,7 +665,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -972,6 +999,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="volume" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcacg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1042,9 +1103,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1061,26 +1119,26 @@
     <property name="js-jscs-nodeInterpreter" value="D:\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\炉石传说\qcacg\src\test\resources\mapper" />
-      <recent name="F:\炉石传说\qcacg\src\main\java\com\qcacg\util\geetest" />
-      <recent name="F:\炉石传说\qcacg\src\main\webapp\img" />
-      <recent name="F:\炉石传说\qcacg\src\main\webapp\user-info" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\炉石传说\qcacg\src\main\webapp\css" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\img" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\WEB-INF\views" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\user-info" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.qcacg.entity" />
       <recent name="com.qcacg.util" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\炉石传说\qcacg\src\main\webapp" />
-      <recent name="F:\炉石传说\qcacg\src\main\webapp\img" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\css" />
       <recent name="F:\炉石传说\qcacg\src\main\webapp\WEB-INF\views" />
-      <recent name="F:\炉石传说\qcacg\src\main\webapp\user-info" />
-      <recent name="F:\炉石传说\qcacg\src\main\webapp\WEB-INF\views\system\user" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\WEB-INF\views\public" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp" />
+      <recent name="F:\炉石传说\qcacg\src\main\webapp\js" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestDemo.TestFindBook">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9">
     <configuration default="false" name="TestDemo.TestBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1905,44 +1963,47 @@
       <workItem from="1473563063595" duration="17323000" />
       <workItem from="1473644244469" duration="16777000" />
       <workItem from="1473748652622" duration="22571000" />
-      <workItem from="1473851859217" duration="2169000" />
+      <workItem from="1473851859217" duration="2332000" />
+      <workItem from="1473991787376" duration="6430000" />
+      <workItem from="1474014206958" duration="28925000" />
+      <workItem from="1474182359879" duration="583000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestDemo_TestFindBook - 2016.09.14 at 19h 10m 31s.xml">
+    <history-entry file="TestDemo_TestFindBook - 2016.09.17 at 20h 19m 01s.xml">
       <configuration name="TestDemo.TestFindBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestFindBook - 2016.09.14 at 19h 13m 16s.xml">
+    <history-entry file="TestDemo_TestFindBook - 2016.09.17 at 20h 19m 25s.xml">
       <configuration name="TestDemo.TestFindBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestFindBook - 2016.09.14 at 19h 22m 20s.xml">
+    <history-entry file="TestDemo_TestFindBook - 2016.09.18 at 11h 12m 06s.xml">
       <configuration name="TestDemo.TestFindBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestFindBook - 2016.09.14 at 19h 24m 12s.xml">
+    <history-entry file="TestDemo_TestFindBook - 2016.09.18 at 11h 16m 40s.xml">
       <configuration name="TestDemo.TestFindBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestFindBook - 2016.09.14 at 19h 25m 51s.xml">
+    <history-entry file="TestDemo_TestFindBook - 2016.09.18 at 11h 17m 07s.xml">
       <configuration name="TestDemo.TestFindBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestFindBook - 2016.09.14 at 19h 36m 34s.xml">
+    <history-entry file="TestDemo_TestFindBook - 2016.09.18 at 11h 25m 14s.xml">
       <configuration name="TestDemo.TestFindBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestFindBook - 2016.09.14 at 19h 36m 51s.xml">
+    <history-entry file="TestDemo_TestFindBook - 2016.09.18 at 11h 26m 03s.xml">
       <configuration name="TestDemo.TestFindBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestFindBook - 2016.09.14 at 19h 45m 54s.xml">
+    <history-entry file="TestDemo_TestFindBook - 2016.09.18 at 11h 31m 08s.xml">
       <configuration name="TestDemo.TestFindBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestFindBook - 2016.09.14 at 19h 51m 24s.xml">
+    <history-entry file="TestDemo_TestFindBook - 2016.09.18 at 11h 32m 58s.xml">
       <configuration name="TestDemo.TestFindBook" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestDemo_TestFindBook - 2016.09.14 at 19h 53m 10s.xml">
+    <history-entry file="TestDemo_TestFindBook - 2016.09.18 at 11h 34m 36s.xml">
       <configuration name="TestDemo.TestFindBook" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1078972000" />
+    <option name="totallyTimeSpent" value="1115073000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1954,7 +2015,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1966,7 +2027,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33225107" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17537314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43939394" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40367964" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864866" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2037,7 +2098,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="94" />
+      <option name="time" value="95" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2046,279 +2107,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0167038">
-          <caret line="85" column="61" selection-start-line="85" selection-start-column="61" selection-end-line="85" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/util/upload/UploadUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.111358576">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/cropper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33296213">
-          <caret line="885" column="8" selection-start-line="885" selection-start-column="8" selection-end-line="885" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/ChapterEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08908686">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user-info-H.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.066740826">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/user-info/user-info.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34249714">
-          <caret line="260" column="24" selection-start-line="260" selection-start-column="24" selection-end-line="260" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6093929">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5647194">
-          <caret line="135" column="46" selection-start-line="135" selection-start-column="46" selection-end-line="135" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/util/geetest/StartCaptchaServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24116744">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.671875">
-          <caret line="128" column="55" selection-start-line="128" selection-start-column="55" selection-end-line="128" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9153318">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-          <folding>
-            <element signature="e#3007#3008#0" expanded="false" />
-            <element signature="e#3024#3025#0" expanded="false" />
-            <element signature="e#3059#3060#0" expanded="false" />
-            <element signature="e#3080#3081#0" expanded="false" />
-            <element signature="e#3112#3113#0" expanded="false" />
-            <element signature="e#3134#3135#0" expanded="false" />
-            <element signature="e#3179#3180#0" expanded="false" />
-            <element signature="e#3210#3211#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-application.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="40.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ValidationMessages.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/resourcesMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3773584">
-          <caret line="100" column="18" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
-          <folding>
-            <marker date="1467723730485" expanded="true" signature="466:1131" placeholder="SELECT resou... sys_resources" />
-            <marker date="1467723730485" expanded="true" signature="529:625" placeholder="select r.res... sys_resources" />
-            <marker date="1467723730485" expanded="true" signature="851:926" placeholder="select resou... sys_role_resources" />
-            <marker date="1467723730485" expanded="true" signature="1021:1096" placeholder="select resou... sys_user_resources" />
-            <marker date="1467723730485" expanded="true" signature="1260:1601" placeholder="SELECT resou... sys_resources" />
-            <marker date="1467723730485" expanded="true" signature="1356:1424" placeholder="SELECT resou... sys_user_resources" />
-            <marker date="1467723730485" expanded="true" signature="1439:1559" placeholder="SELECT resou... sys_role_resources" />
-            <marker date="1467723730485" expanded="true" signature="1734:1924" placeholder="SELECT DISTI... sys_resources" />
-            <marker date="1467723730485" expanded="true" signature="2105:2343" placeholder="SELECT DISTI... resourcesId" />
-            <marker date="1467723730485" expanded="true" signature="2139:2206" placeholder="SELECT resou... sys_user_resources" />
-            <marker date="1467723730485" expanded="true" signature="2221:2338" placeholder="SELECT resou... sys_role_resources" />
-            <marker date="1467723730485" expanded="true" signature="2281:2337" placeholder="SELECT roleI... sys_user_role" />
-            <marker date="1467723730485" expanded="true" signature="2574:2631" placeholder="delete from " />
-            <marker date="1467723730485" expanded="true" signature="2708:2765" placeholder="delete from " />
-            <marker date="1467723730485" expanded="true" signature="2848:2900" placeholder="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ChapterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29900333">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ChapterMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13289036">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6680498">
-          <caret line="100" column="71" selection-start-line="100" selection-start-column="71" selection-end-line="100" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3930131">
-          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66390043">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user-info-A.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.311804">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user-info-C.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6013363">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/user/UserQauryVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18484288">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/user/UserCustom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26617375">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/mapper/BookCollectMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.96153843">
-          <caret line="180" column="30" selection-start-line="180" selection-start-column="30" selection-end-line="180" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user-info-B.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3056093">
-          <caret line="63" column="62" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserEntityExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-40.965973">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.684989">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/mapper/BookMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1473821764199" expanded="true" signature="309:747" placeholder="SELECT wor_b... wor_book" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32407406">
@@ -2332,16 +2120,6 @@
         <state vertical-scroll-proportion="0.9677419">
           <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/ContentEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6557377">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2387,41 +2165,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ContentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4156729">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="28" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="71" selection-start-line="47" selection-start-column="71" selection-end-line="47" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="73" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="70" selection-start-line="48" selection-start-column="70" selection-end-line="48" selection-end-column="70" />
-          <folding>
-            <element signature="e#1095#1096#0" expanded="true" />
-            <element signature="e#1162#1163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/mapper/ContentMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2438,50 +2181,353 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ChapterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3846154">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.103519">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/spring-application.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="38.88889">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/user/UserQauryVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/user/UserCustom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26804122">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/VolumeEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7113402">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/mapper/VolumeMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1473853764155" expanded="true" signature="321:498" placeholder="SELECT wor_v... wor_volume" />
-            <marker date="1473853764155" expanded="true" signature="1622:1815" placeholder="SELECT wor_c... wor_content" />
-            <marker date="1473853764155" expanded="true" signature="1725:1814" placeholder="SELECT wor_v... wor_volume" />
+            <marker date="1474081875826" expanded="true" signature="321:498" placeholder="SELECT wor_v... wor_volume" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ContentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49484536">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.2.8/mybatis-3.2.8.jar!/org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9189724">
+          <caret line="104" column="10" selection-start-line="104" selection-start-column="10" selection-end-line="104" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/vue.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Model.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19762845">
+          <caret line="5" column="79" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/catalog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26415095">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3490566">
+          <caret line="110" column="4" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-application.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7131474">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/type.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="14.9811325">
+          <caret line="397" column="26" selection-start-line="397" selection-start-column="26" selection-end-line="397" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31509435">
+          <caret line="576" column="177" selection-start-line="576" selection-start-column="177" selection-end-line="576" selection-end-column="177" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.189394">
+          <caret line="97" column="11" selection-start-line="97" selection-start-column="11" selection-end-line="97" selection-end-column="11" />
+          <folding>
+            <element signature="e#3195#3196#0" expanded="false" />
+            <element signature="e#3216#3217#0" expanded="false" />
+            <element signature="e#3266#3267#0" expanded="false" />
+            <element signature="e#3286#3287#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/public/public-footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18867925">
+          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/public/public-header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3018868">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2658228">
+          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VolumeCustomMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33207548">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="26" selection-end-column="41" />
+          <folding>
+            <marker date="1474081903193" expanded="true" signature="828:1051" placeholder="SELECT wor_v... wor_content" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4676259">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/task/MonitorTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/util/SystemInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/ContentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23238096">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VolumeMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.153847">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.75789475">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <marker date="1473853764155" expanded="true" signature="321:498" placeholder="SELECT wor_v... wor_volume" />
-            <marker date="1473853764155" expanded="true" signature="1622:1815" placeholder="SELECT wor_c... wor_content" />
-            <marker date="1473853764155" expanded="true" signature="1725:1814" placeholder="SELECT wor_v... wor_volume" />
+            <marker date="1474081875826" expanded="true" signature="321:498" placeholder="SELECT wor_v... wor_volume" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/VolumeEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30476192">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <caret line="47" column="58" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeCustomMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="58" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeCustomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26666668">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/mapper/VolumeCustomMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <marker date="1474169574432" expanded="true" signature="969:1105" placeholder="SELECT wor_v... wor_volume" />
+            <marker date="1474169574432" expanded="true" signature="1225:1474" placeholder="SELECT wor_c... wor_content" />
+            <marker date="1474169574432" expanded="true" signature="1376:1473" placeholder="SELECT wor_v... wor_volume" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/entity/volume/VolumeCustom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/headerOrFooter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qcacg/system/TestDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5243902">
-          <caret line="145" column="8" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="150" column="44" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/轻创/qcacg分类/qcacg/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08421053">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/main-A.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6315789">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeCustomServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53691274">
+          <caret line="12" column="114" selection-start-line="12" selection-start-column="114" selection-end-line="12" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29723993">
+          <caret line="7" column="95" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="109" />
           <folding />
         </state>
       </provider>

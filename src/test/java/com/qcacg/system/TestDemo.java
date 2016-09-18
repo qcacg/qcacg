@@ -1,10 +1,13 @@
 package com.qcacg.system;
 
+import com.alibaba.fastjson.JSON;
 import com.qcacg.controller.system.RoleController;
-import com.qcacg.entity.*;
+import com.qcacg.entity.ContentEntity;
+import com.qcacg.entity.ResourcesEntity;
+import com.qcacg.entity.RoleEntity;
+import com.qcacg.entity.VolumeEntity;
 import com.qcacg.entity.user.UserCustom;
-import com.qcacg.mapper.ResourcesMapper;
-import com.qcacg.mapper.RoleMapper;
+import com.qcacg.entity.volume.VolumeCustom;
 import com.qcacg.service.system.*;
 import org.apache.log4j.Logger;
 import org.junit.Test;
@@ -27,19 +30,20 @@ public class TestDemo {
     UserService userService;
     @Autowired
     RoleService roleService;
-    @Autowired
-    RoleMapper roleMapper;
+//    @Autowired
+//    RoleMapper roleMapper;
     @Autowired
     ResourcesService resourcesService;
-    @Autowired
-    ResourcesMapper resourcesMapper;
+//    @Autowired
+//    ResourcesMapper resourcesMapper;
     @Autowired
     BookService bookService;
     @Autowired
     VolumeService volumeService;
     @Autowired
     ContentService contentService;
-
+    @Autowired
+    VolumeCustomService volumeCustomService;
 
 
 
@@ -142,12 +146,14 @@ public class TestDemo {
 
     @Test
     public void TestFindBook() {
-        List<ContentEntity> contentEntityList = this.volumeService.findVolumeAndContentByBookId(1l);
-        
-        for (int i = 0; i < contentEntityList.size(); i++) {
-            System.out.println(contentEntityList.get(i).getContentTitle());
-        }
+        List<VolumeCustom> volumeEntityList = this.volumeCustomService.findVolumeAndContentByBookId(1l);
 
-
+//        for (int i = 0; i < volumeEntityList.size(); i++) {
+//
+//            System.out.println(volumeEntityList.get(i).getVolumeName());
+//
+//        }
+//        System.out.println(volumeEntityList.get(1).getVolumeName());
+        logger.info(JSON.toJSONString(volumeEntityList));
     }
 }
