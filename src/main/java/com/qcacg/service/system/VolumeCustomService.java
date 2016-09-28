@@ -1,5 +1,6 @@
 package com.qcacg.service.system;
 
+import com.qcacg.entity.ContentEntity;
 import com.qcacg.entity.volume.VolumeCustom;
 
 import java.util.List;
@@ -9,4 +10,6 @@ import java.util.List;
  */
 public interface VolumeCustomService {
     public List<VolumeCustom> findVolumeAndContentByBookId(Long bookId);
+
+    public List<ContentEntity> findContentByVolumeIdAndBookId(Long bookId);
 }

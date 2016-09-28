@@ -13,10 +13,14 @@ public interface BookService extends BaseService<BookEntity> {
 
     public BookEntity findByBookId(Long bookId);
 
-    public PageInfo<BookEntity> queryBookForList(BookEntity entity);
+    public PageInfo<BookEntity> queryBookForList(BookEntity bookEntity);
 
-    public String saveOrUpdate(BookEntity entity);
+    public void saveOrUpdateBook(BookEntity bookEntity);
 
     public List<BookEntity> findBookByUserId(Long userId);
+
+    public void insertBook(BookEntity bookEntity);
+
+    public void updateBook(BookEntity bookEntity);
 
 }

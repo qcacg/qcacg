@@ -57,14 +57,15 @@ public class UserController extends BaseController
 	}
 
 
-/*
-基本的修改(基本信息增加签名字段)
- */
-
-	@RequestMapping("saveOrUpdateUser")
+	/*
+     修改或保存个人信息
+     */
+	@RequestMapping("updateUser")
 	@ResponseBody
 	public String updateUser(UserEntity userEntity, @RequestParam("userName")String userName, @RequestParam("birthday")String birthday, @RequestParam("sex")String sex, @RequestParam("information")String information)
 	{
+		Long userId = UserEntityUtil.getUserFromSession().getUserId();
+		userEntity.setUserId(userId);
 		userEntity.setUserName(userName);
 		userEntity.setBirthday(birthday);
 		userEntity.setInformation(information);
@@ -74,7 +75,6 @@ public class UserController extends BaseController
 
 	@RequestMapping("batchDelete")
 	@ResponseBody
-	@SystemLog(resourcesName = "用户管理", methods = "批量删除用户")
 	public String batchDelete(Long ids[])
 	{
 		return this.userService.batchDelete(ids);

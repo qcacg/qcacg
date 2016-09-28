@@ -2,13 +2,11 @@ package com.qcacg.system;
 
 import com.alibaba.fastjson.JSON;
 import com.qcacg.controller.system.RoleController;
-import com.qcacg.entity.ContentEntity;
-import com.qcacg.entity.ResourcesEntity;
-import com.qcacg.entity.RoleEntity;
-import com.qcacg.entity.VolumeEntity;
+import com.qcacg.entity.*;
 import com.qcacg.entity.user.UserCustom;
 import com.qcacg.entity.volume.VolumeCustom;
 import com.qcacg.service.system.*;
+import org.apache.commons.lang.math.RandomUtils;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -44,12 +43,12 @@ public class TestDemo {
     ContentService contentService;
     @Autowired
     VolumeCustomService volumeCustomService;
-
-
-
-
-
-
+    @Autowired
+    BookAndBookTypeService bookAndBookTypeService;
+    @Autowired
+    BookCollectService bookCollectService;
+    @Autowired
+    BookHitService bookHitService;
 
 
     @Test
@@ -132,28 +131,58 @@ public class TestDemo {
         System.out.println(contentEntity.getContentId());
     }
 
-//    @Test
-//    public void TestBookCollect(){
-//
-//        BookCollectEntity bookCollectEntity = new BookCollectEntity();
-//        bookCollectEntity.setBookCollectId(4l);
-//        bookCollectEntity.setBookId(2l);
-//        bookCollectEntity.setUserId(1l);
-//        this.bookCollectService.saveOrDelete(bookCollectEntity);
-//        logger.info(bookCollectEntity);
-//        System.out.println(bookCollectEntity.getBookCollectDate());
-//    }
+    @Test
+    public void TestBookCollect(){
 
+        List<BookEntity> bookEntityList=this.bookCollectService.findBookCollectByUserId(1l);
+        logger.info(JSON.toJSONString(bookEntityList));
+    }
+@Test
+public void TestFindContent() {
+
+    ContentEntity contentEntity = this.contentService.findContentByContentId(6l);
+
+    logger.info(JSON.toJSONString(contentEntity));
+}
     @Test
     public void TestFindBook() {
-        List<VolumeCustom> volumeEntityList = this.volumeCustomService.findVolumeAndContentByBookId(1l);
 
-//        for (int i = 0; i < volumeEntityList.size(); i++) {
-//
-//            System.out.println(volumeEntityList.get(i).getVolumeName());
-//
-//        }
-//        System.out.println(volumeEntityList.get(1).getVolumeName());
-        logger.info(JSON.toJSONString(volumeEntityList));
+        List<VolumeCustom> volumeCustomList = this.volumeCustomService.findVolumeAndContentByBookId(1l);
+
+        logger.info(JSON.toJSONString(volumeCustomList));
+    }
+    @Test
+    public void TestBookAndBookType(){
+        Long bookId = 1l;
+        List<BookAndBookTypeEntity> bookAndBookTypeEntityList = new ArrayList<BookAndBookTypeEntity>();
+        for(int i = 0;i < 5;i++){
+            BookAndBookTypeEntity bookAndBookTypeEntity = new BookAndBookTypeEntity();
+
+            bookAndBookTypeEntity.setBookId(bookId);
+            bookAndBookTypeEntity.setBookTypeId((long) (RandomUtils.nextInt(17)+1));
+            bookAndBookTypeEntityList.add(bookAndBookTypeEntity);
+        }
+        this.bookAndBookTypeService.saveOrUpdateBookType(bookAndBookTypeEntityList,bookId);
+        logger.info(JSON.toJSONString(bookAndBookTypeEntityList));
+
+
+    }
+
+    @Test
+    public void TestSaveBook(){
+        BookEntity bookEntity = new BookEntity();
+        bookEntity.setUserId(1l);
+        bookEntity.setBookName("纸牌屋");
+        bookEntity.setSort("少年");
+        bookEntity.setBookIntroduction("与人斗其乐无穷");
+        this.bookService.insertBook(bookEntity);
+        System.out.println(bookEntity.getBookId());
+    }
+    @Test
+    public void TestBookHit(){
+        BookHitEntity bookHitEntity = new BookHitEntity();
+        bookHitEntity.setBookId(6l);
+        bookHitEntity.setUserId(1l);
+        this.bookHitService.saveBookHit(bookHitEntity);
     }
 }

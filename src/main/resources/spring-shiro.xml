@@ -89,7 +89,10 @@
 				/register.shtml = anon
 				/toRegister.shtml = anon
 				/type.shtml = anon
-				/sendTelephoneCode.shtml = anon
+				/public-footer.shtml = anon
+				/public-header.shtml = anon
+				/updatePasswordTelephoneCode.shtml = anon
+				/registerTelephoneCode.shtml = anon
 				/toUpdatePassword.shtml = anon
 				/updatePassword.shtml = anon
 				/404.jsp = anon

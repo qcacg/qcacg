@@ -8,6 +8,7 @@ import com.qcacg.util.upload.UploadUtils;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,11 +16,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.UUID;
+import java.io.*;
+import java.util.*;
 
 /**
  * Created by Administrator on 2016/7/4.
@@ -34,13 +32,18 @@ public class ContentController extends BaseController {
     /*
     获取草稿
     */
+    @RequestMapping("findContentByVolumeId/{volumeId}")
+    @ResponseBody
+    public ContentEntity findContentByVolumeId(@PathVariable("volumeId")Long volumeId){
+        return this.contentService.findContentByVolumeId(volumeId);
+    }
 
-
-
-
-    @RequestMapping("save")
-    public void saveContent(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity,
-                            @RequestParam("html")String content,  @RequestParam("contentTitle")String contentTitle,  @RequestParam("volumeId")Long volumeId) {
+    /*
+    保存作品（文本）
+    */
+    @RequestMapping("saveOrUpdateContent/{volumeId}")
+    public void saveOrUpdateContent(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity,
+                            @RequestParam("html")String html,  @RequestParam("contentTitle")String contentTitle,  @PathVariable("volumeId")Long volumeId) {
         String message = "";
         String error = "";
         String path = "";
@@ -48,10 +51,14 @@ public class ContentController extends BaseController {
             String filename = UploadUtils.generateFilename("html");
             path = "/upload/file/content" + filename;
             message = path;
-            File file =new File(path);
-            FileWriter fileWriter = new FileWriter(file.getName());
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            bufferedWriter.write(content);
+            File file = new File(path);
+            FileOutputStream fileOutputStream = new FileOutputStream(file.getName());
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream,"UTF-8");
+            BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
+            bufferedWriter.write(contentTitle);
+            bufferedWriter.newLine();
+            bufferedWriter.write(html);
+            bufferedWriter.flush();
             bufferedWriter.close();
         }catch (IOException e){
             e.printStackTrace();
@@ -59,7 +66,7 @@ public class ContentController extends BaseController {
 
         contentEntity.setVolumeId(volumeId);
         contentEntity.setContentTitle(contentTitle);
-        contentEntity.setContent(content);
+        contentEntity.setContent(html);
         contentEntity.setContentUrl(path);
         this.contentService.saveOrUpdate(contentEntity);
 
@@ -68,8 +75,59 @@ public class ContentController extends BaseController {
         obj.put("msg", message);
         ResponseUtils.renderText(response, obj.toString());
     }
+    /*
+    读者读取作品正文（或者作者获取草稿）
+    */
+    @RequestMapping("findContent/{contentId}")
+    @ResponseBody
+    public ContentEntity findContent(@PathVariable("contentId")Long contentId){
+        return this.contentService.findContentByContentId(contentId);
+    }
 
-
+    public List<String> contentIdList(Long bookId){
+        List<ContentEntity> contentEntityList = this.contentService.findContentByBookId(bookId);
+        List<String> contentIdList = new ArrayList<String>();
+        for(ContentEntity contentEntity : contentEntityList){
+            contentIdList.add(String.valueOf(contentEntity.getContentId()));
+        }
+        return contentIdList;
+    }
+    /*
+    下一章
+     */
+    @RequestMapping("nextContent")
+    @ResponseBody
+    public Map<String,Object> nextContent (@RequestParam("contentId")Long contentId,@RequestParam("bookId")Long bookId){
+        Map<String,Object> result = new HashMap<String, Object>();
+        if(this.contentIdList(bookId).contains(String.valueOf(contentId+1))){
+            ContentEntity contentEntity = this.contentService.findContentByContentId(contentId+1);
+            result.put("success",true);
+            result.put("contentEntity",contentEntity);
+            return result;
+        }else {
+            result.put("success",false);
+            result.put("msg","已经是最后一章了。");
+            return result;
+        }
+    }
+    /*
+    上一章
+     */
+    @RequestMapping("previousContent")
+    @ResponseBody
+    public Map<String,Object> previousContent (@RequestParam("contentId")Long contentId,@RequestParam("bookId")Long bookId){
+        Map<String,Object> result = new HashMap<String, Object>();
+        if(this.contentIdList(bookId).contains(String.valueOf(contentId-1))){
+            ContentEntity contentEntity = this.contentService.findContentByContentId(contentId-1);
+            result.put("success",true);
+            result.put("contentEntity",contentEntity);
+            return result;
+        }else {
+            result.put("success",false);
+            result.put("msg","已经到最前一章了。");
+            return result;
+        }
+    }
 
 
     /*

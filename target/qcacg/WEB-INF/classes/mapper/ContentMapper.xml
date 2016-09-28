@@ -2,7 +2,73 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qcacg.mapper.ContentMapper">
 
+    <select id="findContentByVolumeId" resultType="com.qcacg.entity.ContentEntity" parameterType="java.lang.Long">
+    SELECT
+    wor_content.ContentId,
+    wor_content.VolumeId,
+    wor_content.ContentTitle,
+    wor_content.Content,
+    wor_content.ContentWordCount,
+    wor_content.ContentUpdate,
+    wor_content.ContentStatus,
+    wor_content.ContentUrl
+    FROM
+    wor_content
+    WHERE
+    wor_content.VolumeId = #{wor_content.VolumeId}
+    </select>
 
+    <resultMap id="ContentResultMap" type="com.qcacg.entity.ContentEntity">
+        <id column="contentId" property="contentId"/>
+        <result column="volumeId" property="volumeId"/>
+        <result column="contentTitle" property="contentTitle"/>
+        <result column="content" property="content"/>
+        <result column="contentWordCount" property="contentWordCount"/>
+        <result column="contentUpdate" property="contentUpdate"/>
+        <result column="contentStatus" property="contentStatus"/>
+        <result column="contentUrl" property="contentUrl"/>
+        <result column="bookId" property="bookId"/>
+        <result column="bookName" property="bookName"/>
+        <result column="volumeName" property="volumeName"/>
+        <result column="userName" property="userName"/>
+    </resultMap>
 
-
+    <select id="findContentByContentId" resultMap="ContentResultMap" parameterType="java.lang.Long">
+        SELECT
+wor_content.ContentId,
+wor_content.VolumeId,
+wor_content.ContentTitle,
+wor_content.Content,
+wor_content.ContentWordCount,
+wor_content.ContentUpdate,
+wor_content.ContentStatus,
+wor_content.ContentUrl,
+wor_book.BookId,
+wor_book.BookName,
+wor_volume.VolumeName,
+sys_user.UserName
+FROM
+wor_content ,
+wor_book ,
+sys_user ,
+wor_volume
+WHERE
+wor_book.UserId = sys_user.UserId AND
+wor_volume.BookId = wor_book.BookId AND
+wor_volume.VolumeId = wor_content.VolumeId  AND
+wor_content.ContentId =  #{wor_content.ContentId}
+    </select>
+    
+    <select id="findContentByBookId" resultType="com.qcacg.entity.ContentEntity" parameterType="java.lang.Long">
+        SELECT
+wor_content.ContentId
+FROM
+wor_content ,
+wor_book ,
+wor_volume
+WHERE
+wor_volume.BookId = wor_book.BookId AND
+wor_volume.VolumeId = wor_content.VolumeId AND
+wor_book.BookId = #{wor_book.BookId}
+    </select>
 </mapper>

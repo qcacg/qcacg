@@ -323,7 +323,8 @@
       	}
   </style>
   <body class="class-body">
-    <iframe id="qcacg-header" style="height: 56px;width: 100%;min-width:1200px;border: 0px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-header.html"></iframe>
+    <%--<iframe id="qcacg-header" style="height: 56px;width: 100%;min-width:1200px;border: 0px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-header.html"></iframe>--%>
+    <%@ include file="public-header.jsp" %>
     <div class="class-content">
       <div class="class-title">
         <div class="class-title-line">
@@ -823,6 +824,7 @@
       	</ul>
       </div>
     </div>
-    <iframe style="height: 240px;width: 100%;border: 0px;min-width:1200px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-footer.html"></iframe>
+    <%@ include file="public-footer.jsp" %>
+    <%--<iframe style="height: 240px;width: 100%;border: 0px;min-width:1200px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-footer.html"></iframe>--%>
   </body>
 </html>

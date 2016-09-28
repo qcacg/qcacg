@@ -6,8 +6,9 @@
     <select id="findBookByUserId" resultType="com.qcacg.entity.BookEntity" parameterType="java.lang.Long">
     SELECT
     wor_book.BookId,
+    wor_book.UserId,
     wor_book.BookName,
-    wor_book.`Partition`,
+    wor_book.Sort,
     wor_book.BookIntroduction,
     wor_book.BookUpdated,
     wor_book.BookCoverImage,
@@ -26,8 +27,16 @@
 
     </select>
 
+    <insert id="insertBook" parameterType="com.qcacg.entity.BookEntity" useGeneratedKeys="true" keyProperty="bookId">
+        <selectKey keyProperty="bookId" resultType="java.lang.Long" order="AFTER">
+            SELECT LAST_INSERT_ID() as bookId
+        </selectKey>
+        INSERT INTO wor_book (bookId,userId,bookName,sort,bookIntroduction,bookCoverImage)
+        VALUES( #{bookId,jdbcType=BIGINT},#{userId,jdbcType=BIGINT},#{bookName,jdbcType=VARCHAR},#{sort,jdbcType=VARCHAR},#{bookIntroduction,jdbcType=VARCHAR},#{bookCoverImage,jdbcType=VARCHAR} )
+    </insert>
 
-
-
+    <update id="updateBook" parameterType="com.qcacg.entity.BookEntity">
+        UPDATE wor_book SET bookName=#{bookName},sort=#{sort},bookIntroduction=#{bookIntroduction},bookCoverImage=#{bookCoverImage} WHERE bookId=#{bookId}
+    </update>
 
 </mapper>

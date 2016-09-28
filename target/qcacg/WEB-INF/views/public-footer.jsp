@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-	<head>
-		<meta charset="utf-8" />
-		<title>轻创文学网</title>
-		<link rel="stylesheet" href="../css/main.css" />
-		<link rel="stylesheet" href="../css/headerOrFooter.css" />
-	</head>
-	<body>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+
+<link rel="stylesheet" href="${pageContext.servletContext.contextPath }/css/headerOrFooter.css" />
 	  <footer class="qcacg-footer-parent">
 		  <div class="qcacg-footer">
 		    <div class="qcacg-top">
@@ -38,7 +32,7 @@
 		        <p class="qcacg-content"><a href="javascript:;">网易GACHA</a></p>
 		        <p class="qcacg-content"><a href="javascript:;">MissEvan_M站</a></p>
 		      </div>
-		      <div class="qcacg-footer-logo" onclick="location.href='/qcacg/index.html'">轻创文学网</div>
+		      <div class="qcacg-footer-logo" onclick="location.href='/index.shtml'">轻创文学网</div>
 		    </div>
 		    <div class="qcacg-bottom">
 		      <p>杭州轻悦网络科技有限公司
@@ -48,5 +42,4 @@
 		    </div>
 		  </div>
 		</footer>
-	</body>
-</html>
+

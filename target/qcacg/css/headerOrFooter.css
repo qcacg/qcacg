@@ -1,3 +1,22 @@
+.qcacg-header-parent * {
+  box-sizing: border-box !important;
+  margin: 0px;
+  padding: 0px;
+  outline:none;
+  font-family: "微软雅黑";
+  font-size: 14px;
+  line-height: 1;
+}
+.qcacg-footer-parent * {
+  box-sizing: border-box !important;;
+  margin: 0px;
+  padding: 0px;
+  outline:none;
+  font-family: "微软雅黑";
+  font-size: 14px;
+  line-height: 1;
+}
+
 .qcacg-header-parent {
   height:50px;
   width:100%;

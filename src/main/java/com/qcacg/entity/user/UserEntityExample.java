@@ -1,4 +1,4 @@
-package com.qcacg.entity;
+package com.qcacg.entity.user;
 
 import java.util.ArrayList;
 import java.util.Date;

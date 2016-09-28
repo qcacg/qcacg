@@ -2,19 +2,21 @@ package com.qcacg.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Table(name = "wor_book")
 public class BookEntity implements Serializable {
 
     private static final long serialVersionUID = -5107757138455912827L;
-    @Column(name = "bookId", unique = true, nullable = false)
+    @Column(name = "bookId")
     private Long bookId;
-    @Column(name = "userId", unique = true, nullable = false)
+    @Column(name = "userId")
     private Long userId;
-    @Column(name = "partition")
-    private String partition;
+    @Column(name = "sort")
+    private String sort;
     @Column(name = "bookName")
     private String bookName;
     @Column(name = "bookUpdated")
@@ -35,8 +37,8 @@ public class BookEntity implements Serializable {
     private Long bookSilverCoins;
     @Column(name = "bookIntroduction")
     private String bookIntroduction;
-
-//    private List<VolumeEntity> volumeEntityList ;
+    @Transient
+    private List<Long> bookTypeList;
 
     public Long getBookId() {
         return bookId;
@@ -54,12 +56,12 @@ public class BookEntity implements Serializable {
         this.userId = userId;
     }
 
-    public String getPartition() {
-        return partition;
+    public String getSort() {
+        return sort;
     }
 
-    public void setPartition(String partition) {
-        this.partition = partition;
+    public void setSort(String sort) {
+        this.sort = sort;
     }
 
     public String getBookName() {
@@ -143,11 +145,11 @@ public class BookEntity implements Serializable {
     }
 
 
-//    public List<VolumeEntity> getVolumeEntityList() {
-//        return volumeEntityList;
-//    }
-//
-//    public void setVolumeEntityList(List<VolumeEntity> volumeEntityList) {
-//        this.volumeEntityList = volumeEntityList;
-//    }
+    public List<Long> getBookTypeList() {
+        return bookTypeList;
+    }
+
+    public void setBookTypeList(List<Long> bookTypeList) {
+        this.bookTypeList = bookTypeList;
+    }
 }

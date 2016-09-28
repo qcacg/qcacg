@@ -27,7 +27,6 @@ public class UserServiceImpl extends BaseServiceImpl<UserEntity>implements UserS
 	private RandomNumberGenerator randomNumberGenerator = new SecureRandomNumberGenerator();
 	private String algorithmName = "md5";
 	private int hashIterations = 2;
-
 	@Autowired
 	private UserMapper userMapper;
 
@@ -65,15 +64,19 @@ public class UserServiceImpl extends BaseServiceImpl<UserEntity>implements UserS
 		return result;
 	}
 
-	public void updatePassWord(String telephone, String passWord){
-		UserEntity userEntity = this.findByLoginName(telephone);
-		if(userEntity != null){
-			String salt = randomNumberGenerator.nextBytes().toHex();
-			userEntity.setCredentialsSalt(salt);
-			String newPassWord = new SimpleHash(algorithmName, passWord, ByteSource.Util.bytes(userEntity.getTelephone()+salt), hashIterations).toHex();
-			userEntity.setPassWord(newPassWord);
-			userEntity.setCredentialsSalt(salt);
-			userMapper.updateByPrimaryKey(userEntity);
+	public void updatePassWord(UserEntity userEntity,String passWord){
+		try {
+			if(userEntity != null){
+				String salt = randomNumberGenerator.nextBytes().toHex();
+				userEntity.setCredentialsSalt(salt);
+				String newPassWord = new SimpleHash(algorithmName, passWord, ByteSource.Util.bytes(userEntity.getTelephone()+salt), hashIterations).toHex();
+				userEntity.setPassWord(newPassWord);
+				userEntity.setCredentialsSalt(salt);
+				userMapper.updateByPrimaryKey(userEntity);
+			}
+		}
+		catch (Exception e){
+			e.printStackTrace();
 		}
 
 }

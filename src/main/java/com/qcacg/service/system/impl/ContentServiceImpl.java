@@ -23,6 +23,10 @@ public class ContentServiceImpl extends BaseServiceImpl<ContentEntity> implement
     ContentMapper contentMapper;
 
 
+    @Override
+    public ContentEntity findContentByVolumeId(Long volumeId) {
+        return this.contentMapper.findContentByVolumeId(volumeId);
+    }
 
     @Override
     public String saveOrUpdate(ContentEntity entity) {
@@ -43,5 +47,15 @@ public class ContentServiceImpl extends BaseServiceImpl<ContentEntity> implement
             return null;
         }
         return result;
+    }
+
+    @Override
+    public ContentEntity findContentByContentId(Long contentId) {
+        return this.contentMapper.findContentByContentId(contentId);
+    }
+
+    @Override
+    public List<ContentEntity> findContentByBookId(Long bookId) {
+        return this.contentMapper.findContentByBookId(bookId);
     }
 }

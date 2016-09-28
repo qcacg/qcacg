@@ -6,8 +6,8 @@
 		<link rel="stylesheet" href="${pageContext.servletContext.contextPath }/css/main.css" />
 	</head>
 	<body>
-	  <iframe id="qcacg-header" style="height: 56px;width: 100%;min-width:1200px;border: 0px;overflow: hidden;" src="public/public-header.html"></iframe>
-	  <iframe style="height: 240px;width: 100%;min-width:1200px;border: 0px;overflow: hidden;" src="public/public-footer.html"></iframe>
+	  <iframe id="qcacg-header" style="height: 56px;width: 100%;min-width:1200px;border: 0px;overflow: hidden;" src="public-header.shtml"></iframe>
+	  <iframe style="height: 240px;width: 100%;min-width:1200px;border: 0px;overflow: hidden;" src="public-footer.shtml"></iframe>
 	</body>
 	<script>
 	  window.onload = function () {

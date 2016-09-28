@@ -16,6 +16,6 @@ public interface UserService extends BaseService<UserEntity>
 
 	public void register(UserCustom userCustom);
 
-	public void updatePassWord(String telephone, String newPassWord);
+	public void updatePassWord(UserEntity userEntity,String passWord);
 
 }

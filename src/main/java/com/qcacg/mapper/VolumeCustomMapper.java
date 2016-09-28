@@ -1,5 +1,6 @@
 package com.qcacg.mapper;
 
+import com.qcacg.entity.ContentEntity;
 import com.qcacg.entity.volume.VolumeCustom;
 
 import java.util.List;
@@ -10,4 +11,6 @@ import java.util.List;
 public interface VolumeCustomMapper {
 
     public List<VolumeCustom> findVolumeAndContentByBookId(Long bookId);
+
+    public List<ContentEntity> findContentByVolumeIdAndBookId(Long bookId);
 }

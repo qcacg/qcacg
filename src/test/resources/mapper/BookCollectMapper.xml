@@ -3,16 +3,20 @@
 <mapper namespace="com.qcacg.mapper.BookCollectMapper">
 
 
-    <select id="findBookCollectByUserId" parameterType="java.lang.Long">
+    <select id="findBookCollectByUserId" resultType="com.qcacg.entity.BookEntity" parameterType="java.lang.Long">
     SELECT
-    wor_bookcollect.BookId
+    wor_bookcollect.BookId,
+    wor_book.BookName,
+    wor_book.BookCoverImage
     FROM
-    wor_bookcollect
+    wor_bookcollect ,
+    wor_book
     WHERE
     wor_bookcollect.UserId = #{wor_bookcollect.UserId}
+    GROUP BY
+    wor_bookcollect.BookId
     ORDER BY
     wor_bookcollect.BookCollectDate DESC
-
 
     </select>
 

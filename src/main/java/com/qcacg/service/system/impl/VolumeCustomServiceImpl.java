@@ -1,5 +1,6 @@
 package com.qcacg.service.system.impl;
 
+import com.qcacg.entity.ContentEntity;
 import com.qcacg.entity.volume.VolumeCustom;
 import com.qcacg.mapper.VolumeCustomMapper;
 import com.qcacg.service.system.VolumeCustomService;
@@ -20,5 +21,10 @@ public class VolumeCustomServiceImpl implements VolumeCustomService{
     public List<VolumeCustom> findVolumeAndContentByBookId(Long bookId) {
 
         return this.volumeCustomMapper.findVolumeAndContentByBookId(bookId);
+    }
+
+    @Override
+    public List<ContentEntity> findContentByVolumeIdAndBookId(Long bookId) {
+        return this.volumeCustomMapper.findContentByVolumeIdAndBookId(bookId);
     }
 }

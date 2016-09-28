@@ -1,6 +1,7 @@
 package com.qcacg.mapper;
 
 import com.qcacg.entity.BookCollectEntity;
+import com.qcacg.entity.BookEntity;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
  */
 public interface BookCollectMapper extends Mapper<BookCollectEntity> {
 
-    public List<BookCollectEntity> findBookCollectByUserId(Long userId);
+    public List<BookEntity> findBookCollectByUserId(Long userId);
 
 
 }

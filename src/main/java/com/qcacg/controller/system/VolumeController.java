@@ -8,6 +8,7 @@ import com.qcacg.service.system.VolumeCustomService;
 import com.qcacg.service.system.VolumeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,10 +27,12 @@ public class VolumeController extends BaseController {
     VolumeService volumeService;
     @Autowired
     public BookService bookService;
-
-    @RequestMapping("saveVolume")
+    /*
+    新增卷或修改卷名
+    */
+    @RequestMapping("saveOrUpdateVolume/{bookId}")
     @ResponseBody
-    public String saveVolume(VolumeEntity volumeEntity, @RequestParam("volumeName")String volumeName, @RequestParam("bookId")Long bookId)
+    public String saveOrUpdateVolume(VolumeEntity volumeEntity, @RequestParam("volumeName")String volumeName, @PathVariable("bookId")Long bookId)
     {
         volumeEntity.setBookId(bookId);
         volumeEntity.setVolumeName(volumeName);
@@ -42,10 +45,12 @@ public class VolumeController extends BaseController {
     {
         return this.volumeService.findVolumeByBookId(bookId);
     }
-
-    @RequestMapping("findVolumeAndContentByBookId")
+    /*
+    获取作品卷章详情
+     */
+    @RequestMapping("findVolumeAndContentByBookId/{bookId}")
     @ResponseBody
-    public List<VolumeCustom> findVolumeAndContentByBookId(@RequestParam("bookId")Long bookId)
+    public List<VolumeCustom> findVolumeAndContentByBookId(@PathVariable("bookId")Long bookId)
     {
         return this.volumeCustomService.findVolumeAndContentByBookId(bookId);
     }

@@ -15,7 +15,9 @@
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath }/js/user-info-A.js"></script>
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath }/js/user-info-H.js"></script>
 	    <script type="text/javascript" src="${pageContext.servletContext.contextPath }/js/user-info-B.js"></script>
+	<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main.css" />
 	    <link rel="shortcut icon" href="http://www.qcacg.com/favicon.ico" type="image/x-icon" />
+
 		 <style>
    img {
       max-width: 100%; /* This rule is very important, please do not ignore this! */
@@ -39,7 +41,7 @@
 	</head>
 
 	<body style="zoom: 1;">
-	<iframe id="qcacg-header" style="height: 56px;width: 100%;min-width:1200px;border: 0px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-header.html"></iframe>
+	<%@ include file="public-header.jsp" %>
 	 <div id="canvas"></div>
 		<div id="content" style="min-height: 608px;" class="content">
 			<div class="container">
@@ -104,7 +106,7 @@
 					    <a data-target="content" class="tab active" id="user-info-A">基本信息</a>
 						<a data-target="password" class="tab" id="user-passUpdata-A">修改密码</a></div>
 						<div id="userInfo-A" class="block block-content-profile js-block-content js-block active">
-							<form id="form-profile-a" class="form-member">
+							<%--<form id="form-profile-a" class="form-member">--%>
 								<div class="row-m"><label class="label-m">昵称：</label>
 									<p class="ipt-text-profile">275120399</p>
 								</div>
@@ -127,7 +129,7 @@
 					<div class="row-m"><label class="label-m"></label>
 						<div class="ipt-group"><button id="btn-save-profile" type="submit" class="btn btn-primary btn-sm btn-wide">保存</button></div>
 					</div>
-					</form>
+					<%--</form>--%>
 				</div>
 				<div id="userPassUpdata-A" class="block js-block-password js-block">
 					<p>目前只支持使用客户端修改密码。<a href="javascript:;" target="_blank">立即下载</a></p>
@@ -191,7 +193,7 @@
 						</span>
 					</div>
 					<div class="book-info-post js-book-info js-book">
-						<form id="form-book-info" class="form-member" action="/book/saveOrUpdateBook.shtml">
+						<%--<form id="form-book-info" class="form-member" action="/book/saveOrUpdateBook.shtml">--%>
 							<div class="row-m" ><label for="ipt-title-post-info" class="label-m"  >标题：</label>
 								<div class="ipt-group" ><input id="ipt-title-post-info" placeholder="64个字符以内" required="" maxlength="64" autocomplete="off" spellcheck="false" class="form-control input-sm" name="bookName" value="${bookEntity.bookName}"></div>
 							</div>
@@ -220,7 +222,7 @@
 							<div class="row-m"><label class="label-m"></label>
 								<div class="ipt-group"><button id="btn-info-book" type="submit" class="btn btn-primary btn-sm btn-wide">保存</button></div>
 							</div>
-						</form>
+						<%--</form>--%>
 						<div class="area-post-notice">
 							<blockquote>
 								<h4>注意事项：</h4>
@@ -264,7 +266,7 @@
 						<div class="ipt-group" ><input id="ipt-chapter-post" required="" maxlength="64" autocomplete="off" placeholder="请输入章名" class="form-control input-sm" name="chapterName" value="${contentEntity.contentTitle}"></div>
 					</div>
 					<div class="row-m"><label for="ipt-content-post" class="label-m label-top" >正文：</label>
-						<div class="ipt-group" >
+						<div class="ipt-group" style="height:400px">
 							<textarea id="ipt-content-post" required="" spellcheck="false" placeholder="${contentEntity.content}" class="form-control input-sm" style="display: none;">
 
 							</textarea>
@@ -574,7 +576,7 @@
 		</div>
 		<div></div>
 		<div class="modal-backdrop fade in" style="display:none" id="heimu"></div>
-	<iframe style="height: 240px;width: 100%;border: 0px;min-width:1200px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-footer.html"></iframe>
+	<%@ include file="public-footer.jsp" %>
 
 	<script type="text/javascript" src="${pageContext.servletContext.contextPath }/user-info/wangEditor.min.js"></script>
 	<script type="text/javascript">
@@ -588,79 +590,79 @@
 					title: '轻悦娘',
 					data: [
 						{
-							'icon': './img/不明所以然.jpg',
+							'icon': 'http://127.0.0.1:8080/img/不明所以然.jpg',
 							'value': '[不明所以然]'
 						},
 						{
-							'icon': './img/伤心欲绝.jpg',
+							'icon': 'http://127.0.0.1:8080/img/伤心欲绝.jpg',
 							'value': '[伤心欲绝]'
 						},
 						{
-							'icon': './img/发呆.jpg',
+							'icon': 'http://127.0.0.1:8080/img/发呆.jpg',
 							'value': '[发呆]'
 						},
 						{
-							'icon': './img/吃惊.jpg',
+							'icon': 'http://127.0.0.1:8080/img/吃惊.jpg',
 							'value': '[吃惊]'
 						},
 						{
-							'icon': './img/哭泣.jpg',
+							'icon': 'http://127.0.0.1:8080/img/哭泣.jpg',
 							'value': '[哭泣]'
 						},
 						{
-							'icon': './img/害羞.jpg',
+							'icon': 'http://127.0.0.1:8080/img/害羞.jpg',
 							'value': '[害羞]'
 						},
 						{
-							'icon': './img/就是那个.jpg',
+							'icon': 'http://127.0.0.1:8080/img/就是那个.jpg',
 							'value': '[就是那个]'
 						},
 						{
-							'icon': './img/微笑.jpg',
+							'icon': 'http://127.0.0.1:8080/img/微笑.jpg',
 							'value': '[微笑]'
 						},
 						{
-							'icon': './img/恼怒.jpg',
+							'icon': 'http://127.0.0.1:8080/img/恼怒.jpg',
 							'value': '[恼怒]'
 						},
 						{
-							'icon': './img/悲伤.jpg',
+							'icon': 'http://127.0.0.1:8080/img/悲伤.jpg',
 							'value': '[悲伤]'
 						},
 						{
-							'icon': './img/战斗力渣渣.jpg',
+							'icon': 'http://127.0.0.1:8080/img/战斗力渣渣.jpg',
 							'value': '[战斗力渣渣]'
 						},
 						{
-							'icon': './img/抛媚眼.jpg',
+							'icon': 'http://127.0.0.1:8080/img/抛媚眼.jpg',
 							'value': '[抛媚眼]'
 						},
 						{
-							'icon': './img/早就看穿一切.jpg',
+							'icon': 'http://127.0.0.1:8080/img/早就看穿一切.jpg',
 							'value': '[早就看穿一切]'
 						},
 						{
-							'icon': './img/汗.jpg',
+							'icon': 'http://127.0.0.1:8080/img/汗.jpg',
 							'value': '[汗]'
 						},
 						{
-							'icon': './img/菜刀.jpg',
+							'icon': 'http://127.0.0.1:8080/img/菜刀.jpg',
 							'value': '[菜刀]'
 						},
 						{
-							'icon': './img/那个有没有.jpg',
+							'icon': 'http://127.0.0.1:8080/img/那个有没有.jpg',
 							'value': '[那个有没有]'
 						},
 						{
-							'icon': './img/震惊.jpg',
+							'icon': 'http://127.0.0.1:8080/img/震惊.jpg',
 							'value': '[震惊]'
 						},
 						{
-							'icon': './img/高兴.jpg',
+							'icon': 'http://127.0.0.1:8080/img/高兴.jpg',
 							'value': '[高兴]'
 						},
 						{
-							'icon': './img/默默地看着.jpg',
+							'icon': 'http://127.0.0.1:8080/img/默默地看着.jpg',
 							'value': '[默默地看着]'
 						}
 					]
@@ -684,7 +686,9 @@
 			  $(this).removeClass('active');
 			});
 			 $('.active-user-info').addClass('active');
-
+			/*
+			 获取用户信息
+			 */
 			$.ajax('/user/queryUser.shtml', {
 				type: "GET",
 				cache: false,
@@ -705,13 +709,19 @@
 			  $(this).removeClass('active');
 			});
 			 $('.active-user').addClass('active');
-
+			/*
+			 获取用户作品列表
+			 */
 			$.ajax('/book/findBookByUser.shtml', {
 				type: "GET",
 				cache: false,
 				dataType: "json",
-				success: function (data) {
 
+				success: function (bookEntity) {
+					$('#item-thumb').each(function(e){
+						$(this).html(bookEntity.bookName);
+						$(this).html(bookEntity.bookCoverImage);
+					})
 
 
 					console.log('findBookByUser success');
@@ -725,8 +735,37 @@
 		$('.favor-nav').on('click',function(){
 			 $('.js-stage').each(function(){
 			  $(this).removeClass('active');
+
 			});
 			 $('.active-favor').addClass('active');
+			/*
+			 获取用户收藏
+			 */
+			$.ajax('/bookCollect/findBookCollectByUser.shtml', {
+				type: "GET",
+				data: {},
+				dataType: "json",
+				success: function () {
+					console.log('findBookCollectByUser success');
+				},
+				error: function () {
+					console.log('findBookCollectByUser error');
+				}
+			});
+			/*
+			 获取用户浏览
+			 */
+			$.ajax('/bookHit/findBookHitByUser.shtml', {
+				type: "GET",
+				data: {},
+				dataType: "json",
+				success: function () {
+					console.log('findBookHitByUser success');
+				},
+				error: function () {
+					console.log('findBookHitByUser error');
+				}
+			});
 		});
 		$('.follow-nav').on('click',function(){
 			 $('.js-stage').each(function(){

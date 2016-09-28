@@ -4,40 +4,14 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>轻悦轻小说</title>
-		<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main.css" />
+
 		<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main-A.css" />
 		<link rel="shortcut icon" href="http://www.qcacg.com/favicon.ico" type="image/x-icon" />
 	</head>
 	<body>
-	<iframe id="qcacg-header" style="height: 56px;width: 100%;min-width:1200px;border: 0px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-header.html"></iframe>
-		<header class="header">
-			<section class="navbar">
-				<nav class="nav">
-					<h1 class="logo"><a href="index.shtml">轻悦轻小说</a></h1>
-					<ul class="clearfloat pull-left">
-						<li class="action"><a href="index.shtml">首页</a></li>
-						<li class="action"><a href="type.shtml">分类</a></li>
-						<li>画师</li>
-						<li>周边</li>
-						<li>福利</li>
-					</ul>
-					<a class="publish pull-right">投稿</a>
-					<a class="login pull-right" href="toLogin.shtml">登入/注册</a>
-				</nav>
-			</section>
-			<div class="search">
-				<img src="img/searchMagnifier.png" class="magnifier" />
-				<input type="text" placeholder="请输入关键词..." />
-				<div class="label">
-					<span>热门搜索：</span>
-					<span><a href="javascript:;">我的青春恋爱物语果然有问题</a></span>
-					<span><a href="javascript:;">OVERLORD</a></span>
-					<span><a href="javascript:;">刀剑神域</a></span>
-					<span><a href="javascript:;">加速世界</a></span>
-				</div>
-			</div>
-		</header>
-		 
+
+	<%@ include file="public-header.jsp" %>
+
 		<section class="center">
 			<div class="scrollbar">
 				<figure class="background">
@@ -956,9 +930,8 @@
 			</div>
 
 		</section>
-		
 
-	<iframe style="height: 240px;width: 100%;border: 0px;min-width:1200px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-footer.html"></iframe>
+	<%@ include file="public-footer.jsp" %>
 	</body>
 
 </html>

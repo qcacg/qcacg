@@ -9,6 +9,8 @@ import com.qcacg.service.system.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -16,6 +18,7 @@ import java.util.List;
  */
 @Service
 public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements BookService {
+
 
     @Autowired
     private BookMapper bookMapper;
@@ -28,28 +31,28 @@ public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements Book
     }
 
     @Override
-    public PageInfo<BookEntity> queryBookForList(BookEntity entity) {
-        return this.queryPageForList(entity);
+    public PageInfo<BookEntity> queryBookForList(BookEntity bookEntity) {
+        return this.queryPageForList(bookEntity);
     }
 
     @Override
-    public String saveOrUpdate(BookEntity entity) {
-        String result = "";
+    public void saveOrUpdateBook(BookEntity bookEntity) {
+
         try
         {
-            if (entity.getBookId() == null)
+            if (bookEntity.getBookId() == null)
             {
-                return this.save(entity);
+                 this.insertBook(bookEntity);
             } else
             {
-                result = this.update(entity);
+                 this.updateBook(bookEntity);
             }
         } catch (Exception e)
         {
             e.printStackTrace();
-            return null;
+
         }
-        return result;
+
     }
 
     @Override
@@ -58,6 +61,15 @@ public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements Book
         return this.bookMapper.findBookByUserId(userId);
     }
 
+    @Override
+    public void insertBook(BookEntity bookEntity) {
+         this.bookMapper.insertBook(bookEntity);
+    }
+
+    @Override
+    public void updateBook(BookEntity bookEntity) {
+         this.bookMapper.updateBook(bookEntity);
+    }
 
 
 }

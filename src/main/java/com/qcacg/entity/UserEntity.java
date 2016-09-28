@@ -185,4 +185,6 @@ public class UserEntity implements Serializable
 	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
+
+
 }

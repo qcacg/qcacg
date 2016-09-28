@@ -10,25 +10,12 @@
 		<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
 		<script src="http://static.geetest.com/static/tools/gt.js"></script>
 		<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main.css" />
-		<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main-A.css" />
 		<link rel="shortcut icon" href="http://www.qcacg.com/favicon.ico" type="image/x-icon" />
+
 	</head>
 	<body>
-	<iframe id="qcacg-header" style="height: 56px;width: 100%;min-width:1200px;border: 0px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-header.html"></iframe>
-		<section class="navbar">
-				<nav class="nav">
-					<h1 class="logo"><a href="index.shtml">轻悦轻小说</a></h1>
-					<ul class="clearfloat pull-left">
-						<li><a href="index.shtml">首页</a></li>
-						<li>分类</li>
-						<li>画师</li>
-						<li>周边</li>
-						<li>福利</li>
-					</ul>
-					<a class="publish pull-right">投稿</a>
-					<a class="login pull-right" href="toLogin.shtml">登入/注册</a>
-				</nav>
-			</section>
+
+	<%@ include file="public-header.jsp" %>
 		 
 		<div id="content" class="content" style="min-height: 270px;padding-bottom: 70px;box-sizing: border-box;">
 			<div class="container">
@@ -40,11 +27,11 @@
 					<div id="starlight-stage" class="form-container">
 						<form id="form-login" class="form-login" method="post" action="login.shtml">
 							<div class="form-group has-feedback">
-								<input style="box-sizing: border-box;"   id="ipt-name-login" type="text" placeholder="手机号码" required="" minlength="11" maxlength="20" autocomplete="off" class="form-control" name="telephone" value="${user.telephone}">
+								<input style="box-sizing: border-box;"   id="ipt-name-login" type="text" placeholder="手机号码" required="" minlength="11" maxlength="20" autocomplete="off" class="form-control" name="telephone" value="${userEntity.telephone}">
 								<label for="ipt-name-login" class="form-control-feedback"><i class="fa fa-user"></i></label>
 							</div>
 							<div class="form-group has-feedback">
-								<input style="box-sizing: border-box;"  id="ipt-pwd-login" type="password" placeholder="请输入您的密码" required="" minlength="6" maxlength="35" class="form-control" name="passWord" value="${user.passWord}">
+								<input style="box-sizing: border-box;"  id="ipt-pwd-login" type="password" placeholder="请输入您的密码" required="" minlength="6" maxlength="35" class="form-control" name="passWord" value="${userEntity.passWord}">
 								<label for="ipt-pwd-login" class="form-control-feedback"><i class="fa fa-lock"></i></label>
 							</div>
 							<p class="login-error">${LOGIN_ERROR_MESSAGE}</p>
@@ -61,48 +48,8 @@
 				</div>
 			</div>
 		</div>
-		<footer class="footer clearfloat" style="border: 0px;">
-			<div class="tar">
-				<ul class="gy">
-					<li class="title">关于</li>
-					<li><a href="javascript:;">关于我们</a></li>
-					<li><a href="javascript:;">公司信息</a></li>
-					<li><a href="javascript:;">免责声明</a></li>
-				</ul>
-			</div>
-			<div class="tar">
-				<ul class="gy">
-					<li class="title">联系方式</li>
-					<li><a href="javascript:;">微博</a></li>
-					<li><a href="javascript:;">电子邮件</a></li>
-				</ul>
-			</div>
-			<div class="tar">
-				<ul class="gy">
-					<li class="title">投稿</li>
-					<li><a href="javascript:;">签约制度</a></li>
-					<li><a href="javascript:;">作者福利</a></li>
-					<li><a href="javascript:;">签约流程</a></li>
-					<li><a href="javascript:;">约稿函</a></li>
-					<li><a href="javascript:;">投稿流程</a></li>
-				</ul>
-			</div>
-			<div class="tar">
-				<ul class="gy gy_over">
-					<li class="title">友情链接</li>
-				</ul>
-			</div>
-		</footer>
-		<footer class="footer">
-			<div class="container">
-				<div class="site-info">
-					<p>杭州轻悦网络科技有限公司
-						<span class="driver"> | </span>
-						浙ICP备16021285号
-					</p>
-				</div>
-			</div>
-		</footer>
+	<%@ include file="public-footer.jsp" %>
+
 		<script>
 			var handlerPopup = function (captchaObj) {
 
@@ -165,7 +112,7 @@
 			});
 
 		</script>
-	<iframe style="height: 240px;width: 100%;border: 0px;min-width:1200px;overflow: hidden;" src="${pageContext.servletContext.contextPath }/public/public-footer.html"></iframe>
+
 	</body>
 
 </html>

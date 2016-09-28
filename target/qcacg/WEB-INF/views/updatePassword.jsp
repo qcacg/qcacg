@@ -11,20 +11,7 @@
 		<link rel="shortcut icon" href="http://www.qcacg.com/favicon.ico" type="image/x-icon" />
 	</head>
 	<body>
-		<section class="navbar">
-				<nav class="nav">
-					<h1 class="logo"><a href="index.shtml">轻悦轻小说</a></h1>
-					<ul class="clearfloat pull-left">
-						<li><a href="index.shtml">首页</a></li>
-						<li>分类</li>
-						<li>画师</li>
-						<li>周边</li>
-						<li>福利</li>
-					</ul>
-					<a class="publish pull-right">投稿</a>
-					<a class="login pull-right" href="toLogin.shtml">登入/注册</a>
-				</nav>
-			</section>
+	<%@ include file="public-header.jsp" %>
 		<div id="content" class="content qw" style="min-height: 270px;padding-bottom: 70px;box-sizing: border-box;">
 			<div class="container">
 				<div class="block-img">
@@ -37,20 +24,22 @@
 					<div id="starlight-stage" class="form-container">
 					<form id="form-reg" class="form-reg" action="updatePassword.shtml">
 						<div class="form-group">
-							<label for="ipt-nname-reg" class="label-login">手机号码：</label>
+							<label for="telephone" class="label-login">手机号码：</label>
 							<div class="ipt-group">
-								<input style="box-sizing: border-box;"  id="ipt-nname-reg" type="text" placeholder="手机号码" required="" minlength="11" maxlength="15" autocomplete="off" class="form-control" name="telephone"></div>
+								<input style="box-sizing: border-box;"  id="telephone" type="text" placeholder="手机号码" required="" minlength="11" maxlength="15" autocomplete="off" class="form-control" name="telephone" value="${userCustom.telephone}"></div>
 						</div>
-						<div class="form-group"><label for="ipt-pwd-reg" class="label-login">旧密码：</label>
-							<div class="ipt-group"><input style="box-sizing: border-box;"  id="ipt-pwd-reg" type="password" placeholder="密码" required="" minlength="6" maxlength="35" class="form-control" name="oldPassWord"></div>
+						<div class="form-group"><label for="ipt-code-reg" class="label-login">验证码：</label>
+								<div class="ipt-group ipt-group-x">
+									<input style="box-sizing: border-box;"    id="ipt-code-reg" placeholder="六位手机验证码" required="" minlength="6" maxlength="6" class="form-control" name="telephoneCode">
+									<a id="validationCode" class="btn btn-primary btn-send-code" >发送</a></div>
+							</div>
+							<p class="telephoneCodeError-error">${telephoneCodeError}</p>
+						<div class="form-group"><label for="ipt-pwd-reg1" class="label-login">新密码：</label>
+							<div class="ipt-group"><input style="box-sizing: border-box;"  id="ipt-pwd-reg1" type="password" placeholder="密码" required="" minlength="6" maxlength="35" class="form-control" name="passWord" value="${userCustom.passWord}"></div>
 						</div>
-						<p class="passWordError-error">${passWordError}</p>
-						<div class="form-group"><label for="ipt-pwd-reg" class="label-login">新密码：</label>
-							<div class="ipt-group"><input style="box-sizing: border-box;"  id="ipt-pwd-reg" type="password" placeholder="密码" required="" minlength="6" maxlength="35" class="form-control" name="newPassWord"></div>
-						</div>
-						<p class="samePassWord-error">${samePassWord}</p>
-						<div class="form-group"><label for="ipt-pwd-reg" class="label-login">确认密码：</label>
-							<div class="ipt-group"><input style="box-sizing: border-box;"  id="ipt-pwd-reg" type="password" placeholder="密码" required="" minlength="6" maxlength="35" class="form-control" name="passWordConfirm"></div>
+
+						<div class="form-group"><label for="ipt-pwd-reg2" class="label-login">确认密码：</label>
+							<div class="ipt-group"><input style="box-sizing: border-box;"  id="ipt-pwd-reg2" type="password" placeholder="密码" required="" minlength="6" maxlength="35" class="form-control" name="passWordConfirm" value="${userCustom.passWordConfirm}"></div>
 						</div>
 						<p class="passWordConfirmError-error">${passWordConfirmError}</p>
 						<div class="form-group"><label class="label-login"></label>
@@ -62,47 +51,56 @@
 			</div>
 		</div>
 		</div>
-		<footer class="footer clearfloat" style="border: 0px;">
-			<div class="tar">
-				<ul class="gy">
-					<li class="title">关于</li>
-					<li><a href="javascript:;">关于我们</a></li>
-					<li><a href="javascript:;">公司信息</a></li>
-					<li><a href="javascript:;">免责声明</a></li>
-				</ul>
-			</div>
-			<div class="tar">
-				<ul class="gy">
-					<li class="title">联系方式</li>
-					<li><a href="javascript:;">微博</a></li>
-					<li><a href="javascript:;">电子邮件</a></li>
-				</ul>
-			</div>
-			<div class="tar">
-				<ul class="gy">
-					<li class="title">投稿</li>
-					<li><a href="javascript:;">签约制度</a></li>
-					<li><a href="javascript:;">作者福利</a></li>
-					<li><a href="javascript:;">签约流程</a></li>
-					<li><a href="javascript:;">约稿函</a></li>
-					<li><a href="javascript:;">投稿流程</a></li>
-				</ul>
-			</div>
-			<div class="tar">
-				<ul class="gy gy_over">
-					<li class="title">友情链接</li>
-				</ul>
-			</div>
-		</footer>
-		<footer class="footer">
-			<div class="container">
-				<div class="site-info">
-					<p>杭州轻悦网络科技有限公司
-						<span class="driver"> | </span>
-						浙ICP备16021285号
-					</p>
-				</div>
-			</div>
-		</footer>
+	<%@ include file="public-footer.jsp" %>
 	</body>
+
 </html>
+
+<script type="text/javascript">
+
+	$(function() {
+		$('#validationCode').click(function () {
+			if ($(this).attr('disabled') === 'disabled') {
+				return;
+			}
+			var telephone = document.getElementById("telephone");
+			var value = telephone.value.trim();
+			var countdown = 60;
+			setTime();
+			function setTime() {
+				var val = document.getElementById("validationCode");
+				if(countdown == 60){
+					$.ajax({
+						cache: false,
+						url: "updatePasswordTelephoneCode.shtml",
+						data: {telephone: value},
+						success: function (data) {
+							if(data.success){
+								console.log('updatePasswordTelephoneCode success');
+							}else{
+								alert(data.msg);
+								console.log('registerTelephoneCode fail');
+							}
+						},
+						error: function (data) {
+
+							console.log('updatePasswordTelephoneCode error');
+						}
+					});}
+				if (countdown == 0) {
+					val.removeAttribute("disabled");
+					val.innerHTML = "发送";
+					countdown = 60;
+					return;
+				} else {
+					val.innerHTML = countdown + "秒";
+					val.setAttribute("disabled", true);
+					countdown--;
+				}
+				setTimeout(function () {
+					setTime(this);
+				}, 1000)
+			}
+		});
+	})
+</script>

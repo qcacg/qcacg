@@ -131,7 +131,7 @@ figcaption a {
   z-index: 2;
   width:1266px;
   margin:  0 auto;
-  margin-top: -112px;
+  margin-top: 0px;
 }
 .center .scrollbar {
 	height: 360px;
@@ -139,7 +139,7 @@ figcaption a {
 	margin-bottom: 90px;
 }
 .center .scrollbar .background{
-	background-color: #FFFFFF;
+
 	box-shadow: 3px 3px 8px  3px #efeeee;
 	height:360px;
 	padding: 20px;

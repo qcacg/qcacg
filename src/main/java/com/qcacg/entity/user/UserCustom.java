@@ -10,8 +10,6 @@ public class UserCustom extends UserEntity{
 
 
 
-    private Integer telephoneCode;
-
     private String passWordConfirm;
 
     public String getPassWordConfirm() {
@@ -22,13 +20,6 @@ public class UserCustom extends UserEntity{
         this.passWordConfirm = passWordConfirm;
     }
 
-    public Integer getTelephoneCode() {
-        return telephoneCode;
-    }
-
-    public void setTelephoneCode(Integer telephoneCode) {
-        this.telephoneCode = telephoneCode;
-    }
 
 
 }

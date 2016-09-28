@@ -48,30 +48,30 @@ public class LoginController {
 
 
 	@RequestMapping(value = "login", method = RequestMethod.POST, produces = "text/html; charset=utf-8")
-	public String login(HttpServletRequest request, HttpServletResponse response, UserEntity user,Model model) {
+	public String login(HttpServletRequest request, HttpServletResponse response, UserEntity userEntity,Model model) {
 		// 想要得到 SecurityUtils.getSubject() 的对象．．访问地址必须跟shiro的拦截地址内．不然后会报空指针
 		Subject sub = SecurityUtils.getSubject();
 		// 用户输入的账号和密码,,存到UsernamePasswordToken对象中..然后由shiro内部认证对比,
 		// 认证执行者交由ShiroDbRealm中doGetAuthenticationInfo处理
 		// 当以上认证成功后会向下执行,认证失败会抛出异常
-		UsernamePasswordToken token = new UsernamePasswordToken(user.getTelephone(), user.getPassWord());
+		UsernamePasswordToken token = new UsernamePasswordToken(userEntity.getTelephone(), userEntity.getPassWord());
 		try {
 			sub.login(token);
 		} catch (LockedAccountException lae) {
 			token.clear();
-			model.addAttribute("user", user);
+			model.addAttribute("userEntity", userEntity);
 			request.setAttribute("LOGIN_ERROR_CODE", LoginConstant.LOGIN_ERROR_CODE_100002);
 			request.setAttribute("LOGIN_ERROR_MESSAGE", LoginConstant.LOGIN_ERROR_MESSAGE_SYSTEMERROR);
 			return "login";
 		} catch (ExcessiveAttemptsException e) {
 			token.clear();
-			model.addAttribute("user", user);
+			model.addAttribute("userEntity", userEntity);
 			request.setAttribute("LOGIN_ERROR_CODE", LoginConstant.LOGIN_ERROR_CODE_100003);
-			request.setAttribute("LOGIN_ERROR_MESSAGE","账号：" + user.getUserName() + LoginConstant.LOGIN_ERROR_MESSAGE_MAXERROR);
+			request.setAttribute("LOGIN_ERROR_MESSAGE","账号：" + userEntity.getUserName() + LoginConstant.LOGIN_ERROR_MESSAGE_MAXERROR);
 			return "login";
 		} catch (AuthenticationException e) {
 			token.clear();
-			model.addAttribute("user", user);
+			model.addAttribute("userEntity", userEntity);
 			request.setAttribute("LOGIN_ERROR_CODE", LoginConstant.LOGIN_ERROR_CODE_100001);
 			request.setAttribute("LOGIN_ERROR_MESSAGE", LoginConstant.LOGIN_ERROR_MESSAGE_USERERROR);
 			return "login";
@@ -89,6 +89,17 @@ public class LoginController {
 	public String type() {
 		return "type";
 	}
+
+	@RequestMapping("public-header")
+	public String header() {
+		return "public-header";
+	}
+
+	@RequestMapping("public-footer")
+	public String footer() {
+		return "public-footer";
+	}
+
 	@RequestMapping("toLogin")
 	public String toLogin(){
 		return "login";

@@ -8,23 +8,12 @@
 		<link rel="stylesheet" href="${pageContext.servletContext.contextPath }/register_files/login.29a3b59b.css">
 		<script src="${pageContext.servletContext.contextPath }/js/jquery-1.9.1.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main-A.css" />
 		<link rel="shortcut icon" href="http://www.qcacg.com/favicon.ico" type="image/x-icon" />
 	</head>
 	<body>
-		<section class="navbar">
-				<nav class="nav">
-					<h1 class="logo"><a href="index.shtml">轻悦轻小说</a></h1>
-					<ul class="clearfloat pull-left">
-						<li><a href="index.shtml">首页</a></li>
-						<li>分类</li>
-						<li>画师</li>
-						<li>周边</li>
-						<li>福利</li>
-					</ul>
-					<a class="publish pull-right">投稿</a>
-					<a class="login pull-right" href="toLogin.shtml">登入/注册</a>
-				</nav>
-			</section>
+	<%@ include file="public-header.jsp" %>
+
 		<div id="content" class="content qw" style="min-height: 270px;padding-bottom: 70px;box-sizing: border-box;">
 			<div class="container">
 				<div class="block-img">
@@ -41,7 +30,7 @@
 							<div class="ipt-group">
 								<input style="box-sizing: border-box;"  id="telephone" type="text" placeholder="手机号码" required="" minlength="11" maxlength="11" autocomplete="off" class="form-control" name="telephone" value="${userCustom.telephone}"></div>
 						</div>
-						<p class="sameTelephone-error">${sameTelephone}</p>
+
 						<div class="form-group"><label for="ipt-code-reg" class="label-login">验证码：</label>
 							<div class="ipt-group ipt-group-x">
 								<input style="box-sizing: border-box;"    id="ipt-code-reg" placeholder="六位手机验证码" required="" minlength="6" maxlength="6" class="form-control" name="telephoneCode">
@@ -51,11 +40,11 @@
 						<div class="form-group"><label for="ipt-nname-reg" class="label-login">昵称：</label>
 							<div class="ipt-group"><input style="box-sizing: border-box;"  id="ipt-nname-reg" type="text" placeholder="昵称" required="" minlength="2" maxlength="10" autocomplete="off" class="form-control" name="userName" value="${userCustom.userName}"></div>
 						</div>
-						<div class="form-group"><label for="ipt-pwd-reg" class="label-login">密码：</label>
-							<div class="ipt-group"><input style="box-sizing: border-box;"  id="ipt-pwd-reg" type="password" placeholder="密码" required="" minlength="6" maxlength="35" class="form-control" name="passWord" value="${userCustom.passWord}"></div>
+						<div class="form-group"><label for="ipt-pwd-reg1" class="label-login">密码：</label>
+							<div class="ipt-group"><input style="box-sizing: border-box;"  id="ipt-pwd-reg1" type="password" placeholder="密码" required="" minlength="6" maxlength="35" class="form-control" name="passWord" value="${userCustom.passWord}"></div>
 						</div>
-						<div class="form-group"><label for="ipt-pwd-reg" class="label-login">确认密码：</label>
-							<div class="ipt-group"><input style="box-sizing: border-box;"  id="ipt-pwd-reg" type="password" placeholder="密码" required="" minlength="6" maxlength="35" class="form-control" name="passWordConfirm" value="${userCustom.passWordConfirm}"></div>
+						<div class="form-group"><label for="ipt-pwd-reg2" class="label-login">确认密码：</label>
+							<div class="ipt-group"><input style="box-sizing: border-box;"  id="ipt-pwd-reg2" type="password" placeholder="密码" required="" minlength="6" maxlength="35" class="form-control" name="passWordConfirm" value="${userCustom.passWordConfirm}"></div>
 						</div>
 						<p class="passWordConfirmError-error">${passWordConfirmError}</p>
 						<div class="form-group"><label for="ipt-uid-reg" class="label-login">邀请人：</label>
@@ -71,48 +60,7 @@
 			</div>
 		</div>
 		</div>
-		<footer class="footer clearfloat" style="border: 0px;">
-			<div class="tar">
-				<ul class="gy">
-					<li class="title">关于</li>
-					<li><a href="javascript:;">关于我们</a></li>
-					<li><a href="javascript:;">公司信息</a></li>
-					<li><a href="javascript:;">免责声明</a></li>
-				</ul>
-			</div>
-			<div class="tar">
-				<ul class="gy">
-					<li class="title">联系方式</li>
-					<li><a href="javascript:;">微博</a></li>
-					<li><a href="javascript:;">电子邮件</a></li>
-				</ul>
-			</div>
-			<div class="tar">
-				<ul class="gy">
-					<li class="title">投稿</li>
-					<li><a href="javascript:;">签约制度</a></li>
-					<li><a href="javascript:;">作者福利</a></li>
-					<li><a href="javascript:;">签约流程</a></li>
-					<li><a href="javascript:;">约稿函</a></li>
-					<li><a href="javascript:;">投稿流程</a></li>
-				</ul>
-			</div>
-			<div class="tar">
-				<ul class="gy gy_over">
-					<li class="title">友情链接</li>
-				</ul>
-			</div>
-		</footer>
-		<footer class="footer">
-			<div class="container">
-				<div class="site-info">
-					<p>杭州轻悦网络科技有限公司
-						<span class="driver"> | </span>
-						浙ICP备16021285号
-					</p>
-				</div>
-			</div>
-		</footer>
+	<%@ include file="public-footer.jsp" %>
 	</body>
 </html>
 
@@ -120,7 +68,7 @@
 
 	$(function() {
 		$('#validationCode').click(function () {
-			if ($(this).attr('disabled') == 'disabled') {
+			if ($(this).attr('disabled') === 'disabled') {
 				return;
 			}
 			var telephone = document.getElementById("telephone");
@@ -132,8 +80,20 @@
 				if(countdown == 60){
 					$.ajax({
 						cache: false,
-						url: "sendTelephoneCode.shtml",
-						data: {telephone: value}
+						url: "registerTelephoneCode.shtml",
+						data: {telephone: value},
+						success: function (data) {
+							if(data.success){
+								console.log('registerTelephoneCode success');
+							}else{
+								alert(data.msg);
+								console.log('registerTelephoneCode fail');
+							}
+						},
+						error: function (data) {
+
+							console.log('registerTelephoneCode error');
+						}
 					});}
 				if (countdown == 0) {
 					val.removeAttribute("disabled");
