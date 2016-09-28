@@ -6,10 +6,8 @@ import com.qcacg.entity.BookEntity;
 import com.qcacg.service.system.BookAndBookTypeService;
 import com.qcacg.service.system.BookService;
 import com.qcacg.util.UserEntityUtil;
-import com.qcacg.util.http.ResponseUtils;
 import com.qcacg.util.upload.FileRepository;
 import com.qcacg.util.upload.UploadUtils;
-import net.sf.json.JSONObject;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -109,13 +107,13 @@ public class BookController extends BaseController {
     */
     @RequestMapping(value = "upload")
     @ResponseBody
-    public String upload(MultipartHttpServletRequest request, HttpServletResponse response) {
-        String message = "";
-        String error = "";
+    public Map<String,Object> upload(MultipartHttpServletRequest request, HttpServletResponse response) {
+
+        Map<String,Object> result = new HashMap<String, Object>();
         MultipartFile file = request.getFile("Image");
-        String path = "";
         if (file == null || file.isEmpty()) {
-            error = "文件太小！";
+            result.put("success",false);
+            result.put("msg", "文件太小！");
         } else {
             String origName = file.getOriginalFilename();
             int index = origName.lastIndexOf(".");
@@ -126,24 +124,20 @@ public class BookController extends BaseController {
             File destFile = null;
             try {
                 String filename = UploadUtils.generateFilename("jpg");
-                path = "/upload/image/bookCoverImage" + filename;
+                String path = "/upload/image/bookCoverImage" + filename;
                 destFile = fileRepository.storeByFilename(path, file);
-                message = path;
-
+                result.put("success",true);
+                result.put("msg", path);
             } catch (Exception e) {
-                error = "上传失败！";
+                result.put("success",false);
+                result.put("msg", "上传失败！");
                 e.printStackTrace();
                 if (destFile != null && destFile.exists()) {
                     destFile.delete();
                 }
             }
         }
-
-        JSONObject obj = new JSONObject();
-        obj.put("err", error);
-        obj.put("msg", message);
-        ResponseUtils.renderText(response, obj.toString());
-        return path;
+        return result;
     }
 
 

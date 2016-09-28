@@ -6,10 +6,8 @@ import com.qcacg.controller.BaseController;
 import com.qcacg.entity.UserEntity;
 import com.qcacg.service.system.UserService;
 import com.qcacg.util.UserEntityUtil;
-import com.qcacg.util.http.ResponseUtils;
 import com.qcacg.util.upload.FileRepository;
 import com.qcacg.util.upload.UploadUtils;
-import net.sf.json.JSONObject;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +23,9 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/user/")
@@ -87,14 +87,14 @@ public class UserController extends BaseController
 	}
 
 	@RequestMapping(value = "upload")
-	public void upload(MultipartHttpServletRequest request, HttpServletResponse response) {
+	@ResponseBody
+	public Map<String,Object> upload(MultipartHttpServletRequest request) {
 
-		String message = "";
-		String error = "";
+		Map<String,Object> result = new HashMap<String, Object>();
 		MultipartFile file = request.getFile("Image");
-		String path = "";
 		if (file == null || file.isEmpty()) {
-			error = "文件太小！";
+			result.put("success",false);
+			result.put("msg", "文件太小！");
 		} else {
 			String origName = file.getOriginalFilename();
 			int index = origName.lastIndexOf(".");
@@ -105,25 +105,25 @@ public class UserController extends BaseController
 			File destFile = null;
 			try {
 				String filename = UploadUtils.generateFilename("jpg");
-				path = "/upload/image/userHead" + filename;
+				String path = "/upload/image/userHead" + filename;
 				destFile = fileRepository.storeByFilename(path, file);
-				message = path;
+				UserEntity userEntity = UserEntityUtil.getUserFromSession();
+				userEntity.setUserHead(path);
+				this.userService.update(userEntity);
+				result.put("success",true);
+				result.put("msg", path);
 			} catch (Exception e) {
-				error = "上传失败！";
+				result.put("success",false);
+				result.put("msg", "上传失败！");
 				e.printStackTrace();
 				if (destFile != null && destFile.exists()) {
 					destFile.delete();
 				}
 			}
 		}
-		UserEntity userEntity = UserEntityUtil.getUserFromSession();
-		userEntity.setUserHead(path);
-		this.userService.update(userEntity);
-		JSONObject obj = new JSONObject();
-		obj.put("err", error);
-		obj.put("msg", message);
-		ResponseUtils.renderText(response, obj.toString());
+		return result;
 	}
+
 
 
 	@RequestMapping("queryUserForList")

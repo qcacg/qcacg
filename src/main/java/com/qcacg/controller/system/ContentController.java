@@ -3,9 +3,7 @@ package com.qcacg.controller.system;
 import com.qcacg.controller.BaseController;
 import com.qcacg.entity.ContentEntity;
 import com.qcacg.service.system.ContentService;
-import com.qcacg.util.http.ResponseUtils;
 import com.qcacg.util.upload.UploadUtils;
-import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -42,15 +40,14 @@ public class ContentController extends BaseController {
     保存作品（文本）
     */
     @RequestMapping("saveOrUpdateContent/{volumeId}")
-    public void saveOrUpdateContent(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity,
+    @ResponseBody
+    public Map<String,Object> saveOrUpdateContent(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity,
                             @RequestParam("html")String html,  @RequestParam("contentTitle")String contentTitle,  @PathVariable("volumeId")Long volumeId) {
-        String message = "";
-        String error = "";
-        String path = "";
+        Map<String,Object> result = new HashMap<String, Object>();
+
         try{
             String filename = UploadUtils.generateFilename("html");
-            path = "/upload/file/content" + filename;
-            message = path;
+            String path = "/upload/file/content" + filename;
             File file = new File(path);
             FileOutputStream fileOutputStream = new FileOutputStream(file.getName());
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream,"UTF-8");
@@ -60,20 +57,19 @@ public class ContentController extends BaseController {
             bufferedWriter.write(html);
             bufferedWriter.flush();
             bufferedWriter.close();
+            contentEntity.setVolumeId(volumeId);
+            contentEntity.setContentTitle(contentTitle);
+            contentEntity.setContent(html);
+            contentEntity.setContentUrl(path);
+            this.contentService.saveOrUpdate(contentEntity);
+            result.put("success",true);
+            result.put("msg",path);
         }catch (IOException e){
+            result.put("success",false);
+            result.put("msg", "error");
             e.printStackTrace();
         }
-
-        contentEntity.setVolumeId(volumeId);
-        contentEntity.setContentTitle(contentTitle);
-        contentEntity.setContent(html);
-        contentEntity.setContentUrl(path);
-        this.contentService.saveOrUpdate(contentEntity);
-
-        JSONObject obj = new JSONObject();
-        obj.put("err", error);
-        obj.put("msg", message);
-        ResponseUtils.renderText(response, obj.toString());
+        return result;
     }
     /*
     读者读取作品正文（或者作者获取草稿）

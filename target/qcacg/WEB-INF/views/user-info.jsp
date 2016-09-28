@@ -106,7 +106,7 @@
 					    <a data-target="content" class="tab active" id="user-info-A">基本信息</a>
 						<a data-target="password" class="tab" id="user-passUpdata-A">修改密码</a></div>
 						<div id="userInfo-A" class="block block-content-profile js-block-content js-block active">
-							<%--<form id="form-profile-a" class="form-member">--%>
+							<form id="form-profile-a" class="form-member">
 								<div class="row-m"><label class="label-m">昵称：</label>
 									<p class="ipt-text-profile">275120399</p>
 								</div>
@@ -129,7 +129,7 @@
 					<div class="row-m"><label class="label-m"></label>
 						<div class="ipt-group"><button id="btn-save-profile" type="submit" class="btn btn-primary btn-sm btn-wide">保存</button></div>
 					</div>
-					<%--</form>--%>
+					</form>
 				</div>
 				<div id="userPassUpdata-A" class="block js-block-password js-block">
 					<p>目前只支持使用客户端修改密码。<a href="javascript:;" target="_blank">立即下载</a></p>
@@ -710,7 +710,7 @@
 			});
 			 $('.active-user').addClass('active');
 			/*
-			 获取用户作品列表
+			 获取作品列表
 			 */
 			$.ajax('/book/findBookByUser.shtml', {
 				type: "GET",

@@ -2,26 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="bfa18c5d-906d-4d48-ac4f-65fe43107609" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookAndBookTypeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookHitController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookTypeContrloller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookAndBookTypeEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookHitEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookTypeEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookAndBookTypeMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookHitMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookTypeMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookAndBookTypeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookHitService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookTypeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookAndBookTypeServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookHitServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookTypeServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BookAndBookTypeMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BookHitMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BookTypeMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/mapper/BookAndBookTypeMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/mapper/BookHitMapper.xml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/entity/UserEntityExample$Criteria.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/entity/UserEntityExample$Criterion.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/entity/UserEntityExample$GeneratedCriteria.class" afterPath="" />
@@ -34,135 +14,22 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/task/MonitorTask.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/qcacg/public/public-footer.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/qcacg/public/public-header.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/BookCollectController.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/BookCollectController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/BookController.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/BookController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/ContentController.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/ContentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/RegisterController.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/RegisterController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/VolumeController.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/controller/system/VolumeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/entity/BookEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/BookEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/entity/user/UserCustom.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/entity/user/UserCustom.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/BookCollectMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/BookCollectMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/BookMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/BookMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/ContentMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/ContentMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/VolumeCustomMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/mapper/VolumeCustomMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/BookCollectService.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/BookCollectService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/BookService.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/BookService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/ContentService.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/ContentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/VolumeCustomService.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/VolumeCustomService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/BookCollectServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/BookCollectServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/BookServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/BookServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/ContentServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/ContentServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/VolumeCustomServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/qcacg/service/system/impl/VolumeCustomServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg.war" afterPath="$PROJECT_DIR$/target/qcacg.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/BookCollectController.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/BookCollectController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/BookController.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/BookController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/ContentController.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/ContentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/LoginController.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/RegisterController.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/RegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/UserController.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/VolumeController.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/controller/system/VolumeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/BookEntity.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/BookEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/user/UserCustom.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/entity/user/UserCustom.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/BookCollectMapper.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/BookCollectMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/BookMapper.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/BookMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/ContentMapper.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/ContentMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/VolumeCustomMapper.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/mapper/VolumeCustomMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/BookCollectService.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/BookCollectService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/BookService.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/BookService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/ContentService.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/ContentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/UserService.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/VolumeCustomService.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/VolumeCustomService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/BookCollectServiceImpl.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/BookCollectServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/BookServiceImpl.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/BookServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/ContentServiceImpl.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/ContentServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/VolumeCustomServiceImpl.class" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/com/qcacg/service/system/impl/VolumeCustomServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/qcacg/system/TestDemo.class" afterPath="$PROJECT_DIR$/target/test-classes/com/qcacg/system/TestDemo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookCollectController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookCollectController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/RegisterController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/RegisterController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/BookEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ContentEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ContentEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/user/UserCustom.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/user/UserCustom.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookCollectMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookCollectMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/BookMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ContentMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ContentMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeCustomMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeCustomMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookCollectService.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookCollectService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookService.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/ContentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/ContentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeCustomService.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/VolumeCustomService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookCollectServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookCollectServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/BookServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ContentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ContentServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeCustomServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/VolumeCustomServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/task/MonitorTask.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/task/MonitorTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/BookCollectMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BookCollectMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BookMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ContentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ContentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/VolumeCustomMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/VolumeCustomMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-shiro.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-shiro.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Model.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Model.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/type.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/type.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/updatePassword.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/updatePassword.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/qcacg.sql" afterPath="$PROJECT_DIR$/src/main/resources/qcacg.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/headerOrFooter.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/headerOrFooter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/main-A.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/main-A.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/user-info-B.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/user-info-B.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/user-info-C.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/user-info-C.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/qcacg/system/TestDemo.java" afterPath="$PROJECT_DIR$/src/test/java/com/qcacg/system/TestDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/mapper/BookCollectMapper.xml" afterPath="$PROJECT_DIR$/src/test/resources/mapper/BookCollectMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/mapper/ContentMapper.xml" afterPath="$PROJECT_DIR$/src/test/resources/mapper/ContentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/mapper/VolumeCustomMapper.xml" afterPath="$PROJECT_DIR$/src/test/resources/mapper/VolumeCustomMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/mapper/bookMapper.xml" afterPath="$PROJECT_DIR$/src/test/resources/mapper/bookMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/BookCollectMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/BookCollectMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/BookMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/BookMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/ContentMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ContentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/VolumeCustomMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/VolumeCustomMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-shiro.xml" afterPath="$PROJECT_DIR$/target/classes/spring-shiro.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/qcacg.sql" afterPath="$PROJECT_DIR$/target/classes/qcacg.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/qcacg/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/BookCollectMapper.xml" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/BookCollectMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/BookMapper.xml" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/BookMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/ContentMapper.xml" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/ContentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/VolumeCustomMapper.xml" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/mapper/VolumeCustomMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/spring-shiro.xml" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/spring-shiro.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/Model.jsp" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/Model.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/index.jsp" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/register.jsp" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/type.jsp" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/type.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/updatePassword.jsp" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/updatePassword.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/qcacg.sql" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/classes/qcacg.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/user-info.jsp" afterPath="$PROJECT_DIR$/target/qcacg/WEB-INF/views/user-info.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/css/headerOrFooter.css" afterPath="$PROJECT_DIR$/target/qcacg/css/headerOrFooter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/css/main-A.css" afterPath="$PROJECT_DIR$/target/qcacg/css/main-A.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/css/main.css" afterPath="$PROJECT_DIR$/target/qcacg/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/js/user-info-B.js" afterPath="$PROJECT_DIR$/target/qcacg/js/user-info-B.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/qcacg/js/user-info-C.js" afterPath="$PROJECT_DIR$/target/qcacg/js/user-info-C.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/mapper/BookCollectMapper.xml" afterPath="$PROJECT_DIR$/target/test-classes/mapper/BookCollectMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/mapper/ContentMapper.xml" afterPath="$PROJECT_DIR$/target/test-classes/mapper/ContentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/mapper/VolumeCustomMapper.xml" afterPath="$PROJECT_DIR$/target/test-classes/mapper/VolumeCustomMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/mapper/bookMapper.xml" afterPath="$PROJECT_DIR$/target/test-classes/mapper/bookMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserEntityExample.java" afterPath="$PROJECT_DIR$/src/main/java/com/qcacg/entity/user/UserEntityExample.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/public/public-footer.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/public-footer.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/public/public-header.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/public-header.jsp" />
     </list>
     <ignored path="battcn1.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -188,25 +55,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ContentController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BookController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.4052289">
+              <caret line="120" column="27" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContentController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5435898">
-              <caret line="114" column="7" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
               <folding>
-                <element signature="e#3351#3359#0" expanded="true" />
-                <element signature="e#3792#3808#0" expanded="true" />
-                <element signature="e#4506#4522#0" expanded="true" />
+                <element signature="e#3306#3314#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user-info-B.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user-info-B.js">
+      <file leaf-file-name="user-info-A.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user-info-A.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="234" column="51" selection-start-line="234" selection-start-column="51" selection-end-line="234" selection-end-column="51" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -214,12 +89,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user-info.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="58.76923">
-              <caret line="712" column="21" selection-start-line="712" selection-start-column="21" selection-end-line="712" selection-end-column="21" />
-              <folding />
+            <state vertical-scroll-proportion="24.857143">
+              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+              <folding>
+                <element signature="e#2766#2782#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -293,18 +170,18 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/updatePassword.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-shiro.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/UserEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/qcacg/system/TestDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/VolumeCustomMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/mapper/ContentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/ContentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/service/system/impl/ContentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qcacg/entity/ContentEntity.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ContentMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/user-info-B.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java" />
       </list>
     </option>
   </component>
@@ -2110,7 +1987,7 @@
       <workItem from="1474531032470" duration="62367000" />
       <workItem from="1474791671874" duration="32430000" />
       <workItem from="1474939476984" duration="25333000" />
-      <workItem from="1475025528455" duration="12822000" />
+      <workItem from="1475025528455" duration="16928000" />
     </task>
     <servers />
   </component>
@@ -2147,7 +2024,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1307679000" />
+    <option name="totallyTimeSpent" value="1311785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2171,11 +2048,11 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33225107" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17537314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33874458" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30952382" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864866" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1684435" sideWeight="0.49134198" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1684435" sideWeight="0.49134198" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18176973" sideWeight="0.508658" order="3" side_tool="true" content_ui="tabs" />
@@ -2251,22 +2128,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39156628">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookCollectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39759037">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/service/system/BookHitService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2508,14 +2369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55655295">
-          <caret line="64" column="214" selection-start-line="64" selection-start-column="203" selection-end-line="64" selection-end-column="214" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/mapper/VolumeCustomMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23931624">
@@ -2554,14 +2407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9821826">
-          <caret line="109" column="35" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VolumeCustomMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8598131">
@@ -2571,14 +2416,6 @@
             <marker date="1475031314663" expanded="true" signature="2167:2726" placeholder="SELECT wor_c... wor_content" />
             <marker date="1475031314663" expanded="true" signature="2581:2678" placeholder="SELECT wor_v... wor_volume" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookAndBookTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32085562">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2604,14 +2441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.615385">
           <caret line="89" column="74" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.034188036">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -2675,31 +2504,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user-info.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="58.76923">
-          <caret line="712" column="21" selection-start-line="712" selection-start-column="21" selection-end-line="712" selection-end-column="21" />
+        <state vertical-scroll-proportion="-2.3165138">
+          <caret line="592" column="58" selection-start-line="592" selection-start-column="56" selection-end-line="592" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user-info-B.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="234" column="51" selection-start-line="234" selection-start-column="51" selection-end-line="234" selection-end-column="51" />
+        <state vertical-scroll-proportion="-4.077951">
+          <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/VolumeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08685969">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookAndBookTypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30769232">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookCollectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41880342">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user-info-A.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="24.857143">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding>
+            <element signature="e#2766#2782#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/ContentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5435898">
-          <caret line="114" column="7" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
           <folding>
-            <element signature="e#3351#3359#0" expanded="true" />
-            <element signature="e#3792#3808#0" expanded="true" />
-            <element signature="e#4506#4522#0" expanded="true" />
+            <element signature="e#3306#3314#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qcacg/controller/system/BookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.4052289">
+          <caret line="120" column="27" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
