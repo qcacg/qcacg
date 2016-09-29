@@ -12,6 +12,8 @@ public class VolumeEntity implements Serializable {
     private Long bookId;
     @Column(name = "volumeName")
     private String volumeName;
+    @Column(name = "volumeWordCount")
+    private String volumeWordCount;
 
 
     private static final long serialVersionUID = -4809600648149719389L;
@@ -41,5 +43,11 @@ public class VolumeEntity implements Serializable {
     }
 
 
+    public String getVolumeWordCount() {
+        return volumeWordCount;
+    }
 
+    public void setVolumeWordCount(String volumeWordCount) {
+        this.volumeWordCount = volumeWordCount;
+    }
 }

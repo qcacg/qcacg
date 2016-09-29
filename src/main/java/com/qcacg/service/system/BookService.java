@@ -23,4 +23,12 @@ public interface BookService extends BaseService<BookEntity> {
 
     public void updateBook(BookEntity bookEntity);
 
+    public List<BookEntity> findBookByBookUpDate();
+
+    public void userUpdateBookStatus(Long bookId);
+
+    public void adminUpdateBookStatus(Long bookId);
+
+    public List<BookEntity> queryBookForCheck();
+
 }

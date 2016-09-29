@@ -69,6 +69,11 @@ wor_volume
 WHERE
 wor_volume.BookId = wor_book.BookId AND
 wor_volume.VolumeId = wor_content.VolumeId AND
+wor_content.ContentStatus = '0' AND
 wor_book.BookId = #{wor_book.BookId}
     </select>
+
+    <update id="updateContentStatus" parameterType="java.lang.Long">
+        UPDATE wor_content SET contentStatus= IF(contentStatus='0','1','0') WHERE contentId=#{contentId}
+    </update>
 </mapper>

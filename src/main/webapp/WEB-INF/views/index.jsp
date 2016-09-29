@@ -6,6 +6,7 @@
 		<title>轻悦轻小说</title>
 
 		<link rel="stylesheet" type="text/css" href="${pageContext.servletContext.contextPath }/css/main-A.css" />
+		<script type="text/javascript" src="${pageContext.servletContext.contextPath }/js/user-info-C.js"></script>
 		<link rel="shortcut icon" href="http://www.qcacg.com/favicon.ico" type="image/x-icon" />
 	</head>
 	<body>

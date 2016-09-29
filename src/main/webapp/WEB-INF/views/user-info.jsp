@@ -590,79 +590,79 @@
 					title: '轻悦娘',
 					data: [
 						{
-							'icon': 'http://127.0.0.1:8080/img/不明所以然.jpg',
+							'icon': 'http://www.qcacg.com/img/不明所以然.jpg',
 							'value': '[不明所以然]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/伤心欲绝.jpg',
+							'icon': 'http://www.qcacg.com/img/伤心欲绝.jpg',
 							'value': '[伤心欲绝]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/发呆.jpg',
+							'icon': 'http://www.qcacg.com/img/发呆.jpg',
 							'value': '[发呆]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/吃惊.jpg',
+							'icon': 'http://www.qcacg.com/img/吃惊.jpg',
 							'value': '[吃惊]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/哭泣.jpg',
+							'icon': 'http://www.qcacg.com/img/哭泣.jpg',
 							'value': '[哭泣]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/害羞.jpg',
+							'icon': 'http://www.qcacg.com/img/害羞.jpg',
 							'value': '[害羞]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/就是那个.jpg',
+							'icon': 'http://www.qcacg.com/img/就是那个.jpg',
 							'value': '[就是那个]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/微笑.jpg',
+							'icon': 'http://www.qcacg.com/img/微笑.jpg',
 							'value': '[微笑]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/恼怒.jpg',
+							'icon': 'http://www.qcacg.com/img/恼怒.jpg',
 							'value': '[恼怒]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/悲伤.jpg',
+							'icon': 'http://www.qcacg.com/img/悲伤.jpg',
 							'value': '[悲伤]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/战斗力渣渣.jpg',
+							'icon': 'http://www.qcacg.com/img/战斗力渣渣.jpg',
 							'value': '[战斗力渣渣]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/抛媚眼.jpg',
+							'icon': 'http://www.qcacg.com/img/抛媚眼.jpg',
 							'value': '[抛媚眼]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/早就看穿一切.jpg',
+							'icon': 'http://www.qcacg.com/img/早就看穿一切.jpg',
 							'value': '[早就看穿一切]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/汗.jpg',
+							'icon': 'http://www.qcacg.com/img/汗.jpg',
 							'value': '[汗]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/菜刀.jpg',
+							'icon': 'http://www.qcacg.com/img/菜刀.jpg',
 							'value': '[菜刀]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/那个有没有.jpg',
+							'icon': 'http://www.qcacg.com/img/那个有没有.jpg',
 							'value': '[那个有没有]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/震惊.jpg',
+							'icon': 'http://www.qcacg.com/img/震惊.jpg',
 							'value': '[震惊]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/高兴.jpg',
+							'icon': 'http://www.qcacg.com/img/高兴.jpg',
 							'value': '[高兴]'
 						},
 						{
-							'icon': 'http://127.0.0.1:8080/img/默默地看着.jpg',
+							'icon': 'http://www.qcacg.com/img/默默地看着.jpg',
 							'value': '[默默地看着]'
 						}
 					]

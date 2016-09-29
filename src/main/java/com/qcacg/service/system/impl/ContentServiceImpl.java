@@ -58,4 +58,9 @@ public class ContentServiceImpl extends BaseServiceImpl<ContentEntity> implement
     public List<ContentEntity> findContentByBookId(Long bookId) {
         return this.contentMapper.findContentByBookId(bookId);
     }
+
+    @Override
+    public void updateContentStatus(Long contentId) {
+        this.contentMapper.updateContentStatus(contentId);
+    }
 }

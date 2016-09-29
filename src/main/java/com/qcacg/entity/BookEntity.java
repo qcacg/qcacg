@@ -19,8 +19,8 @@ public class BookEntity implements Serializable {
     private String sort;
     @Column(name = "bookName")
     private String bookName;
-    @Column(name = "bookUpdated")
-    private Date bookUpdated;
+    @Column(name = "bookUpdate")
+    private Date bookUpdate;
     @Column(name = "bookCoverImage")
     private String bookCoverImage;
     @Column(name = "bookWordCount")
@@ -72,12 +72,12 @@ public class BookEntity implements Serializable {
         this.bookName = bookName;
     }
 
-    public Date getBookUpdated() {
-        return bookUpdated;
+    public Date getBookUpdate() {
+        return bookUpdate;
     }
 
-    public void setBookUpdated(Date bookUpdated) {
-        this.bookUpdated = bookUpdated;
+    public void setBookUpdate(Date bookUpdate) {
+        this.bookUpdate = bookUpdate;
     }
 
     public String getBookCoverImage() {

@@ -41,6 +41,16 @@ public class BookController extends BaseController {
         return "/system/book/list";
     }
 
+    /*
+    按时间获取作品列表
+     */
+    @RequestMapping("findBookByBookUpDate")
+    @ResponseBody
+    public List<BookEntity> findBookByBookUpDate()
+    {
+        return this.bookService.findBookByBookUpDate();
+    }
+
 
 
     /*
@@ -138,6 +148,54 @@ public class BookController extends BaseController {
             }
         }
         return result;
+    }
+
+    /*
+    作者提交审核
+     */
+    @RequestMapping("userUpdateBookStatus/{bookId}")
+    @ResponseBody
+    public Map<String,Object> userUpdateBookStatus(@PathVariable("bookId")Long bookId)
+    {
+        Map<String,Object> result = new HashMap<String, Object>();
+        try{
+            this.bookService.userUpdateBookStatus(bookId);
+            result.put("success",true);
+            return result;
+        }catch (Exception e){
+            e.printStackTrace();
+            result.put("success",false);
+            return result;
+        }
+    }
+
+    /*
+    编辑审核审核
+     */
+    @RequestMapping("adminUpdateBookStatus")
+    @ResponseBody
+    public Map<String,Object> adminUpdateBookStatus(@RequestParam("bookId")Long bookId)
+    {
+        Map<String,Object> result = new HashMap<String, Object>();
+        try{
+            this.bookService.adminUpdateBookStatus(bookId);
+            result.put("success",true);
+            return result;
+        }catch (Exception e){
+            e.printStackTrace();
+            result.put("success",false);
+            return result;
+        }
+    }
+    /*
+    展示提交审核的小说
+     */
+    @RequestMapping("queryBookForCheck")
+    @ResponseBody
+    public List<BookEntity> queryBookForCheck()
+    {
+        return this.bookService.queryBookForCheck();
+
     }
 
 

@@ -71,5 +71,25 @@ public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements Book
          this.bookMapper.updateBook(bookEntity);
     }
 
+    @Override
+    public List<BookEntity> findBookByBookUpDate() {
+        return this.bookMapper.findBookByBookUpDate();
+    }
+
+    @Override
+    public void userUpdateBookStatus(Long bookId) {
+        this.bookMapper.userUpdateBookStatus(bookId);
+    }
+
+    @Override
+    public void adminUpdateBookStatus(Long bookId) {
+        this.bookMapper.adminUpdateBookStatus(bookId);
+    }
+
+    @Override
+    public List<BookEntity> queryBookForCheck() {
+        return this.bookMapper.queryBookForCheck();
+    }
+
 
 }

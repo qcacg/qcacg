@@ -31,6 +31,7 @@ $(function() {
  */
 $(function() {
     $('#btn-content-post').on('click', function() {
+        var formatText = editor.$txt.formatText();
         var html = editor.$txt.html();
         var contentTitle = $('#ipt-chapter-post').val();
         var volumeId = 1;
@@ -38,7 +39,7 @@ $(function() {
 
         $.ajax({url:url,
             type: "POST",
-            data: {"html":html,"contentTitle":contentTitle},
+            data: {"html":html,"contentTitle":contentTitle,"formatText":formatText,"volumeId":volumeId},
             dataType: "text",
             success: function () {
                 console.log('save success');
@@ -61,7 +62,7 @@ $(function() {
         var url = "/volume/saveOrUpdateVolume/"+bookId+".shtml";
         $.ajax({url:url,
             type: "POST",
-            data: {"volumeName":volumeName},
+            data: {"volumeName":volumeName,"bookId":bookId},
             dataType: "text",
             success: function () {
                 console.log('save success');
@@ -97,11 +98,11 @@ $(function() {
  获取分类
  */
 $(function() {
-    $('#btn-choose-cat').on('click', function() {
+    $(' ').on('click', function() {
 
         $.ajax('/bookType/queryBookType.shtml', {
             type: "GET",
-            data: {},
+            data: {"bookId":bookId},
             dataType: "json",
             success: function () {
                 console.log('save success');
@@ -116,13 +117,13 @@ $(function() {
  添加或删除收藏
  */
 $(function() {
-    $('#btn-choose-cat').on('click', function() {
+    $(' ').on('click', function() {
         var bookId = 1;
         var url = "/bookCollect/saveOrDeleteBookCollect/"+bookId+".shtml";
         $.ajax({
             url:url,
             type: "POST",
-            data: {},
+            data: {"bookId":bookId},
             dataType: "json",
             success: function () {
                 console.log('saveOrDeleteBookCollect success');
@@ -188,7 +189,7 @@ $(function() {
         $.ajax({
             url:url,
             type: "POST",
-            data: {},
+            data: {"contentId":contentId},
             dataType: "json",
             success: function (data) {
                 console.log('findContent success');
@@ -229,7 +230,7 @@ $(function() {
  上一章节
  */
 $(function() {
-    $('#btn-choose-cat ').on('click', function() {
+    $('  ').on('click', function() {
         var contentId = 2;
         var bookId = 1;
         var url = "/content/previousContent.shtml";
@@ -244,6 +245,91 @@ $(function() {
                 }else {
                     alert(data.msg);
                 }
+            },
+            error: function (data) {
+                console.log('error');
+            }
+        });
+    });
+})
+/*
+ 设置文本展示状态
+ */
+$(function() {
+    $('  ').on('click', function() {
+        var contentId = 1;
+        var url = "/content/updateContentStatus/"+contentId+".shtml";
+        $.ajax({
+            url:url,
+            type: "POST",
+            data: {"contentId":contentId},
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (data) {
+                console.log('error');
+            }
+        });
+    });
+})
+/*
+ 作者提交审核
+ */
+$(function() {
+    $(' ').on('click', function() {
+        var bookId = 2;
+        var url = "/book/userUpdateBookStatus/"+bookId+".shtml";
+        $.ajax({
+            url:url,
+            type: "POST",
+            data: {"bookId":bookId},
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (data) {
+                console.log('error');
+            }
+        });
+    });
+})
+/*
+ 编辑审核审核
+ */
+$(function() {
+    $('#btn-choose-cat').on('click', function() {
+
+        var url = "/book/adminUpdateBookStatus.shtml";
+        $.ajax({
+            url:url,
+            type: "POST",
+            data: {bookId:1},
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (data) {
+                console.log('error');
+            }
+        });
+    });
+})
+
+/*
+ 展示提交审核的小说
+ */
+$(function() {
+    $('  ').on('click', function() {
+
+        var url = "/book/queryBookForCheck.shtml";
+        $.ajax({
+            url:url,
+            type: "GET",
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
             },
             error: function (data) {
                 console.log('error');

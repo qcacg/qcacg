@@ -18,4 +18,6 @@ public interface ContentService extends BaseService<ContentEntity> {
 
     public List<ContentEntity> findContentByBookId(Long bookId);
 
+    public void updateContentStatus(Long contentId);
+
 }

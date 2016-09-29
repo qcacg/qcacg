@@ -90,15 +90,24 @@ public class LoginController {
 		return "type";
 	}
 
-	@RequestMapping("public-header")
-	public String header() {
-		return "public-header";
+	@RequestMapping("catalog")
+	public String catalog() {
+		return "catalog";
 	}
 
-	@RequestMapping("public-footer")
-	public String footer() {
-		return "public-footer";
+	@RequestMapping("ranking")
+	public String ranking() {
+		return "ranking";
 	}
+//	@RequestMapping("public-header")
+//	public String header() {
+//		return "public-header";
+//	}
+//
+//	@RequestMapping("public-footer")
+//	public String footer() {
+//		return "public-footer";
+//	}
 
 	@RequestMapping("toLogin")
 	public String toLogin(){

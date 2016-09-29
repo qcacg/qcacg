@@ -13,4 +13,6 @@ public interface ContentMapper extends Mapper<ContentEntity>{
 
     public List<ContentEntity> findContentByBookId(Long bookId);
 
+    public void updateContentStatus(Long contentId);
+
 }

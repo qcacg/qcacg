@@ -89,14 +89,18 @@
 				/register.shtml = anon
 				/toRegister.shtml = anon
 				/type.shtml = anon
-				/public-footer.shtml = anon
-				/public-header.shtml = anon
+				<!--/public-footer.shtml = anon-->
+				<!--/public-header.shtml = anon-->
+				/ranking.shtml = anon
+				/catalog.shtml = anon
 				/updatePasswordTelephoneCode.shtml = anon
 				/registerTelephoneCode.shtml = anon
 				/toUpdatePassword.shtml = anon
 				/updatePassword.shtml = anon
 				/404.jsp = anon
 				/error.jsp = anon
+
+				/book/findBookByBookUpDate.shtml = anon
 
 			</value>
 		</property>

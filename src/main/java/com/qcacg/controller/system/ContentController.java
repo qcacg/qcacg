@@ -42,9 +42,8 @@ public class ContentController extends BaseController {
     @RequestMapping("saveOrUpdateContent/{volumeId}")
     @ResponseBody
     public Map<String,Object> saveOrUpdateContent(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity,
-                            @RequestParam("html")String html,  @RequestParam("contentTitle")String contentTitle,  @PathVariable("volumeId")Long volumeId) {
+                            @RequestParam("html")String html,  @RequestParam("contentTitle")String contentTitle,  @RequestParam("formatText")String formatText, @PathVariable("volumeId")Long volumeId) {
         Map<String,Object> result = new HashMap<String, Object>();
-
         try{
             String filename = UploadUtils.generateFilename("html");
             String path = "/upload/file/content" + filename;
@@ -61,6 +60,7 @@ public class ContentController extends BaseController {
             contentEntity.setContentTitle(contentTitle);
             contentEntity.setContent(html);
             contentEntity.setContentUrl(path);
+            contentEntity.setContentWordCount((long)formatText.trim().length());
             this.contentService.saveOrUpdate(contentEntity);
             result.put("success",true);
             result.put("msg",path);
@@ -140,8 +140,25 @@ public class ContentController extends BaseController {
         if (!newFile.exists())
             newFile.mkdirs();
         file.transferTo(newFile);
-        return "http://127.0.0.1:8080"+request.getContextPath()+"/upload/image/content/"+newFileName;
+        return "http://www.qcacg.com/"+request.getContextPath()+"/upload/image/content/"+newFileName;
     }
 
+    /*
+   设置文本展示状态
+   */
+    @RequestMapping("updateContentStatus/{contentId}")
+    @ResponseBody
+    public Map<String,Object> updateContentStatus(@PathVariable("contentId")Long contentId){
+        Map<String,Object> result = new HashMap<String, Object>();
+        try{
+            this.contentService.updateContentStatus(contentId);
+            result.put("success",true);
+            return result;
+        }catch (Exception e){
+            e.printStackTrace();
+            result.put("success",false);
+            return result;
+        }
+    }
 
 }

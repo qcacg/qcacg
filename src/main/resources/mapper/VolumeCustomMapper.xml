@@ -18,6 +18,7 @@
         <id column="volumeId" property="volumeId"/>
         <result column="bookId" property="bookId"/>
         <result column="volumeName" property="volumeName"/>
+        <result column="volumeWordCount" property="volumeWordCount"/>
         <collection property="contentEntityList" ofType="com.qcacg.entity.ContentEntity" resultMap="ContentResultMap"/>
     </resultMap>
 
@@ -26,6 +27,7 @@
         wor_volume.VolumeId AS volumeId,
         wor_volume.BookId AS bookId,
         wor_volume.VolumeName AS volumeName,
+         wor_volume.VolumeWordCount AS volumeWordCount,
         wor_content.ContentId AS contentId,
         wor_content.VolumeId AS volumeId,
         wor_content.ContentTitle AS contentTitle,
@@ -39,6 +41,8 @@
         wor_volume
         WHERE
         wor_volume.VolumeId = wor_content.VolumeId
+        AND
+        wor_content.ContentStatus = '0'
         AND
         wor_volume.BookId = #{wor_volume.BookId}
         ORDER BY
