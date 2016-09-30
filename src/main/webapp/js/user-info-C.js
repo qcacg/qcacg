@@ -17,3 +17,20 @@ $(function() {
         });
     });
 })
+
+$(function() {
+    $(' ').on('click', function() {
+
+        $.ajax('/resources/list.shtml', {
+            type: "GET",
+            data: {},
+            dataType: "json",
+            success: function () {
+                console.log(' success');
+            },
+            error: function () {
+                console.log(' error');
+            }
+        });
+    });
+})

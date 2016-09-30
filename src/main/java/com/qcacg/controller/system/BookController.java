@@ -23,6 +23,7 @@ import java.util.*;
 /**
  * Created by Administrator on 2016/7/4.
  */
+
 @Controller
 @RequestMapping("/book/")
 public class BookController extends BaseController {
@@ -56,6 +57,7 @@ public class BookController extends BaseController {
     /*
     获取用户作品列表
      */
+
     @RequestMapping("findBookByUser")
     @ResponseBody
     public List<BookEntity> findBookByUser()
