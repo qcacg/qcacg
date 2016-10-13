@@ -10,9 +10,11 @@ import java.util.List;
  */
 public interface VolumeService extends BaseService<VolumeEntity> {
 
-    public String saveOrUpdate(VolumeEntity entity);
+    public void saveOrUpdate(VolumeEntity volumeEntity);
 
     public List<VolumeEntity> findVolumeByBookId(Long bookId);
 
+    public void delete(Long volumeId);
 
+    public void updateVolume(VolumeEntity volumeEntity);
 }

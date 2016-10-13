@@ -37,12 +37,12 @@ public class ContentController extends BaseController {
     }
 
     /*
-    保存作品（文本）
+    保存或修改作品（文本）
     */
-    @RequestMapping("saveOrUpdateContent/{volumeId}")
+    @RequestMapping("saveOrUpdateContent")
     @ResponseBody
     public Map<String,Object> saveOrUpdateContent(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity,
-                            @RequestParam("html")String html,  @RequestParam("contentTitle")String contentTitle,  @RequestParam("formatText")String formatText, @PathVariable("volumeId")Long volumeId) {
+                                                  @RequestParam("contentId")Long contentId, @RequestParam("html")String html,  @RequestParam("contentTitle")String contentTitle,  @RequestParam("formatText")String formatText, @RequestParam("volumeId")Long volumeId) {
         Map<String,Object> result = new HashMap<String, Object>();
         try{
             String filename = UploadUtils.generateFilename("html");
@@ -56,6 +56,7 @@ public class ContentController extends BaseController {
             bufferedWriter.write(html);
             bufferedWriter.flush();
             bufferedWriter.close();
+            contentEntity.setContentId(contentId);
             contentEntity.setVolumeId(volumeId);
             contentEntity.setContentTitle(contentTitle);
             contentEntity.setContent(html);
@@ -74,9 +75,9 @@ public class ContentController extends BaseController {
     /*
     读者读取作品正文（或者作者获取草稿）
     */
-    @RequestMapping("findContent/{contentId}")
+    @RequestMapping("findContent")
     @ResponseBody
-    public ContentEntity findContent(@PathVariable("contentId")Long contentId){
+    public ContentEntity findContent(@RequestParam("contentId")Long contentId){
         return this.contentService.findContentByContentId(contentId);
     }
 
@@ -146,12 +147,29 @@ public class ContentController extends BaseController {
     /*
    设置文本展示状态
    */
-    @RequestMapping("updateContentStatus/{contentId}")
+    @RequestMapping("updateContentStatus")
     @ResponseBody
-    public Map<String,Object> updateContentStatus(@PathVariable("contentId")Long contentId){
+    public Map<String,Object> updateContentStatus(@RequestParam("contentId")Long contentId){
         Map<String,Object> result = new HashMap<String, Object>();
         try{
             this.contentService.updateContentStatus(contentId);
+            result.put("success",true);
+            return result;
+        }catch (Exception e){
+            e.printStackTrace();
+            result.put("success",false);
+            return result;
+        }
+    }
+    /*
+   删除章节
+   */
+    @RequestMapping("deleteContent")
+    @ResponseBody
+    public Map<String,Object> deleteContent(@RequestParam("contentId")Long contentId){
+        Map<String,Object> result = new HashMap<String, Object>();
+        try{
+            this.contentService.delete(contentId);
             result.put("success",true);
             return result;
         }catch (Exception e){

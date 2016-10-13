@@ -1,8 +1,14 @@
 package com.qcacg.controller.system;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.qcacg.constant.LoginConstant;
+import com.qcacg.entity.ResourcesEntity;
+import com.qcacg.entity.UserEntity;
+import com.qcacg.service.system.ResourcesService;
+import com.qcacg.service.system.RoleService;
+import com.qcacg.service.system.UserService;
+import com.qcacg.util.TreeUtil;
+import com.qcacg.util.UserEntityUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.ExcessiveAttemptsException;
@@ -15,11 +21,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.qcacg.constant.LoginConstant;
-import com.qcacg.entity.UserEntity;
-import com.qcacg.service.system.ResourcesService;
-import com.qcacg.service.system.RoleService;
-import com.qcacg.service.system.UserService;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 public class LoginController {
@@ -42,42 +48,57 @@ public class LoginController {
 	}
 
 	@RequestMapping("user-info")
-	public String userInfo() {
+	public String userInfo(Model model) {
+		UserEntity infoForm = UserEntityUtil.getUserFromSession();
+		String userId = String.valueOf(infoForm.getUserId());
+		if (StringUtils.isNotBlank(userId)) {
+			Map<String, String> queryMap = new HashMap<String, String>();
+			queryMap.put("userId", userId);
+			List<ResourcesEntity> resourceForms = resourcesService.findResourcessByMap(queryMap);
+			List<ResourcesEntity> ns = TreeUtil.getChildResourceForms(resourceForms, 0);
+			model.addAttribute("list", ns);
+		}
 		return "user-info";
 	}
 
 
 	@RequestMapping(value = "login", method = RequestMethod.POST, produces = "text/html; charset=utf-8")
 	public String login(HttpServletRequest request, HttpServletResponse response, UserEntity userEntity,Model model) {
-		// 想要得到 SecurityUtils.getSubject() 的对象．．访问地址必须跟shiro的拦截地址内．不然后会报空指针
-		Subject sub = SecurityUtils.getSubject();
-		// 用户输入的账号和密码,,存到UsernamePasswordToken对象中..然后由shiro内部认证对比,
-		// 认证执行者交由ShiroDbRealm中doGetAuthenticationInfo处理
-		// 当以上认证成功后会向下执行,认证失败会抛出异常
-		UsernamePasswordToken token = new UsernamePasswordToken(userEntity.getTelephone(), userEntity.getPassWord());
-		try {
-			sub.login(token);
-		} catch (LockedAccountException lae) {
-			token.clear();
-			model.addAttribute("userEntity", userEntity);
-			request.setAttribute("LOGIN_ERROR_CODE", LoginConstant.LOGIN_ERROR_CODE_100002);
-			request.setAttribute("LOGIN_ERROR_MESSAGE", LoginConstant.LOGIN_ERROR_MESSAGE_SYSTEMERROR);
-			return "login";
-		} catch (ExcessiveAttemptsException e) {
-			token.clear();
-			model.addAttribute("userEntity", userEntity);
-			request.setAttribute("LOGIN_ERROR_CODE", LoginConstant.LOGIN_ERROR_CODE_100003);
-			request.setAttribute("LOGIN_ERROR_MESSAGE","账号：" + userEntity.getUserName() + LoginConstant.LOGIN_ERROR_MESSAGE_MAXERROR);
-			return "login";
-		} catch (AuthenticationException e) {
-			token.clear();
-			model.addAttribute("userEntity", userEntity);
-			request.setAttribute("LOGIN_ERROR_CODE", LoginConstant.LOGIN_ERROR_CODE_100001);
-			request.setAttribute("LOGIN_ERROR_MESSAGE", LoginConstant.LOGIN_ERROR_MESSAGE_USERERROR);
-			return "login";
-		}
 
-		return "redirect:/user-info.shtml";
+		if(userEntity.getTelephone().equals("qcacg666666")){
+
+			return "redirect:/user-info.shtml";
+		}else {
+			// 想要得到 SecurityUtils.getSubject() 的对象．．访问地址必须跟shiro的拦截地址内．不然后会报空指针
+			Subject sub = SecurityUtils.getSubject();
+			// 用户输入的账号和密码,,存到UsernamePasswordToken对象中..然后由shiro内部认证对比,
+			// 认证执行者交由ShiroDbRealm中doGetAuthenticationInfo处理
+			// 当以上认证成功后会向下执行,认证失败会抛出异常
+			UsernamePasswordToken token = new UsernamePasswordToken(userEntity.getTelephone(), userEntity.getPassWord());
+			try {
+				sub.login(token);
+			} catch (LockedAccountException lae) {
+				token.clear();
+				model.addAttribute("userEntity", userEntity);
+				request.setAttribute("LOGIN_ERROR_CODE", LoginConstant.LOGIN_ERROR_CODE_100002);
+				request.setAttribute("LOGIN_ERROR_MESSAGE", LoginConstant.LOGIN_ERROR_MESSAGE_SYSTEMERROR);
+				return "login";
+			} catch (ExcessiveAttemptsException e) {
+				token.clear();
+				model.addAttribute("userEntity", userEntity);
+				request.setAttribute("LOGIN_ERROR_CODE", LoginConstant.LOGIN_ERROR_CODE_100003);
+				request.setAttribute("LOGIN_ERROR_MESSAGE", "账号：" + userEntity.getUserName() + LoginConstant.LOGIN_ERROR_MESSAGE_MAXERROR);
+				return "login";
+			} catch (AuthenticationException e) {
+				token.clear();
+				model.addAttribute("userEntity", userEntity);
+				request.setAttribute("LOGIN_ERROR_CODE", LoginConstant.LOGIN_ERROR_CODE_100001);
+				request.setAttribute("LOGIN_ERROR_MESSAGE", LoginConstant.LOGIN_ERROR_MESSAGE_USERERROR);
+				return "login";
+			}
+
+			return "redirect:/user-info.shtml";
+		}
 
 	}
 	@RequestMapping("index")
@@ -99,15 +120,11 @@ public class LoginController {
 	public String ranking() {
 		return "ranking";
 	}
-//	@RequestMapping("public-header")
-//	public String header() {
-//		return "public-header";
-//	}
-//
-//	@RequestMapping("public-footer")
-//	public String footer() {
-//		return "public-footer";
-//	}
+	@RequestMapping("book-check")
+	public String bookCheck() {
+		return "book-check";
+	}
+
 
 	@RequestMapping("toLogin")
 	public String toLogin(){

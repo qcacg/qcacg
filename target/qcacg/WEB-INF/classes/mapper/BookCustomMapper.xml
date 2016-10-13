@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qcacg.mapper.BookCustomMapper">
+
+    <resultMap id="ContentResultMap" type="com.qcacg.entity.ContentEntity">
+        <id column="contentId" property="contentId"/>
+        <result column="volumeId" property="volumeId"/>
+        <result column="contentTitle" property="contentTitle"/>
+        <result column="content" property="content"/>
+        <result column="contentWordCount" property="contentWordCount"/>
+        <result column="contentUpdate" property="contentUpdate"/>
+        <result column="contentStatus" property="contentStatus"/>
+        <result column="contentUrl" property="contentUrl"/>
+    </resultMap>
+
+    <resultMap id="VolumeResultMap" type="com.qcacg.entity.volume.VolumeCustom">
+        <id column="volumeId" property="volumeId"/>
+        <result column="bookId" property="bookId"/>
+        <result column="volumeName" property="volumeName"/>
+        <result column="volumeWordCount" property="volumeWordCount"/>
+        <collection property="contentEntityList" ofType="com.qcacg.entity.ContentEntity" resultMap="ContentResultMap"/>
+    </resultMap>
+
+    <resultMap id="BookTypeResultMap" type="com.qcacg.entity.BookTypeEntity">
+        <id column="bookTypeId" property="bookTypeId"/>
+        <result column="bookTypeName" property="bookTypeName"/>
+    </resultMap>
+
+    <resultMap id="BookResultMap" type="com.qcacg.entity.book.BookCustom">
+        <id column="bookId" property="bookId"/>
+        <result column="bookName" property="bookName"/>
+        <result column="sort" property="sort"/>
+        <result column="bookIntroduction" property="bookIntroduction"/>
+        <result column="bookUpdate" property="bookUpdate"/>
+        <result column="bookCoverImage" property="bookCoverImage"/>
+        <result column="bookWordCount" property="bookWordCount"/>
+        <result column="bookStatus" property="bookStatus"/>
+        <result column="bookHit" property="bookHit"/>
+        <result column="bookCollect" property="bookCollect"/>
+        <result column="bookCopperCoins" property="bookCopperCoins"/>
+        <association property="userEntity" javaType="com.qcacg.entity.UserEntity">
+            <id column="userId" property="userId"/>
+            <result column="userName" property="userName"/>
+            <result column="information" property="information"/>
+        </association>
+        <collection property="bookTypeEntityList" ofType="com.qcacg.entity.BookTypeEntity" resultMap="BookTypeResultMap"/>
+        <collection property="volumeCustomList" ofType="com.qcacg.entity.volume.VolumeCustom" resultMap="VolumeResultMap"/>
+    </resultMap>
+
+
+
+
+    <select id="queryBook" resultMap="BookResultMap" parameterType="java.lang.Long">
+        SELECT
+        wor_book.BookId AS bookId,
+
+        wor_book.BookName AS bookName,
+        wor_book.Sort AS sort,
+        wor_book.BookIntroduction AS bookIntroduction,
+        wor_book.BookUpdate AS bookUpdate,
+        wor_book.BookCoverImage AS bookCoverImage,
+        wor_book.BookWordCount AS bookWordCount,
+        wor_book.BookStatus AS bookStatus,
+        wor_book.BookHit AS bookHit,
+        wor_book.BookCollect AS bookCollect,
+        wor_book.BookCopperCoins AS bookCopperCoins,
+        wor_book.BookSilverCoins AS bookSilverCoins,
+        wor_booktype.BookTypeId AS bookTypeId,
+        wor_booktype.BookTypeName AS bookTypeName,
+        wor_volume.VolumeId AS volumeId,
+        wor_volume.BookId AS bookId,
+        wor_volume.VolumeName AS volumeName,
+        wor_volume.VolumeWordCount AS volumeWordCount,
+        wor_content.ContentId AS contentId,
+        wor_content.VolumeId AS volumeId,
+        wor_content.ContentTitle AS contentTitle,
+        wor_content.Content AS content,
+        wor_content.ContentWordCount AS contentWordCount,
+        wor_content.ContentUpdate AS contentUpdate,
+        wor_content.ContentStatus AS contentStatus,
+        wor_content.ContentUrl AS contentUrl,
+        sys_user.UserId AS userId,
+        sys_user.UserName AS userName,
+        sys_user.Information AS information
+        FROM
+        wor_book ,
+        sys_user ,
+        wor_booktype ,
+        wor_book_booktype,
+        wor_content,
+        wor_volume
+        WHERE
+        wor_book.UserId = sys_user.UserId AND
+        wor_booktype.BookTypeId IN (SELECT wor_book_booktype.BookTypeId FROM wor_book_booktype WHERE wor_book_booktype.BookId = #{wor_book.BookId}) AND
+        wor_volume.BookId = wor_book.BookId AND
+        wor_volume.VolumeId = wor_content.VolumeId AND
+        wor_book.BookId = #{wor_book.BookId}
+    </select>
+
+    <select id="findBookTypeByBookId" resultMap="BookTypeResultMap" parameterType="java.lang.Long">
+        SELECT
+        wor_booktype.BookTypeId AS bookTypeId,
+        wor_booktype.BookTypeName AS bookTypeName
+        FROM
+        wor_booktype
+        WHERE
+        wor_booktype.BookTypeId IN (SELECT wor_book_booktype.BookTypeId FROM wor_book_booktype WHERE wor_book_booktype.BookId = #{wor_book.BookId})
+    </select>
+
+    <select id="findVolumeAndContentByBookId" resultMap="VolumeResultMap" parameterType="java.lang.Long">
+        SELECT
+        wor_volume.VolumeId AS volumeId,
+        wor_volume.BookId AS bookId,
+        wor_volume.VolumeName AS volumeName,
+        wor_volume.VolumeWordCount AS volumeWordCount,
+        wor_content.ContentId AS contentId,
+        wor_content.VolumeId AS volumeId,
+        wor_content.ContentTitle AS contentTitle,
+        wor_content.Content AS content,
+        wor_content.ContentWordCount AS contentWordCount,
+        wor_content.ContentUpdate AS contentUpdate,
+        wor_content.ContentStatus AS contentStatus,
+        wor_content.ContentUrl AS contentUrl
+        FROM
+        wor_content,
+        wor_volume
+        WHERE
+        wor_volume.VolumeId = wor_content.VolumeId
+        AND
+        wor_volume.BookId = #{wor_volume.BookId}
+        ORDER BY
+        wor_volume.VolumeId
+
+    </select>
+
+    <select id="findContentByVolumeIdAndBookId" resultMap="ContentResultMap" parameterType="java.lang.Long">
+        SELECT
+        wor_content.ContentId AS contentId,
+        wor_content.VolumeId AS volumeId,
+        wor_content.ContentTitle AS contentTitle,
+        wor_content.Content AS content,
+        wor_content.ContentWordCount AS contentWordCount,
+        wor_content.ContentUpdate AS contentUpdate,
+        wor_content.ContentStatus AS contentStatus,
+        wor_content.ContentUrl AS contentUrl
+        FROM
+        wor_content
+        WHERE wor_content.VolumeId IN
+        (SELECT wor_volume.VolumeId FROM wor_volume
+        WHERE wor_volume.BookId = #{wor_volume.BookId})
+        AND
+        wor_content.ContentStatus = '0'
+        ORDER BY
+        wor_content.ContentId
+    </select>
+</mapper>

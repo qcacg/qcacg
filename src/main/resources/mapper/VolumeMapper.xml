@@ -18,6 +18,9 @@
 
   </select>
 
+  <update id="updateVolume" parameterType="com.qcacg.entity.VolumeEntity">
+    UPDATE wor_volume SET volumeName=#{volumeName} WHERE volumeId=#{volumeId}
+  </update>
 
 
 </mapper>

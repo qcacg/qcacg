@@ -91,5 +91,20 @@ public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements Book
         return this.bookMapper.queryBookForCheck();
     }
 
+    @Override
+    public List<BookEntity> findBookByBookCopperCoins() {
+        return this.bookMapper.findBookByBookCopperCoins();
+    }
+
+    @Override
+    public List<BookEntity> findBookByBookHit() {
+        return this.bookMapper.findBookByBookHit();
+    }
+
+    @Override
+    public List<BookEntity> findBookByBookWordCount() {
+        return this.bookMapper.findBookByBookWordCount();
+    }
+
 
 }

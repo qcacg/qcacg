@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -576,6 +577,16 @@
 		</div>
 		<div></div>
 		<div class="modal-backdrop fade in" style="display:none" id="heimu"></div>
+
+	<div class="sidebar-collapse">
+		<ul class="nav" id="side-menu">
+		<c:forEach items="${list}" var="rs">
+			<li><a href="book-check.shtml"> <i class="${rs.resourcesView}"></i> <span class="nav-label">${rs.resourcesName}</span> <span class="fa arrow"></span>
+			</a>
+		</c:forEach>
+		</ul>
+	</div>
+
 	<%@ include file="public-footer.jsp" %>
 
 	<script type="text/javascript" src="${pageContext.servletContext.contextPath }/user-info/wangEditor.min.js"></script>

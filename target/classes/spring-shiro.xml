@@ -89,8 +89,7 @@
 				/register.shtml = anon
 				/toRegister.shtml = anon
 				/type.shtml = anon
-				<!--/public-footer.shtml = anon-->
-				<!--/public-header.shtml = anon-->
+				/book/queryBook/**.shtml = anon
 				/ranking.shtml = anon
 				/catalog.shtml = anon
 				/updatePasswordTelephoneCode.shtml = anon
@@ -99,9 +98,17 @@
 				/updatePassword.shtml = anon
 				/404.jsp = anon
 				/error.jsp = anon
-
 				/book/findBookByBookUpDate.shtml = anon
+				/book/findBookByBookCopperCoins.shtml = anon
 
+				/book/** = anon
+				/user/** = anon
+				/volume/** = anon
+				/content/** = anon
+				/user/** = anon
+				/bookAndBookType/** = anon
+				/bookCollect/** = anon
+				/bookType/** = anon
 			</value>
 		</property>
 	</bean>

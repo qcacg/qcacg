@@ -1,5 +1,5 @@
 /*
- 保存作品（信息）
+ 保存或修改作品（信息）
  */
 $(function() {
     $('#btn-info-book').on('click', function() {
@@ -27,19 +27,20 @@ $(function() {
 })
 
 /*
- 保存作品（文本）
+ 保存或修改作品（内容）
  */
 $(function() {
     $('#btn-content-post').on('click', function() {
+        var contentId = 9;
         var formatText = editor.$txt.formatText();
         var html = editor.$txt.html();
         var contentTitle = $('#ipt-chapter-post').val();
-        var volumeId = 1;
-        var url = "/content/saveOrUpdateContent/"+volumeId+".shtml";
+        var volumeId = 3;
+        var url = "/content/saveOrUpdateContent.shtml";
 
         $.ajax({url:url,
             type: "POST",
-            data: {"html":html,"contentTitle":contentTitle,"formatText":formatText,"volumeId":volumeId},
+            data: {"contentId":contentId,"html":html,"contentTitle":contentTitle,"formatText":formatText,"volumeId":volumeId},
             dataType: "text",
             success: function () {
                 console.log('save success');
@@ -57,12 +58,13 @@ $(function() {
 $(function() {
     $('#btn-add-vol-submit').on('click', function() {
 
-        var volumeName = $('#ipt-title-volume').val();
-        var bookId = 1;
-        var url = "/volume/saveOrUpdateVolume/"+bookId+".shtml";
+        var volumeName = "第三卷";
+        var bookId = 2;
+        var volumeId = 3;
+        var url = "/volume/saveOrUpdateVolume.shtml";
         $.ajax({url:url,
             type: "POST",
-            data: {"volumeName":volumeName,"bookId":bookId},
+            data: {"volumeName":volumeName,"bookId":bookId,"volumeId":volumeId},
             dataType: "text",
             success: function () {
                 console.log('save success');
@@ -102,7 +104,7 @@ $(function() {
 
         $.ajax('/bookType/queryBookType.shtml', {
             type: "GET",
-            data: {"bookId":bookId},
+            data: {},
             dataType: "json",
             success: function () {
                 console.log('save success');
@@ -119,7 +121,7 @@ $(function() {
 $(function() {
     $(' ').on('click', function() {
         var bookId = 1;
-        var url = "/bookCollect/saveOrDeleteBookCollect/"+bookId+".shtml";
+        var url = "/bookCollect/saveOrDeleteBookCollect.shtml";
         $.ajax({
             url:url,
             type: "POST",
@@ -135,7 +137,7 @@ $(function() {
     });
 })
 /*
- 修改或保存个人信息
+ 修改个人信息
  */
 $(function() {
     $('#btn-save-profile').on('click', function() {
@@ -183,9 +185,9 @@ $(function() {
  读者读取作品正文（或者作者获取草稿）
  */
 $(function() {
-    $(' ').on('click', function() {
+    $('#btn-book-check').on('click', function() {
         var contentId = 1;
-        var url = "/content/findContent/"+contentId+".shtml";
+        var url = "/content/findContent.shtml";
         $.ajax({
             url:url,
             type: "POST",
@@ -258,7 +260,7 @@ $(function() {
 $(function() {
     $('  ').on('click', function() {
         var contentId = 1;
-        var url = "/content/updateContentStatus/"+contentId+".shtml";
+        var url = "/content/updateContentStatus.shtml";
         $.ajax({
             url:url,
             type: "POST",
@@ -279,7 +281,7 @@ $(function() {
 $(function() {
     $(' ').on('click', function() {
         var bookId = 2;
-        var url = "/book/userUpdateBookStatus/"+bookId+".shtml";
+        var url = "/book/userUpdateBookStatus.shtml";
         $.ajax({
             url:url,
             type: "POST",
@@ -315,14 +317,55 @@ $(function() {
         });
     });
 })
-
 /*
  展示提交审核的小说
  */
 $(function() {
-    $('  ').on('click', function() {
+    $('#btn-book-check').on('click', function() {
 
         var url = "/book/queryBookForCheck.shtml";
+        $.ajax({
+            url:url,
+            type: "GET",
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (data) {
+                console.log('error');
+            }
+        });
+    });
+})
+/*
+ 获取作品信息
+ */
+$(function() {
+    $('#btn-book-check').on('click', function() {
+        var bookId = 1;
+        var url = "/book/queryBook.shtml";
+        $.ajax({
+            url:url,
+            type: "GET",
+            data: {"bookId":bookId},
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (data) {
+                console.log('error');
+            }
+        });
+    });
+})
+/*
+ 按字数获取作品列表（总榜）
+ */
+$(function() {
+    $(' ').on('click', function() {
+
+        var url = "/book/findBookByBookWordCount.shtml";
         $.ajax({
             url:url,
             type: "GET",

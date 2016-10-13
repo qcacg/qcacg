@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2016-09-28 15:06:37
+Date: 2016-09-30 12:18:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -438,8 +438,6 @@ INSERT INTO `sys_resources` VALUES ('16', '系统监管', '系统监管', null, 
 INSERT INTO `sys_resources` VALUES ('17', '实时监控', '实时监控', '/sys/monitor.shtml', '16', '2', '1', ',16,17,', '1', null, '2016-06-14 17:14:00');
 INSERT INTO `sys_resources` VALUES ('18', '告警列表', '告警列表', '/sys/list.shtml', '16', '3', '1', ',16,18,', '1', null, '2016-06-14 17:14:41');
 INSERT INTO `sys_resources` VALUES ('19', '个人信息', '个人信息', '/user/info.shtml', '0', '1', '1', ',19,', '0', 'fa fa-home', '2016-07-13 14:44:47');
-INSERT INTO `sys_resources` VALUES ('20', '我的投稿', '我的投稿', '/book/list.shtml', '0', '1', '1', ',20,', '0', 'fa fa-columns icon', '2016-07-13 14:46:49');
-INSERT INTO `sys_resources` VALUES ('21', '我的书架', '我的书架', '', '0', '1', '1', ',21,', '0', 'fa fa-columns icon', '2016-07-13 15:13:46');
 
 -- ----------------------------
 -- Table structure for sys_resources_button
@@ -7191,7 +7189,7 @@ CREATE TABLE `sys_user` (
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES ('1', 'qcacg', '15067171806', null, '5a0a677d1a2ed7d5928272fa9f11bce6', '2016-09-28 09:50:52', null, '1', null, '男生', '', null, '我就是传说中的小说高手！！', 'd26d9367fcf190b683ced18bb6cc6833', '2016-01-01');
+INSERT INTO `sys_user` VALUES ('1', 'qcacg', '15067171806', null, '5a0a677d1a2ed7d5928272fa9f11bce6', '2016-09-28 09:50:52', null, '1', '/upload/image/userHead/201609/28163329kcwc.jpg', '男生', '', null, '我就是传说中的小说高手！！', 'd26d9367fcf190b683ced18bb6cc6833', '2016-01-01');
 INSERT INTO `sys_user` VALUES ('2', 'user', '13083963669', null, '88e966624f0ef82611ba0fc0b31af5ce', '2016-07-23 15:16:13', null, '1', null, null, null, null, null, 'c01ebee0672afa6c2e0b9b7907ec4083', '1970-01-01');
 
 -- ----------------------------
@@ -7253,7 +7251,7 @@ CREATE TABLE `wor_book` (
   `BookName` varchar(255) DEFAULT NULL COMMENT '小说名称',
   `Sort` enum('少女','少年') NOT NULL DEFAULT '少年',
   `BookIntroduction` text COMMENT '作品简介',
-  `BookUpdated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新日期',
+  `BookUpdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新日期',
   `BookCoverImage` varchar(255) DEFAULT NULL COMMENT '封面图片',
   `BookWordCount` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '小说字数',
   `BookStatus` enum('0','2','1') DEFAULT '0' COMMENT '小说状态',
@@ -7269,10 +7267,10 @@ CREATE TABLE `wor_book` (
 -- ----------------------------
 -- Records of wor_book
 -- ----------------------------
-INSERT INTO `wor_book` VALUES ('1', '1', '回到明朝当皇帝', '少年', '主人公一个玩游戏时发生了一件离奇的事件，突然穿越回到了北宋末与南宋初，机缘巧合之下结实了宋高宗，一段奇幻的经历从此开始，并改写了历史......', '2016-09-28 15:02:21', '/upload/image/userHead/201609/12114241j4m0.jpg', '0', '0', '0', '2', '0', '0');
-INSERT INTO `wor_book` VALUES ('2', '1', '回到宋朝当皇帝', '少年', '主人公改写了历史......', '2016-09-12 11:43:13', '/upload/image/userHead/201609/12114241j4m0.jpg', '0', '0', '0', '2', '0', '0');
+INSERT INTO `wor_book` VALUES ('1', '1', '回到明朝当皇帝', '少年', '主人公一个玩游戏时发生了一件离奇的事件，突然穿越回到了北宋末与南宋初，机缘巧合之下结实了宋高宗，一段奇幻的经历从此开始，并改写了历史......', '2016-09-29 16:48:21', '/upload/image/userHead/201609/12114241j4m0.jpg', '3410', '1', '0', '2', '0', '0');
+INSERT INTO `wor_book` VALUES ('2', '1', '回到宋朝当皇帝', '少年', '主人公改写了历史......', '2016-09-29 15:36:49', '/upload/image/userHead/201609/12114241j4m0.jpg', '1000', '2', '0', '2', '0', '0');
 INSERT INTO `wor_book` VALUES ('5', '1', '纸牌屋', '少年', '冰与火之歌', '2016-09-27 10:55:53', '', '0', '0', '1', '0', '0', '0');
-INSERT INTO `wor_book` VALUES ('6', '1', '鸭子坐飞机', '少年', '不喝咖啡会死星人', '2016-09-27 11:02:01', '', '0', '0', '1', '0', '0', '0');
+INSERT INTO `wor_book` VALUES ('6', '1', '', '少年', '', '2016-09-29 15:24:21', '', '0', '0', '1', '0', '0', '0');
 INSERT INTO `wor_book` VALUES ('7', '1', '低俗小说', '少年', '杀出个黎明', '2016-09-26 20:50:21', '', '0', '0', '0', '0', '0', '0');
 
 -- ----------------------------
@@ -7397,7 +7395,7 @@ CREATE TABLE `wor_book_booktype` (
   `BookId` bigint(11) unsigned NOT NULL COMMENT '小说ID',
   `BookTypeId` int(11) NOT NULL COMMENT '小说分类ID',
   PRIMARY KEY (`BookAndBookTypeId`)
-) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wor_book_booktype
@@ -7415,11 +7413,11 @@ INSERT INTO `wor_book_booktype` VALUES ('74', '5', '2');
 INSERT INTO `wor_book_booktype` VALUES ('75', '5', '3');
 INSERT INTO `wor_book_booktype` VALUES ('76', '5', '4');
 INSERT INTO `wor_book_booktype` VALUES ('77', '5', '5');
-INSERT INTO `wor_book_booktype` VALUES ('78', '6', '1');
-INSERT INTO `wor_book_booktype` VALUES ('79', '6', '2');
-INSERT INTO `wor_book_booktype` VALUES ('80', '6', '3');
-INSERT INTO `wor_book_booktype` VALUES ('81', '6', '4');
-INSERT INTO `wor_book_booktype` VALUES ('82', '6', '5');
+INSERT INTO `wor_book_booktype` VALUES ('83', '6', '1');
+INSERT INTO `wor_book_booktype` VALUES ('84', '6', '2');
+INSERT INTO `wor_book_booktype` VALUES ('85', '6', '3');
+INSERT INTO `wor_book_booktype` VALUES ('86', '6', '4');
+INSERT INTO `wor_book_booktype` VALUES ('87', '6', '5');
 
 -- ----------------------------
 -- Table structure for wor_chapter
@@ -7452,34 +7450,23 @@ CREATE TABLE `wor_content` (
   `Content` longtext,
   `ContentWordCount` bigint(11) unsigned NOT NULL DEFAULT '0' COMMENT '内容字数',
   `ContentUpdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
-  `ContentStatus` enum('0','1','2') DEFAULT '0' COMMENT '内容状态',
+  `ContentStatus` enum('0','1') DEFAULT '0' COMMENT '内容状态',
   `ContentUrl` varchar(255) DEFAULT NULL COMMENT '地址',
   PRIMARY KEY (`ContentId`),
   KEY `ChapterID` (`ContentTitle`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wor_content
 -- ----------------------------
-INSERT INTO `wor_content` VALUES ('1', '1', '宅男的穿越', '<p>突然就穿越了<p>', '0', '2016-09-14 09:48:26', '0', null);
-INSERT INTO `wor_content` VALUES ('2', '1', '心中的困惑', '<p>为什么呢？<p>', '0', '2016-09-14 09:48:46', '0', null);
-INSERT INTO `wor_content` VALUES ('3', '2', '猥琐的大叔', '<p>哈哈哈<p>', '0', '2016-09-14 09:49:02', '0', null);
-INSERT INTO `wor_content` VALUES ('4', '2', '无聊的生活', '<p>哎呀<p>', '0', '2016-09-14 09:49:31', '0', null);
-INSERT INTO `wor_content` VALUES ('5', '2', '美好的一天', '<p>aa<p>', '0', '2016-09-14 18:58:49', '0', null);
-INSERT INTO `wor_content` VALUES ('6', '1', '又穿越！', '\n							<p><img src=\"http://127.0.0.1:8080/upload/image/content/0f623e21f0c5414987dcdc7e865370d2.jpg\" alt=\"a9e0ac51f8198618e91f29374fed2e738ad4e621\"><br></p><p><br></p><p>从前的从前的从前</p><p><br></p>', '0', '2016-09-20 16:24:00', '0', '/upload/file/content/201609/20162400zbdl.html');
-INSERT INTO `wor_content` VALUES ('7', '1', '阿斯顿发', '\n							<p>sdfsdfdsfdf阿斯顿发斯蒂芬多少</p>', '0', '2016-09-20 18:50:02', '0', '/upload/file/content/201609/20185002p3ay.html');
-INSERT INTO `wor_content` VALUES ('8', '1', '哈哈', '\n							<p>又穿越了 o~ye！！~~<img src=\"http://127.0.0.1:8080/upload/image/content/3c6d9548e9e441459ee081082e683741.jpg\" alt=\"a9e0ac51f8198618e91f29374fed2e738ad4e621\"></p><p><br></p>', '0', '2016-09-20 19:29:38', '0', '/upload/file/content/201609/201929382zi7.htm');
-INSERT INTO `wor_content` VALUES ('9', '1', '阿斯顿发', '\n							<p>阿斯顿发 哦yes！！！<img src=\"http://127.0.0.1:8080/upload/image/content/8ed3792d0ca046ebb057bd6786e0addf.jpg\" alt=\"b38c2512b31bb051257c759b337adab44bede021\"></p><p><br></p>', '0', '2016-09-20 19:34:33', '0', '/upload/file/content/201609/2019343351oj.htm');
-INSERT INTO `wor_content` VALUES ('10', '1', '撒旦法', '\n							<p>啥地方 66666 \\(^o^)/YES! &nbsp;<img src=\"./img/不明所以然.jpg\"><img src=\"http://127.0.0.1:8080/upload/image/content/92c65f578f5a4486888586a6be349826.jpg\" alt=\"caed1524ab18972b6784c679e3cd7b899c510ac6\"></p><p><br></p>', '0', '2016-09-20 19:35:48', '0', '/upload/file/content/201609/20193548o85j.html');
-INSERT INTO `wor_content` VALUES ('11', '1', '撒旦法', '\n							<p>啥地方 66666 \\(^o^)/YES! &nbsp;<img src=\"./img/不明所以然.jpg\"><img src=\"http://127.0.0.1:8080/upload/image/content/92c65f578f5a4486888586a6be349826.jpg\" alt=\"caed1524ab18972b6784c679e3cd7b899c510ac6\"><img src=\"./img/不明所以然.jpg\"></p><p><br></p>', '0', '2016-09-20 20:02:17', '0', '/upload/file/content/201609/20200217lq9g.html');
-INSERT INTO `wor_content` VALUES ('12', '1', '撒旦法', '\n							<p><img src=\"./img/伤心欲绝.jpg\"><img src=\"./img/吃惊.jpg\"><br></p><p><br></p>', '0', '2016-09-20 20:06:23', '0', '/upload/file/content/201609/202006230m2j.html');
-INSERT INTO `wor_content` VALUES ('13', '1', '啊啊啊', '\n							<p><img src=\"http://img.t.sinajs.cn/t35/style/images/common/face/ext/normal/60/horse2_thumb.gif\"><img src=\"./img/默默地看着.jpg\"><br></p><p><br></p>', '0', '2016-09-20 20:18:13', '0', '/upload/file/content/201609/2020181371ma.html');
-INSERT INTO `wor_content` VALUES ('14', '1', 'A D阿萨德', '\n							<p><img src=\"/img/不明所以然.jpg\">的阿萨德<img src=\"http://127.0.0.1:8080/upload/image/content/5b79bcf36d724f4390c0a62f8d50fdd8.jpg\" alt=\"a9e0ac51f8198618e91f29374fed2e738ad4e621\"><br></p><p><br></p>', '0', '2016-09-21 10:11:07', '0', '/upload/file/content/201609/211011070fe3.html');
-INSERT INTO `wor_content` VALUES ('15', '1', '啊实打实的', '\n							<p>撒旦法<img src=\"http://127.0.0.1:8080/img/不明所以然.jpg\"></p><p><br></p>', '0', '2016-09-21 10:13:22', '0', '/upload/file/content/201609/211013228rnx.html');
-INSERT INTO `wor_content` VALUES ('16', '1', '我的世界', '\n							<p>&nbsp; &nbsp; &nbsp;这是一个美好的早上<img src=\"http://127.0.0.1:8080/img/不明所以然.jpg\"><img src=\"http://127.0.0.1:8080/img/哭泣.jpg\"></p><p><br></p>', '0', '2016-09-21 10:27:52', '0', '/upload/file/content/201609/21102752a7u9.html');
-INSERT INTO `wor_content` VALUES ('17', '1', '胡来的左右', '\n							<p>哇哇哇</p>', '0', '2016-09-21 15:16:54', '0', '/upload/file/content/201609/21151654q5gj.html');
-INSERT INTO `wor_content` VALUES ('18', '1', '阿斯顿发是打发', '\n							<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 啊撒旦法撒旦阿斯顿发</p><p>&nbsp; &nbsp; &nbsp;阿斯顿发斯蒂芬是打发是打发撒点f</p><p>是打发阿斯顿发是打发撒点飞</p><p>撒旦法撒点地方</p><p><br></p>', '0', '2016-09-21 15:27:26', '0', '/upload/file/content/201609/21152726fmv5.html');
-INSERT INTO `wor_content` VALUES ('19', '1', '多对多', '\n							<p>&nbsp; &nbsp; 啊撒旦法撒旦阿斯&nbsp;阿斯顿发斯蒂芬是打发是打发撒点f撒旦法 啊撒旦法撒旦阿斯&nbsp;阿斯顿发斯蒂芬是打发是打发撒点f撒旦法 啊撒旦阿斯顿发法撒旦阿斯&nbsp;阿斯顿发斯蒂芬是打发是打发撒点f撒旦法</p><p>&nbsp;啊撒旦法撒旦阿斯&nbsp;阿斯顿发斯蒂芬是打发是打发撒点f撒旦法</p><p>&nbsp;啊撒旦法撒旦阿斯&nbsp;阿斯顿发斯蒂芬是打发是打发撒点f撒旦法</p><p>&nbsp;啊撒旦法撒旦阿斯&nbsp;阿斯顿发斯蒂芬是打发是打发撒点f撒旦法</p><p>&nbsp;啊撒旦法撒旦阿斯&nbsp;阿斯顿发斯蒂芬是打发是打发撒点f撒旦法</p><p>是打发阿斯顿发是打发撒点飞</p><p>撒旦法撒点地方</p><p>&nbsp;</p><p><br></p>', '0', '2016-09-21 15:28:53', '0', '/upload/file/content/201609/211528530w20.html');
+INSERT INTO `wor_content` VALUES ('1', '1', '宅男的穿越', '<p>突然就穿越了<p>', '100', '2016-09-14 09:48:26', '0', null);
+INSERT INTO `wor_content` VALUES ('2', '1', '心中的困惑', '<p>为什么呢？<p>', '1000', '2016-09-14 09:48:46', '0', null);
+INSERT INTO `wor_content` VALUES ('3', '2', '猥琐的大叔', '<p>哈哈哈<p>', '100', '2016-09-14 09:49:02', '0', null);
+INSERT INTO `wor_content` VALUES ('4', '2', '无聊的生活', '<p>哎呀<p>', '10', '2016-09-14 09:49:31', '0', null);
+INSERT INTO `wor_content` VALUES ('5', '2', '美好的一天', '<p>aa<p>', '100', '2016-09-14 18:58:49', '0', null);
+INSERT INTO `wor_content` VALUES ('6', '1', '又穿越！', '\n							<p><img src=\"http://127.0.0.1:8080/upload/image/content/0f623e21f0c5414987dcdc7e865370d2.jpg\" alt=\"a9e0ac51f8198618e91f29374fed2e738ad4e621\"><br></p><p><br></p><p>从前的从前的从前</p><p><br></p>', '1000', '2016-09-20 16:24:00', '0', '/upload/file/content/201609/20162400zbdl.html');
+INSERT INTO `wor_content` VALUES ('7', '1', '了不起的盖茨比', '\n							<p>从前，有一个乐不起的任务，他叫盖茨比。</p>', '100', '2016-09-28 19:53:07', '0', '/upload/file/content/201609/281953079giq.html');
+INSERT INTO `wor_content` VALUES ('9', '3', null, null, '1000', '2016-09-29 10:50:51', '0', null);
 
 -- ----------------------------
 -- Table structure for wor_painting
@@ -7652,15 +7639,17 @@ CREATE TABLE `wor_volume` (
   `VolumeId` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '分卷ID',
   `BookId` bigint(11) unsigned NOT NULL COMMENT '小说ID',
   `VolumeName` varchar(255) DEFAULT NULL COMMENT '分卷标题',
+  `VolumeWordCount` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`VolumeId`),
   KEY `BookID` (`BookId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wor_volume
 -- ----------------------------
-INSERT INTO `wor_volume` VALUES ('1', '1', '第一卷');
-INSERT INTO `wor_volume` VALUES ('2', '1', '第二卷');
+INSERT INTO `wor_volume` VALUES ('1', '1', '第一卷', '2200');
+INSERT INTO `wor_volume` VALUES ('2', '1', '第二卷', '1210');
+INSERT INTO `wor_volume` VALUES ('3', '2', null, '1000');
 DROP TRIGGER IF EXISTS `trigger1`;
 DELIMITER ;;
 CREATE TRIGGER `trigger1` AFTER INSERT ON `wor_bookcollect` FOR EACH ROW begin
@@ -7694,6 +7683,66 @@ CREATE TRIGGER `trigger4` AFTER DELETE ON `wor_bookhit` FOR EACH ROW begin
   update wor_book 
   set BookHit=BookHit-1 
   where BookId=old.BookId;
+end
+;;
+DELIMITER ;
+DROP TRIGGER IF EXISTS `triger5`;
+DELIMITER ;;
+CREATE TRIGGER `triger5` AFTER INSERT ON `wor_content` FOR EACH ROW begin
+  update wor_volume
+  set VolumeWordCount=(SELECT sum(ContentWordCount)
+  FROM wor_content WHERE wor_content.VolumeId =new.VolumeId )
+  where VolumeId =new.VolumeId ;
+end
+;;
+DELIMITER ;
+DROP TRIGGER IF EXISTS `triger6`;
+DELIMITER ;;
+CREATE TRIGGER `triger6` AFTER UPDATE ON `wor_content` FOR EACH ROW begin
+  update wor_volume
+  set VolumeWordCount=(SELECT sum(ContentWordCount)
+  FROM wor_content WHERE wor_content.VolumeId =new.VolumeId )
+  where VolumeId =new.VolumeId ;
+end
+;;
+DELIMITER ;
+DROP TRIGGER IF EXISTS `triger7`;
+DELIMITER ;;
+CREATE TRIGGER `triger7` AFTER DELETE ON `wor_content` FOR EACH ROW begin
+  update wor_volume
+  set VolumeWordCount=(SELECT sum(ContentWordCount)
+  FROM wor_content WHERE wor_content.VolumeId =old.VolumeId )
+  where VolumeId =old.VolumeId ;
+end
+;;
+DELIMITER ;
+DROP TRIGGER IF EXISTS `triger8`;
+DELIMITER ;;
+CREATE TRIGGER `triger8` AFTER INSERT ON `wor_volume` FOR EACH ROW begin
+  update wor_book
+  set BookWordCount=(SELECT sum(VolumeWordCount)
+  FROM wor_volume WHERE wor_volume.BookId =new.BookId )
+  where BookId =new.BookId ;
+end
+;;
+DELIMITER ;
+DROP TRIGGER IF EXISTS `triger9`;
+DELIMITER ;;
+CREATE TRIGGER `triger9` AFTER UPDATE ON `wor_volume` FOR EACH ROW begin
+  update wor_book
+  set BookWordCount=(SELECT sum(VolumeWordCount)
+  FROM wor_volume WHERE wor_volume.BookId =new.BookId )
+  where BookId =new.BookId ;
+end
+;;
+DELIMITER ;
+DROP TRIGGER IF EXISTS `triger10`;
+DELIMITER ;;
+CREATE TRIGGER `triger10` AFTER DELETE ON `wor_volume` FOR EACH ROW begin
+  update wor_book
+  set BookWordCount=(SELECT sum(VolumeWordCount)
+  FROM wor_volume WHERE wor_volume.BookId =old.BookId )
+  where BookId =old.BookId ;
 end
 ;;
 DELIMITER ;

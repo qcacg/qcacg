@@ -19,28 +19,38 @@ public class VolumeServiceImpl extends BaseServiceImpl<VolumeEntity> implements 
     @Autowired
     VolumeMapper volumeMapper;
 
-    public String saveOrUpdate(VolumeEntity entity) {
-        String result = "";
+    public void saveOrUpdate(VolumeEntity entity) {
+
         try
         {
             if (entity.getVolumeId() == null)
             {
-                return this.save(entity);
+                 this.save(entity);
             } else
             {
-                result = this.update(entity);
+                 this.updateVolume(entity);
             }
         } catch (Exception e)
         {
             e.printStackTrace();
-            return null;
+
         }
-        return result;
+
     }
 
     @Override
     public List<VolumeEntity> findVolumeByBookId(Long bookId) {
         return this.volumeMapper.findVolumeByBookId(bookId);
+    }
+
+    @Override
+    public void delete(Long volumeId) {
+        this.volumeMapper.deleteByPrimaryKey(volumeId);
+    }
+
+    @Override
+    public void updateVolume(VolumeEntity volumeEntity) {
+        this.volumeMapper.updateVolume(volumeEntity);
     }
 
 

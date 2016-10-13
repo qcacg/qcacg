@@ -58,7 +58,7 @@ public class UserController extends BaseController
 
 
 	/*
-     修改或保存个人信息
+     修改个人信息
      */
 	@RequestMapping("updateUser")
 	@ResponseBody

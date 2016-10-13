@@ -25,17 +25,96 @@ wor_book.BookUpdate DESC
 
     </select>
 
-    <select id="findBookByBookUpDate" resultType="com.qcacg.entity.BookEntity" parameterType="java.lang.Long">
+    <select id="findBookByBookUpDate" resultType="com.qcacg.entity.BookEntity" >
         SELECT
     wor_book.BookId,
-    wor_book.BookName,
-    wor_book.BookCoverImage
+wor_book.UserId,
+wor_book.BookName,
+wor_book.Sort,
+wor_book.BookIntroduction,
+wor_book.BookUpdate,
+wor_book.BookCoverImage,
+wor_book.BookWordCount,
+wor_book.BookStatus,
+wor_book.BookHit,
+wor_book.BookCollect,
+wor_book.BookCopperCoins,
+wor_book.BookSilverCoins
     FROM
     wor_book
     WHERE
     wor_book.BookStatus = '0'
     ORDER BY
     wor_book.BookUpdate DESC
+    </select>
+
+    <select id="findBookByBookCopperCoins" resultType="com.qcacg.entity.BookEntity" >
+        SELECT
+        wor_book.BookId,
+wor_book.UserId,
+wor_book.BookName,
+wor_book.Sort,
+wor_book.BookIntroduction,
+wor_book.BookUpdate,
+wor_book.BookCoverImage,
+wor_book.BookWordCount,
+wor_book.BookStatus,
+wor_book.BookHit,
+wor_book.BookCollect,
+wor_book.BookCopperCoins,
+wor_book.BookSilverCoins
+        FROM
+        wor_book
+        WHERE
+        wor_book.BookStatus = '0'
+        ORDER BY
+        wor_book.BookCopperCoins DESC
+    </select>
+
+    <select id="findBookByBookHit" resultType="com.qcacg.entity.BookEntity" >
+        SELECT
+        wor_book.BookId,
+        wor_book.UserId,
+        wor_book.BookName,
+        wor_book.Sort,
+        wor_book.BookIntroduction,
+        wor_book.BookUpdate,
+        wor_book.BookCoverImage,
+        wor_book.BookWordCount,
+        wor_book.BookStatus,
+        wor_book.BookHit,
+        wor_book.BookCollect,
+        wor_book.BookCopperCoins,
+        wor_book.BookSilverCoins
+        FROM
+        wor_book
+        WHERE
+        wor_book.BookStatus = '0'
+        ORDER BY
+        wor_book.BookHit DESC
+    </select>
+
+    <select id="findBookByBookWordCount" resultType="com.qcacg.entity.BookEntity" >
+        SELECT
+        wor_book.BookId,
+        wor_book.UserId,
+        wor_book.BookName,
+        wor_book.Sort,
+        wor_book.BookIntroduction,
+        wor_book.BookUpdate,
+        wor_book.BookCoverImage,
+        wor_book.BookWordCount,
+        wor_book.BookStatus,
+        wor_book.BookHit,
+        wor_book.BookCollect,
+        wor_book.BookCopperCoins,
+        wor_book.BookSilverCoins
+        FROM
+        wor_book
+        WHERE
+        wor_book.BookStatus = '0'
+        ORDER BY
+        wor_book.BookWordCount DESC
     </select>
 
     <select id="queryBookForCheck" resultType="com.qcacg.entity.BookEntity">

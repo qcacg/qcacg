@@ -15,4 +15,5 @@ public interface ContentMapper extends Mapper<ContentEntity>{
 
     public void updateContentStatus(Long contentId);
 
+    public void updateContent(ContentEntity contentEntity);
 }

@@ -3,7 +3,9 @@ package com.qcacg.controller.system;
 import com.qcacg.controller.BaseController;
 import com.qcacg.entity.BookAndBookTypeEntity;
 import com.qcacg.entity.BookEntity;
+import com.qcacg.entity.book.BookCustom;
 import com.qcacg.service.system.BookAndBookTypeService;
+import com.qcacg.service.system.BookCustomService;
 import com.qcacg.service.system.BookService;
 import com.qcacg.util.UserEntityUtil;
 import com.qcacg.util.upload.FileRepository;
@@ -35,6 +37,8 @@ public class BookController extends BaseController {
     private FileRepository fileRepository;
     @Autowired
     BookAndBookTypeService bookAndBookTypeService;
+    @Autowired
+    BookCustomService bookCustomService;
     @RequestMapping("list")
     public String list(Model model)
     {
@@ -43,7 +47,7 @@ public class BookController extends BaseController {
     }
 
     /*
-    按时间获取作品列表
+    按时间获取小说列表
      */
     @RequestMapping("findBookByBookUpDate")
     @ResponseBody
@@ -51,11 +55,35 @@ public class BookController extends BaseController {
     {
         return this.bookService.findBookByBookUpDate();
     }
-
-
-
     /*
-    获取用户作品列表
+        按好人币获取小说列表（总榜）
+         */
+    @RequestMapping("findBookByBookCopperCoins")
+    @ResponseBody
+    public List<BookEntity> findBookByBookCopperCoins()
+    {
+        return this.bookService.findBookByBookCopperCoins();
+    }
+    /*
+        按点击数获取小说列表（总榜）
+         */
+    @RequestMapping("findBookByBookHit")
+    @ResponseBody
+    public List<BookEntity> findBookByBookHit()
+    {
+        return this.bookService.findBookByBookHit();
+    }
+    /*
+        按字数获取小说列表（总榜）
+         */
+    @RequestMapping("findBookByBookWordCount")
+    @ResponseBody
+    public List<BookEntity> findBookByBookWordCount()
+    {
+        return this.bookService.findBookByBookWordCount();
+    }
+    /*
+    获取用户小说列表
      */
 
     @RequestMapping("findBookByUser")
@@ -68,17 +96,17 @@ public class BookController extends BaseController {
 
 
     /*
-    获取作品信息
+    获取小说信息
      */
-    @RequestMapping("findByPrimaryBookId/{bookId}")
+    @RequestMapping("queryBook")
     @ResponseBody
-    public BookEntity findByPrimaryBookId(@PathVariable("bookId")Long bookId)
+    public BookCustom queryBook(@RequestParam("bookId")Long bookId)
     {
 
-        return this.bookService.findByPrimaryKey(bookId);
+        return this.bookCustomService.queryBook(bookId);
     }
     /*
-    保存作品（信息）
+    保存小说（信息）
      */
     @RequestMapping(value = "saveOrUpdateBook", method = RequestMethod.POST)
     @ResponseBody
@@ -94,7 +122,7 @@ public class BookController extends BaseController {
             bookEntity.setBookCoverImage(bookEntityForm.getBookCoverImage());
             bookEntity.setSort(bookEntityForm.getSort());
             this.bookService.saveOrUpdateBook(bookEntity);
-            map.put("bookEntity", "success");
+            map.put("bookEntity", bookEntity);
             Long bookId = bookEntity.getBookId();
             List<Long> bookTypeList = bookEntityForm.getBookTypeList();
             List<BookAndBookTypeEntity> bookAndBookTypeEntityList = new ArrayList<BookAndBookTypeEntity>();
@@ -103,7 +131,7 @@ public class BookController extends BaseController {
                 bookAndBookTypeEntity.setBookId(bookId);
                 bookAndBookTypeEntity.setBookTypeId(bookTypeList.get(i));
                 bookAndBookTypeEntityList.add(bookAndBookTypeEntity);
-                map.put("bookAndBookTypeEntity"," success");
+                map.put("bookAndBookTypeEntity",bookAndBookTypeEntity);
             }
             this.bookAndBookTypeService.saveOrUpdateBookType(bookAndBookTypeEntityList, bookId);
             map.put("success",true);
@@ -115,7 +143,7 @@ public class BookController extends BaseController {
         return map;
     }
     /*
-    添加作品封面
+    添加小说封面
     */
     @RequestMapping(value = "upload")
     @ResponseBody
@@ -155,9 +183,9 @@ public class BookController extends BaseController {
     /*
     作者提交审核
      */
-    @RequestMapping("userUpdateBookStatus/{bookId}")
+    @RequestMapping("userUpdateBookStatus")
     @ResponseBody
-    public Map<String,Object> userUpdateBookStatus(@PathVariable("bookId")Long bookId)
+    public Map<String,Object> userUpdateBookStatus(@RequestParam("bookId")Long bookId)
     {
         Map<String,Object> result = new HashMap<String, Object>();
         try{

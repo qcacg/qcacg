@@ -76,4 +76,8 @@ wor_book.BookId = #{wor_book.BookId}
     <update id="updateContentStatus" parameterType="java.lang.Long">
         UPDATE wor_content SET contentStatus= IF(contentStatus='0','1','0') WHERE contentId=#{contentId}
     </update>
+
+    <update id="updateContent" parameterType="com.qcacg.entity.ContentEntity">
+        UPDATE wor_content SET contentTitle=#{contentTitle},content=#{content},contentUrl=#{contentUrl},contentWordCount=#{contentWordCount} WHERE contentId=#{contentId}
+    </update>
 </mapper>

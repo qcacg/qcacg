@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2016/7/10.
@@ -30,13 +32,19 @@ public class VolumeController extends BaseController {
     /*
     新增卷或修改卷名
     */
-    @RequestMapping("saveOrUpdateVolume/{bookId}")
+    @RequestMapping("saveOrUpdateVolume")
     @ResponseBody
-    public String saveOrUpdateVolume(VolumeEntity volumeEntity, @RequestParam("volumeName")String volumeName, @PathVariable("bookId")Long bookId)
+    public Map<String, Object> saveOrUpdateVolume(@RequestParam("volumeName")String volumeName, @RequestParam("volumeId")Long volumeId, @RequestParam("bookId")Long bookId)
     {
+        Map<String, Object> map = new HashMap<String, Object>();
+        VolumeEntity volumeEntity = new VolumeEntity();
+        volumeEntity.setVolumeId(volumeId);
         volumeEntity.setBookId(bookId);
         volumeEntity.setVolumeName(volumeName);
-        return this.volumeService.saveOrUpdate(volumeEntity);
+        this.volumeService.saveOrUpdate(volumeEntity);
+        map.put("volumeEntity",volumeEntity);
+        map.put("success",true);
+        return map;
     }
 
     @RequestMapping("findVolumeByBook")
@@ -53,5 +61,22 @@ public class VolumeController extends BaseController {
     public List<VolumeCustom> findVolumeAndContentByBookId(@PathVariable("bookId")Long bookId)
     {
         return this.volumeCustomService.findVolumeAndContentByBookId(bookId);
+    }
+    /*
+   删除章节
+   */
+    @RequestMapping("deleteVolume")
+    @ResponseBody
+    public Map<String,Object> deleteContent(@RequestParam("volumeId")Long volumeId){
+        Map<String,Object> result = new HashMap<String, Object>();
+        try{
+            this.volumeService.delete(volumeId);
+            result.put("success",true);
+            return result;
+        }catch (Exception e){
+            e.printStackTrace();
+            result.put("success",false);
+            return result;
+        }
     }
 }

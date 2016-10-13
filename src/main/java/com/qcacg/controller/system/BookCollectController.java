@@ -7,8 +7,8 @@ import com.qcacg.service.system.BookCollectService;
 import com.qcacg.util.UserEntityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -38,9 +38,9 @@ public class BookCollectController extends BaseController {
     /*
     添加或删除收藏
      */
-    @RequestMapping("saveOrDeleteBookCollect/{bookId}")
+    @RequestMapping("saveOrDeleteBookCollect")
     @ResponseBody
-    public String saveOrDeleteBookCollect(BookCollectEntity bookCollectEntity, @PathVariable("bookId")Long bookId)
+    public String saveOrDeleteBookCollect(BookCollectEntity bookCollectEntity, @RequestParam("bookId")Long bookId)
     {
         Long userId = UserEntityUtil.getUserFromSession().getUserId();
         bookCollectEntity.setBookId(bookId);

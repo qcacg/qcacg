@@ -29,24 +29,24 @@ public class ContentServiceImpl extends BaseServiceImpl<ContentEntity> implement
     }
 
     @Override
-    public String saveOrUpdate(ContentEntity entity) {
-        String result = "";
+    public void saveOrUpdate(ContentEntity entity) {
+
         try
         {
             if (entity.getContentId() == null)
             {
-                return this.save(entity);
+                 this.save(entity);
 
             } else
             {
-                result = this.update(entity);
+                  this.updateContent(entity);
             }
         } catch (Exception e)
         {
             e.printStackTrace();
-            return null;
+
         }
-        return result;
+
     }
 
     @Override
@@ -62,5 +62,15 @@ public class ContentServiceImpl extends BaseServiceImpl<ContentEntity> implement
     @Override
     public void updateContentStatus(Long contentId) {
         this.contentMapper.updateContentStatus(contentId);
+    }
+
+    @Override
+    public void delete(Long contentId) {
+        this.contentMapper.deleteByPrimaryKey(contentId);
+    }
+
+    @Override
+    public void updateContent(ContentEntity contentEntity) {
+        this.contentMapper.updateContent(contentEntity);
     }
 }

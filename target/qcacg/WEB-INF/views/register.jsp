@@ -30,7 +30,7 @@
 							<div class="ipt-group">
 								<input style="box-sizing: border-box;"  id="telephone" type="text" placeholder="手机号码" required="" minlength="11" maxlength="11" autocomplete="off" class="form-control" name="telephone" value="${userCustom.telephone}"></div>
 						</div>
-
+						<p class="sameTelephone-error">${sameTelephone}</p>
 						<div class="form-group"><label for="ipt-code-reg" class="label-login">验证码：</label>
 							<div class="ipt-group ipt-group-x">
 								<input style="box-sizing: border-box;"    id="ipt-code-reg" placeholder="六位手机验证码" required="" minlength="6" maxlength="6" class="form-control" name="telephoneCode">

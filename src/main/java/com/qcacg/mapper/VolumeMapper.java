@@ -10,6 +10,6 @@ public interface VolumeMapper extends Mapper<VolumeEntity> {
     public List<VolumeEntity> findVolumeByBookId(Long bookId);
 
 
-
+    public void updateVolume(VolumeEntity volumeEntity);
 
 }

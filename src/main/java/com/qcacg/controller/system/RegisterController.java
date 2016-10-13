@@ -2,6 +2,7 @@ package com.qcacg.controller.system;
 
 import com.qcacg.entity.UserEntity;
 import com.qcacg.entity.user.UserCustom;
+import com.qcacg.entity.user.UserQauryVo;
 import com.qcacg.service.system.UserService;
 import com.qcacg.util.Sms;
 import com.taobao.api.ApiException;
@@ -41,11 +42,19 @@ public class RegisterController {
     @RequestMapping(value = "register", method = RequestMethod.POST, produces = "text/html; charset=utf-8")
     public String register(HttpServletRequest request, Model model, UserCustom userCustom) throws Exception{
 
-
+        UserQauryVo userQauryVo = new UserQauryVo();
+        userQauryVo.setUserCustom(userCustom);
+        if(userService.findByLoginName(userQauryVo.getUserCustom().getTelephone()) != null){
+            //用户名重复
+            String sameTelephone = "该手机号码已经注册过了";
+            model.addAttribute("sameTelephone", sameTelephone);
+            model.addAttribute("userCustom", userCustom);
+            return "register";
+        }
     HttpSession session = request.getSession();
     String telephoneCode = (String) session.getAttribute(VALIDATE_TELEPHONE_CODE);
     String inputTelephoneCode = request.getParameter("telephoneCode");
-    if(!telephoneCode.equals(inputTelephoneCode)){
+    if(!inputTelephoneCode.equals(telephoneCode)){
         String telephoneCodeError = "验证码不正确";
         model.addAttribute("telephoneCodeError", telephoneCodeError);
         model.addAttribute("userCustom", userCustom);
@@ -57,6 +66,7 @@ public class RegisterController {
         model.addAttribute("userCustom", userCustom);
         return "register";
     }
+
     userService.register(userCustom);
     return "redirect:/login.shtml";
 }
@@ -140,19 +150,5 @@ public class RegisterController {
         }
         return result;
     }
-//
-//    @RequestMapping("sendTelephoneCode")
-//    @ResponseBody
-//    public void checkTelephoneCode(String telephone, HttpServletRequest request) throws ApiException {
-//        StringBuilder telephoneCode = new StringBuilder();
-//        Random random = new Random();
-//        for (int i = 0; i < 6; i++) {
-//            telephoneCode.append(String.valueOf(random.nextInt(10)));
-//        }
-//        HttpSession session = request.getSession();
-//        session.setAttribute(VALIDATE_TELEPHONE,telephone);
-//        session.setAttribute(VALIDATE_TELEPHONE_CODE,telephoneCode.toString());
-//        session.setAttribute(SEND_CODE_TIME, new Date().getTime());
-//        Sms.sendMessage(telephone, telephoneCode);
-//    }
+
 }

@@ -3,6 +3,7 @@ package com.qcacg.system;
 import com.alibaba.fastjson.JSON;
 import com.qcacg.controller.system.RoleController;
 import com.qcacg.entity.*;
+import com.qcacg.entity.book.BookCustom;
 import com.qcacg.entity.user.UserCustom;
 import com.qcacg.entity.volume.VolumeCustom;
 import com.qcacg.service.system.*;
@@ -49,6 +50,8 @@ public class TestDemo {
     BookCollectService bookCollectService;
     @Autowired
     BookHitService bookHitService;
+    @Autowired
+    BookCustomService bookCustomService;
 
 
     @Test
@@ -114,21 +117,23 @@ public class TestDemo {
 
         VolumeEntity volumeEntity = new VolumeEntity();
         volumeEntity.setBookId(1l);
+        volumeEntity.setVolumeId(3l);
         volumeEntity.setVolumeName("第一卷");
         this.volumeService.saveOrUpdate(volumeEntity);
         logger.info(volumeEntity);
-        System.out.println(volumeEntity.getVolumeName());
+
     }
 
     @Test
     public void TestContent(){
 
         ContentEntity contentEntity = new ContentEntity();
-        contentEntity.setVolumeId(1l);
-        contentEntity.setContentTitle("美好的一天");
+        contentEntity.setContentId(9l);
+        contentEntity.setVolumeId(3l);
+        contentEntity.setContentTitle("<p>哈哈哈美好的一天啊啊啊<p>");
         this.contentService.saveOrUpdate(contentEntity);
         logger.info(contentEntity);
-        System.out.println(contentEntity.getContentId());
+
     }
 
     @Test
@@ -171,8 +176,9 @@ public void TestFindContent() {
     @Test
     public void TestSaveBook(){
         BookEntity bookEntity = new BookEntity();
+        bookEntity.setBookId(8l);
         bookEntity.setUserId(1l);
-        bookEntity.setBookName("纸牌屋");
+        bookEntity.setBookName("了不起的盖茨比");
         bookEntity.setSort("少年");
         bookEntity.setBookIntroduction("与人斗其乐无穷");
         this.bookService.insertBook(bookEntity);
@@ -184,5 +190,10 @@ public void TestFindContent() {
         bookHitEntity.setBookId(6l);
         bookHitEntity.setUserId(1l);
         this.bookHitService.saveBookHit(bookHitEntity);
+    }
+    @Test
+    public void TestQueryBook(){
+        BookCustom bookCustom = this.bookCustomService.queryBook(1l);
+        logger.info(JSON.toJSONString(bookCustom));
     }
 }

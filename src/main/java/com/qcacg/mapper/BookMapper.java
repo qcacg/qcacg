@@ -13,12 +13,18 @@ public interface BookMapper extends Mapper<BookEntity> {
 
     public void updateBook(BookEntity bookEntity);
 
-    public List<BookEntity> findBookByBookUpDate();
-
     public void userUpdateBookStatus(Long bookId);
 
     public void adminUpdateBookStatus(Long bookId);
 
     public List<BookEntity> queryBookForCheck();
+
+    public List<BookEntity> findBookByBookCopperCoins();
+
+    public List<BookEntity> findBookByBookHit();
+
+    public List<BookEntity> findBookByBookWordCount();
+
+    public List<BookEntity> findBookByBookUpDate();
 
 }
