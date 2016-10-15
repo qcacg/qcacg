@@ -45,7 +45,6 @@ public class RegisterController {
         UserQauryVo userQauryVo = new UserQauryVo();
         userQauryVo.setUserCustom(userCustom);
         if(userService.findByLoginName(userQauryVo.getUserCustom().getTelephone()) != null){
-            //用户名重复
             String sameTelephone = "该手机号码已经注册过了";
             model.addAttribute("sameTelephone", sameTelephone);
             model.addAttribute("userCustom", userCustom);
@@ -114,10 +113,18 @@ public class RegisterController {
     public String updatePassWord(HttpServletRequest request,Model model, UserCustom userCustom,@RequestParam(value = "passWord") String passWord){
 
 
+        UserQauryVo userQauryVo = new UserQauryVo();
+        userQauryVo.setUserCustom(userCustom);
+        if(userService.findByLoginName(userQauryVo.getUserCustom().getTelephone()) == null){
+            String sameTelephone = "该手机号码还未注册过";
+            model.addAttribute("sameTelephone", sameTelephone);
+            model.addAttribute("userCustom", userCustom);
+            return "updatePassword";
+        }
         HttpSession session = request.getSession();
         String telephoneCode = (String) session.getAttribute(VALIDATE_TELEPHONE_CODE);
         String inputTelephoneCode = request.getParameter("telephoneCode");
-        if(!telephoneCode.equals(inputTelephoneCode)){
+        if(!inputTelephoneCode.equals(telephoneCode)){
             String telephoneCodeError = "验证码不正确";
             model.addAttribute("telephoneCodeError", telephoneCodeError);
             model.addAttribute("userCustom", userCustom);

@@ -27,9 +27,7 @@ public class ContentController extends BaseController {
     @Autowired
     ContentService contentService;
 
-    /*
-    获取草稿
-    */
+
     @RequestMapping("findContentByVolumeId/{volumeId}")
     @ResponseBody
     public ContentEntity findContentByVolumeId(@PathVariable("volumeId")Long volumeId){
@@ -96,8 +94,12 @@ public class ContentController extends BaseController {
     @ResponseBody
     public Map<String,Object> nextContent (@RequestParam("contentId")Long contentId,@RequestParam("bookId")Long bookId){
         Map<String,Object> result = new HashMap<String, Object>();
-        if(this.contentIdList(bookId).contains(String.valueOf(contentId+1))){
-            ContentEntity contentEntity = this.contentService.findContentByContentId(contentId+1);
+        List<String> contentIdList = this.contentIdList(bookId);
+        Integer contendIdIndex = contentIdList.indexOf(String.valueOf(contentId));
+
+        if(contendIdIndex < contentIdList.size()-1){
+            Long id = Long.valueOf(contentIdList.get(contendIdIndex+1));
+            ContentEntity contentEntity = this.contentService.findContentByContentId(id);
             result.put("success",true);
             result.put("contentEntity",contentEntity);
             return result;
@@ -114,8 +116,12 @@ public class ContentController extends BaseController {
     @ResponseBody
     public Map<String,Object> previousContent (@RequestParam("contentId")Long contentId,@RequestParam("bookId")Long bookId){
         Map<String,Object> result = new HashMap<String, Object>();
-        if(this.contentIdList(bookId).contains(String.valueOf(contentId-1))){
-            ContentEntity contentEntity = this.contentService.findContentByContentId(contentId-1);
+        List<String> contentIdList = this.contentIdList(bookId);
+        Integer contendIdIndex = contentIdList.indexOf(String.valueOf(contentId));
+
+        if(contendIdIndex > 0){
+            Long id = Long.valueOf(contentIdList.get(contendIdIndex-1));
+            ContentEntity contentEntity = this.contentService.findContentByContentId(id);
             result.put("success",true);
             result.put("contentEntity",contentEntity);
             return result;
@@ -162,7 +168,7 @@ public class ContentController extends BaseController {
         }
     }
     /*
-   删除章节
+   删除内容
    */
     @RequestMapping("deleteContent")
     @ResponseBody

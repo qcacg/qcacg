@@ -37,13 +37,18 @@ public class BookHitController extends BaseController {
     /*
     添加浏览记录
      */
-    @RequestMapping("saveOrDeleteBookHit")
+    @RequestMapping("saveBookHit")
     @ResponseBody
-    public String saveOrDeleteBookCollect(BookHitEntity bookHitEntity, @RequestParam("bookId")Long bookId)
+    public String saveBookHit(BookHitEntity bookHitEntity, @RequestParam("bookId")Long bookId)
     {
         Long userId = UserEntityUtil.getUserFromSession().getUserId();
-        bookHitEntity.setBookId(bookId);
-        bookHitEntity.setUserId(userId);
-        return this.bookHitService.saveBookHit(bookHitEntity);
+        if(userId != null){
+            bookHitEntity.setBookId(bookId);
+            bookHitEntity.setUserId(userId);
+            return this.bookHitService.saveBookHit(bookHitEntity);
+        }else{
+            return  null;
+        }
+
     }
 }

@@ -206,8 +206,8 @@ $(function() {
  下一章节
  */
 $(function() {
-    $(' ').on('click', function() {
-        var contentId = 18;
+    $('').on('click', function() {
+        var contentId = 7;
         var bookId = 1;
         var url = "/content/nextContent.shtml";
         $.ajax({
@@ -232,8 +232,8 @@ $(function() {
  上一章节
  */
 $(function() {
-    $('  ').on('click', function() {
-        var contentId = 2;
+    $('').on('click', function() {
+        var contentId = 1;
         var bookId = 1;
         var url = "/content/previousContent.shtml";
         $.ajax({
@@ -297,10 +297,10 @@ $(function() {
     });
 })
 /*
- 编辑审核审核
+ 管理员审核审核
  */
 $(function() {
-    $('#btn-choose-cat').on('click', function() {
+    $('').on('click', function() {
 
         var url = "/book/adminUpdateBookStatus.shtml";
         $.ajax({
@@ -321,7 +321,7 @@ $(function() {
  展示提交审核的小说
  */
 $(function() {
-    $('#btn-book-check').on('click', function() {
+    $(' ').on('click', function() {
 
         var url = "/book/queryBookForCheck.shtml";
         $.ajax({
@@ -345,6 +345,27 @@ $(function() {
     $('#btn-book-check').on('click', function() {
         var bookId = 1;
         var url = "/book/queryBook.shtml";
+        $.ajax({
+            url:url,
+            type: "GET",
+            data: {"bookId":bookId},
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (data) {
+                console.log('error');
+            }
+        });
+    });
+})
+/*
+ 添加浏览记录
+ */
+$(function() {
+    $('#btn-book-check').on('click', function() {
+        var bookId = 1;
+        var url = "/bookHit/saveBookHit.shtml";
         $.ajax({
             url:url,
             type: "GET",

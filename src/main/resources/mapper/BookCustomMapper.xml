@@ -28,6 +28,7 @@
 
     <resultMap id="BookResultMap" type="com.qcacg.entity.book.BookCustom">
         <id column="bookId" property="bookId"/>
+        <result column="userId" property="userId"/>
         <result column="bookName" property="bookName"/>
         <result column="sort" property="sort"/>
         <result column="bookIntroduction" property="bookIntroduction"/>
@@ -53,7 +54,7 @@
     <select id="queryBook" resultMap="BookResultMap" parameterType="java.lang.Long">
         SELECT
         wor_book.BookId AS bookId,
-
+        wor_book.UserId AS userId,
         wor_book.BookName AS bookName,
         wor_book.Sort AS sort,
         wor_book.BookIntroduction AS bookIntroduction,

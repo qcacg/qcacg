@@ -77,6 +77,36 @@ public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements Book
     }
 
     @Override
+    public List<BookEntity> WeekBookByBookCopperCoins() {
+        return this.bookMapper.WeekBookByBookCopperCoins();
+    }
+
+    @Override
+    public List<BookEntity> MonthBookByBookCopperCoins() {
+        return this.bookMapper.MonthBookByBookCopperCoins();
+    }
+
+    @Override
+    public List<BookEntity> WeekBookByBookHit() {
+        return this.bookMapper.WeekBookByBookHit();
+    }
+
+    @Override
+    public List<BookEntity> MonthBookByBookHit() {
+        return this.bookMapper.MonthBookByBookHit();
+    }
+
+    @Override
+    public List<BookEntity> WeekBookByBookWordCount() {
+        return this.bookMapper.WeekBookByBookWordCount();
+    }
+
+    @Override
+    public List<BookEntity> MonthBookByBookWordCount() {
+        return this.bookMapper.MonthBookByBookWordCount();
+    }
+
+    @Override
     public void userUpdateBookStatus(Long bookId) {
         this.bookMapper.userUpdateBookStatus(bookId);
     }

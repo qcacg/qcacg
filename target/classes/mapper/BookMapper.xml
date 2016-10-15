@@ -6,6 +6,7 @@
     <select id="findBookByUserId" resultType="com.qcacg.entity.BookEntity" parameterType="java.lang.Long">
 SELECT
 wor_book.BookId,
+wor_book.UserId,
 wor_book.BookName,
 wor_book.BookCoverImage,
 wor_book.UserId,
@@ -20,6 +21,8 @@ wor_book.BookCopperCoins,
 wor_book.BookSilverCoins
 FROM
 wor_book
+WHERE
+wor_book.UserId = #{wor_book.UserId}
 ORDER BY
 wor_book.BookUpdate DESC
 
@@ -71,6 +74,52 @@ wor_book.BookSilverCoins
         wor_book.BookCopperCoins DESC
     </select>
 
+    <select id="WeekBookByBookCopperCoins" resultType="com.qcacg.entity.BookEntity" >
+        SELECT
+        wor_book.BookId,
+        wor_book.UserId,
+        wor_book.BookName,
+        wor_book.Sort,
+        wor_book.BookIntroduction,
+        wor_book.BookUpdate,
+        wor_book.BookCoverImage,
+        wor_book.BookWordCount,
+        wor_book.BookStatus,
+        wor_book.BookHit,
+        wor_book.BookCollect,
+        wor_book.BookCopperCoins,
+        wor_book.BookSilverCoins
+        FROM
+        wor_book
+        WHERE
+        wor_book.BookStatus = '0'
+        ORDER BY
+        wor_book.EveryWeekCopperCoins DESC
+    </select>
+
+    <select id="MonthBookByBookCopperCoins" resultType="com.qcacg.entity.BookEntity" >
+        SELECT
+        wor_book.BookId,
+        wor_book.UserId,
+        wor_book.BookName,
+        wor_book.Sort,
+        wor_book.BookIntroduction,
+        wor_book.BookUpdate,
+        wor_book.BookCoverImage,
+        wor_book.BookWordCount,
+        wor_book.BookStatus,
+        wor_book.BookHit,
+        wor_book.BookCollect,
+        wor_book.BookCopperCoins,
+        wor_book.BookSilverCoins
+        FROM
+        wor_book
+        WHERE
+        wor_book.BookStatus = '0'
+        ORDER BY
+        wor_book.EveryMonthCopperCoins DESC
+    </select>
+
     <select id="findBookByBookHit" resultType="com.qcacg.entity.BookEntity" >
         SELECT
         wor_book.BookId,
@@ -94,6 +143,53 @@ wor_book.BookSilverCoins
         wor_book.BookHit DESC
     </select>
 
+
+    <select id="WeekBookByBookHit" resultType="com.qcacg.entity.BookEntity" >
+    SELECT
+    wor_book.BookId,
+    wor_book.UserId,
+    wor_book.BookName,
+    wor_book.Sort,
+    wor_book.BookIntroduction,
+    wor_book.BookUpdate,
+    wor_book.BookCoverImage,
+    wor_book.BookWordCount,
+    wor_book.BookStatus,
+    wor_book.BookHit,
+    wor_book.BookCollect,
+    wor_book.BookCopperCoins,
+    wor_book.BookSilverCoins
+    FROM
+    wor_book
+    WHERE
+    wor_book.BookStatus = '0'
+    ORDER BY
+    wor_book.EveryWeekHit DESC
+    </select>
+
+    <select id="MonthBookByBookHit" resultType="com.qcacg.entity.BookEntity" >
+        SELECT
+        wor_book.BookId,
+        wor_book.UserId,
+        wor_book.BookName,
+        wor_book.Sort,
+        wor_book.BookIntroduction,
+        wor_book.BookUpdate,
+        wor_book.BookCoverImage,
+        wor_book.BookWordCount,
+        wor_book.BookStatus,
+        wor_book.BookHit,
+        wor_book.BookCollect,
+        wor_book.BookCopperCoins,
+        wor_book.BookSilverCoins
+        FROM
+        wor_book
+        WHERE
+        wor_book.BookStatus = '0'
+        ORDER BY
+        wor_book.EveryMonthHit DESC
+    </select>
+
     <select id="findBookByBookWordCount" resultType="com.qcacg.entity.BookEntity" >
         SELECT
         wor_book.BookId,
@@ -115,6 +211,52 @@ wor_book.BookSilverCoins
         wor_book.BookStatus = '0'
         ORDER BY
         wor_book.BookWordCount DESC
+    </select>
+
+    <select id="WeekBookByBookWordCount" resultType="com.qcacg.entity.BookEntity" >
+    SELECT
+    wor_book.BookId,
+    wor_book.UserId,
+    wor_book.BookName,
+    wor_book.Sort,
+    wor_book.BookIntroduction,
+    wor_book.BookUpdate,
+    wor_book.BookCoverImage,
+    wor_book.BookWordCount,
+    wor_book.BookStatus,
+    wor_book.BookHit,
+    wor_book.BookCollect,
+    wor_book.BookCopperCoins,
+    wor_book.BookSilverCoins
+    FROM
+    wor_book
+    WHERE
+    wor_book.BookStatus = '0'
+    ORDER BY
+    wor_book.EveryWeekWordCount DESC
+    </select>
+
+    <select id="MonthBookByBookWordCount" resultType="com.qcacg.entity.BookEntity" >
+        SELECT
+        wor_book.BookId,
+        wor_book.UserId,
+        wor_book.BookName,
+        wor_book.Sort,
+        wor_book.BookIntroduction,
+        wor_book.BookUpdate,
+        wor_book.BookCoverImage,
+        wor_book.BookWordCount,
+        wor_book.BookStatus,
+        wor_book.BookHit,
+        wor_book.BookCollect,
+        wor_book.BookCopperCoins,
+        wor_book.BookSilverCoins
+        FROM
+        wor_book
+        WHERE
+        wor_book.BookStatus = '0'
+        ORDER BY
+        wor_book.EveryMonthWordCount DESC
     </select>
 
     <select id="queryBookForCheck" resultType="com.qcacg.entity.BookEntity">

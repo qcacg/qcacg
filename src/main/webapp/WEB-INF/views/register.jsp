@@ -33,7 +33,7 @@
 						<p class="sameTelephone-error">${sameTelephone}</p>
 						<div class="form-group"><label for="ipt-code-reg" class="label-login">验证码：</label>
 							<div class="ipt-group ipt-group-x">
-								<input style="box-sizing: border-box;"    id="ipt-code-reg" placeholder="六位手机验证码" required="" minlength="6" maxlength="6" class="form-control" name="telephoneCode">
+								<input style="box-sizing: border-box;"    id="ipt-code-reg" placeholder="六位手机验证码" required="" minlength="6" maxlength="6" class="form-control" name="telephoneCode" value="${userCustom.telephoneCode}">
 								<a id="validationCode" class="btn btn-primary btn-send-code" >发送</a></div>
 						</div>
 						<p class="telephoneCodeError-error">${telephoneCodeError}</p>

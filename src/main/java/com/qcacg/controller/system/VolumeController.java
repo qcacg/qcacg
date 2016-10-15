@@ -63,7 +63,7 @@ public class VolumeController extends BaseController {
         return this.volumeCustomService.findVolumeAndContentByBookId(bookId);
     }
     /*
-   删除章节
+   删除卷
    */
     @RequestMapping("deleteVolume")
     @ResponseBody

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2016-09-30 12:18:50
+Date: 2016-10-14 14:17:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -331,7 +331,7 @@ CREATE TABLE `sys_log` (
   `LogUpdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '日志更新时间',
   `ResourcesUrl` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`LogId`)
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_log
@@ -396,6 +396,7 @@ INSERT INTO `sys_log` VALUES ('57', '15067171806', '用户管理', '查询用户
 INSERT INTO `sys_log` VALUES ('58', '15067171806', '用户管理', '查询用户', '执行成功!', '5', '0:0:0:0:0:0:0:1', null, '2016-07-06 20:08:08', '/user/list.shtml');
 INSERT INTO `sys_log` VALUES ('59', '15067171806', 'null', '查询用户', '执行成功!', '40', '0:0:0:0:0:0:0:1', null, '2016-07-15 13:01:30', '/user/list.shtml');
 INSERT INTO `sys_log` VALUES ('60', '15067171806', 'null', '查询用户', '执行成功!', '62', '0:0:0:0:0:0:0:1', null, '2016-07-22 18:42:48', '/user/list.shtml');
+INSERT INTO `sys_log` VALUES ('61', '15067171806', 'null', '查询用户', '执行成功!', '25', '0:0:0:0:0:0:0:1', null, '2016-10-10 09:52:26', '/user/list.shtml');
 
 -- ----------------------------
 -- Table structure for sys_resources
@@ -414,30 +415,12 @@ CREATE TABLE `sys_resources` (
   `ResourcesView` varchar(255) DEFAULT NULL COMMENT '模块图标',
   `ResourcesUpdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '模块更新时间',
   PRIMARY KEY (`ResourcesId`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_resources
 -- ----------------------------
-INSERT INTO `sys_resources` VALUES ('1', '系统管理', '系统管理', null, '0', '1', '1', ',1,', '0', 'fa fa-home', '2016-06-14 15:33:03');
-INSERT INTO `sys_resources` VALUES ('2', '用户管理', '用户管理', '/user/list.shtml', '1', '2', '1', ',1,2,', '1', null, '2016-06-14 15:34:45');
-INSERT INTO `sys_resources` VALUES ('3', '角色管理', '角色管理', '/role/list.shtml', '1', '3', '1', ',1,3,', '1', null, '2016-06-14 15:35:54');
-INSERT INTO `sys_resources` VALUES ('4', '菜单管理', '菜单管理', '/resources/list.shtml', '1', '4', '1', ',1,4,', '1', null, '2016-06-14 15:36:36');
-INSERT INTO `sys_resources` VALUES ('5', '按钮管理', '按钮管理', '/buttom/list.shtml', '1', '5', '1', ',1,5,', '1', null, '2016-06-14 15:37:07');
-INSERT INTO `sys_resources` VALUES ('6', '日志管理', '日志管理', null, '0', '1', '1', ',6,', '0', 'fa fa-home', '2016-07-06 11:23:52');
-INSERT INTO `sys_resources` VALUES ('7', '登陆日志', '登陆日志', '/log/list.shtml', '6', '2', '1', ',6,7,', '1', null, '2016-07-06 11:23:55');
-INSERT INTO `sys_resources` VALUES ('8', '添加用户', '<button onclick=\"addUser()\" class=\"btn btn-info\" type=\"button\"><i class=\"fa fa-plus-square\"></i> 新增</button>', null, '2', '1', '2', ',1,2,8,', '2', null, '2016-06-14 17:14:52');
-INSERT INTO `sys_resources` VALUES ('9', '编辑用户', '<button onclick=\"editUser()\" class=\"btn btn-success\" type=\"button\"><i class=\"fa fa-paste\"></i> 编辑</button>', null, '2', '2', '2', ',1,2,9,', '2', null, '2016-06-14 17:14:59');
-INSERT INTO `sys_resources` VALUES ('10', '删除用户', '<button onclick=\"delUser()\" class=\"btn btn-danger\" type=\"button\"><i class=\"fa fa-remove\"></i> 删除</button>', null, '2', '3', '2', ',1,2,10,', '2', null, '2016-06-14 17:15:13');
-INSERT INTO `sys_resources` VALUES ('11', '分配权限', '<button onclick=\"userPermissions()\" class=\"btn btn-warning\" type=\"button\"><i class=\"fa fa-reorder\"></i> 分配权限</button>', null, '2', '4', '2', ',1,2,11,', '2', null, '2016-06-14 17:15:28');
-INSERT INTO `sys_resources` VALUES ('12', '添加角色', '<button onclick=\"addRole()\" class=\"btn btn-info\" type=\"button\"><i class=\"fa fa-plus-square\"></i> 新增</button>', null, '3', '1', '2', ',1,3,12,', '2', null, '2016-06-14 17:15:35');
-INSERT INTO `sys_resources` VALUES ('13', '编辑角色', '<button onclick=\"editRole()\" class=\"btn btn-success\" type=\"button\"><i class=\"fa fa-paste\"></i> 编辑</button>', null, '3', '2', '2', ',1,3,13,', '2', null, '2016-06-14 17:15:41');
-INSERT INTO `sys_resources` VALUES ('14', '删除角色', '<button onclick=\"delRole()\" class=\"btn btn-danger\" type=\"button\"><i class=\"fa fa-remove\"></i> 删除</button>', null, '3', '3', '2', ',1,3,14,', '2', null, '2016-06-14 17:15:47');
-INSERT INTO `sys_resources` VALUES ('15', '分配权限', '<button onclick=\"rolePermissions()\" class=\"btn btn-warning\" type=\"button\"><i class=\"fa fa-reorder\"></i> 分配权限</button>', null, '3', '4', '2', ',1,3,15,', '2', null, '2016-06-14 17:16:00');
-INSERT INTO `sys_resources` VALUES ('16', '系统监管', '系统监管', null, '0', '1', '1', ',16,', '0', 'fa fa-columns icon', '2016-06-14 17:13:03');
-INSERT INTO `sys_resources` VALUES ('17', '实时监控', '实时监控', '/sys/monitor.shtml', '16', '2', '1', ',16,17,', '1', null, '2016-06-14 17:14:00');
-INSERT INTO `sys_resources` VALUES ('18', '告警列表', '告警列表', '/sys/list.shtml', '16', '3', '1', ',16,18,', '1', null, '2016-06-14 17:14:41');
-INSERT INTO `sys_resources` VALUES ('19', '个人信息', '个人信息', '/user/info.shtml', '0', '1', '1', ',19,', '0', 'fa fa-home', '2016-07-13 14:44:47');
+INSERT INTO `sys_resources` VALUES ('1', '小说审核', '小说审核', null, '0', '1', '1', ',1,', '0', 'fa fa-home', '2016-10-10 09:57:42');
 
 -- ----------------------------
 -- Table structure for sys_resources_button
@@ -487,22 +470,6 @@ CREATE TABLE `sys_role_resources` (
 -- Records of sys_role_resources
 -- ----------------------------
 INSERT INTO `sys_role_resources` VALUES ('1', '1');
-INSERT INTO `sys_role_resources` VALUES ('1', '2');
-INSERT INTO `sys_role_resources` VALUES ('1', '3');
-INSERT INTO `sys_role_resources` VALUES ('1', '4');
-INSERT INTO `sys_role_resources` VALUES ('1', '5');
-INSERT INTO `sys_role_resources` VALUES ('1', '6');
-INSERT INTO `sys_role_resources` VALUES ('1', '7');
-INSERT INTO `sys_role_resources` VALUES ('1', '8');
-INSERT INTO `sys_role_resources` VALUES ('1', '9');
-INSERT INTO `sys_role_resources` VALUES ('1', '10');
-INSERT INTO `sys_role_resources` VALUES ('1', '11');
-INSERT INTO `sys_role_resources` VALUES ('1', '12');
-INSERT INTO `sys_role_resources` VALUES ('1', '13');
-INSERT INTO `sys_role_resources` VALUES ('1', '14');
-INSERT INTO `sys_role_resources` VALUES ('1', '15');
-INSERT INTO `sys_role_resources` VALUES ('1', '17');
-INSERT INTO `sys_role_resources` VALUES ('1', '18');
 
 -- ----------------------------
 -- Table structure for sys_server
@@ -7206,23 +7173,6 @@ CREATE TABLE `sys_user_resources` (
 -- Records of sys_user_resources
 -- ----------------------------
 INSERT INTO `sys_user_resources` VALUES ('1', '1');
-INSERT INTO `sys_user_resources` VALUES ('1', '2');
-INSERT INTO `sys_user_resources` VALUES ('1', '3');
-INSERT INTO `sys_user_resources` VALUES ('1', '4');
-INSERT INTO `sys_user_resources` VALUES ('1', '5');
-INSERT INTO `sys_user_resources` VALUES ('1', '6');
-INSERT INTO `sys_user_resources` VALUES ('1', '7');
-INSERT INTO `sys_user_resources` VALUES ('1', '8');
-INSERT INTO `sys_user_resources` VALUES ('1', '9');
-INSERT INTO `sys_user_resources` VALUES ('1', '10');
-INSERT INTO `sys_user_resources` VALUES ('1', '11');
-INSERT INTO `sys_user_resources` VALUES ('1', '12');
-INSERT INTO `sys_user_resources` VALUES ('1', '13');
-INSERT INTO `sys_user_resources` VALUES ('1', '14');
-INSERT INTO `sys_user_resources` VALUES ('1', '15');
-INSERT INTO `sys_user_resources` VALUES ('1', '16');
-INSERT INTO `sys_user_resources` VALUES ('1', '17');
-INSERT INTO `sys_user_resources` VALUES ('1', '18');
 
 -- ----------------------------
 -- Table structure for sys_user_role
@@ -7253,25 +7203,38 @@ CREATE TABLE `wor_book` (
   `BookIntroduction` text COMMENT '作品简介',
   `BookUpdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新日期',
   `BookCoverImage` varchar(255) DEFAULT NULL COMMENT '封面图片',
-  `BookWordCount` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '小说字数',
+  `BookWordCount` bigint(11) unsigned NOT NULL DEFAULT '0' COMMENT '小说字数',
   `BookStatus` enum('0','2','1') DEFAULT '0' COMMENT '小说状态',
   `BookHit` bigint(11) NOT NULL DEFAULT '0' COMMENT '点击率',
   `BookCollect` bigint(11) unsigned NOT NULL DEFAULT '0' COMMENT '收藏数',
-  `BookCopperCoins` bigint(11) unsigned NOT NULL DEFAULT '0' COMMENT '青铜币数',
-  `BookSilverCoins` bigint(11) NOT NULL DEFAULT '0' COMMENT '白银币数',
+  `BookCopperCoins` bigint(11) unsigned NOT NULL DEFAULT '0' COMMENT '好人币数',
+  `BookSilverCoins` bigint(11) unsigned NOT NULL DEFAULT '0' COMMENT '白银币数',
+  `WeekWordCount` bigint(11) unsigned NOT NULL DEFAULT '0' COMMENT '小说字数上周统计',
+  `WeekHit` bigint(11) unsigned NOT NULL DEFAULT '0' COMMENT '小说点击上周统计',
+  `WeekCopperCoins` bigint(11) unsigned NOT NULL DEFAULT '0' COMMENT '小说上周好人币数统计',
+  `MonthWordCount` bigint(11) unsigned NOT NULL DEFAULT '0' COMMENT '小说字数上月统计',
+  `MonthHit` bigint(11) unsigned NOT NULL DEFAULT '0' COMMENT '小说点击上月统计',
+  `MonthCopperCoins` bigint(11) unsigned NOT NULL DEFAULT '0' COMMENT '小说上月好人币数统计',
+  `EveryWeekWordCount` bigint(11) NOT NULL DEFAULT '0' COMMENT '小说字数每周统计',
+  `EveryWeekHit` bigint(11) NOT NULL DEFAULT '0' COMMENT '小说点击每月统计',
+  `EveryWeekCopperCoins` bigint(11) NOT NULL DEFAULT '0' COMMENT '小说每周好人币数统计',
+  `EveryMonthWordCount` bigint(11) NOT NULL DEFAULT '0' COMMENT '小说字数每月统计',
+  `EveryMonthHit` bigint(11) NOT NULL DEFAULT '0' COMMENT '小说点击每月统计',
+  `EveryMonthCopperCoins` bigint(11) NOT NULL DEFAULT '0' COMMENT '小说每月好人币数统计',
   PRIMARY KEY (`BookId`),
   KEY `BookID` (`BookId`) USING BTREE,
   KEY `UserID` (`UserId`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wor_book
 -- ----------------------------
-INSERT INTO `wor_book` VALUES ('1', '1', '回到明朝当皇帝', '少年', '主人公一个玩游戏时发生了一件离奇的事件，突然穿越回到了北宋末与南宋初，机缘巧合之下结实了宋高宗，一段奇幻的经历从此开始，并改写了历史......', '2016-09-29 16:48:21', '/upload/image/userHead/201609/12114241j4m0.jpg', '3410', '1', '0', '2', '0', '0');
-INSERT INTO `wor_book` VALUES ('2', '1', '回到宋朝当皇帝', '少年', '主人公改写了历史......', '2016-09-29 15:36:49', '/upload/image/userHead/201609/12114241j4m0.jpg', '1000', '2', '0', '2', '0', '0');
-INSERT INTO `wor_book` VALUES ('5', '1', '纸牌屋', '少年', '冰与火之歌', '2016-09-27 10:55:53', '', '0', '0', '1', '0', '0', '0');
-INSERT INTO `wor_book` VALUES ('6', '1', '', '少年', '', '2016-09-29 15:24:21', '', '0', '0', '1', '0', '0', '0');
-INSERT INTO `wor_book` VALUES ('7', '1', '低俗小说', '少年', '杀出个黎明', '2016-09-26 20:50:21', '', '0', '0', '0', '0', '0', '0');
+INSERT INTO `wor_book` VALUES ('1', '1', '回到明朝当皇帝', '少年', '主人公一个玩游戏时发生了一件离奇的事件，突然穿越回到了北宋末与南宋初，机缘巧合之下结实了宋高宗，一段奇幻的经历从此开始，并改写了历史......', '2016-10-14 13:46:24', '/upload/image/userHead/201609/12114241j4m0.jpg', '4200', '0', '1', '2', '0', '0', '4200', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `wor_book` VALUES ('2', '1', '回到宋朝当皇帝', '少年', '主人公改写了历史......', '2016-10-14 10:32:25', '/upload/image/userHead/201609/12114241j4m0.jpg', '700', '0', '0', '2', '0', '0', '10', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `wor_book` VALUES ('5', '1', '纸牌屋', '少年', '冰与火之歌', '2016-10-13 16:40:06', '', '1000', '0', '1', '0', '0', '0', '1000', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `wor_book` VALUES ('6', '1', '', '少年', '', '2016-10-13 16:31:06', '', '200', '0', '1', '0', '0', '0', '200', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `wor_book` VALUES ('7', '1', '低俗小说', '少年', '杀出个黎明', '2016-10-13 19:39:57', '', '300', '0', '0', '0', '0', '0', '300', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `wor_book` VALUES ('8', '2', '纸牌屋', '少年', '与人斗其乐无穷', '2016-10-14 14:10:24', null, '300', '0', '0', '0', '0', '0', '300', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for wor_bookcollect
@@ -7326,13 +7289,14 @@ CREATE TABLE `wor_bookhit` (
   PRIMARY KEY (`BookHitId`),
   KEY `BookID` (`BookId`),
   KEY `UserID` (`UserId`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wor_bookhit
 -- ----------------------------
 INSERT INTO `wor_bookhit` VALUES ('2', '5', '1', '2016-09-27 10:55:53');
 INSERT INTO `wor_bookhit` VALUES ('3', '6', '1', '2016-09-27 11:02:01');
+INSERT INTO `wor_bookhit` VALUES ('4', '1', '1', '2016-10-14 13:46:24');
 
 -- ----------------------------
 -- Table structure for wor_booksilver
@@ -7459,14 +7423,14 @@ CREATE TABLE `wor_content` (
 -- ----------------------------
 -- Records of wor_content
 -- ----------------------------
-INSERT INTO `wor_content` VALUES ('1', '1', '宅男的穿越', '<p>突然就穿越了<p>', '100', '2016-09-14 09:48:26', '0', null);
+INSERT INTO `wor_content` VALUES ('1', '1', '宅男的穿越', '<p>突然就穿越了<p>', '500', '2016-09-14 09:48:26', '0', null);
 INSERT INTO `wor_content` VALUES ('2', '1', '心中的困惑', '<p>为什么呢？<p>', '1000', '2016-09-14 09:48:46', '0', null);
-INSERT INTO `wor_content` VALUES ('3', '2', '猥琐的大叔', '<p>哈哈哈<p>', '100', '2016-09-14 09:49:02', '0', null);
-INSERT INTO `wor_content` VALUES ('4', '2', '无聊的生活', '<p>哎呀<p>', '10', '2016-09-14 09:49:31', '0', null);
+INSERT INTO `wor_content` VALUES ('3', '2', '猥琐的大叔', '<p>哈哈哈<p>', '500', '2016-09-14 09:49:02', '0', null);
+INSERT INTO `wor_content` VALUES ('4', '2', '无聊的生活', '<p>哎呀<p>', '100', '2016-09-14 09:49:31', '0', null);
 INSERT INTO `wor_content` VALUES ('5', '2', '美好的一天', '<p>aa<p>', '100', '2016-09-14 18:58:49', '0', null);
 INSERT INTO `wor_content` VALUES ('6', '1', '又穿越！', '\n							<p><img src=\"http://127.0.0.1:8080/upload/image/content/0f623e21f0c5414987dcdc7e865370d2.jpg\" alt=\"a9e0ac51f8198618e91f29374fed2e738ad4e621\"><br></p><p><br></p><p>从前的从前的从前</p><p><br></p>', '1000', '2016-09-20 16:24:00', '0', '/upload/file/content/201609/20162400zbdl.html');
-INSERT INTO `wor_content` VALUES ('7', '1', '了不起的盖茨比', '\n							<p>从前，有一个乐不起的任务，他叫盖茨比。</p>', '100', '2016-09-28 19:53:07', '0', '/upload/file/content/201609/281953079giq.html');
-INSERT INTO `wor_content` VALUES ('9', '3', null, null, '1000', '2016-09-29 10:50:51', '0', null);
+INSERT INTO `wor_content` VALUES ('7', '1', '了不起的盖茨比', '\n							<p>从前，有一个乐不起的任务，他叫盖茨比。</p>', '1000', '2016-09-28 19:53:07', '0', '/upload/file/content/201609/281953079giq.html');
+INSERT INTO `wor_content` VALUES ('9', '3', '阴阳师', '\n							<p>从前有一个阴阳师很叼</p><p><br></p>', '1000', '2016-09-29 10:50:51', '0', '/upload/file/content/201610/111857000jgf.html');
 
 -- ----------------------------
 -- Table structure for wor_painting
@@ -7647,9 +7611,117 @@ CREATE TABLE `wor_volume` (
 -- ----------------------------
 -- Records of wor_volume
 -- ----------------------------
-INSERT INTO `wor_volume` VALUES ('1', '1', '第一卷', '2200');
-INSERT INTO `wor_volume` VALUES ('2', '1', '第二卷', '1210');
-INSERT INTO `wor_volume` VALUES ('3', '2', null, '1000');
+INSERT INTO `wor_volume` VALUES ('1', '1', '第一卷', '3500');
+INSERT INTO `wor_volume` VALUES ('2', '2', '第二卷', '700');
+INSERT INTO `wor_volume` VALUES ('3', '5', '第三卷', '1000');
+
+-- ----------------------------
+-- Event structure for EveryMonthCopperCoins
+-- ----------------------------
+DROP EVENT IF EXISTS `EveryMonthCopperCoins`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `EveryMonthCopperCoins` ON SCHEDULE EVERY 1 MONTH STARTS '2016-11-01 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE wor_book SET wor_book.EveryMonthCopperCoins = (wor_book.BookCopperCoins-wor_book.MonthCopperCoins)
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Event structure for EveryMonthHit
+-- ----------------------------
+DROP EVENT IF EXISTS `EveryMonthHit`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `EveryMonthHit` ON SCHEDULE EVERY 1 MONTH STARTS '2016-11-01 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE wor_book SET wor_book.EveryMonthHit = (wor_book.BookHit-wor_book.MonthHit)
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Event structure for EveryMonthWordCount
+-- ----------------------------
+DROP EVENT IF EXISTS `EveryMonthWordCount`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `EveryMonthWordCount` ON SCHEDULE EVERY 1 MONTH STARTS '2016-11-01 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE wor_book SET wor_book.EveryMonthWordCount = (wor_book.BookWordCount-wor_book.MonthWordCount)
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Event structure for EveryWeekCopperCoins
+-- ----------------------------
+DROP EVENT IF EXISTS `EveryWeekCopperCoins`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `EveryWeekCopperCoins` ON SCHEDULE EVERY 1 WEEK STARTS '2016-10-16 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE wor_book SET wor_book.EveryWeekCopperCoins = (wor_book.BookHit-wor_book.WeekCopperCoins)
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Event structure for EveryWeekHit
+-- ----------------------------
+DROP EVENT IF EXISTS `EveryWeekHit`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `EveryWeekHit` ON SCHEDULE EVERY 1 WEEK STARTS '2016-10-16 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE wor_book SET wor_book.EveryWeekHit = (wor_book.BookHit-wor_book.WeekHit)
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Event structure for EveryWeekWordCount
+-- ----------------------------
+DROP EVENT IF EXISTS `EveryWeekWordCount`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `EveryWeekWordCount` ON SCHEDULE EVERY 1 WEEK STARTS '2016-10-16 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE wor_book SET wor_book.EveryWeekWordCount = (wor_book.BookWordCount-wor_book.WeekWordCount)
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Event structure for MonthCopperCoins
+-- ----------------------------
+DROP EVENT IF EXISTS `MonthCopperCoins`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `MonthCopperCoins` ON SCHEDULE EVERY 1 MONTH STARTS '2016-11-01 01:00:00' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE wor_book SET wor_book.MonthCopperCoins = wor_book.BookCopperCoins
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Event structure for MonthHit
+-- ----------------------------
+DROP EVENT IF EXISTS `MonthHit`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `MonthHit` ON SCHEDULE EVERY 1 MONTH STARTS '2016-11-01 01:00:00' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE wor_book SET wor_book.MonthHit = wor_book.BookHit
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Event structure for MonthWordCount
+-- ----------------------------
+DROP EVENT IF EXISTS `MonthWordCount`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `MonthWordCount` ON SCHEDULE EVERY 1 MONTH STARTS '2016-11-01 01:00:00' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE wor_book SET wor_book.MonthWordCount = wor_book.BookWordCount
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Event structure for WeekCopperCoins
+-- ----------------------------
+DROP EVENT IF EXISTS `WeekCopperCoins`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `WeekCopperCoins` ON SCHEDULE EVERY 1 WEEK STARTS '2016-10-16 01:00:00' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE wor_book SET wor_book.WeekCopperCoins = wor_book.BookCopperCoins
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Event structure for WeekHit
+-- ----------------------------
+DROP EVENT IF EXISTS `WeekHit`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `WeekHit` ON SCHEDULE EVERY 1 WEEK STARTS '2016-10-16 01:00:00' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE wor_book SET wor_book.WeekHit = wor_book.BookHit
+;;
+DELIMITER ;
+
+-- ----------------------------
+-- Event structure for WeekWordCount
+-- ----------------------------
+DROP EVENT IF EXISTS `WeekWordCount`;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` EVENT `WeekWordCount` ON SCHEDULE EVERY 1 WEEK STARTS '2016-10-16 01:00:00' ON COMPLETION NOT PRESERVE ENABLE DO UPDATE wor_book SET wor_book.WeekWordCount = wor_book.BookWordCount
+;;
+DELIMITER ;
 DROP TRIGGER IF EXISTS `trigger1`;
 DELIMITER ;;
 CREATE TRIGGER `trigger1` AFTER INSERT ON `wor_bookcollect` FOR EACH ROW begin

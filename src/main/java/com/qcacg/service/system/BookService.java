@@ -36,4 +36,16 @@ public interface BookService extends BaseService<BookEntity> {
     public List<BookEntity> findBookByBookWordCount();
 
     public List<BookEntity> findBookByBookUpDate();
+
+    public List<BookEntity> WeekBookByBookCopperCoins();
+
+    public List<BookEntity> MonthBookByBookCopperCoins();
+
+    public List<BookEntity> WeekBookByBookHit();
+
+    public List<BookEntity> MonthBookByBookHit();
+
+    public List<BookEntity> WeekBookByBookWordCount();
+
+    public List<BookEntity> MonthBookByBookWordCount();
 }

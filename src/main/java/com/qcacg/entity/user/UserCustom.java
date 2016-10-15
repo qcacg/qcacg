@@ -8,7 +8,7 @@ import com.qcacg.entity.UserEntity;
  */
 public class UserCustom extends UserEntity{
 
-
+    private String telephoneCode;
 
     private String passWordConfirm;
 
@@ -21,5 +21,11 @@ public class UserCustom extends UserEntity{
     }
 
 
+    public String getTelephoneCode() {
+        return telephoneCode;
+    }
 
+    public void setTelephoneCode(String telephoneCode) {
+        this.telephoneCode = telephoneCode;
+    }
 }

@@ -82,6 +82,62 @@ public class BookController extends BaseController {
     {
         return this.bookService.findBookByBookWordCount();
     }
+
+    /*
+        按好人币获取小说列表（周榜）
+         */
+    @RequestMapping("WeekBookByBookCopperCoins")
+    @ResponseBody
+    public List<BookEntity> WeekBookByBookCopperCoins()
+    {
+        return this.bookService.WeekBookByBookCopperCoins();
+    }
+    /*
+        按点击数获取小说列表（周榜）
+         */
+    @RequestMapping("WeekBookByBookHit")
+    @ResponseBody
+    public List<BookEntity> WeekBookByBookHit()
+    {
+        return this.bookService.WeekBookByBookHit();
+    }
+    /*
+        按字数获取小说列表（周榜）
+         */
+    @RequestMapping("WeekBookByBookWordCount")
+    @ResponseBody
+    public List<BookEntity> WeekBookByBookWordCount()
+    {
+        return this.bookService.WeekBookByBookWordCount();
+    }
+
+    /*
+        按好人币获取小说列表（月榜）
+         */
+    @RequestMapping("MonthBookByBookCopperCoins")
+    @ResponseBody
+    public List<BookEntity> MonthBookByBookCopperCoins()
+    {
+        return this.bookService.MonthBookByBookCopperCoins();
+    }
+    /*
+        按点击数获取小说列表（月榜）
+         */
+    @RequestMapping("MonthBookByBookHit")
+    @ResponseBody
+    public List<BookEntity> MonthBookByBookHit()
+    {
+        return this.bookService.MonthBookByBookHit();
+    }
+    /*
+        按字数获取小说列表（月榜）
+         */
+    @RequestMapping("MonthBookByBookWordCount")
+    @ResponseBody
+    public List<BookEntity> MonthBookByBookWordCount()
+    {
+        return this.bookService.MonthBookByBookWordCount();
+    }
     /*
     获取用户小说列表
      */
