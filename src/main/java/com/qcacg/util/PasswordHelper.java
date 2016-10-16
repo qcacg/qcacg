@@ -23,13 +23,14 @@ public class PasswordHelper
 		System.out.println(salt);
 	}
 
-	public static void main(String[] args)
-	{
-		PasswordHelper passwordHelper = new PasswordHelper();
-		UserEntity userFormMap = new UserEntity();
-		userFormMap.setPassWord("123456");
-		userFormMap.setTelephone("15067171806");
-		passwordHelper.encryptPassword(userFormMap);
+
+	public static void main(String[] args) {
+//		PasswordHelper passwordHelper = new PasswordHelper();
+//		UserEntity userFormMap = new UserEntity();
+//		userFormMap.setPassWord("123456");
+//		userFormMap.setTelephone("15067171806");
+//		passwordHelper.encryptPassword(userFormMap);
 
 	}
+
 }

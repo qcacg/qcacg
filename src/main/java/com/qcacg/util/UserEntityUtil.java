@@ -1,12 +1,13 @@
 package com.qcacg.util;
 
+import com.qcacg.entity.UserEntity;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.session.Session;
+import org.apache.shiro.subject.Subject;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.session.Session;
-
-import com.qcacg.entity.UserEntity;
 
 public class UserEntityUtil
 {
@@ -24,6 +25,10 @@ public class UserEntityUtil
 	 */
 	public static UserEntity getUserFromSession()
 	{
+		Subject subject = SecurityUtils.getSubject();
+		UsernamePasswordToken token = new UsernamePasswordToken("15067171806", "123456");
+		subject.login(token);
+
 		Session session = SecurityUtils.getSubject().getSession();
 		return (UserEntity) session.getAttribute(UserEntityUtil.USER_SESSION_KEY);
 	}

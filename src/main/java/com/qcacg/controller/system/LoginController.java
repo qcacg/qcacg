@@ -65,10 +65,7 @@ public class LoginController {
 	@RequestMapping(value = "login", method = RequestMethod.POST, produces = "text/html; charset=utf-8")
 	public String login(HttpServletRequest request, HttpServletResponse response, UserEntity userEntity,Model model) {
 
-		if(userEntity.getTelephone().equals("qcacg666666")){
 
-			return "redirect:/user-info.shtml";
-		}else {
 			// 想要得到 SecurityUtils.getSubject() 的对象．．访问地址必须跟shiro的拦截地址内．不然后会报空指针
 			Subject sub = SecurityUtils.getSubject();
 			// 用户输入的账号和密码,,存到UsernamePasswordToken对象中..然后由shiro内部认证对比,
@@ -98,7 +95,7 @@ public class LoginController {
 			}
 
 			return "redirect:/user-info.shtml";
-		}
+
 
 	}
 	@RequestMapping("index")
