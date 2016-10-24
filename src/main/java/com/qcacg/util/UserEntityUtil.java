@@ -29,7 +29,9 @@ public class UserEntityUtil
 		UsernamePasswordToken token = new UsernamePasswordToken("15067171806", "123456");
 		subject.login(token);
 
+		//获取验证后的subject实例
 		Session session = SecurityUtils.getSubject().getSession();
+		UserEntity userEntity = (UserEntity) session.getAttribute(UserEntityUtil.USER_SESSION_KEY);
 		return (UserEntity) session.getAttribute(UserEntityUtil.USER_SESSION_KEY);
 	}
 
@@ -37,5 +39,7 @@ public class UserEntityUtil
 	{
 		return new SimpleDateFormat(format).format(date);
 	}
+
+	
 
 }

@@ -13,6 +13,9 @@ public interface LoginConstant
 	
 	String LOGIN_ERROR_CODE_100004 = "100004";
 	String LOGIN_ERROR_MESSAGE_FORCELOGOUT = "您已经被管理员强制退出，请重新登录";
+
+	String LOGIN_ERROR_CODE_100005 = "100005";
+	String LOGIN_ERROR_MESSAGE_USERNOTEXIST = "您还未登录，请登录！！！";
 	
 	
 	

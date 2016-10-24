@@ -7,6 +7,7 @@ import com.qcacg.entity.book.BookCustom;
 import com.qcacg.service.system.BookAndBookTypeService;
 import com.qcacg.service.system.BookCustomService;
 import com.qcacg.service.system.BookService;
+import com.qcacg.util.BookEntityUtil;
 import com.qcacg.util.UserEntityUtil;
 import com.qcacg.util.upload.FileRepository;
 import com.qcacg.util.upload.UploadUtils;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.util.*;
@@ -164,9 +166,39 @@ public class BookController extends BaseController {
     /*
     保存小说（信息）
      */
+
     @RequestMapping(value = "saveOrUpdateBook", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> saveOrUpdateBook(BookEntity bookEntity,@RequestBody BookEntity bookEntityForm)
+    public Map<String, Object> saveOrUpdateBook(BookEntity bookEntity, HttpServletRequest request)
+    {
+        Map<String, Object> map = new HashMap<String, Object>();
+        try {
+            bookEntity = BookEntityUtil.getBookEntity(request);
+            this.bookService.saveOrUpdateBook(bookEntity);
+            map.put("bookEntity", bookEntity);
+            Long bookId = bookEntity.getBookId();
+            List<Long> bookTypeList = bookEntity.getBookTypeList();
+            List<BookAndBookTypeEntity> bookAndBookTypeEntityList = new ArrayList<BookAndBookTypeEntity>();
+            if(bookTypeList != null) {
+                for (int i = 0; i < bookTypeList.size(); i++) {
+                    BookAndBookTypeEntity bookAndBookTypeEntity = new BookAndBookTypeEntity();
+                    bookAndBookTypeEntity.setBookId(bookId);
+                    bookAndBookTypeEntity.setBookTypeId(bookTypeList.get(i));
+                    bookAndBookTypeEntityList.add(bookAndBookTypeEntity);
+                    map.put("bookAndBookTypeEntity" + i,bookAndBookTypeEntity);
+                }
+            }
+            this.bookAndBookTypeService.saveOrUpdateBookType(bookAndBookTypeEntityList, bookId);
+            map.put("success",true);
+        }catch (Exception e){
+            e.printStackTrace();
+            map.put("success",false);
+            map.put("msg","error");
+        }
+        return map;
+    }
+    /*
+    public Map<String, Object> saveOrUpdateBook(BookEntity bookEntity, @RequestBody BookEntity bookEntityForm)
     {
         Map<String, Object> map = new HashMap<String, Object>();
         try {
@@ -177,6 +209,7 @@ public class BookController extends BaseController {
             bookEntity.setBookIntroduction(bookEntityForm.getBookIntroduction());
             bookEntity.setBookCoverImage(bookEntityForm.getBookCoverImage());
             bookEntity.setSort(bookEntityForm.getSort());
+            System.out.println(bookEntity);
             this.bookService.saveOrUpdateBook(bookEntity);
             map.put("bookEntity", bookEntity);
             Long bookId = bookEntity.getBookId();
@@ -198,6 +231,7 @@ public class BookController extends BaseController {
         }
         return map;
     }
+    */
     /*
     添加小说封面
     */

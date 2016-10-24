@@ -21,6 +21,7 @@ import org.apache.shiro.web.util.WebUtils;
  * <p>Date: 15-9-15
  * <p>Version: 1.0
  */
+//AccessControlFilter提供了访问控制的基础功能；比如是否允许访问/当访问拒绝时如何处理等：
 public class KickoutSessionControlFilter extends AccessControlFilter {
 
     private String kickoutUrl; //踢出后到的地址
@@ -50,6 +51,7 @@ public class KickoutSessionControlFilter extends AccessControlFilter {
         this.cache = cacheManager.getCache("shiro-kickout-session");
     }
 
+    //是否允许访问
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws Exception {
         return false;
@@ -57,13 +59,20 @@ public class KickoutSessionControlFilter extends AccessControlFilter {
 
     @Override
     protected boolean onAccessDenied(ServletRequest request, ServletResponse response) throws Exception {
+        //AccessControlFilter提供的获取实例的方法
         Subject subject = getSubject(request, response);
+        /*
+        当login函数没有返回信息时表明验证通过了。
+        程序可以继续运行，此时执行SecurityUtils.getSubject()将返回验证后的Subject实例，
+        subject.isAuthenticated()将返回true。
+         */
         if(!subject.isAuthenticated() && !subject.isRemembered()) {
             //如果没有登录，直接进行之后的流程
             return true;
         }
 
         Session session = subject.getSession();
+        //获取用户
         String username = (String) subject.getPrincipal();
         Serializable sessionId = session.getId();
 
@@ -103,6 +112,7 @@ public class KickoutSessionControlFilter extends AccessControlFilter {
                 subject.logout();
             } catch (Exception e) { //ignore
             }
+            //将请求保存起来，如登录成功后再重定向回该请求
             saveRequest(request);
             WebUtils.issueRedirect(request, response, kickoutUrl);
             return false;

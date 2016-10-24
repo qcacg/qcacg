@@ -1,16 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="qcacg:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="qcacg.war">
+  <artifact type="war" build-on-make="true" name="qcacg:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/qcacg_war</output-path>
+    <root id="archive" name="qcacg_war.war">
       <element id="artifact" artifact-name="qcacg:war exploded" />
-      <element id="directory" name="WEB-INF">
-        <element id="directory" name="lib">
-          <element id="file-copy" path="F:/WorkSpace/IT/Ueditor4SpringMvc-master/src/main/webapp/WEB-INF/lib/ueditor-1.1.2.jar" />
-          <element id="file-copy" path="F:/WorkSpace/IT/gt-java-sdk-master/lib/java-json.jar" />
-          <element id="file-copy" path="F:/下载/sdk-java-23443437/taobao-sdk-java-auto_1455552377940-20160828.jar" />
-          <element id="file-copy" path="F:/下载/sdk-java-23443437/taobao-sdk-java-auto_1455552377940-20160828-source.jar" />
-        </element>
-      </element>
     </root>
   </artifact>
 </component>
