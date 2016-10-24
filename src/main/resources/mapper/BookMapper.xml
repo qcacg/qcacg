@@ -2,7 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qcacg.mapper.BookMapper">
 
-
+    <select id="findBookByBookName" resultType="com.qcacg.entity.BookEntity" parameterType = "java.lang.String">
+        SELECT
+          wor_book.BookId,
+          wor_book.BookName
+        FROM
+          wor_book
+        WHERE
+          wor_book.BookName = #{wor_book.BookName}
+    </select>
     <select id="findBookByUserId" resultType="com.qcacg.entity.BookEntity" parameterType="java.lang.Long">
 SELECT
 wor_book.BookId,

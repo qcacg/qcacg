@@ -136,5 +136,20 @@ public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements Book
         return this.bookMapper.findBookByBookWordCount();
     }
 
-
+    @Override
+    public boolean findBookByBookName(String bookName, Long bookId) {
+        if(bookId == null) {
+            if(bookName != null) {
+                List<BookEntity> list = this.bookMapper.findBookByBookName(bookName);
+                if(list.size() > 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
 }

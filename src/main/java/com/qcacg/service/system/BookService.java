@@ -48,4 +48,6 @@ public interface BookService extends BaseService<BookEntity> {
     public List<BookEntity> WeekBookByBookWordCount();
 
     public List<BookEntity> MonthBookByBookWordCount();
+
+    public boolean findBookByBookName(String bookName, Long bookId);
 }

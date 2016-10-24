@@ -174,6 +174,10 @@ public class BookController extends BaseController {
         Map<String, Object> map = new HashMap<String, Object>();
         try {
             bookEntity = BookEntityUtil.getBookEntity(request);
+            if(this.bookService.findBookByBookName(bookEntity.getBookName(), bookEntity.getBookId())) {
+                map.put("msg", "error");
+                return map;
+            }
             this.bookService.saveOrUpdateBook(bookEntity);
             map.put("bookEntity", bookEntity);
             Long bookId = bookEntity.getBookId();

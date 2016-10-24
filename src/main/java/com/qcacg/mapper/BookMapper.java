@@ -39,4 +39,6 @@ public interface BookMapper extends Mapper<BookEntity> {
 
     public List<BookEntity> MonthBookByBookWordCount();
 
+    public List<BookEntity> findBookByBookName(String bookName);
+
 }

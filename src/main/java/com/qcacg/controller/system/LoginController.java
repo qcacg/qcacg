@@ -109,7 +109,7 @@ public class LoginController {
 		return "user-info";
 	}
 	*/
-
+	/*
 	@RequestMapping(value = "login", method = RequestMethod.POST, produces = "text/html; charset=utf-8")
 	@ResponseBody
 	public Map<String, Object> login(HttpServletRequest request,
@@ -149,8 +149,7 @@ public class LoginController {
 		model.put("msg", "success");
 		return model;
 	}
-
-	/*
+	*/
 	@RequestMapping(value = "login", method = RequestMethod.POST, produces = "text/html; charset=utf-8")
 	public String login(HttpServletRequest request, HttpServletResponse response, UserEntity userEntity,Model model) {
 			// 想要得到 SecurityUtils.getSubject() 的对象．．访问地址必须跟shiro的拦截地址内．不然后会报空指针
@@ -185,7 +184,7 @@ public class LoginController {
 			}
 			return "redirect:/user-info.shtml";
 	}
-	*/
+
 	@RequestMapping("index")
 	public String index() {
 		return "index";
