@@ -103,7 +103,7 @@
 				/content/nextContent.shtml = anon
 				/content/previousContent.shtml = anon
 
-
+				/book-check.shtml = anon
 				/book/** = anon
 				/user/** = anon
 				/volume/** = anon

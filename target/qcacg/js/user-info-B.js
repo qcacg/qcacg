@@ -2,14 +2,14 @@
  保存或修改作品（信息）
  */
 $(function() {
-    $('#btn-info-book').on('click', function() {
+    $(' ').on('click', function() {
         var bookEntity = new Object();
-        bookEntity.bookId = 6;
-        bookEntity.bookName = $('#ipt-title-post-info').val();
-        bookEntity.bookIntroduction = $('#ipt-intro-post-info').val();
-        bookEntity.bookCoverImage = $('#ipt-cover-post-info').val();
-        bookEntity.sort = "少年";
-        bookEntity.bookTypeList = [1,2,3,4,5];
+        bookEntity.bookId = 9;
+        //bookEntity.bookName = $('#ipt-title-post-info').val();
+        //bookEntity.bookIntroduction = $('#ipt-intro-post-info').val();
+        //bookEntity.bookCoverImage = $('#ipt-cover-post-info').val();
+        //bookEntity.sort = "少年";
+        bookEntity.bookTypeList = [1,2,3];
 
         $.ajax('/book/saveOrUpdateBook.shtml', {
             type: "POST",
@@ -58,9 +58,9 @@ $(function() {
 $(function() {
     $('#btn-add-vol-submit').on('click', function() {
 
-        var volumeName = "第三卷";
-        var bookId = 2;
-        var volumeId = 3;
+        var volumeName = "第4卷";
+        var bookId = 1;
+        var volumeId = null;
         var url = "/volume/saveOrUpdateVolume.shtml";
         $.ajax({url:url,
             type: "POST",
@@ -185,7 +185,7 @@ $(function() {
  读者读取作品正文（或者作者获取草稿）
  */
 $(function() {
-    $('#btn-book-check').on('click', function() {
+    $('').on('click', function() {
         var contentId = 1;
         var url = "/content/findContent.shtml";
         $.ajax({
@@ -363,7 +363,7 @@ $(function() {
  添加浏览记录
  */
 $(function() {
-    $('#btn-book-check').on('click', function() {
+    $(' ').on('click', function() {
         var bookId = 1;
         var url = "/bookHit/saveBookHit.shtml";
         $.ajax({
@@ -391,6 +391,28 @@ $(function() {
             url:url,
             type: "GET",
             data: {},
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (data) {
+                console.log('error');
+            }
+        });
+    });
+})
+/*
+ 按小说名或作者名搜索小说
+ */
+$(function() {
+    $('').on('click', function() {
+
+        var KeyWord = "皇帝";
+        var url = "/book/SearchBookByKeyWord.shtml";
+        $.ajax({
+            url:url,
+            type: "GET",
+            data: {"KeyWord":KeyWord},
             dataType: "json",
             success: function (data) {
                 console.log(data);

@@ -283,6 +283,44 @@ wor_book.BookUpdate ASC
 
     </select>
 
+    <select id="SearchBookByKeyWord" resultType="com.qcacg.entity.BookEntity" parameterType="java.lang.String">
+    SELECT
+    wor_book.BookId,
+    wor_book.UserId,
+    wor_book.BookName,
+    wor_book.Sort,
+    wor_book.BookIntroduction,
+    wor_book.BookUpdate,
+    wor_book.BookCoverImage,
+    wor_book.BookWordCount,
+    wor_book.BookStatus,
+    wor_book.BookHit,
+    wor_book.BookCollect,
+    wor_book.BookCopperCoins,
+    wor_book.BookSilverCoins,
+    wor_book.WeekWordCount,
+    wor_book.WeekHit,
+    wor_book.WeekCopperCoins,
+    wor_book.MonthWordCount,
+    wor_book.MonthHit,
+    wor_book.MonthCopperCoins,
+    wor_book.EveryWeekWordCount,
+    wor_book.EveryWeekHit,
+    wor_book.EveryWeekCopperCoins,
+    wor_book.EveryMonthWordCount,
+    wor_book.EveryMonthHit,
+    wor_book.EveryMonthCopperCoins
+    FROM
+    wor_book,
+    sys_user
+    WHERE
+    wor_book.BookName LIKE CONCAT('%',#{KeyWord},'%')
+    OR sys_user.UserName LIKE CONCAT('%',#{KeyWord},'%')
+    AND wor_book.UserId = sys_user.UserId
+    AND wor_book.BookStatus = '0'
+    GROUP BY
+    wor_book.BookId
+    </select>
 
     <insert id="insertBook" parameterType="com.qcacg.entity.BookEntity" useGeneratedKeys="true" keyProperty="bookId">
         <selectKey keyProperty="bookId" resultType="java.lang.Long" order="AFTER">

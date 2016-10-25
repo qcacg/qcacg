@@ -107,6 +107,11 @@ public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements Book
     }
 
     @Override
+    public List<BookEntity> SearchBookByKeyWord(String KeyWord) {
+        return this.bookMapper.SearchBookByKeyWord(KeyWord);
+    }
+
+    @Override
     public void userUpdateBookStatus(Long bookId) {
         this.bookMapper.userUpdateBookStatus(bookId);
     }

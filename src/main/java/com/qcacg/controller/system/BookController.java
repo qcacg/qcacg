@@ -187,7 +187,7 @@ public class BookController extends BaseController {
                 bookAndBookTypeEntity.setBookId(bookId);
                 bookAndBookTypeEntity.setBookTypeId(bookTypeList.get(i));
                 bookAndBookTypeEntityList.add(bookAndBookTypeEntity);
-                map.put("bookAndBookTypeEntity",bookAndBookTypeEntity);
+                map.put("bookAndBookTypeEntity"+i,bookAndBookTypeEntity);
             }
             this.bookAndBookTypeService.saveOrUpdateBookType(bookAndBookTypeEntityList, bookId);
             map.put("success",true);
@@ -284,6 +284,14 @@ public class BookController extends BaseController {
 
     }
 
+    /*
+    按小说名或作者名搜索小说
+     */
+    @RequestMapping("SearchBookByKeyWord")
+    @ResponseBody
+    public List<BookEntity> SearchBookByKeyWord(@RequestParam("KeyWord")String KeyWord)
+    {
+        return this.bookService.SearchBookByKeyWord(KeyWord);
 
-
+    }
 }
