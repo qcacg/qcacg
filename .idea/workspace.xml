@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="bfa18c5d-906d-4d48-ac4f-65fe43107609" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" readonly="true" id="bfa18c5d-906d-4d48-ac4f-65fe43107609" name="Default" comment="" />
     <ignored path="battcn1.0.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -2207,7 +2205,7 @@
       <workItem from="1477210241433" duration="1662000" />
       <workItem from="1477212113547" duration="3119000" />
       <workItem from="1477310940188" duration="9423000" />
-      <workItem from="1477394963035" duration="3906000" />
+      <workItem from="1477394963035" duration="4496000" />
     </task>
     <servers />
   </component>
@@ -2244,7 +2242,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1506241000" />
+    <option name="totallyTimeSpent" value="1506831000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
