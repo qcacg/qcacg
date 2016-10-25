@@ -58,6 +58,15 @@
 		<filter-name>originFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	<!-- 验证登录过滤器 -->
+	<!--<filter>
+		<filter-name>accessFilter</filter-name>
+		<filter-class>com.qcacg.shiro.filter.AccessFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>accessFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
 
 	<servlet>
 		<servlet-name>springmvc</servlet-name>

@@ -23,10 +23,11 @@ public class UserEntityUtil
 	 * @return[参数、异常说明] @return UserForm [返回类型说明]
 	 * @see [类、类#方法、类#成员]
 	 */
-	public static UserEntity getUserFromSession()
+	public static UserEntity getUserFromSession(UserEntity user)
 	{
 		Subject subject = SecurityUtils.getSubject();
-		UsernamePasswordToken token = new UsernamePasswordToken("15067171806", "123456");
+		//UsernamePasswordToken token = new UsernamePasswordToken("15067171806", "123456");
+		UsernamePasswordToken token = new UsernamePasswordToken(user.getTelephone(), user.getPassWord());
 		subject.login(token);
 
 		//获取验证后的subject实例
@@ -40,6 +41,18 @@ public class UserEntityUtil
 		return new SimpleDateFormat(format).format(date);
 	}
 
+	public static UserEntity getUserFromSession()
+	{
+		//Subject subject = SecurityUtils.getSubject();
+		//UsernamePasswordToken token = new UsernamePasswordToken("15067171806", "123456");
+		//UsernamePasswordToken token = new UsernamePasswordToken(user.getTelephone(), user.getPassWord());
+		//subject.login(token);
+
+		//获取验证后的subject实例
+		Session session = SecurityUtils.getSubject().getSession();
+		UserEntity userEntity = (UserEntity) session.getAttribute(UserEntityUtil.USER_SESSION_KEY);
+		return userEntity;
+	}
 	
 
 }

@@ -23,13 +23,19 @@ public class PasswordHelper
 		System.out.println(salt);
 	}
 
+	public String encryptToken(String now, String agent) {
+		String salt = randomNumberGenerator.nextBytes().toHex();
+		String token = new SimpleHash(algorithmName, now, ByteSource.Util.bytes(agent + salt), hashIterations).toHex();
+		return token;
+	}
 
 	public static void main(String[] args) {
-//		PasswordHelper passwordHelper = new PasswordHelper();
-//		UserEntity userFormMap = new UserEntity();
-//		userFormMap.setPassWord("123456");
-//		userFormMap.setTelephone("15067171806");
-//		passwordHelper.encryptPassword(userFormMap);
+		PasswordHelper passwordHelper = new PasswordHelper();
+		UserEntity userFormMap = new UserEntity();
+		userFormMap.setPassWord("123456");
+		userFormMap.setTelephone("15067171806");
+		passwordHelper.encryptPassword(userFormMap);
+		System.out.println(userFormMap.getPassWord());
 
 	}
 

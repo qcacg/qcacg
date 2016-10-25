@@ -206,7 +206,7 @@ public class BookController extends BaseController {
     {
         Map<String, Object> map = new HashMap<String, Object>();
         try {
-            Long userId = UserEntityUtil.getUserFromSession().getUserId();
+            Long userId = UserEntityUtil.getUserFormSessionFromSession().getUserId();
             bookEntity.setBookId(bookEntityForm.getBookId());
             bookEntity.setUserId(userId);
             bookEntity.setBookName(bookEntityForm.getBookName());
