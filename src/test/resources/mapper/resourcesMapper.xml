@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qcacg.mapper.ResourcesMapper">
+	<!-- 回收策略为先进先出 --> <!-- 自动刷新时间60s --><!-- 最多缓存512个引用对象 -->
+	<!-- <cache eviction="FIFO" flushInterval="30000" size="512" readOnly="false" /> --> <!-- 只读 -->
+
+	<select id="findRes" parameterType="java.util.Map" resultType="com.qcacg.entity.ResourcesEntity">
+		SELECT
+		resourcesId,
+		resourcesName,
+		parentResourcesId,
+		(select r.resourcesName from sys_resources r where r.resourcesId= sys_resources.parentResourcesId )
+		parentName,
+		resourcesType,
+		resourcesUrl,
+		resourcesLevel,
+		resourcesView,
+		resourcesDescription
+		from sys_resources where 1 = 1
+		<if test="roleId != null and roleId != '' and roleId != 0">
+			AND resourcesId in( select resourcesId from sys_role_resources where 1=1 and roleId = #{roleId})
+		</if>
+		<if test="userId != null and userId != '' and userId != 0">
+			AND resourcesId in( select resourcesId from sys_user_resources where 1=1 and userId = #{userId})
+		</if>
+		order by resourcesLevel
+	</select>
+
+	<select id="findResourcesByUserId" resultType="com.qcacg.entity.ResourcesEntity" parameterType="java.lang.Long">
+		SELECT
+		resourcesName,
+		parentResourcesId,
+		resourcesUrl
+		from sys_resources  t1
+		JOIN (
+		SELECT resourcesId FROM sys_user_resources  WHERE userId = #{userId}
+		UNION ALL
+		SELECT resourcesId FROM sys_role_resources t1 JOIN sys_user_role t2 ON t1.roleId = t2.roleId
+		AND t2.userId = #{userId})t2 
+		 ON t1.resourcesId = t2.resourcesId
+	</select>
+
+	<select id="findResourcesByRoleId" resultType="com.qcacg.entity.ResourcesEntity"
+		parameterType="java.lang.String">
+		SELECT
+		DISTINCT t1.*
+		FROM
+		sys_resources t1,
+		sys_role_resources
+		t2,
+		sys_role t3
+		WHERE
+		t1.resourcesId = t2.resourcesId
+		AND t2.roleId = t3.roleId
+		AND t2.roleId
+		= #{roleId}
+	</select>
+
+
+	<select id="findResourcessByMap" resultType="com.qcacg.entity.ResourcesEntity"
+		parameterType="java.util.Map">
+		SELECT * FROM sys_resources WHERE resourcesId in
+		(SELECT DISTINCT resourcesId FROM (SELECT resourcesId FROM sys_user_resources WHERE userId = #{userId}
+		UNION ALL
+		SELECT resourcesId FROM sys_role_resources WHERE roleId in (SELECT roleId FROM sys_user_role WHERE userId= #{userId})) tmp)
+		<if test="parentResourcesId != null and parentResourcesId != '' and parentResourcesId != 0">
+			AND parentResourcesId = #{parentResourcesId}
+		</if>
+	</select>
+
+
+	<delete id="deleteByRoleId" parameterType="java.lang.String">
+		delete from
+		sys_role_resources where roleId = #{roleId}
+	</delete>
+	<delete id="deleteByUserId" parameterType="java.lang.String">
+		delete from
+		sys_user_resources where userId = #{userId}
+	</delete>
+	
+	<delete id="deleteRoleByUserId" parameterType="java.lang.String">
+		delete from
+		sys_user_role where userId = #{userId}
+	</delete>
+	
+	
+
+	<insert id="batchAddRoleGroup" parameterType="java.util.List">
+		INSERT INTO sys_role_resources (roleId,resourcesId)
+		VALUES
+		<foreach collection="list" item="item" index="index" separator=",">
+			(#{item.roleId},#{item.resId})
+		</foreach>
+	</insert>
+	<insert id="batchAddUserGroup" parameterType="java.util.List">
+		INSERT INTO sys_user_resources (userId,resourcesId)
+		VALUES
+		<foreach collection="list" item="item" index="index" separator=",">
+			(#{item.userId},#{item.resId})
+		</foreach>
+	</insert>
+	
+
+	<select id="treeNodes" >
+         CALL treeNodes()
+    </select>
+
+
+
+
+
+
+
+</mapper>
