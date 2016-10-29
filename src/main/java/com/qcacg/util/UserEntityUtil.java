@@ -43,10 +43,17 @@ public class UserEntityUtil
 
 	public static UserEntity getUserFromSession()
 	{
+<<<<<<< HEAD
 //		Subject subject = SecurityUtils.getSubject();
 //		UsernamePasswordToken token = new UsernamePasswordToken("15067171806", "123456");
 //		//UsernamePasswordToken token = new UsernamePasswordToken(user.getTelephone(), user.getPassWord());
 //		subject.login(token);
+=======
+		Subject subject = SecurityUtils.getSubject();
+		UsernamePasswordToken token = new UsernamePasswordToken("15067171806", "123456");
+		//UsernamePasswordToken token = new UsernamePasswordToken(user.getTelephone(), user.getPassWord());
+		subject.login(token);
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 
 		//获取验证后的subject实例
 		Session session = SecurityUtils.getSubject().getSession();

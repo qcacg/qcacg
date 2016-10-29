@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
 		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 		 id="WebApp_ID" version="3.0">
 <display-name>qcacg</display-name>
 
 
+=======
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>qcacg</display-name>
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 
 	<!--过滤字符集 -->
 	<filter>
@@ -29,7 +37,16 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:spring-shiro.xml,classpath:spring-application.xml</param-value>
 	</context-param>
+<<<<<<< HEAD
 
+=======
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 	<!--委派过滤器，原型是FilterToBeanProxy，即将Filter作为spring的bean，由spring来管理。-->
 	<filter>
 		<filter-name>shiroFilter</filter-name>
@@ -45,6 +62,7 @@
 		<url-pattern>*.shtml</url-pattern>
 	</filter-mapping>
 
+<<<<<<< HEAD
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
@@ -52,6 +70,8 @@
 		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
 	</listener>
 
+=======
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 	<!--跨域过滤器00-->
 	<filter>
 		<filter-name>originFilter</filter-name>
@@ -62,14 +82,23 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	<!-- 验证登录过滤器 -->
+<<<<<<< HEAD
 	<filter>
+=======
+	<!--<filter>
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 		<filter-name>accessFilter</filter-name>
 		<filter-class>com.qcacg.shiro.filter.AccessFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>accessFilter</filter-name>
+<<<<<<< HEAD
 		<url-pattern>*.shtml</url-pattern>
 	</filter-mapping>
+=======
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> -->
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 
 	<servlet>
 		<servlet-name>springmvc</servlet-name>

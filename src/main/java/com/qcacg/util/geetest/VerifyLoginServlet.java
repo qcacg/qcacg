@@ -32,9 +32,11 @@ public class VerifyLoginServlet extends HttpServlet {
 		String validate = request.getParameter(GeetestLib.fn_geetest_validate);
 		String seccode = request.getParameter(GeetestLib.fn_geetest_seccode);
 
+
 		//从session中获取gt-server状态
 		MyJedis jedis = new MyJedis();
 		int gt_server_status_code = Integer.valueOf(jedis.getValue(gtSdk.gtServerStatusSessionKey));
+
 		
 		//从session中获取userid
 //		Long userId = UserEntityUtil.getUserFromSession().getUserId();

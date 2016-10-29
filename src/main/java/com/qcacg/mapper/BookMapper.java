@@ -41,6 +41,7 @@ public interface BookMapper extends Mapper<BookEntity> {
 
     public List<BookEntity> findBookByBookName(String bookName);
 
+<<<<<<< HEAD
     public void batchUpdateBookStatus(List list);
 
     public void batchUpdateBookStatus2(List list);
@@ -48,4 +49,6 @@ public interface BookMapper extends Mapper<BookEntity> {
     public void deleteBookByBookId(Long bookId);
 
     public void batchDeleteBookByBookId(List list);
+=======
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 }

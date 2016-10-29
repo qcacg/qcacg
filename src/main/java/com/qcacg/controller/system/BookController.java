@@ -1,6 +1,9 @@
 package com.qcacg.controller.system;
 
+<<<<<<< HEAD
 import com.qcacg.constant.CodeConstant;
+=======
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 import com.qcacg.controller.BaseController;
 import com.qcacg.entity.BookAndBookTypeEntity;
 import com.qcacg.entity.BookEntity;
@@ -170,13 +173,19 @@ public class BookController extends BaseController {
 
     @RequestMapping(value = "saveOrUpdateBook", method = RequestMethod.POST)
     @ResponseBody
+<<<<<<< HEAD
     public Map<String, Object> saveOrUpdateBook(BookEntity bookEntity,
                                                 HttpServletRequest request,
                                                 HttpServletResponse response) throws Exception {
+=======
+    public Map<String, Object> saveOrUpdateBook(BookEntity bookEntity, HttpServletRequest request)
+    {
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
         Map<String, Object> map = new HashMap<String, Object>();
         try {
             bookEntity = BookEntityUtil.getBookEntity(request);
             if(bookEntity.getBookName() == null) {
+<<<<<<< HEAD
                 response.setStatus(response.SC_NOT_FOUND);
                 map.put("code", CodeConstant.NOT_NULL_CODE);
                 map.put("msg", CodeConstant.BOOKNAME_IS_NULL);
@@ -185,6 +194,13 @@ public class BookController extends BaseController {
             if(this.bookService.findBookByBookName(bookEntity.getBookName(), bookEntity.getBookId())) {
                 map.put("code", CodeConstant.IS_EXIST_CODE);
                 map.put("msg", CodeConstant.BOOKNAME_IS_EXIST);
+=======
+                map.put("msg", "书名不能为空");
+                return map;
+            }
+            if(this.bookService.findBookByBookName(bookEntity.getBookName(), bookEntity.getBookId())) {
+                map.put("msg", "书名已存在");
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
                 return map;
             }
             this.bookService.saveOrUpdateBook(bookEntity);
@@ -205,6 +221,7 @@ public class BookController extends BaseController {
             map.put("success",true);
         }catch (Exception e){
             e.printStackTrace();
+<<<<<<< HEAD
             // response.sendError(500, e.getMessage());
             response.setStatus(500);
             map.put("msg", CodeConstant.SYS_CODE_MSG);
@@ -215,6 +232,49 @@ public class BookController extends BaseController {
         return map;
     }
 
+=======
+//            map.put("success",false);
+//            map.put("msg","error");
+            throw new NullPointerException("未找到");
+        }
+        return map;
+    }
+    /*
+    public Map<String, Object> saveOrUpdateBook(BookEntity bookEntity, @RequestBody BookEntity bookEntityForm)
+    {
+        Map<String, Object> map = new HashMap<String, Object>();
+        try {
+            Long userId = UserEntityUtil.getUserFormSessionFromSession().getUserId();
+            bookEntity.setBookId(bookEntityForm.getBookId());
+            bookEntity.setUserId(userId);
+            bookEntity.setBookName(bookEntityForm.getBookName());
+            bookEntity.setBookIntroduction(bookEntityForm.getBookIntroduction());
+            bookEntity.setBookCoverImage(bookEntityForm.getBookCoverImage());
+            bookEntity.setSort(bookEntityForm.getSort());
+            System.out.println(bookEntity);
+            this.bookService.saveOrUpdateBook(bookEntity);
+            map.put("bookEntity", bookEntity);
+            Long bookId = bookEntity.getBookId();
+            List<Long> bookTypeList = bookEntityForm.getBookTypeList();
+            List<BookAndBookTypeEntity> bookAndBookTypeEntityList = new ArrayList<BookAndBookTypeEntity>();
+            for (int i = 0; i < bookTypeList.size(); i++) {
+                BookAndBookTypeEntity bookAndBookTypeEntity = new BookAndBookTypeEntity();
+                bookAndBookTypeEntity.setBookId(bookId);
+                bookAndBookTypeEntity.setBookTypeId(bookTypeList.get(i));
+                bookAndBookTypeEntityList.add(bookAndBookTypeEntity);
+                map.put("bookAndBookTypeEntity",bookAndBookTypeEntity);
+            }
+            this.bookAndBookTypeService.saveOrUpdateBookType(bookAndBookTypeEntityList, bookId);
+            map.put("success",true);
+        }catch (Exception e){
+            e.printStackTrace();
+            map.put("success",false);
+            map.put("msg","error");
+        }
+        return map;
+    }
+    */
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
     /*
     添加小说封面
     */
@@ -290,6 +350,7 @@ public class BookController extends BaseController {
             return result;
         }
     }
+<<<<<<< HEAD
 
     @RequestMapping("bookFromSale")
     @ResponseBody
@@ -303,6 +364,8 @@ public class BookController extends BaseController {
         return null;
     }
 
+=======
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
     /*
     展示提交审核的小说
      */
@@ -313,4 +376,10 @@ public class BookController extends BaseController {
         return this.bookService.queryBookForCheck();
 
     }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 }

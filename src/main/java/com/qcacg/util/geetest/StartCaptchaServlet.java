@@ -1,6 +1,8 @@
 package com.qcacg.util.geetest;
 
+
 import com.qcacg.util.MyJedis;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -38,9 +40,13 @@ public class StartCaptchaServlet extends HttpServlet {
 			int gtServerStatus = gtSdk.preProcess();
 
 			//将服务器状态设置到session中
+<<<<<<< HEAD
 		MyJedis jedis = new MyJedis();
 		jedis.set(gtSdk.gtServerStatusSessionKey, String.valueOf(gtServerStatus));
 		jedis.expire(gtSdk.gtServerStatusSessionKey, 60);
+=======
+			request.getSession().setAttribute(gtSdk.gtServerStatusSessionKey, gtServerStatus);
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 			//将userid设置到session中
 //		request.getSession().setAttribute("userId", userId);
 

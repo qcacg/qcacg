@@ -20,7 +20,11 @@ public class BookEntityUtil {
         BookEntity bookEntity = new BookEntity();
         bookEntity.setUserId(userId);
         JSONObject json = JSONObject.fromObject(req.getParameter("bookEntity"));
+<<<<<<< HEAD
         if (json.getString("bookId") != null && StringUtils.isNotBlank(json.getString("bookId"))){
+=======
+        if (json.get("bookId") != null && StringUtils.isNotBlank(json.getString("bookId"))){
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
             bookEntity.setBookId(json.getLong("bookId"));
         }
         if (json.get("bookCoverImage") != null && !json.getString("bookCoverImage").trim().isEmpty())

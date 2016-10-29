@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/qcacg.iml" filepath="$PROJECT_DIR$/qcacg.iml" />
+<<<<<<< HEAD
+=======
+      <module fileurl="file://$PROJECT_DIR$/src/test/test.iml" filepath="$PROJECT_DIR$/src/test/test.iml" />
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
     </modules>
   </component>
 </project>

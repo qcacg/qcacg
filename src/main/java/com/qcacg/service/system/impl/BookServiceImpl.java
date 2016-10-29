@@ -1,7 +1,10 @@
 package com.qcacg.service.system.impl;
 
 import com.github.pagehelper.PageInfo;
+<<<<<<< HEAD
 import com.qcacg.constant.CodeConstant;
+=======
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 import com.qcacg.entity.BookEntity;
 import com.qcacg.entity.VolumeEntity;
 import com.qcacg.mapper.BookMapper;
@@ -12,9 +15,13 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+=======
+import java.util.List;
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 
 /**
  * Created by Administrator on 2016/7/4.
@@ -155,6 +162,7 @@ public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements Book
         }
         return false;
     }
+<<<<<<< HEAD
 
     @Override
     public Map<String, Object> bookFromSale(List list) {
@@ -193,4 +201,6 @@ public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements Book
         map.put("msg", "您选择的删除成功");
         return map;
     }
+=======
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 }
