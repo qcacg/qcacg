@@ -41,4 +41,11 @@ public interface BookMapper extends Mapper<BookEntity> {
 
     public List<BookEntity> findBookByBookName(String bookName);
 
+    public void batchUpdateBookStatus(List list);
+
+    public void batchUpdateBookStatus2(List list);
+
+    public void deleteBookByBookId(Long bookId);
+
+    public void batchDeleteBookByBookId(List list);
 }

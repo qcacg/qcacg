@@ -1,5 +1,6 @@
 package com.qcacg.controller.system;
 
+import com.qcacg.constant.CodeConstant;
 import com.qcacg.controller.BaseController;
 import com.qcacg.entity.BookAndBookTypeEntity;
 import com.qcacg.entity.BookEntity;
@@ -169,13 +170,21 @@ public class BookController extends BaseController {
 
     @RequestMapping(value = "saveOrUpdateBook", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> saveOrUpdateBook(BookEntity bookEntity, HttpServletRequest request)
-    {
+    public Map<String, Object> saveOrUpdateBook(BookEntity bookEntity,
+                                                HttpServletRequest request,
+                                                HttpServletResponse response) throws Exception {
         Map<String, Object> map = new HashMap<String, Object>();
         try {
             bookEntity = BookEntityUtil.getBookEntity(request);
+            if(bookEntity.getBookName() == null) {
+                response.setStatus(response.SC_NOT_FOUND);
+                map.put("code", CodeConstant.NOT_NULL_CODE);
+                map.put("msg", CodeConstant.BOOKNAME_IS_NULL);
+                return map;
+            }
             if(this.bookService.findBookByBookName(bookEntity.getBookName(), bookEntity.getBookId())) {
-                map.put("msg", "error");
+                map.put("code", CodeConstant.IS_EXIST_CODE);
+                map.put("msg", CodeConstant.BOOKNAME_IS_EXIST);
                 return map;
             }
             this.bookService.saveOrUpdateBook(bookEntity);
@@ -196,46 +205,16 @@ public class BookController extends BaseController {
             map.put("success",true);
         }catch (Exception e){
             e.printStackTrace();
-            map.put("success",false);
-            map.put("msg","error");
+            // response.sendError(500, e.getMessage());
+            response.setStatus(500);
+            map.put("msg", CodeConstant.SYS_CODE_MSG);
+            map.put("code", CodeConstant.SYS_CODE);
+            map.put("error",e.getMessage());
+            return map;
         }
         return map;
     }
-    /*
-    public Map<String, Object> saveOrUpdateBook(BookEntity bookEntity, @RequestBody BookEntity bookEntityForm)
-    {
-        Map<String, Object> map = new HashMap<String, Object>();
-        try {
-            Long userId = UserEntityUtil.getUserFormSessionFromSession().getUserId();
-            bookEntity.setBookId(bookEntityForm.getBookId());
-            bookEntity.setUserId(userId);
-            bookEntity.setBookName(bookEntityForm.getBookName());
-            bookEntity.setBookIntroduction(bookEntityForm.getBookIntroduction());
-            bookEntity.setBookCoverImage(bookEntityForm.getBookCoverImage());
-            bookEntity.setSort(bookEntityForm.getSort());
-            System.out.println(bookEntity);
-            this.bookService.saveOrUpdateBook(bookEntity);
-            map.put("bookEntity", bookEntity);
-            Long bookId = bookEntity.getBookId();
-            List<Long> bookTypeList = bookEntityForm.getBookTypeList();
-            List<BookAndBookTypeEntity> bookAndBookTypeEntityList = new ArrayList<BookAndBookTypeEntity>();
-            for (int i = 0; i < bookTypeList.size(); i++) {
-                BookAndBookTypeEntity bookAndBookTypeEntity = new BookAndBookTypeEntity();
-                bookAndBookTypeEntity.setBookId(bookId);
-                bookAndBookTypeEntity.setBookTypeId(bookTypeList.get(i));
-                bookAndBookTypeEntityList.add(bookAndBookTypeEntity);
-                map.put("bookAndBookTypeEntity",bookAndBookTypeEntity);
-            }
-            this.bookAndBookTypeService.saveOrUpdateBookType(bookAndBookTypeEntityList, bookId);
-            map.put("success",true);
-        }catch (Exception e){
-            e.printStackTrace();
-            map.put("success",false);
-            map.put("msg","error");
-        }
-        return map;
-    }
-    */
+
     /*
     添加小说封面
     */
@@ -311,6 +290,19 @@ public class BookController extends BaseController {
             return result;
         }
     }
+
+    @RequestMapping("bookFromSale")
+    @ResponseBody
+    public Map<String, Object> bookFromSale(HttpServletRequest request,
+                                            HttpServletResponse response,
+                                            @RequestParam("bookIds") List<Long> list) {
+        Map<String, Object> map = this.bookService.bookFromSale(list);
+        if(map.get("code") != null) {
+
+        }
+        return null;
+    }
+
     /*
     展示提交审核的小说
      */
@@ -321,7 +313,4 @@ public class BookController extends BaseController {
         return this.bookService.queryBookForCheck();
 
     }
-
-
-
 }

@@ -23,11 +23,11 @@ public class BookEntityUtil {
         if (json.getString("bookId") != null && StringUtils.isNotBlank(json.getString("bookId"))){
             bookEntity.setBookId(json.getLong("bookId"));
         }
-        if (json.getString("bookCoverImage") != null && !json.getString("bookCoverImage").trim().isEmpty())
+        if (json.get("bookCoverImage") != null && !json.getString("bookCoverImage").trim().isEmpty())
             bookEntity.setBookCoverImage(json.getString("bookCoverImage"));
-        if (json.getString("bookIntroduction") != null && !json.getString("bookIntroduction").trim().isEmpty())
+        if (json.get("bookIntroduction") != null && !json.getString("bookIntroduction").trim().isEmpty())
             bookEntity.setBookIntroduction(json.getString("bookIntroduction"));
-        if (json.getString("bookName") != null && !json.getString("bookName").trim().isEmpty())
+        if (json.get("bookName") != null && !json.getString("bookName").trim().isEmpty())
             bookEntity.setBookName(json.getString("bookName"));
         if (json.get("sort") != null && !json.getString("sort").trim().isEmpty())
             bookEntity.setSort(json.getString("sort"));

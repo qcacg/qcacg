@@ -30,7 +30,7 @@ public class VerifyLoginServlet extends HttpServlet {
 		String challenge = request.getParameter(GeetestLib.fn_geetest_challenge);
 		String validate = request.getParameter(GeetestLib.fn_geetest_validate);
 		String seccode = request.getParameter(GeetestLib.fn_geetest_seccode);
-			
+		
 		//从session中获取gt-server状态
 		int gt_server_status_code = (Integer) request.getSession().getAttribute(gtSdk.gtServerStatusSessionKey);
 		

@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class BookCustom extends BookEntity {
 
+    //使用@Transient注解可以忽略字段,添加该注解的字段不会作为表字段使用.
     @Transient
     private List<VolumeCustom> volumeCustomList;
     @Transient

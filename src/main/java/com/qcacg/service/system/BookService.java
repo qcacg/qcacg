@@ -5,6 +5,7 @@ import com.qcacg.entity.BookEntity;
 import com.qcacg.service.BaseService;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2016/7/4.
@@ -50,4 +51,9 @@ public interface BookService extends BaseService<BookEntity> {
     public List<BookEntity> MonthBookByBookWordCount();
 
     public boolean findBookByBookName(String bookName, Long bookId);
+
+    //将小说下架
+    public Map<String, Object> bookFromSale(List list);
+    //删除小说
+    public Map<String, Object> removeBook(List list);
 }

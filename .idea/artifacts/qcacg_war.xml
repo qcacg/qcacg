@@ -1,8 +1,14 @@
 <component name="ArtifactManager">
   <artifact type="war" build-on-make="true" name="qcacg:war">
-    <output-path>$PROJECT_DIR$/out/artifacts/qcacg_war</output-path>
-    <root id="archive" name="qcacg_war.war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="qcacg.war">
       <element id="artifact" artifact-name="qcacg:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jedis-2.9.0" />
+          <element id="library" level="project" name="lib" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>

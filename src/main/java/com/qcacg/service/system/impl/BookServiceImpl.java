@@ -1,6 +1,7 @@
 package com.qcacg.service.system.impl;
 
 import com.github.pagehelper.PageInfo;
+import com.qcacg.constant.CodeConstant;
 import com.qcacg.entity.BookEntity;
 import com.qcacg.entity.VolumeEntity;
 import com.qcacg.mapper.BookMapper;
@@ -11,7 +12,9 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2016/7/4.
@@ -151,5 +154,43 @@ public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements Book
             }
         }
         return false;
+    }
+
+    @Override
+    public Map<String, Object> bookFromSale(List list) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        if(list.size() == 0) {
+            map.put("code", CodeConstant.NULL_SELECT_CODE);
+            map.put("msg", CodeConstant.NULL_SELECT_MSG);
+            return map;
+        }
+        for(int i = 0; i < list.size(); i++) {
+            if(!(list.get(i) instanceof Long)) {
+                map.put("code", CodeConstant.UNABLE_HANDLE_CODE);
+                map.put("msg", CodeConstant.UNABLE_HANDLE_PARAM);
+                return map;
+            }
+        }
+        map.put("msg", "您选择的书籍下架成功");
+        return map;
+    }
+
+    @Override
+    public Map<String, Object> removeBook(List list) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        if(list.size() == 0) {
+            map.put("code", CodeConstant.NULL_SELECT_CODE);
+            map.put("msg", CodeConstant.NULL_SELECT_MSG);
+            return map;
+        }
+        for(int i = 0; i < list.size(); i++) {
+            if(!(list.get(i) instanceof Long)) {
+                map.put("code", CodeConstant.UNABLE_HANDLE_CODE);
+                map.put("msg", CodeConstant.UNABLE_HANDLE_PARAM);
+                return map;
+            }
+        }
+        map.put("msg", "您选择的删除成功");
+        return map;
     }
 }

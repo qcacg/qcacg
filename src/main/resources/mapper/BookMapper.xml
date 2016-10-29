@@ -2,6 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qcacg.mapper.BookMapper">
 
+    <select id="findBookByBookName" resultType="com.qcacg.entity.BookEntity" parameterType="String">
+        SELECT
+          wor_book.BookId,
+          wor_book.BookName
+        FROM
+          wor_book
+        WHERE
+          wor_book.BookName = #{wor_book.BookName}
+    </select>
 
     <select id="findBookByUserId" resultType="com.qcacg.entity.BookEntity" parameterType="java.lang.Long">
 SELECT
@@ -341,4 +350,54 @@ wor_book.BookUpdate ASC
     <update id="adminUpdateBookStatus" parameterType="java.lang.Long">
         UPDATE wor_book SET bookStatus= '1' WHERE bookId=#{bookId}
     </update>
+
+    <update id="batchUpdateBookStatus" parameterType="java.util.List">
+        UPDATE wor_book SET wor_book.BookStatus = '2'
+        WHERE wor_book.BookId IN
+        <foreach collection="list" item="item" index="index" open="(" separator="," close=")" >
+            #{item}
+        </foreach>
+    </update>
+
+    <update id="batchUpdateBookStatus2" parameterType="java.util.List">
+        <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+            UPDATE wor_book SET wor_book.BookStatus = '2'
+            WHERE wor_book.BookId = #{item}
+        </foreach>
+    </update>
+
+    <delete id="deleteBookByBookId" parameterType="java.lang.Long">
+        DELETE wor_book, wor_bookcollect,
+        wor_bookcopper, wor_bookhit,
+        wor_booksilver, wor_book_booktype,
+        wor_volume
+        FROM
+        wor_book, wor_bookcollect,
+        wor_bookcopper, wor_bookhit,
+        wor_booksilver, wor_book_booktype,
+        wor_volume
+        WHERE
+          wor_book.BookId = wor_bookcollect.BookId = wor_bookcopper.BookId = wor_bookhit.BookId
+          = wor_booksilver.BookId = wor_book_booktype.BookId = wor_volume.BookId
+        AND
+          wor_book.BookId = #{bookId}
+    </delete>
+    <delete id="batchDeleteBookByBookId" parameterType="java.util.List">
+        <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+            DELETE wor_book, wor_bookcollect,
+            wor_bookcopper, wor_bookhit,
+            wor_booksilver, wor_book_booktype,
+            wor_volume
+            FROM
+            wor_book, wor_bookcollect,
+            wor_bookcopper, wor_bookhit,
+            wor_booksilver, wor_book_booktype,
+            wor_volume
+            WHERE
+            wor_book.BookId = wor_bookcollect.BookId = wor_bookcopper.BookId = wor_bookhit.BookId
+            = wor_booksilver.BookId = wor_book_booktype.BookId = wor_volume.BookId
+            AND
+            wor_book.BookId = #{item}
+        </foreach>
+    </delete>
 </mapper>

@@ -1,16 +1,23 @@
 package com.qcacg.util;
 
 import com.qcacg.entity.UserEntity;
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.crypto.RandomNumberGenerator;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.util.ByteSource;
+
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class PasswordHelper
 {
 	private RandomNumberGenerator randomNumberGenerator = new SecureRandomNumberGenerator();
 	private String algorithmName = "md5";
 	private int hashIterations = 2;
+	private static String mySalt = "cn.qcacg";
 
 	public void encryptPassword(UserEntity userEntity)
 	{
@@ -29,13 +36,31 @@ public class PasswordHelper
 		return token;
 	}
 
+	public static String encryptByMd5(String in) {
+		if(StringUtils.isBlank(in)) {
+			throw new RuntimeException("无法对空字符串加密");
+		}
+		try {
+			byte[] input = in.getBytes("utf-8");
+			MessageDigest md = MessageDigest.getInstance("MD5");
+			md.update(input);
+			md.update(mySalt.getBytes("utf-8"));
+			byte[] out = md.digest();
+			String encrypt = Base64.encodeBase64String(out);
+			return encrypt;
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+
+
 	public static void main(String[] args) {
-		PasswordHelper passwordHelper = new PasswordHelper();
-		UserEntity userFormMap = new UserEntity();
-		userFormMap.setPassWord("123456");
-		userFormMap.setTelephone("15067171806");
-		passwordHelper.encryptPassword(userFormMap);
-		System.out.println(userFormMap.getPassWord());
 
 	}
 
