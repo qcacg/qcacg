@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="qcacg:war">
+  <artifact type="war" name="qcacg:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="archive" name="qcacg.war">
       <element id="artifact" artifact-name="qcacg:war exploded" />

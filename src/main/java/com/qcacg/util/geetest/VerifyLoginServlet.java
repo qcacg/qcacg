@@ -1,5 +1,6 @@
 package com.qcacg.util.geetest;
 
+import com.qcacg.util.MyJedis;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -30,9 +31,10 @@ public class VerifyLoginServlet extends HttpServlet {
 		String challenge = request.getParameter(GeetestLib.fn_geetest_challenge);
 		String validate = request.getParameter(GeetestLib.fn_geetest_validate);
 		String seccode = request.getParameter(GeetestLib.fn_geetest_seccode);
-		
+
 		//从session中获取gt-server状态
-		int gt_server_status_code = (Integer) request.getSession().getAttribute(gtSdk.gtServerStatusSessionKey);
+		MyJedis jedis = new MyJedis();
+		int gt_server_status_code = Integer.valueOf(jedis.getValue(gtSdk.gtServerStatusSessionKey));
 		
 		//从session中获取userid
 //		Long userId = UserEntityUtil.getUserFromSession().getUserId();
