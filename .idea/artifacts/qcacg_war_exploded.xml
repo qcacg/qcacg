@@ -1,17 +1,18 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" build-on-make="true" name="qcacg:war exploded">
-    <output-path>$PROJECT_DIR$/target/qcacg</output-path>
+  <artifact type="exploded-war" name="qcacg:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/qcacg_war_exploded</output-path>
     <root id="root">
+      <element id="javaee-facet-resources" facet="qcacg/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="qcacg" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="lib" />
           <element id="library" level="project" name="jedis-2.9.0" />
+          <element id="library" level="project" name="lib" />
+          <element id="file-copy" path="E:/jedis-2.9.0.jar" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="qcacg/web/Web" />
     </root>
   </artifact>
 </component>

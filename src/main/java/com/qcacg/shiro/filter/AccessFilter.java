@@ -57,9 +57,13 @@ public class AccessFilter implements Filter{
     }
 
     private boolean isOut(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        String jsessionId = req.getParameter("jsessionId");
+        String jsessionId = req.getParameter("JSESSIONID");
         MyJedis jedis = new MyJedis();
-        if (StringUtils.isNotBlank(jsessionId)){
+        System.out.println(jsessionId);
+        //jsessionId的值有可能是undefined，这是非常尴尬的
+        if (StringUtils.isNotBlank(jsessionId)
+                && !"undefined".equals(jsessionId)
+                && !"null".equals(jsessionId)){
             String token = jedis.getValue(jsessionId);
             long loginTime = Long.valueOf(jedis.getTime(jsessionId));
             long now = System.currentTimeMillis();
@@ -85,15 +89,15 @@ public class AccessFilter implements Filter{
 
     private void redirectController(HttpServletRequest request, HttpServletResponse response, FilterChain chain) {
         // TODO Auto-generated method stub
-        //获取sessionId
+        // 获取sessionId
         Map<String, String> map = new HashMap<String, String>();
         JSONObject json = null;
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json; charset=utf-8");
         PrintWriter out = null;
         String jsessionId = request.getParameter("JSESSIONID");
-        //如果sessionId为空表明未登录
-        if(StringUtils.isBlank(jsessionId)) {
+        //如果sessionId为空表明未登录 或者 jsessionid 是 undefined
+        if(StringUtils.isBlank(jsessionId) || "undefined".equals(jsessionId)) {
             try {
                 response.setStatus(500);
                 map.put("code", CodeConstant.TO_LOGIN_CODE + 2);
@@ -136,22 +140,39 @@ public class AccessFilter implements Filter{
         }
     }
 
+    /**
+     * 验证那些是不需要登入的页面的判断
+     * @param name
+     *
+     */
     private List<String> getList() {
         List<String> list = new ArrayList<String>();
-        //不需要登录检查的页面
-//        /index.jsp  /index.shtml  /common/**  /lib/** /module/**
-//        /treegrid/**  /denied.shtml   /login.shtml /toLogin.shtml
-//         /register.shtml  /toRegister.shtml  /type.shtml  /book/queryBook/**.shtml
-//         /ranking.shtml  /catalog.shtml = anon /updatePasswordTelephoneCode.shtml
-//         /registerTelephoneCode.shtml  /toUpdatePassword.shtml  /updatePassword.shtml
-//         /404.jsp  /error.jsp = anon  /book/findBookByBookUpDate.shtml
-        list.add("/index.jsp");list.add("/index.shtml");list.add("/common/");
-        list.add("/lib/");list.add("/module/");list.add("/treegrid/");list.add("/denied.shtml");
-        list.add("/login.shtml");list.add("/toLogin.shtml");list.add("/register.shtml");
-        list.add("/toRegister.shtml");list.add("/type.shtml");list.add("/book/queryBook/");
-        list.add("/ranking.shtml");list.add("/catalog.shtml");list.add("/updatePasswordTelephoneCode.shtml");
-        list.add("/registerTelephoneCode.shtml");list.add("/toUpdatePassword.shtml");list.add("/updatePassword.shtml");
-        list.add("/404.jsp");list.add("/error.jsp");list.add("/book/findBookByBookUpDate.shtml");
+        list.add("/index.jsp");
+        list.add("/index.shtml");
+        list.add("/common/");
+        list.add("/lib/");
+        list.add("/module/");
+        list.add("/treegrid/");
+        list.add("/denied.shtml");
+        list.add("/login.shtml");
+        list.add("/toLogin.shtml");
+        list.add("/register.shtml");
+        list.add("/toRegister.shtml");
+        list.add("/type.shtml");
+        list.add("/book/queryBook/");
+        list.add("/ranking.shtml");
+        list.add("/catalog.shtml");
+        list.add("/updatePasswordTelephoneCode.shtml");
+        list.add("/registerTelephoneCode.shtml");
+        list.add("/toUpdatePassword.shtml");
+        list.add("/updatePassword.shtml");
+        list.add("/404.jsp");
+        list.add("/error.jsp");
+        list.add("/book/findBookByBookUpDate.shtml");
+        list.add("/book/queryBookType.shtml");
+        list.add("/book/findBookByBook");
+        list.add("/book/MonthBookByBook");
+        list.add("/book/WeekBookByBook");
         return list;
     }
 

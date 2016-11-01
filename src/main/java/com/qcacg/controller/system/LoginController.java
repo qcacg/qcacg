@@ -43,47 +43,6 @@ public class LoginController {
 	@Autowired
 	UserService userService;
 
-
-	
-	@RequestMapping(value = "login", method = RequestMethod.GET, produces = "text/html; charset=utf-8")
-	@ResponseBody
-	public Map<String, String> login(HttpServletRequest request) {
-		Map<String, String> map = new HashMap<String, String>();
-		if(request.getParameter("forceLogout") != null)
-		{
-			//错误信息100004
-			map.put("LOGIN_ERROR_CODE", LoginConstant.LOGIN_ERROR_CODE_100004);
-			//您已经被管理员强制退出，请重新登录
-			map.put("LOGIN_ERROR_MESSAGE", LoginConstant.LOGIN_ERROR_MESSAGE_FORCELOGOUT);
-			return map;
-		}
-		//错误信息100005
-		map.put("LOGIN_ERROR_CODE", LoginConstant.LOGIN_ERROR_CODE_100005);
-		//用户不存在
-		map.put("LOGIN_ERROR_MESSAGE", LoginConstant.LOGIN_ERROR_MESSAGE_USERNOTEXIST);
-		return map;
-	}
-	
-
-	
-
-	public JsonResult<List<ResourcesEntity>> userInfo() {
-		UserEntity infoForm = UserEntityUtil.getUserFromSession();
-		String userId = String.valueOf(infoForm.getUserId());
-		//判断某字符串是否不为空且长度不为0且不由空白符(whitespace)构成
-		if (StringUtils.isNotBlank(userId)) {
-			Map<String, String> queryMap = new HashMap<String, String>();
-			queryMap.put("userId", userId);
-			List<ResourcesEntity> resourceForms = resourcesService.findResourcessByMap(queryMap);
-			List<ResourcesEntity> ns = TreeUtil.getChildResourceForms(resourceForms, 0);
-			//绑定数据；内部调用put（string1, string2),调用之前会判断是否为null（报错）。
-			//String uuid = UUID.randomUUID().toString();
-			//model.addAttribute("UUID", uuid);
-			return new JsonResult<List<ResourcesEntity>>(ns);
-		}
-		return new JsonResult<List<ResourcesEntity>>("用户信息异常");
-	}
-
 	@RequestMapping("login")
 	@ResponseBody
 	public Map login(HttpServletRequest request,HttpServletResponse response) {
@@ -136,54 +95,5 @@ public class LoginController {
 		return map;
 	}
 
-	@RequestMapping("index")
-	public String index() {
-		return "index";
-	}
 
-	@RequestMapping("type")
-	public String type() {
-		return "type";
-	}
-
-	@RequestMapping("catalog")
-	public String catalog() {
-		return "catalog";
-	}
-
-	@RequestMapping("ranking")
-	public String ranking() {
-		return "ranking";
-	}
-	@RequestMapping("book-check")
-	public String bookCheck() {
-		return "book-check";
-	}
-
-
-	@RequestMapping("toLogin")
-	public String toLogin(){
-		return "login";
-	}
-
-	/**
-	 * 登出系统
-	 * 
-	 * @param request
-	 * @param response
-	 * @param model
-	 * @param user
-	 * @param result
-	 * @return
-	 */
-	@RequestMapping("logout")
-	public String logout() {
-		SecurityUtils.getSubject().logout();
-		return "redirect:/login.shtml";
-	}
-	@RequestMapping("denied")
-	public String denied()
-	{
-		return "denied";
-	}
 }

@@ -1,5 +1,8 @@
 package com.qcacg.util.geetest;
 
+import com.qcacg.constant.CodeConstant;
+import com.qcacg.util.MyJedis;
+import org.apache.commons.lang3.StringUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -21,18 +24,38 @@ public class VerifyLoginServlet extends HttpServlet {
 
 
 	private static final long serialVersionUID = 5691814559693335335L;
-	@RequestMapping("/StartCaptchaServlet")
+	@RequestMapping("/VerifyLoginServlet")
 	protected void doPost(HttpServletRequest request,
 						  HttpServletResponse response) throws ServletException, IOException {
 
+		System.out.println("the requestMapping StartCaptchaServlet in  1");
 		GeetestLib gtSdk = new GeetestLib(GeetestConfig.getCaptcha_id(), GeetestConfig.getPrivate_key());
 			
 		String challenge = request.getParameter(GeetestLib.fn_geetest_challenge);
 		String validate = request.getParameter(GeetestLib.fn_geetest_validate);
 		String seccode = request.getParameter(GeetestLib.fn_geetest_seccode);
 		
-		//从session中获取gt-server状态
-		int gt_server_status_code = (Integer) request.getSession().getAttribute(gtSdk.gtServerStatusSessionKey);
+		//从redis中获取gt-server状态
+		MyJedis jedis = new MyJedis();
+		String gt_server_status = jedis.getValue(gtSdk.gtServerStatusSessionKey);
+		System.out.println(gt_server_status);
+		System.out.println(gtSdk.gtServerStatusSessionKey);
+		System.out.println("the StartCaptchaServlet is running here");
+		if(StringUtils.isBlank(gt_server_status)) {
+			response.setCharacterEncoding("utf-8");
+			response.setContentType("application/json; charset=utf-8");
+			response.setStatus(500);
+			JSONObject data = new JSONObject();
+			try {
+				data.put("code", CodeConstant.OUT_OF_TIME_CODE);
+				data.put("msg", CodeConstant.CODE_TIME_OUT_MSG);
+				response.getWriter().append(data.toString()).close();
+				return;
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+		}
+		int gt_server_status_code = Integer.valueOf(gt_server_status);
 		
 		//从session中获取userid
 //		Long userId = UserEntityUtil.getUserFromSession().getUserId();

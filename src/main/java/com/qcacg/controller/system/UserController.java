@@ -62,9 +62,10 @@ public class UserController extends BaseController
      */
 	@RequestMapping("updateUser")
 	@ResponseBody
-	public String updateUser(UserEntity userEntity, @RequestParam("userName")String userName, @RequestParam("birthday")String birthday, @RequestParam("sex")String sex, @RequestParam("information")String information)
+	public String updateUser(HttpServletRequest request, UserEntity userEntity, @RequestParam("userName")String userName, @RequestParam("birthday")String birthday, @RequestParam("sex")String sex, @RequestParam("information")String information)
 	{
-		Long userId = UserEntityUtil.getUserFromSession().getUserId();
+		String jsessionId = request.getParameter("JSESSIONID");
+		Long userId = UserEntityUtil.getUserFromTel(userService, jsessionId).getUserId();
 		userEntity.setUserId(userId);
 		userEntity.setUserName(userName);
 		userEntity.setBirthday(birthday);
@@ -92,6 +93,7 @@ public class UserController extends BaseController
 
 		Map<String,Object> result = new HashMap<String, Object>();
 		MultipartFile file = request.getFile("Image");
+		String jsession = request.getParameter("JSESSIONID");
 		if (file == null || file.isEmpty()) {
 			result.put("success",false);
 			result.put("msg", "文件太小！");
@@ -107,7 +109,8 @@ public class UserController extends BaseController
 				String filename = UploadUtils.generateFilename("jpg");
 				String path = "/upload/image/userHead" + filename;
 				destFile = fileRepository.storeByFilename(path, file);
-				UserEntity userEntity = UserEntityUtil.getUserFromSession();
+				//UserEntity userEntity = UserEntityUtil.getUserFromSession();
+				UserEntity userEntity = UserEntityUtil.getUserFromTel(userService,jsession);
 				userEntity.setUserHead(path);
 				this.userService.update(userEntity);
 				result.put("success",true);
@@ -144,9 +147,10 @@ public class UserController extends BaseController
  */
 	@RequestMapping("queryUser")
 	@ResponseBody
-	public UserEntity queryUser()
+	public UserEntity queryUser(HttpServletRequest request)
 	{
-		Long userId = UserEntityUtil.getUserFromSession().getUserId();
+		String jsessionId = request.getParameter("JSESSIONID");
+		Long userId = UserEntityUtil.getUserId(jsessionId);
 		return this.userService.findByPrimaryKey(userId);
 	}
 

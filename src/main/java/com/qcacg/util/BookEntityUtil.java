@@ -16,7 +16,9 @@ import java.util.List;
 
 public class BookEntityUtil {
     public static BookEntity getBookEntity(HttpServletRequest req) {
-        Long userId = UserEntityUtil.getUserFromSession().getUserId();
+        //Long userId = UserEntityUtil.getUserFromSession().getUserId();
+        String jsessionId = req.getParameter("JSESSIONID");
+        Long userId = UserEntityUtil.getUserId(jsessionId);
         BookEntity bookEntity = new BookEntity();
         bookEntity.setUserId(userId);
         JSONObject json = JSONObject.fromObject(req.getParameter("bookEntity"));

@@ -54,50 +54,50 @@ public class RegisterController {
 		//判断用户是否有输入验证码
 		if(StringUtils.isBlank(inputTelephoneCode)) {
 			response.setStatus(500);
-			map.put("code", CodeConstant.NOT_NULL_CODE);
+			map.put("code", CodeConstant.PARAMETER_CODE);
 			map.put("msg", CodeConstant.VALUE_NO_INPUT);
 			return map;
 		}
 
-		//判断验证码是否过期
+		//判断验证码是否过期;验证码有效期五分钟
 		if(StringUtils.isBlank(telephoneCode)) {
 			response.setStatus(CodeConstant.ERROR_CODE);
 			map.put("code", CodeConstant.OUT_OF_TIME_CODE);
 			map.put("msg", CodeConstant.OUT_OF_TIME_MSG);
 			return map;
 		}
-
+		//检查验证码是否输入正确
 		if(!inputTelephoneCode.equals(telephoneCode)) {
 			response.setStatus(500);
-			map.put("code", CodeConstant.IDENTIFYING_CODE);
+			map.put("code", CodeConstant.PARAMETER_CODE);
 			map.put("msg", CodeConstant.IDENTIFYING_ERROR);
 			return map;
 		}
-
+		//检查用户是否有输入手机号
 		if(userQauryVo.getUserCustom().getTelephone() == null) {
 			response.setStatus(500);
-			map.put("code", CodeConstant.NOT_NULL_CODE);
+			map.put("code", CodeConstant.PARAMETER_CODE);
 			map.put("msg", CodeConstant.TELEPHONE_IS_NULL);
 			return map;
 		}
 		//验证用户手机号是否能正常使用
 		if(!isMobile(userQauryVo.getUserCustom().getTelephone())) {
 			response.setStatus(500);
-			map.put("code", CodeConstant.NOT_EXIST_CODE);
+			map.put("code", CodeConstant.PARAMETER_CODE);
 			map.put("msg", CodeConstant.TELEPHONE_NOT_EXIST);
 			return map;
 		}
 		//验证注册用户是否注册
 		if(this.userService.findByLoginName(userQauryVo.getUserCustom().getTelephone()) != null) {
 			response.setStatus(CodeConstant.ERROR_CODE);
-			map.put("code", CodeConstant.IS_EXIST_CODE);
+			map.put("code", CodeConstant.PARAMETER_CODE);
 			map.put("msg", CodeConstant.TELEPHONE_IS_EXIST);
 			return map;
 		}
 		//判断两次密码是否一致
 		if(!userCustom.getPassWordConfirm().equals(userCustom.getPassWord())) {
 			response.setStatus(CodeConstant.ERROR_CODE);
-			map.put("code", CodeConstant.REGISTER_CODE);
+			map.put("code", CodeConstant.PARAMETER_CODE);
 			map.put("msg", CodeConstant.REGISTER_MSG);
 			return map;
 		}
@@ -115,21 +115,21 @@ public class RegisterController {
 
         if(telephone == null || StringUtils.isBlank(telephone)) {
 			response.setStatus(500);
-			result.put("code", CodeConstant.NOT_NULL_CODE);
+			result.put("code", CodeConstant.PARAMETER_CODE);
 			result.put("msg", CodeConstant.TELEPHONE_IS_NULL);
 			return result;
 		}
 
         if(!isMobile(telephone)) {
 			response.setStatus(500);
-			result.put("code", CodeConstant.NOT_EXIST_CODE);
+			result.put("code", CodeConstant.PARAMETER_CODE);
 			result.put("msg", CodeConstant.TELEPHONE_NOT_EXIST);
 			return result;
 		}
 
         if(this.userService.findByLoginName(telephone) != null){
             response.setStatus(500);
-			result.put("code", CodeConstant.IS_EXIST_CODE);
+			result.put("code", CodeConstant.PARAMETER_CODE);
 			result.put("msg",CodeConstant.TELEPHONE_IS_EXIST);
 			return result;
 
@@ -160,7 +160,7 @@ public class RegisterController {
 		//判断用户是否有输入验证码
 		if(StringUtils.isBlank(inputTelephoneCode)) {
 			response.setStatus(500);
-			map.put("code", CodeConstant.NOT_NULL_CODE);
+			map.put("code", CodeConstant.PARAMETER_CODE);
 			map.put("msg", CodeConstant.VALUE_NO_INPUT);
 			return map;
 		}
@@ -175,35 +175,35 @@ public class RegisterController {
 		//验证验证码是否输入正确
 		if(!inputTelephoneCode.equals(telephoneCode)) {
 			response.setStatus(500);
-			map.put("code", CodeConstant.IDENTIFYING_CODE);
+			map.put("code", CodeConstant.PARAMETER_CODE);
 			map.put("msg", CodeConstant.IDENTIFYING_ERROR);
 			return map;
 		}
 		//需要更新的手机号是否为空
 		if(userQauryVo.getUserCustom().getTelephone() == null) {
 			response.setStatus(500);
-			map.put("code", CodeConstant.NOT_NULL_CODE);
+			map.put("code", CodeConstant.PARAMETER_CODE);
 			map.put("msg", CodeConstant.TELEPHONE_IS_NULL);
 			return map;
 		}
 		//查看手机号是否有效
 		if(!isMobile(userQauryVo.getUserCustom().getTelephone())) {
 			response.setStatus(500);
-			map.put("code", CodeConstant.NOT_EXIST_CODE);
+			map.put("code", CodeConstant.PARAMETER_CODE);
 			map.put("msg", CodeConstant.TELEPHONE_NOT_EXIST);
 			return map;
 		}
 		//查看该手机号是否注册
         if(userService.findByLoginName(userQauryVo.getUserCustom().getTelephone()) == null){
             response.setStatus(500);
-            map.put("code", CodeConstant.NOT_EXIST_CODE);
+            map.put("code", CodeConstant.PARAMETER_CODE);
             map.put("msg", CodeConstant.TELEPHONE_NOT_REGIST);
             return map;
         }
         //查看两次密码是否一致
 		if(!userCustom.getPassWordConfirm().equals(userCustom.getPassWord())) {
 			response.setStatus(CodeConstant.ERROR_CODE);
-			map.put("code", CodeConstant.REGISTER_CODE);
+			map.put("code", CodeConstant.PARAMETER_CODE);
 			map.put("msg", CodeConstant.REGISTER_MSG);
 			return map;
 		}

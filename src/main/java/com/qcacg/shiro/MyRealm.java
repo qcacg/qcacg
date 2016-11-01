@@ -4,6 +4,7 @@ import com.qcacg.entity.ResourcesEntity;
 import com.qcacg.entity.UserEntity;
 import com.qcacg.service.system.ResourcesService;
 import com.qcacg.service.system.UserService;
+import com.qcacg.util.MyJedis;
 import com.qcacg.util.UserEntityUtil;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.SecurityUtils;
@@ -39,7 +40,9 @@ public class MyRealm extends AuthorizingRealm
 		final String loginName = SecurityUtils.getSubject().getPrincipal().toString();
 		if (loginName != null)
 		{
-			Long userId = UserEntityUtil.getUserFromSession().getUserId();
+			//Long userId = UserEntityUtil.getUserFromSession().getUserId();
+			MyJedis jedis = new MyJedis();
+			Long userId = jedis.getUserId(loginName);
 			// 权限信息对象info,用来存放查出的用户的所有的角色（role）及权限（permission）
 			SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
 			List<ResourcesEntity> reList = resourcesService.findResourcessByUserId(userId);
@@ -108,6 +111,8 @@ public class MyRealm extends AuthorizingRealm
 			SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(telephone,
 					user.getPassWord().toCharArray(),
 					ByteSource.Util.bytes(telephone + "" + user.getCredentialsSalt()), getName());
+			MyJedis jedis = new MyJedis();
+			jedis.set(telephone, user.getUserId().toString());
 			// bWVtbXNj
 			// 当验证都通过后，把用户信息放在session里
 			Session session = SecurityUtils.getSubject().getSession();

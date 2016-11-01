@@ -1,9 +1,11 @@
 package com.qcacg.controller.system;
 
+import com.qcacg.constant.CodeConstant;
 import com.qcacg.controller.BaseController;
 import com.qcacg.entity.ContentEntity;
 import com.qcacg.service.system.ContentService;
 import com.qcacg.util.upload.UploadUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,8 +42,29 @@ public class ContentController extends BaseController {
     @RequestMapping("saveOrUpdateContent")
     @ResponseBody
     public Map<String,Object> saveOrUpdateContent(HttpServletRequest request, HttpServletResponse response, ContentEntity contentEntity,
-                                                  @RequestParam("contentId")Long contentId, @RequestParam("html")String html,  @RequestParam("contentTitle")String contentTitle,  @RequestParam("formatText")String formatText, @RequestParam("volumeId")Long volumeId) {
+                                                  @RequestParam("contentId")Long contentId,
+                                                  @RequestParam("html")String html,
+                                                  @RequestParam("contentTitle")String contentTitle,
+                                                  @RequestParam("formatText")String formatText,
+                                                  @RequestParam("volumeId")Long volumeId) {
+        //contentId为空就是保存操作
         Map<String,Object> result = new HashMap<String, Object>();
+        if("null".equals(contentTitle)
+                || "undefined".equals(contentTitle)
+                || StringUtils.isBlank(contentTitle)) {
+            response.setStatus(CodeConstant.ERROR_CODE);
+            result.put("code", CodeConstant.PARAMETER_CODE);
+            result.put("msg", CodeConstant.TITLE_IS_NULL);
+            return result;
+        }
+        if("null".equals(formatText)
+                || "undefined".equals(formatText)
+                || StringUtils.isBlank(formatText)) {
+            response.setStatus(CodeConstant.ERROR_CODE);
+            result.put("code", CodeConstant.PARAMETER_CODE);
+            result.put("msg", CodeConstant.TEXT_IS_NULL);
+            return result;
+        }
         try{
             String filename = UploadUtils.generateFilename("html");
             String path = "/upload/file/content" + filename;
@@ -61,12 +84,14 @@ public class ContentController extends BaseController {
             contentEntity.setContentUrl(path);
             contentEntity.setContentWordCount((long)formatText.trim().length());
             this.contentService.saveOrUpdate(contentEntity);
-            result.put("success",true);
-            result.put("msg",path);
+            result.put("msg", CodeConstant.SUCCESS_COMMIT);
         }catch (IOException e){
-            result.put("success",false);
-            result.put("msg", "error");
+            response.setStatus(CodeConstant.ERROR_CODE);
+            result.put("code", CodeConstant.SYS_CODE);
+            result.put("msg", CodeConstant.IO_CODE_MSG);
+            result.put("error", e.getMessage());
             e.printStackTrace();
+            return result;
         }
         return result;
     }
@@ -92,7 +117,9 @@ public class ContentController extends BaseController {
      */
     @RequestMapping("nextContent")
     @ResponseBody
-    public Map<String,Object> nextContent (@RequestParam("contentId")Long contentId,@RequestParam("bookId")Long bookId){
+    public Map<String,Object> nextContent (@RequestParam("contentId")Long contentId,
+                                           @RequestParam("bookId")Long bookId,
+                                           HttpServletResponse response){
         Map<String,Object> result = new HashMap<String, Object>();
         List<String> contentIdList = this.contentIdList(bookId);
         Integer contendIdIndex = contentIdList.indexOf(String.valueOf(contentId));
@@ -100,12 +127,12 @@ public class ContentController extends BaseController {
         if(contendIdIndex < contentIdList.size()-1){
             Long id = Long.valueOf(contentIdList.get(contendIdIndex+1));
             ContentEntity contentEntity = this.contentService.findContentByContentId(id);
-            result.put("success",true);
-            result.put("contentEntity",contentEntity);
+            result.put("msg",contentEntity);
             return result;
         }else {
-            result.put("success",false);
-            result.put("msg","已经是最后一章了。");
+            response.setStatus(CodeConstant.ERROR_CODE);
+            result.put("code",CodeConstant.PARAMETER_CODE);
+            result.put("msg", CodeConstant.THE_LAST_CONTENT);
             return result;
         }
     }
@@ -114,7 +141,9 @@ public class ContentController extends BaseController {
      */
     @RequestMapping("previousContent")
     @ResponseBody
-    public Map<String,Object> previousContent (@RequestParam("contentId")Long contentId,@RequestParam("bookId")Long bookId){
+    public Map<String,Object> previousContent (@RequestParam("contentId")Long contentId,
+                                               @RequestParam("bookId")Long bookId,
+                                               HttpServletResponse response){
         Map<String,Object> result = new HashMap<String, Object>();
         List<String> contentIdList = this.contentIdList(bookId);
         Integer contendIdIndex = contentIdList.indexOf(String.valueOf(contentId));
@@ -122,12 +151,12 @@ public class ContentController extends BaseController {
         if(contendIdIndex > 0){
             Long id = Long.valueOf(contentIdList.get(contendIdIndex-1));
             ContentEntity contentEntity = this.contentService.findContentByContentId(id);
-            result.put("success",true);
-            result.put("contentEntity",contentEntity);
+            result.put("msg",contentEntity);
             return result;
         }else {
-            result.put("success",false);
-            result.put("msg","已经到最前一章了。");
+            response.setStatus(CodeConstant.ERROR_CODE);
+            result.put("code", CodeConstant.PARAMETER_CODE);
+            result.put("msg",CodeConstant.THE_FIRST_CONTENT);
             return result;
         }
     }
@@ -155,15 +184,19 @@ public class ContentController extends BaseController {
    */
     @RequestMapping("updateContentStatus")
     @ResponseBody
-    public Map<String,Object> updateContentStatus(@RequestParam("contentId")Long contentId){
+    public Map<String,Object> updateContentStatus(HttpServletResponse response,
+                                                  @RequestParam("contentId")Long contentId){
         Map<String,Object> result = new HashMap<String, Object>();
         try{
             this.contentService.updateContentStatus(contentId);
-            result.put("success",true);
+            result.put("msg", CodeConstant.SUCCESS_SET);
             return result;
         }catch (Exception e){
             e.printStackTrace();
-            result.put("success",false);
+            response.setStatus(CodeConstant.ERROR_CODE);
+            result.put("code", CodeConstant.SYS_CODE);
+            result.put("msg", CodeConstant.SQL_CODE_MSG);
+            result.put("error", e.getMessage());
             return result;
         }
     }
@@ -172,14 +205,19 @@ public class ContentController extends BaseController {
    */
     @RequestMapping("deleteContent")
     @ResponseBody
-    public Map<String,Object> deleteContent(@RequestParam("contentId")Long contentId){
+    public Map<String,Object> deleteContent(@RequestParam("contentId")Long contentId,
+                                            HttpServletResponse response){
         Map<String,Object> result = new HashMap<String, Object>();
         try{
             this.contentService.delete(contentId);
-            result.put("success",true);
+            result.put("msg", CodeConstant.SUCCESS_DELETE);
             return result;
         }catch (Exception e){
             e.printStackTrace();
+            response.setStatus(CodeConstant.ERROR_CODE);
+            result.put("code", CodeConstant.SYS_CODE);
+            result.put("msg", CodeConstant.SQL_CODE_MSG);
+            result.put("error", e.getMessage());
             result.put("success",false);
             return result;
         }

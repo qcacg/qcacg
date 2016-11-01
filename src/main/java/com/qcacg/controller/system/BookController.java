@@ -9,10 +9,12 @@ import com.qcacg.service.system.BookAndBookTypeService;
 import com.qcacg.service.system.BookCustomService;
 import com.qcacg.service.system.BookService;
 import com.qcacg.util.BookEntityUtil;
+import com.qcacg.util.MyJedis;
 import com.qcacg.util.UserEntityUtil;
 import com.qcacg.util.upload.FileRepository;
 import com.qcacg.util.upload.UploadUtils;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.poi.ss.formula.functions.Code;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -147,9 +149,11 @@ public class BookController extends BaseController {
 
     @RequestMapping("findBookByUser")
     @ResponseBody
-    public List<BookEntity> findBookByUser()
+    public List<BookEntity> findBookByUser(HttpServletRequest request)
     {
-        Long userId = UserEntityUtil.getUserFromSession().getUserId();
+        String jsessionId = request.getParameter("JSESSIONID");
+        Long userId = UserEntityUtil.getUserId(jsessionId);
+        System.out.println(userId);
         return this.bookService.findBookByUserId(userId);
     }
 
@@ -178,12 +182,12 @@ public class BookController extends BaseController {
             bookEntity = BookEntityUtil.getBookEntity(request);
             if(bookEntity.getBookName() == null) {
                 response.setStatus(response.SC_NOT_FOUND);
-                map.put("code", CodeConstant.NOT_NULL_CODE);
+                map.put("code", CodeConstant.PARAMETER_CODE);
                 map.put("msg", CodeConstant.BOOKNAME_IS_NULL);
                 return map;
             }
             if(this.bookService.findBookByBookName(bookEntity.getBookName(), bookEntity.getBookId())) {
-                map.put("code", CodeConstant.IS_EXIST_CODE);
+                map.put("code", CodeConstant.PARAMETER_CODE);
                 map.put("msg", CodeConstant.BOOKNAME_IS_EXIST);
                 return map;
             }
@@ -225,8 +229,9 @@ public class BookController extends BaseController {
         Map<String,Object> result = new HashMap<String, Object>();
         MultipartFile file = request.getFile("Image");
         if (file == null || file.isEmpty()) {
-            result.put("success",false);
-            result.put("msg", "文件太小！");
+            response.setStatus(CodeConstant.ERROR_CODE);
+            result.put("code",CodeConstant.PARAMETER_CODE);
+            result.put("msg", CodeConstant.FILE_TOO_SMALL);
         } else {
             String origName = file.getOriginalFilename();
             int index = origName.lastIndexOf(".");
@@ -239,15 +244,18 @@ public class BookController extends BaseController {
                 String filename = UploadUtils.generateFilename("jpg");
                 String path = "/upload/image/bookCoverImage" + filename;
                 destFile = fileRepository.storeByFilename(path, file);
-                result.put("success",true);
-                result.put("msg", path);
+                result.put("success", CodeConstant.SUCCESS_SAVE);
+                result.put("msg", "文件存储在" + path);
             } catch (Exception e) {
-                result.put("success",false);
-                result.put("msg", "上传失败！");
+                response.setStatus(CodeConstant.ERROR_CODE);
+                result.put("code", CodeConstant.SYS_CODE);
+                result.put("msg", CodeConstant.SQL_CODE_MSG);
+                result.put("error", e.getMessage());
                 e.printStackTrace();
                 if (destFile != null && destFile.exists()) {
                     destFile.delete();
                 }
+                return result;
             }
         }
         return result;
@@ -258,16 +266,19 @@ public class BookController extends BaseController {
      */
     @RequestMapping("userUpdateBookStatus")
     @ResponseBody
-    public Map<String,Object> userUpdateBookStatus(@RequestParam("bookId")Long bookId)
+    public Map<String,Object> userUpdateBookStatus(HttpServletResponse response, @RequestParam("bookId")Long bookId)
     {
         Map<String,Object> result = new HashMap<String, Object>();
         try{
             this.bookService.userUpdateBookStatus(bookId);
-            result.put("success",true);
+            result.put("msg", CodeConstant.SUCCESS_COMMIT);
             return result;
         }catch (Exception e){
             e.printStackTrace();
-            result.put("success",false);
+            response.setStatus(CodeConstant.ERROR_CODE);
+            result.put("code", CodeConstant.SYS_CODE);
+            result.put("msg", CodeConstant.SQL_CODE_MSG);
+            result.put("error", e.getMessage());
             return result;
         }
     }
@@ -277,16 +288,19 @@ public class BookController extends BaseController {
      */
     @RequestMapping("adminUpdateBookStatus")
     @ResponseBody
-    public Map<String,Object> adminUpdateBookStatus(@RequestParam("bookId")Long bookId)
+    public Map<String,Object> adminUpdateBookStatus(HttpServletResponse response, @RequestParam("bookId")Long bookId)
     {
         Map<String,Object> result = new HashMap<String, Object>();
         try{
             this.bookService.adminUpdateBookStatus(bookId);
-            result.put("success",true);
+            result.put("msg", CodeConstant.SUCCESS_COMMIT);
             return result;
         }catch (Exception e){
             e.printStackTrace();
-            result.put("success",false);
+            response.setStatus(CodeConstant.ERROR_CODE);
+            result.put("code", CodeConstant.SYS_CODE);
+            result.put("msg", CodeConstant.SQL_CODE_MSG);
+            result.put("error",e.getMessage());
             return result;
         }
     }

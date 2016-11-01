@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qcacg.mapper.ContentMapper">
+
+    <select id="findContentByVolumeId" resultType="com.qcacg.entity.ContentEntity" parameterType="java.lang.Long">
+    SELECT
+    wor_content.ContentId,
+    wor_content.VolumeId,
+    wor_content.ContentTitle,
+    wor_content.Content,
+    wor_content.ContentWordCount,
+    wor_content.ContentUpdate,
+    wor_content.ContentStatus,
+    wor_content.ContentUrl
+    FROM
+    wor_content
+    WHERE
+    wor_content.VolumeId = #{wor_content.VolumeId}
+    </select>
+
+    <select id="findContentUrlByPrimaryKey" resultType="java.lang.String" parameterType="java.lang.Long">
+        SELECT
+        wor_content.ContentUrl
+        FROM
+        wor_content
+        WHERE
+        wor_content.ContentId = #{wor_content.ContentId}
+    </select>
+</mapper>

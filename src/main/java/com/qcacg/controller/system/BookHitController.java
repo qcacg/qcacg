@@ -4,6 +4,7 @@ import com.qcacg.controller.BaseController;
 import com.qcacg.entity.BookEntity;
 import com.qcacg.entity.BookHitEntity;
 import com.qcacg.service.system.BookHitService;
+import com.qcacg.util.MyJedis;
 import com.qcacg.util.UserEntityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -28,9 +30,11 @@ public class BookHitController extends BaseController {
      */
     @RequestMapping("findBookHitByUser")
     @ResponseBody
-    public List<BookEntity> findBookByUser()
+    public List<BookEntity> findBookByUser(HttpServletRequest request)
     {
-        Long userId = UserEntityUtil.getUserFromSession().getUserId();
+        //Long userId = UserEntityUtil.getUserFromSession().getUserId();
+        String jsessionId = request.getParameter("JSESSIONID");
+        Long userId = UserEntityUtil.getUserId(jsessionId);
         return this.bookHitService.findBookHitByUserId(userId);
     }
 
@@ -39,9 +43,13 @@ public class BookHitController extends BaseController {
      */
     @RequestMapping("saveBookHit")
     @ResponseBody
-    public String saveBookHit(BookHitEntity bookHitEntity, @RequestParam("bookId")Long bookId)
+    public String saveBookHit(HttpServletRequest request,
+            BookHitEntity bookHitEntity,
+                              @RequestParam("bookId")Long bookId)
     {
-        Long userId = UserEntityUtil.getUserFromSession().getUserId();
+        //Long userId = UserEntityUtil.getUserFromSession().getUserId();
+        String jsessionId = request.getParameter("JSESSIONID");
+        Long userId = UserEntityUtil.getUserId(jsessionId);
         if(userId != null){
             bookHitEntity.setBookId(bookId);
             bookHitEntity.setUserId(userId);

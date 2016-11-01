@@ -15,6 +15,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,11 +32,21 @@ public class ResourcesController extends BaseController
 	@Autowired
 	private ButtomService buttomService;
 
+	//author
 	@RequestMapping("list")
 	public String list(Model model)
 	{
 		model.addAttribute("pageInfo", resourcesService.queryResourcrsForList());
 		return "/system/resources/list";
+	}
+
+	//my
+	@RequestMapping("list")
+	@ResponseBody
+	public Map<String, Object> list(HttpServletRequest request, HttpServletResponse response) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("pageInfo", resourcesService.queryResourcesForList());
+		return map;
 	}
 
 	@RequestMapping("editUI")

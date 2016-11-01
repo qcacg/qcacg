@@ -160,13 +160,13 @@ public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements Book
     public Map<String, Object> bookFromSale(List list) {
         Map<String, Object> map = new HashMap<String, Object>();
         if(list.size() == 0) {
-            map.put("code", CodeConstant.NULL_SELECT_CODE);
+            map.put("code", CodeConstant.PARAMETER_CODE);
             map.put("msg", CodeConstant.NULL_SELECT_MSG);
             return map;
         }
         for(int i = 0; i < list.size(); i++) {
             if(!(list.get(i) instanceof Long)) {
-                map.put("code", CodeConstant.UNABLE_HANDLE_CODE);
+                map.put("code", CodeConstant.PARAMETER_CODE);
                 map.put("msg", CodeConstant.UNABLE_HANDLE_PARAM);
                 return map;
             }
@@ -179,13 +179,13 @@ public class BookServiceImpl extends BaseServiceImpl<BookEntity> implements Book
     public Map<String, Object> removeBook(List list) {
         Map<String, Object> map = new HashMap<String, Object>();
         if(list.size() == 0) {
-            map.put("code", CodeConstant.NULL_SELECT_CODE);
+            map.put("code", CodeConstant.PARAMETER_CODE);
             map.put("msg", CodeConstant.NULL_SELECT_MSG);
             return map;
         }
         for(int i = 0; i < list.size(); i++) {
             if(!(list.get(i) instanceof Long)) {
-                map.put("code", CodeConstant.UNABLE_HANDLE_CODE);
+                map.put("code", CodeConstant.PARAMETER_CODE);
                 map.put("msg", CodeConstant.UNABLE_HANDLE_PARAM);
                 return map;
             }
