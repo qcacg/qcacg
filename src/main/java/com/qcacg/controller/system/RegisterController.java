@@ -1,10 +1,13 @@
 package com.qcacg.controller.system;
 
+
 import com.qcacg.constant.CodeConstant;
+
 import com.qcacg.entity.UserEntity;
 import com.qcacg.entity.user.UserCustom;
 import com.qcacg.entity.user.UserQauryVo;
 import com.qcacg.service.system.UserService;
+
 import com.qcacg.util.MyJedis;
 import com.qcacg.util.Sms;
 import com.taobao.api.ApiException;
@@ -12,12 +15,14 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.poi.ss.formula.functions.Code;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.*;
@@ -139,9 +144,11 @@ public class RegisterController {
 			this.sendTelephoneCode(telephone, request, uuid);
             result.put("verificationId",uuid);
             result.put("msg", CodeConstant.SUCCESS_SEND);
+
         }
         return result;
     }
+
 
     @RequestMapping("updatePassword")
     @ResponseBody

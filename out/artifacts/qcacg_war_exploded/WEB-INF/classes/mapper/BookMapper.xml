@@ -2,6 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qcacg.mapper.BookMapper">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 29b5968a7d2574ac73d00daa9bfbb4d275d63adc
     <select id="findBookByBookName" resultType="com.qcacg.entity.BookEntity" parameterType="String">
         SELECT
           wor_book.BookId,
@@ -350,6 +354,7 @@ wor_book.BookUpdate ASC
     <update id="adminUpdateBookStatus" parameterType="java.lang.Long">
         UPDATE wor_book SET bookStatus= '1' WHERE bookId=#{bookId}
     </update>
+<<<<<<< HEAD
 
     <update id="batchUpdateBookStatus" parameterType="java.util.List">
         UPDATE wor_book SET wor_book.BookStatus = '2'
@@ -400,4 +405,6 @@ wor_book.BookUpdate ASC
             wor_book.BookId = #{item}
         </foreach>
     </delete>
+=======
+>>>>>>> 29b5968a7d2574ac73d00daa9bfbb4d275d63adc
 </mapper>

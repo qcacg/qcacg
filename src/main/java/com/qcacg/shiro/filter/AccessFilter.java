@@ -1,5 +1,6 @@
 package com.qcacg.shiro.filter;
 
+<<<<<<< HEAD
 import com.qcacg.constant.CodeConstant;
 import com.qcacg.util.MyJedis;
 import com.qcacg.util.UserEntityUtil;
@@ -7,11 +8,14 @@ import net.sf.json.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 import redis.clients.jedis.Jedis;
 
+=======
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+<<<<<<< HEAD
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,6 +24,12 @@ import java.util.Map;
 
 /**
  * 该拦截器只拦截*.shtml请求，对于静态页面和一些资源请求不限制。
+=======
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
  * Created by CaiYuanYu on 2016/10/24.
  */
 public class AccessFilter implements Filter{
@@ -33,6 +43,7 @@ public class AccessFilter implements Filter{
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
+<<<<<<< HEAD
 
         boolean flag = isOut(req, res);
 
@@ -115,6 +126,47 @@ public class AccessFilter implements Filter{
         String value = jedis.getTel(jsessionId);
         //如果value不为null并且排除当前会话还有其它用户;防止出现jsessionId一致的情况
         if(value != null) {
+=======
+        String url = req.getRequestURL().toString();
+        //筛选jsp页面和*.shtml请求
+        //System.out.println(url);
+        if(url.endsWith(".jsp") || url.indexOf(".shtml") > 0) {
+            //放过登录页面请求
+            List<String> list = getList();
+            for (String str : list) {
+                if(url.indexOf(str) > 0) {
+                    chain.doFilter(req, res);
+                    return;
+                }
+            }
+            redirectController(req, res, chain);
+            return;
+        }
+        //对于一些配置文件
+        chain.doFilter(request, response);
+    }
+
+    private void redirectController(HttpServletRequest request, HttpServletResponse response, FilterChain chain) {
+        // TODO Auto-generated method stub
+       HttpSession session = request.getSession(false);
+        String path = request.getContextPath();
+        String url = path + "/toLogin.shtml";
+        if(session == null) {
+            try {
+                response.sendRedirect(url);
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            return;
+        }
+        String value = session.getAttribute("action").toString();
+        String[] data =value.split("\\|");
+        String now = data[0];
+        String action = data[1];
+        String userAgent = request.getHeader("User-Agent");
+        if(action.equals(userAgent)) {
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
             try {
                 chain.doFilter(request, response);
             } catch (IOException e) {
@@ -126,6 +178,7 @@ public class AccessFilter implements Filter{
             }
             return;
         }
+<<<<<<< HEAD
         try {
             //重定向到登录界面
             response.setStatus(500);
@@ -138,6 +191,8 @@ public class AccessFilter implements Filter{
         } catch (IOException e) {
             e.printStackTrace();
         }
+=======
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
     }
 
     /**
@@ -147,6 +202,7 @@ public class AccessFilter implements Filter{
      */
     private List<String> getList() {
         List<String> list = new ArrayList<String>();
+<<<<<<< HEAD
         list.add("/index.jsp");
         list.add("/index.shtml");
         list.add("/common/");
@@ -173,7 +229,27 @@ public class AccessFilter implements Filter{
         list.add("/book/findBookByBook");
         list.add("/book/MonthBookByBook");
         list.add("/book/WeekBookByBook");
+=======
+        //不需要登录检查的页面
+//        /index.jsp  /index.shtml  /common/**  /lib/** /module/**
+//        /treegrid/**  /denied.shtml   /login.shtml /toLogin.shtml
+//         /register.shtml  /toRegister.shtml  /type.shtml  /book/queryBook/**.shtml
+//         /ranking.shtml  /catalog.shtml = anon /updatePasswordTelephoneCode.shtml
+//         /registerTelephoneCode.shtml  /toUpdatePassword.shtml  /updatePassword.shtml
+//         /404.jsp  /error.jsp = anon  /book/findBookByBookUpDate.shtml
+        list.add("/index.jsp");list.add("/index.shtml");list.add("/common/");
+        list.add("/lib/");list.add("/module/");list.add("/treegrid/");list.add("/denied.shtml");
+        list.add("/login.shtml");list.add("/toLogin.shtml");list.add("/register.shtml");
+        list.add("/toRegister.shtml");list.add("/type.shtml");list.add("/book/queryBook/");
+        list.add("/ranking.shtml");list.add("/catalog.shtml");list.add("/updatePasswordTelephoneCode.shtml");
+        list.add("/registerTelephoneCode.shtml");list.add("/toUpdatePassword.shtml");list.add("/updatePassword.shtml");
+        list.add("/404.jsp");list.add("/error.jsp");list.add("/book/findBookByBookUpDate.shtml");
+<<<<<<< HEAD
+>>>>>>> 29b5968a7d2574ac73d00daa9bfbb4d275d63adc
         return list;
+=======
+         return list;
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
     }
 
     @Override

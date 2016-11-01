@@ -1,8 +1,12 @@
 package com.qcacg.util.geetest;
 
+<<<<<<< HEAD
 import com.qcacg.constant.CodeConstant;
 import com.qcacg.util.MyJedis;
 import org.apache.commons.lang3.StringUtils;
+=======
+import com.qcacg.util.MyJedis;
+>>>>>>> 29b5968a7d2574ac73d00daa9bfbb4d275d63adc
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -34,6 +38,7 @@ public class VerifyLoginServlet extends HttpServlet {
 		String challenge = request.getParameter(GeetestLib.fn_geetest_challenge);
 		String validate = request.getParameter(GeetestLib.fn_geetest_validate);
 		String seccode = request.getParameter(GeetestLib.fn_geetest_seccode);
+<<<<<<< HEAD
 		
 		//从redis中获取gt-server状态
 		MyJedis jedis = new MyJedis();
@@ -56,6 +61,14 @@ public class VerifyLoginServlet extends HttpServlet {
 			}
 		}
 		int gt_server_status_code = Integer.valueOf(gt_server_status);
+=======
+
+
+		//从session中获取gt-server状态
+		MyJedis jedis = new MyJedis();
+		int gt_server_status_code = Integer.valueOf(jedis.getValue(gtSdk.gtServerStatusSessionKey));
+
+>>>>>>> 29b5968a7d2574ac73d00daa9bfbb4d275d63adc
 		
 		//从session中获取userid
 //		Long userId = UserEntityUtil.getUserFromSession().getUserId();

@@ -1,6 +1,12 @@
 package com.qcacg.util.geetest;
 
+<<<<<<< HEAD
 import com.qcacg.util.MyJedis;
+=======
+
+import com.qcacg.util.MyJedis;
+
+>>>>>>> 29b5968a7d2574ac73d00daa9bfbb4d275d63adc
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -38,6 +44,7 @@ public class StartCaptchaServlet extends HttpServlet {
 			//进行验证预处理
 			int gtServerStatus = gtSdk.preProcess();
 
+<<<<<<< HEAD
 			//将服务器状态存到redis中
 
 			MyJedis jedis = new MyJedis();
@@ -45,6 +52,16 @@ public class StartCaptchaServlet extends HttpServlet {
             System.out.println("key和value:" + gtSdk.gtServerStatusSessionKey + "  :  " + gtServerStatus);
 			//将该值设置一分钟过期
 			jedis.expire(gtSdk.gtServerStatusSessionKey, 120);
+=======
+			//将服务器状态设置到session中
+<<<<<<< HEAD
+		MyJedis jedis = new MyJedis();
+		jedis.set(gtSdk.gtServerStatusSessionKey, String.valueOf(gtServerStatus));
+		jedis.expire(gtSdk.gtServerStatusSessionKey, 60);
+=======
+			request.getSession().setAttribute(gtSdk.gtServerStatusSessionKey, gtServerStatus);
+>>>>>>> 0aa25e77c367abfa3e9bf53151a7fad4b044f553
+>>>>>>> 29b5968a7d2574ac73d00daa9bfbb4d275d63adc
 			//将userid设置到session中
 //		request.getSession().setAttribute("userId", userId);
 
